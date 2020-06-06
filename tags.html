@@ -1,0 +1,31 @@
+---
+layout: page
+title: Index - AWS Certifications and More
+permalink: /tags/
+tags: about
+---
+<div class="home" id="Cloud">
+
+  <p>Our goal is to help you master the cloud with <b>hands-on, practical videos, articles and courses</b>.</p>
+
+  <H2>All Categories</H2>
+
+  {% capture tags %}
+    {% for tag in site.categories %}
+      {{ tag[0] }}
+    {% endfor %}
+  {% endcapture %}
+
+  {% assign sortedtags = tags | split:' ' | sort %}
+  {% for tag in sortedtags %}
+    
+    <BR/>
+    <h2 class="h1">Tag - {{ tag }}</h2>
+    <ul>
+    {% for post in site.categories[tag] %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+
+</div>
