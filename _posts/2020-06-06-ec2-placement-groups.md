@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      AWS EC2 Placement Groups - ABBREVIATION - Certification
+title:      AWS EC2 Placement Groups - Certification
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of EC2 Placement Groups from an AWS certification perspective. We will look at important certification questions regarding EC2 Placement Groups.  We will look at the three types of EC2 Placement Groups - Cluster, Spread and Partition.
 categories:  AWS_CERTIFICATION
