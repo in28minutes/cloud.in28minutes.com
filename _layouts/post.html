@@ -30,10 +30,6 @@ layout: default
   {% include share_buttons.html %}
 {% endif %}
 
-{% if site.show_post_footers %}
-  {% include post_footer.html %}
-{% endif %}
-
 {% if site.show_related_posts %}
   <h3 class="related-post-title">{{ site.text.post.related_posts }}</h3>
   {% for post in site.related_posts %}
@@ -43,6 +39,10 @@ layout: default
       </a>
     </div>
   {% endfor %}
+{% endif %}
+
+{% if site.show_post_footers %}
+  {% include post_footer.html %}
 {% endif %}
 
 
