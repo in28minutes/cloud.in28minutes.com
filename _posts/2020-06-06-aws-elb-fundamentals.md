@@ -218,3 +218,61 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 |--|--|
 |Protect ELB from web attacks - SQL injection or cross-site scripting| Integrate with AWS WAF (Web Application Firewall)|
 |Protect web applications from DDoS attacks| Application Load Balancer (ALB) protects you from common DDoS attacks, like SYN floods or UDP reflection attacks.|
+
+## Secure Communication - HTTPS
+![](/images/aws/00-icons/user.png)
+![](/images/arrow.png)
+![](/images/aws/00-icons/server.png)
+- Using HTTPS secures the communication on the internet
+- To use HTTPS, install SSL/TLS certificates on the server
+- In AWS, SSL certificates can be managed using AWS Certificate Manager
+
+## Elastic Load Balancer - Two Communication Hops
+![](/images/aws/00-icons/client.png)
+![](/images/arrowbi.png)
+![](/images/aws/00-icons/elb.png)
+![](/images/arrowbi.png)
+![](/images/aws/00-icons/ec2instance.png)
+- Client to ELB:
+	- Over internet. 
+	- HTTPS recommended
+	- ELB requires X.509 certificates (SSL/TLS server certificates)
+- ELB to EC2 instance:
+	- Through AWS internal network. 
+	- HTTP is ok. HTTPS is preferred. 
+
+## Elastic Load Balancer - SSL/TLS Termination
+![](/images/aws/00-icons/client.png)
+![](/images/arrowbi.png)
+![](/images/aws/00-icons/elb.png)
+![](/images/arrowbi.png)
+![](/images/aws/00-icons/ec2instance.png)
+- Application/Classic Load Balancer - SSL Termination
+	- Client to ELB: HTTPS
+	- ELB to EC2 instance: HTTP
+- Network Load Balancer - TLS Termination
+	- Client to ELB: TLS
+	- ELB to EC2 instance: TCP
+
+## Server Name Indication
+![](/images/aws/elb-sni.png) 
+- ALB can provide load balancing for multiple target groups
+- Each of these targets can be separate websites with different SSL/TLS certificates
+- Each Listener can be associated with multiple SSL certificates(one for each website) to enable this 
+- Server Name Indication is automatically enabled when multiple SSL certificates are associated with a listener
+- Server Name Indication is an extension to TLS protocol 
+	- Client indicates the host name being contacted at the start of interaction
+
+## Elastic Load Balancer - Logs and Headers
+- You can enable access logs on ELB to capture:
+	- Time request was received
+	- Client's IP address
+	- Latencies
+	- Request Paths, and 
+	- Server Response
+- Network Load Balancer allows the EC2 instance to see the client details
+- HOWEVER Application Load Balancer does NOT
+	- Client details are in request headers:
+		- X-Forwarded-For: Client IP address
+		- X-Forwarded-Proto: Originating Protocol - HTTP/HTTPS
+		- X-Forwarded-Port: Originating Port
