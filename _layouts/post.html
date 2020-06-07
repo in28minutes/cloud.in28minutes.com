@@ -39,7 +39,7 @@ layout: default
   {% for post in site.related_posts %}
     <div class="post ml2">
       <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title | replace: "- AWS Certification", ""}}</h4>
+        <h4>{{ post.title | replace: "- AWS Certification", ""}}</h4>
       </a>
     </div>
   {% endfor %}
