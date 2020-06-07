@@ -65,13 +65,15 @@ Each cheat sheet contains:
 - **Demo** : Create an Application Load Balancer 
 
 ## Load Balancers - Security Group Best Practice
-||
-|--|
-| Load Balancer allow traffic from everywhere! |
-|![](/images/aws/loadbalancer-inbound-sg-rules.png)     |
-|EC2 Security Group **ONLY** allows traffic from Load Balancer Security Group|
-|![](/images/aws/ec2-inbound-sg-rules.png)|
-|(Best Practice) Restrict allowed traffic using Security Groups|
+
+
+Load Balancer allow traffic from everywhere!
+![](/images/aws/loadbalancer-inbound-sg-rules.png) 
+
+EC2 Security Group **ONLY** allows traffic from Load Balancer Security Group
+![](/images/aws/ec2-inbound-sg-rules.png)
+
+(Best Practice) Restrict allowed traffic using Security Groups
 
 ## Listeners
 ![](/images/aws/elb-listener.png)
