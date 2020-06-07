@@ -233,6 +233,52 @@ curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/
 - **Launch Templates** - Pre-configured templates (AMI ID, instance type, and network settings) simplifying the creation of EC2 instances. 
 
 
+## Elastic Network Interface
+![](/images/aws/eni.png) 
+- Logical networking component that represents a **virtual network card**
+- Support IPv4 (110.120.120.145) and IPv6 (2001:0db8:85a3:0000:0000:8a2e:0370:7334)
+- Each Elastic Network Interface can provide:
+	- One primary and multiple secondary private IP addresses
+	- One public address
+	- One **Elastic IP address** per private IPv4 address
+	- One or more **security groups**
+
+## Elastic Network Interface - Primary and Secondary
+![](/images/aws/eni.png) 
+- Each EC2 instance is connected to primary network interface (**eth0**)
+- You can create and attach a secondary network interface - **eth1**
+- Allows an instance to be **dual homed** - present in two subnets in a VPC
+- Used to create a **management network** or a low budget high availability solution
+- Terminology :
+	- **Hot attach**: Attaching ENI when EC2 instance is running
+	- **Warm attach**: Attaching ENI when EC2 instance is stopped
+	- **Cold attach**: Attaching ENI at launch time of EC2 instance
+- Demo
+
+
+## Monitoring EC2 instances
+![](/images/aws/cloudwatch-ec2.png) 
+- Amazon CloudWatch is used to **monitor** EC2 instances
+- (FREE) **Basic monitoring** ("Every 5 minutes") provided for all EC2 instance types
+- ($$$$) EC2 **Detailed Monitoring** can be enabled for detailed metrics every 1 minute
+
+## Monitoring EC2 instances - Metrics
+![](/images/aws/cloudwatch-ec2.png) 
+- EC2 **System level** metrics (CPU, Disk, Network) are tracked by CloudWatch:
+	- CPU utilization
+	- Network In and Out
+	- Disk Reads & writes
+	- CPU Credit Usage & Balance (For Burstable Instances)
+
+## Monitoring EC2 instances - Custom Metrics
+![](/images/aws/00-icons/ec2instance.png)
+![](/images/arrow.png) 
+![](/images/aws/00-icons/cloudwatch.png)
+- CloudWatch does **NOT** have access to **operating system metrics** like memory consumption.
+- You can provide those metrics to CloudWatch: 
+	- Install CloudWatch Agent to send OS metrics to CloudWatch. (OR)
+	- Use CloudWatch collectd plug-in
+
 ## EC2 Fundamentals - AWS Certification Exam Practice Questions
 
 Coming Soon..
