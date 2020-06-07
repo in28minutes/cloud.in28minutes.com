@@ -2,7 +2,7 @@
 layout: page
 title: AWS Certifications and More
 permalink: /
-tags: about
+tags: generic
 ---
 <div class="home" id="Cloud">
 
@@ -11,7 +11,9 @@ tags: about
   <h2>Recommended Certification Topics</h2>
   <ul>
   {% for page in site.pages %}
-    <li><a href="{{ page.url | prepend: site.baseurl }}" class="post-link">{{ page.title }}</a></li>
+    {% if post.category != "generic" %}
+      <li><a href="{{ page.url | prepend: site.baseurl }}" class="post-link">{{ page.title }}</a></li>
+    {% endif %}
   {% endfor %}
   </ul>
 
