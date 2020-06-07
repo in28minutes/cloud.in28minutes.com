@@ -1,41 +1,4 @@
 
-## VPC and Subnets - Questions
-
- 
-| Question | Answer  | 
-|--|--|
-|Can I have a VPC spread over two regions? | No|
-|Can I have multiple VPCs in same region?| Yes|
-|Is communication between two resources in a VPC visible outside VPC? | No |
-|Can you allow external access to your resources in a VPC?| Yes|
-|Can I have a subnet spread over two regions?| No|
-|Can I have a subnet spread over two availability zones?| No|
-| Can I have two subnets in one availability zone?| Yes|
-| Can I have a subnet in availability zone ap-south-1a if it's VPC is in the region us-east-1?| No. Subnet should be in AZs belonging to the VPC's region|
-
-## VPC Main Route Table
-
-![](/images/aws/00-icons/vpc.png) 
-![](/images/aws/00-icons/vpcrouter.png) 
-
-| Destination             | Target                 |
-|--|--|
-| 172.31.0.0/16           | Local                  |
-
-- Each VPC has a **main route table**, by default
-- **Main route table** has a default route enabling communication between resources in all subnets in a VPC
-- Default route rule CANNOT be deleted/edited
-- HOWEVER you can add/edit/delete other routing rules to the main route table
-
-## Subnet Route Tables
-
-![](/images/aws/00-icons/subnet.png) 
-![](/images/aws/00-icons/vpcrouter.png) 
-
-- Each subnet can have its **own** route table OR **share** its route table with the VPC
-- If a subnet does not have a route table associated with it, it **implicitly** uses the route table of its VPC
-- Multiple subnets can share a route table
-- HOWEVER at any point in time, a subnet can be associated with one route table ONLY
 
 ## Quick Review of Security Groups - Default Security Group
 
