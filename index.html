@@ -11,9 +11,8 @@ tags: generic
   <h2>Recommended Certification Topics</h2>
   <ul>
   {% for page in site.pages %}
-    {% if post.category != "generic" %}
       <li><a href="{{ page.url | prepend: site.baseurl }}" class="post-link">{{ page.title }}</a></li>
-    {% endif %}
+      {{post}}
   {% endfor %}
   </ul>
 
