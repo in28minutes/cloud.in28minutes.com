@@ -21,7 +21,14 @@ Let's understand the three types of EC2 Placement Groups
 - When do you use Cluster, Spread and Partition EC2 Placement Groups?
 
 ## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
-- [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
+
+Each cheat sheet contains:
+- FAQs and Tutorials with 5-20 slides
+- Notes to quickly review and prepare for certification exam
+- Certification Exam Tips
+- Certification and Interview Scenario Questions
+
+**Download Now** - [25 AWS Cheat Sheets and Free Course - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
 ## EC2 Placement Groups
