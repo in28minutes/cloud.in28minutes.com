@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      TOPIC - ABBREVIATION - AWS Certification
+title:      TOPIC - TOPIC_ABBREVIATION - AWS Certification
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of TOPIC from an AWS certification perspective. We will look at important certification questions regarding TOPIC. 
-categories:  AWS_CLOUD
+categories:  AWS_CLOUD TOPIC
 permalink:  /aws-certification-topic-abbreviation
 ---
 
@@ -16,13 +16,12 @@ Let's get a quick overview of TOPIC from an AWS certification perspective. We wi
 - Where?
 - When?
 
-## AWS Certification - Download 25 Cheat Sheets and a Free Course
+## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
 - [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
 ## Article Begins
 Some theory
-   
 
-## AWS Certification Exam Practice Questions
+## TOPIC - AWS Certification Exam Practice Questions
 

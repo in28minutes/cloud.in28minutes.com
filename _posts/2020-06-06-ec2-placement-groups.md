@@ -20,7 +20,7 @@ Let's understand the three types of EC2 Placement Groups
 - Why do you need EC2 Placement Groups?
 - When do you use Cluster, Spread and Partition EC2 Placement Groups?
 
-## AWS Certification - Download 25 Cheat Sheets and a Free Course
+## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
 - [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
@@ -70,7 +70,7 @@ Let's understand the three types of EC2 Placement Groups
 - Can be spread across **different AZs** in same region
 - Maximum of seven partitions per Availability Zone per group
 
-## EC2 Placement Groups - Best Practice
+## EC2 Placement Groups - Best Practices
 - **Insufficient capacity error** can happen when:
 	- New instances are added in (OR)
 	- More than one instance type is used (OR)
@@ -83,7 +83,7 @@ Let's understand the three types of EC2 Placement Groups
 	- Have only one instance type in a launch request AND 
 	- Launch all instances in a single launch request together   
 
-## AWS Certification Exam Practice Questions
+## EC2 Placement Groups - AWS Certification Exam Practice Questions
 
 Coming Soon...
 
