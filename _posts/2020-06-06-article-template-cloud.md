@@ -16,7 +16,7 @@ Let's get a quick overview of TOPIC from an AWS certification perspective. We wi
 - Where?
 - When?
 
-## Free Course - Get Started with AWS Certification
+## AWS Certification - 25 Cheat Sheets and a Free Course
 - [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
