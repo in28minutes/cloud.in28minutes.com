@@ -66,6 +66,7 @@ Each cheat sheet contains:
 
 ## Load Balancers - Security Group Best Practice
 
+
 ||
 |--|
 | Load Balancer allow traffic from everywhere! |

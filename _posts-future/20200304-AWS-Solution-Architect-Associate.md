@@ -38,6 +38,7 @@
 - **Demo** : Create an Application Load Balancer 
 
 ## Load Balancers - Security Group Best Practice
+
 ||
 |--|
 | Load Balancer allow traffic from everywhere! |
@@ -340,6 +341,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | i (i3, d2) | **Storage (I/O) optimized** | NoSQL databases and data warehousing|
 
 ## EC2 Instance Families
+
 | Instance Family | Details  | Use Cases |
 |--|--|--|
 | g (g3, g4) | **GPU optimized** | Floating point number calculations, graphics processing, or video compression|
@@ -1237,6 +1239,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Each router has a set of rules that help it decide the path to the destination IP address
 
 ## Routing inside AWS
+
 | Destination             | Target                 |
 |--|--|
 | 172.31.0.0/16           | Local                  |
