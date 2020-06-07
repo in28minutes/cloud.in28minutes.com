@@ -103,9 +103,6 @@
 
 # Regions and Zones
 
-
-
-
 ## Regions and Zones 
 ![](/images/aws/vpc/1-SingleDataCenter.png)
 - Imagine that your application is deployed in a data center in London
