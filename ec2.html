@@ -1,0 +1,15 @@
+---
+layout: page
+title: EC2 - AWS Certification Questions
+permalink: /ec2-aws-certification
+tags: EC2
+---
+<div class="home" id="Cloud">
+  Here are some of the important resources related to EC2
+  <ul>
+  {% for post in site.categories['EC2'] %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+
+</div>
