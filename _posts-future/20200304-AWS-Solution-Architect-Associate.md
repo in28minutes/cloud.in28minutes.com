@@ -1,54 +1,12 @@
 # Load Balancing
 
 ## Elastic Load Balancer
-
 ![](/images/aws/ec2/1-simple-elb.png)
 - Distribute traffic across EC2 instances in one or more AZs in a single region
 - **Managed service** - AWS ensures that it is highly available
 - Auto scales to handle huge loads
 - Load Balancers can be **public or private**
 - **Health checks** - route traffic to healthy instances
-
-
-## HTTP vs HTTPS vs TCP vs TLS vs UDP
-
-![](/images/application-transport-layers.png)
-- Computers use protocols to communicate
-- Multiple layers and multiple protocols
-- **Network Layer** - Transfer bits and bytes
-- **Transport Layer** - Are the bits and bytes transferred properly?
-- **Application Layer** - Make REST API calls and Send Emails
-- (Remember) Each layer makes use of the layers beneath it
-- (Remember) Most applications talk at application layer. BUT some applications talk at transport layer directly(high performance).
-
-
-
-## HTTP vs HTTPS vs TCP vs TLS vs UDP
-![](/images/application-transport-layers.png)
-- Network Layer:
-	- IP (Internet Protocol): Transfer bytes. Unreliable.
-- Transport Layer:
-	- TCP (Transmission Control): Reliability > Performance
-	- TLS (Transport Layer Security): Secure TCP
-	- UDP (User Datagram Protocol): Performance > Reliability
-- Application Layer:
-	- HTTP(Hypertext Transfer Protocol): Stateless Request Response Cycle
-	- HTTPS: Secure HTTP
-	- SMTP: Email Transfer Protocol
-	- and a lot of others...
-
-
-
-## HTTP vs HTTPS vs TCP vs TLS vs UDP
-![](/images/application-transport-layers.png)
-- **Most applications** typically communicate at application layer
-	- Web apps/REST API(HTTP/HTTPS), Email Servers(SMTP), File Transfers(FTP)
-	- All these applications use TCP/TLS at network layer(for reliability)
-- **HOWEVER** applications needing high performance **directly** communicate at transport layer:
-	- Gaming applications and live video streaming use UDP (sacrifice reliability for performance)
-- **Objective**: Understand Big Picture. Its OK if you do not understand all details.
-
-
 
 ## Three Types of Elastic Load Balancers
 - **Classic** Load Balancer ( Layer 4 and Layer 7)
@@ -60,16 +18,11 @@
 	- New generation supporting TCP/TLS and UDP
 	- Very high performance usecases
 
-
-
-
 ## Classic Load Balancer
 - **Older** version of ELB
 - **Not recommended anymore**
 - Supports TCP, SSL/TLS and HTTP(S) (Layer 4 and 7)
 - **Demo**: Create a Classic Load Balancer
-
-
 
 ## Application Load Balancer
 ![](/images/aws/ec2/1-simple-elb.png)
@@ -84,10 +37,6 @@
 	- Lambdas (serverless)
 - **Demo** : Create an Application Load Balancer 
 
-
-
-
-
 ## Load Balancers - Security Group Best Practice
 ||
 |--|
@@ -96,8 +45,6 @@
 |EC2 Security Group **ONLY** allows traffic from Load Balancer Security Group|
 |![](/images/aws/ec2-inbound-sg-rules.png)|
 |(Best Practice) Restrict allowed traffic using Security Groups|
-
-
 
 ## Listeners
 ![](/images/aws/elb-listener.png)
@@ -115,8 +62,6 @@
 	- HTTPS requests on port 443 are routed to port 80
 	- HTTP requests on port 8080 get a fixed response (customized HTML)
 
-
-
 ## Target Groups
 ![](/images/aws/ec2/4-elb-target-groups.png)
 - How to group instances that ALB has to distribute the load between? 
@@ -125,8 +70,6 @@
 	- A set of EC2 instances
 	- A lambda function
 	- Or a set of IP addresses
-
-
 
 ## Target Group Configuration - Sticky Session
 > Enable sticky user sessions
@@ -146,8 +89,6 @@
 - 0 to 3600 seconds (default 300 seconds)
 - Also called Connection Draining
 
-
-
 ## Microservices architectures - Multiple Target Group(s)
 ![](/images/aws/ec2/5-elb-target-groups.png)
 - Microservices architectures have 1000s of microservices
@@ -166,9 +107,6 @@
 - Rules are executed in the order they are configured. 
 - Default Rule is executed last.
 
-
-
-
 ## Listener Rules - Possibilities
 ![](/images/aws/elb-listener-rules.png)
 - Based on **path** - in28minutes.com/a to target group A and in28minutes.com/b to target group B
@@ -176,7 +114,6 @@
 - Based on **HTTP headers** (Authorization header) and methods (POST, GET, etc)
 - Based on **Query Strings** (/microservice?target=a, /microservice?target=b)
 - Based on **IP Address** - all requests from a range of IP address to target group A. Others to target group B
-
 
 ## Architecture Summary
 ![](/images/aws/elb_architecture.png)
@@ -187,106 +124,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Each listener can have multiple rules each routing to a target group based on request content.
 - A target can be part of multiple target groups. 
 
-
-
-## Introducing Auto Scaling Groups
-![](/images/aws/ec2/4-elb-target-groups.png)
-- Target Groups are configured with a static set of instances. How do you scale out and scale in **automatically**?
-	- Configure a Auto Scaling Group
-
-
-
-
-## Auto Scaling Groups
-![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
-- Auto Scaling Group responsibilities:
-	- **Maintain** configured number of instances (using periodic health checks)
-		- If an instance goes down, ASG launches replacement instance
-	- **Auto scale** to adjust to load (scale-in and scale-out based on auto scaling policies)
-- ASG can launch On-Demand Instances, Spot Instances, or both 
-	- **Best Practice**: Use Launch Template
-- An ELB can distribute load to **active instances** as ASG expands and contracts based on the load
-- **DEMO:** Creating Auto Scaling Groups
-
-
-
-
-## Auto Scaling Components
-![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
-
-- **Launch Configuration/Template**
-	- EC2 instance size and AMI
-- **Auto Scaling Group**
-	- Reference to Launch Configuration/Template
-	- Min, max and desired size of ASG
-	- EC2 health checks by default. Optionally enable ELB health checks.
-	- **Auto Scaling Policies**
-		- When and How to execute scaling?
-
-
-## Auto Scaling Group - Use Cases
-
-![](/images/aws/asg.png) 
-
-| ASG Use case | Description  | More details | 
-|--|--|--|
-| Maintain current instance levels at all times   |  min = max = desired = CONSTANT<BR/> When an instance becomes unhealthy, it is replaced.     |   Constant load |
-| Scale manually    |   Change desired capacity as needed   |  You need complete control over scaling  |
-| Scale based on a schedule |  Schedule a date and time for scaling up and down. | Batch programs with regular schedules|
-| Scale based on demand (Dynamic/Automatic Scaling) | Create scaling policy (what to monitor?) and scaling action (what action?) | Unpredictable load |
-
-
-
-## Dynamic Scaling Policy Types
-![](/images/aws/asg.png) 
-
-| Scaling Policy | Example(s)  | Description | 
-|--|--|--|
-| Target tracking scaling   |  Maintain CPU Utilization at 70%.|  Modify current capacity based on a target value for a specific metric.    |
-|  Simple scaling   | +5 if CPU utilization > 80% <BR/> -3 if CPU utilization < 60%| Waits for cooldown period before triggering additional actions. | 
-|  Step scaling   | +1 if CPU utilization between 70% and 80%<BR/> +3 if CPU utilization between 80% and 100%<BR/> Similar settings for scale down| Warm up time can be configured for each instance| 
-
-
-
-## Scaling Policies - Background
-![](/images/aws/00-icons/cloudwatchalarm.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/autoscaling.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/ec2instances.png)
-- Two parts:
-	- CloudWatch alarm (Is CPU utilization >80%? or < 60%). 
-	- Scaling action (+5 EC2 instances or -3 EC2 instances)
-
-
- 
-## Auto Scaling - Scenarios
-![](/images/aws/asg.png) 
-
-| Scenario | Solution | 
-|--|--|
-|Change instance type or size of ASG instances|Launch configuration or Launch template cannot be edited. Create a new version and ensure that the ASG is using the new version. Terminate instances in small groups.|
-|Roll out a new security patch (new AMI) to ASG instances| Same as above.|
-| Perform actions before an instance is added or removed| Create a Lifecycle Hook. You can configure CloudWatch to trigger actions based on it. |
-
-
-
-## Auto Scaling - Scenarios
-![](/images/aws/00-icons/cloudwatchalarm.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/autoscaling.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/ec2instances.png)
-
-| Scenario | Solution | 
-|--|--|
-|Which instance in an ASG is terminated first when a scale-in happens?| (**Default Termination Policy**) Within constraints, goal is to distribute instances evenly across available AZs. Next priority is to terminate older instances.|
-| Preventing frequent scale up and down | Adjust cooldown period to suit your need (default - 300 seconds). Align CloudWatch monitoring interval |
-| I would want to protect newly launched instances from scale-in|Enable instance scale-in protection|
-
-
-
-
 ## Network Load Balancer
 - Functions at the **Transport Layer** - Layer 4 (Protocols TCP, TLS and UDP)
 - For **high performance** use cases (millions of requests per second)
@@ -296,7 +133,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Containerized applications (Amazon ECS)
 	- Web applications (using IP addresses)
 - Demo
-
 
 ## Review
 
@@ -313,7 +149,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Very **high performance usecases**
 - Can be assigned a Static IP/Elastic IP
 
-
 ## Review
 
 ##### Application Load Balancer
@@ -326,6 +161,85 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Target group** is a group representing the targets (ex: EC2 instances)
 - One ALB or NLB can support multiple microservices (multiple target groups)!
 
+## Introducing Auto Scaling Groups
+![](/images/aws/ec2/4-elb-target-groups.png)
+- Target Groups are configured with a static set of instances. How do you scale out and scale in **automatically**?
+	- Configure a Auto Scaling Group
+
+## Auto Scaling Groups
+![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
+- Auto Scaling Group responsibilities:
+	- **Maintain** configured number of instances (using periodic health checks)
+		- If an instance goes down, ASG launches replacement instance
+	- **Auto scale** to adjust to load (scale-in and scale-out based on auto scaling policies)
+- ASG can launch On-Demand Instances, Spot Instances, or both 
+	- **Best Practice**: Use Launch Template
+- An ELB can distribute load to **active instances** as ASG expands and contracts based on the load
+- **DEMO:** Creating Auto Scaling Groups
+
+## Auto Scaling Components
+![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
+
+- **Launch Configuration/Template**
+	- EC2 instance size and AMI
+- **Auto Scaling Group**
+	- Reference to Launch Configuration/Template
+	- Min, max and desired size of ASG
+	- EC2 health checks by default. Optionally enable ELB health checks.
+	- **Auto Scaling Policies**
+		- When and How to execute scaling?
+
+## Auto Scaling Group - Use Cases
+
+![](/images/aws/asg.png) 
+
+| ASG Use case | Description  | More details | 
+|--|--|--|
+| Maintain current instance levels at all times   |  min = max = desired = CONSTANT<BR/> When an instance becomes unhealthy, it is replaced.     |   Constant load |
+| Scale manually    |   Change desired capacity as needed   |  You need complete control over scaling  |
+| Scale based on a schedule |  Schedule a date and time for scaling up and down. | Batch programs with regular schedules|
+| Scale based on demand (Dynamic/Automatic Scaling) | Create scaling policy (what to monitor?) and scaling action (what action?) | Unpredictable load |
+
+## Dynamic Scaling Policy Types
+![](/images/aws/asg.png) 
+
+| Scaling Policy | Example(s)  | Description | 
+|--|--|--|
+| Target tracking scaling   |  Maintain CPU Utilization at 70%.|  Modify current capacity based on a target value for a specific metric.    |
+|  Simple scaling   | +5 if CPU utilization > 80% <BR/> -3 if CPU utilization < 60%| Waits for cooldown period before triggering additional actions. | 
+|  Step scaling   | +1 if CPU utilization between 70% and 80%<BR/> +3 if CPU utilization between 80% and 100%<BR/> Similar settings for scale down| Warm up time can be configured for each instance| 
+
+## Scaling Policies - Background
+![](/images/aws/00-icons/cloudwatchalarm.png)
+![](/images/arrow.png)
+![](/images/aws/00-icons/autoscaling.png)
+![](/images/arrow.png)
+![](/images/aws/00-icons/ec2instances.png)
+- Two parts:
+	- CloudWatch alarm (Is CPU utilization >80%? or < 60%). 
+	- Scaling action (+5 EC2 instances or -3 EC2 instances)
+
+## Auto Scaling - Scenarios
+![](/images/aws/asg.png) 
+
+| Scenario | Solution | 
+|--|--|
+|Change instance type or size of ASG instances|Launch configuration or Launch template cannot be edited. Create a new version and ensure that the ASG is using the new version. Terminate instances in small groups.|
+|Roll out a new security patch (new AMI) to ASG instances| Same as above.|
+| Perform actions before an instance is added or removed| Create a Lifecycle Hook. You can configure CloudWatch to trigger actions based on it. |
+
+## Auto Scaling - Scenarios
+![](/images/aws/00-icons/cloudwatchalarm.png)
+![](/images/arrow.png)
+![](/images/aws/00-icons/autoscaling.png)
+![](/images/arrow.png)
+![](/images/aws/00-icons/ec2instances.png)
+
+| Scenario | Solution | 
+|--|--|
+|Which instance in an ASG is terminated first when a scale-in happens?| (**Default Termination Policy**) Within constraints, goal is to distribute instances evenly across available AZs. Next priority is to terminate older instances.|
+| Preventing frequent scale up and down | Adjust cooldown period to suit your need (default - 300 seconds). Align CloudWatch monitoring interval |
+| I would want to protect newly launched instances from scale-in|Enable instance scale-in protection|
 
 ## Review
 
@@ -334,11 +248,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Dynamic Scaling Policies** - Target tracking scaling, Simple scaling and Step scaling.
 - **CloudWatch alarms** track the metric (Is CPU utilization >80%? or < 60%) and trigger the auto scaling action (+5 EC2 instances or -3 EC2 instances)
 
-
-
 # EC2 & ELB for Architects
-
-
 
 ## EC2 & ELB for Architects
 
@@ -350,7 +260,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Improve Security
 - Low Costs
 - and .....
-
 
 ## Availability
 
@@ -366,7 +275,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | 99.99% (four 9's)| 4 and 1/2 minutes | Most online apps aim for 99.99% (four 9's)|
 | 99.999% (five 9's) | 26 seconds| Achieving 5 9's availability is tough|
 
-
 ## Availability Basics - EC2 and ELB
 
 ![](/images/aws/ec2/3-elb-crosszone-lb.png)
@@ -374,9 +282,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Use **Cross Zone** Load Balancing
 - Deploy to multiple regions
 - Configure proper EC2 and ELB **health checks**
-
-
-
 
 ## Scalability
 - A system is handling 1000 transactions per second. Load is expected to increase 10 times in the next month
@@ -388,7 +293,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Increase the number of application instances and setup a load balancer
 	- And a lot more.
 
-
 ## Vertical Scaling
 
 ![](/images/vertical-scaling.png) 
@@ -398,15 +302,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- More RAM, CPU, I/O, or networking capabilities
 - There are limits to vertical scaling
 
-
-
 ## Vertical Scaling for EC2
 ![](/images/aws/ec2-vertical-scaling.png) 
 - Increasing **EC2 instance size**:
 	- *t2.micro* to *t2.small* or 
 	- *t2.small* to *t2.2xlarge* or 
 	-  ...
-
 
 ## Horizontal Scaling
 ![](/images/horizontal-scaling.png) 
@@ -418,8 +319,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - (BUT) Horizontal Scaling needs additional infrastructure:
 	- Load Balancers etc.
 
-
-
 ## Horizontal Scaling for EC2
 ![](/images/aws/ec2/3-elb-crosszone-lb.png)
 
@@ -429,9 +328,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- in multiple AZs in multiple regions
 - **Auto scale**: Auto Scaling Group
 - **Distribute load** : Elastic Load Balancer, Route53
-
-
-
 
 ## EC2 Instance Families
 
@@ -443,15 +339,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | r (r4, r5, r5a, r5n) |  **Memory (RAM) optimized** | Memory caches, in-memory databases and real time big data analytics|
 | i (i3, d2) | **Storage (I/O) optimized** | NoSQL databases and data warehousing|
 
-
-
 ## EC2 Instance Families
 | Instance Family | Details  | Use Cases |
 |--|--|--|
 | g (g3, g4) | **GPU optimized** | Floating point number calculations, graphics processing, or video compression|
 | f (f1) | **FPGA** instances - customizable field programmable gate arrays | Applications needing massively parallel processing power, such as genomics, data analytics, video processing and financial computing|
 |inf (inf1) | **Machine learning ASIC** instances| Machine learning applications such as image recognition, speech recognition, natural language processing and personalization|
-
 
 ## EC2 Burstable Instances (T family - T2, T3 etc)
 ![](/images/aws/ec2-burstable-instances-cloudwatch.png)
@@ -461,8 +354,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - (Feature)Unlimited Mode - Spike beyond CPU credit at additional cost:
 	- For T2 instances, Unlimited Mode is disabled by default. 
 	- For T3 instances, Unlimited Mode is enabled by default
-
-
 
 ## EC2 Tenancy - Shared vs Dedicated
 ![](/images/aws/ec2-host.png)
@@ -476,7 +367,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- You have visibility into the hardware of underlying host (sockets and physical cores)
 	- (Use cases) Regulatory needs or server-bound software licenses like Windows Server, SQL Server
 
-
 ## EC2 Dedicated Instances vs Hosts
  
 | Feature |Dedicated Instance  | Dedicated Host | 
@@ -484,8 +374,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | Billing    | Per instance      | Per host        |
 | Targeted Instance Placement |        |  ✓      |
 | Access to Underlying Host Hardware |        |  ✓      |
-
-
 
 ## EC2 Placement Groups
 ![](/images/aws/ec2-host.png)
@@ -501,8 +389,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Spread (avoid simultaneous failures)
 	- Partition (multiple partitions with low network latency)
 
-
-
 ## EC2 Cluster Placement Group
 ![](/images/aws/ec2/ec2-placement-groups-cluster.png) 
 - When low latency network communication between EC2 instances is critical
@@ -510,8 +396,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - EC2 instances placed near to each other in single AZ
 - **High Network Throughput**: EC2 instances can use 10 Gbps or 25Gbps network
 - (Disadvantage) Low Availability (Rack crashes => All EC2 instances fail)
-
-
 
  
 ## EC2 Spread Placement Group
@@ -522,16 +406,11 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Can be spread across different AZs in same region
 - Maximum of seven running instances per AZ in a spread placement group
 
-
-
 ## EC2 Partition Placement Group - Use Case
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
 - In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 instances need to be **divided into multiple groups**:
 	- Low latency communication between instances in a group
 	- Each group is placed on a different rack
-
-
-
 
 ## EC2 Partition Placement Group
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
@@ -540,7 +419,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - You can choose the partition where EC2 instance is launched into
 - Can be spread across **different AZs** in same region
 - Maximum of seven partitions per Availability Zone per group
-
 
 ## EC2 Placement Groups - Best Practice
 - **Insufficient capacity error** can happen when:
@@ -555,8 +433,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Have only one instance type in a launch request AND 
 	- Launch all instances in a single launch request together
 
-
-
 ## Elastic Network Interface
 ![](/images/aws/eni.png) 
 - Logical networking component that represents a **virtual network card**
@@ -566,8 +442,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- One public address
 	- One **Elastic IP address** per private IPv4 address
 	- One or more **security groups**
-
-
 
 ## Elastic Network Interface - Primary and Secondary
 ![](/images/aws/eni.png) 
@@ -581,9 +455,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- **Cold attach**: Attaching ENI at launch time of EC2 instance
 - Demo
 
-
-
-
 ## EC2 Pricing Models Overview
 
 | Pricing Model | Description  | Details|
@@ -592,9 +463,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | Spot      | Quote the maximum price  | Cheapest (upto 90% off) BUT NO Guarantees |
 | Reserved  | Reserve ahead of time  | Upto 75% off. 1 or 3 years reservation. |
 | Savings Plans | Commit spending $X per hour on (EC2 or AWS Fargate or Lambda)| Upto 66% off. No restrictions. 1 or 3 years reservation.|
-
-
-
 
 ## EC2 On-Demand
 
@@ -608,7 +476,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- A batch program which has unpredictable runtime and cannot be interrupted
 	- A batch program being moved from on-premises to cloud for the first time
 
-
 ## EC2 Spot instances
 - **(Old Model)** Bid a price. Highest bidder wins
 - **(New Model)** Quote your maximum price. Prices decided by long term trends. 
@@ -617,7 +484,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Ideal for **Non time-critical workloads** that can **tolerate interruptions** (fault-tolerant)
 	- A batch program that does not have a strict deadline AND can be stopped at short notice and re-started
 - (Best Practice) Stop or Hibernate EC2 instance on receiving interruption notice
-
 
 ## EC2 Spot Block and Spot Fleet
 
@@ -629,8 +495,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Request spot instances across a **range of instance types**
 - The more instance types that you specify, the better your chances of having your target capacity fulfilled
 
-
-
 ## EC2 Linux Spot Instances - Pricing
 - ZERO charge if terminated or stopped by Amazon EC2 in the first instance hour
 - Otherwise you are charged by second
@@ -638,8 +502,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- If EC2 terminates spot instance after 50 minutes, you pay ZERO
 	- If you terminate spot instance after 50 minutes, you pay for 50 minutes
 	- If either EC2 or you yourselves terminate spot instance after 70 minutes, you pay for 70 minutes
-
-
 
 ## EC2 Spot Instances - Remember
 - Spot instances can be terminated, stopped, or hibernated when interrupted
@@ -650,7 +512,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Step 1. Cancel Spot Request
 	- Step 2. Terminate all Spot Instances
 	- **(Remember)** Canceling a spot request might not terminate active spot instances
-
 
 ## EC2 Reserved Instances
 - Reserve EC2 instances ahead of time!
@@ -665,22 +526,16 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- **Cost wise** : Earlier you pay, more the discount. All Upfront <  Partial Upfront < No Upfront
 	- A difference upto 5%
 
-
-
 ## EC2 Standard Reserved Instances
 - **Commitment** : (In a region) I reserve an EC2 instance with a **specific platform**(for example, Linux), a **specific instance type**(for example, t2.micro) for a term of **1 year** or **3 years**
 - You can switch to other instance sizes within the same instance family (t2.large to t2.xlarge)
 - You can switch Availability Zones
 - You **CANNOT** change instance families, operating systems, or tenancies (default or dedicated)
 
-
-
 ## EC2 Convertible Reserved Instances
 - **Commitment** : (In a region) I reserve an EC2 instance for a term of **1 year** or **3 years**
 - You **can change** instance families, operating systems, or tenancies (default or dedicated)
 - You can switch Availability Zones and instance size
-
-
 
 ## EC2 Scheduled Reserved Instances
 - Commitment : (In a region) I reserve an EC2 instance part-time for a year - **X hours every month/week/day** at a specific time ZZ:ZZ
@@ -689,15 +544,11 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - (Use case) A batch program runs for a few hours every day
 - (Use case) Weekend batch program runs for a few hours every week
 
-
-
 ## EC2 Reserved Instances - Summary
 - Standard: Commit for a EC2 platform and instance family for 1 year or 3 years. (Up to 75% off)
 - Convertible: Standard + **flexibility** to change EC2 platform and instance family. (Up to 54% off)
 - Scheduled: Reserve for **specific time period** in a day. (5% to 10% off)
 - You can **sell reserved instances** on the AWS Reserved instance marketplace if you do not want to use your reservation
-
-
 
 ## EC2 Compute Savings Plans
 - **Commitment** : I would spend X dollars per hour on AWS compute resources (Amazon EC2 instances, AWS Fargate and/or AWS Lambda) for a 1 or 3 year period
@@ -706,14 +557,10 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- You can change instance family, size, OS, tenancy or AWS Region of your Amazon EC2 instances
 	- You can switch between Amazon EC2, AWS Fargate and/or AWS Lambda
 
-
-
 ## EC2 Instance Savings Plans 
 - **Commitment** : I would spend X dollars per hour on Amazon EC2 instances of a specific instance family (General Purpose, for example) within a specific region (us-east-1, for example)
 - Up to 72% off (compared to on demand instances)
 - You can switch operating systems (Windows to Linux, for example)
-
-
 
 ## EC2 Pricing Models Overview
 > https://www.ec2instances.info/
@@ -725,13 +572,11 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | Reserved  | Constant workloads that run all the time. |
 | Savings Plans | Constant workloads that run all the time and you want more flexibility.| 
 
-
 ## Monitoring EC2 instances
 ![](/images/aws/cloudwatch-ec2.png) 
 - Amazon CloudWatch is used to **monitor** EC2 instances
 - (FREE) **Basic monitoring** ("Every 5 minutes") provided for all EC2 instance types
 - ($$$$) EC2 **Detailed Monitoring** can be enabled for detailed metrics every 1 minute
-
 
 ## Monitoring EC2 instances - Metrics
 ![](/images/aws/cloudwatch-ec2.png) 
@@ -740,7 +585,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Network In and Out
 	- Disk Reads & writes
 	- CPU Credit Usage & Balance (For Burstable Instances)
-
 
 ## Monitoring EC2 instances - Custom Metrics
 ![](/images/aws/00-icons/ec2instance.png)
@@ -751,8 +595,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Install CloudWatch Agent to send OS metrics to CloudWatch. (OR)
 	- Use CloudWatch collectd plug-in
 
-
-
 # Elastic Load Balancers
 
 ## Secure Communication - HTTPS
@@ -762,7 +604,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Using HTTPS secures the communication on the internet
 - To use HTTPS, install SSL/TLS certificates on the server
 - In AWS, SSL certificates can be managed using AWS Certificate Manager
-
 
 ## Elastic Load Balancer - Two Communication Hops
 ![](/images/aws/00-icons/client.png)
@@ -778,8 +619,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Through AWS internal network. 
 	- HTTP is ok. HTTPS is preferred. 
 
-
-
 ## Elastic Load Balancer - SSL/TLS Termination
 ![](/images/aws/00-icons/client.png)
 ![](/images/arrowbi.png)
@@ -793,8 +632,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Client to ELB: TLS
 	- ELB to EC2 instance: TCP
 
-
-
 ## Server Name Indication
 ![](/images/aws/elb-sni.png) 
 - ALB can provide load balancing for multiple target groups
@@ -803,7 +640,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Server Name Indication is automatically enabled when multiple SSL certificates are associated with a listener
 - Server Name Indication is an extension to TLS protocol 
 	- Client indicates the host name being contacted at the start of interaction
-
 
 ## Elastic Load Balancer - Logs and Headers
 - You can enable access logs on ELB to capture:
@@ -819,7 +655,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 		- X-Forwarded-Proto: Originating Protocol - HTTP/HTTPS
 		- X-Forwarded-Port: Originating Port
 
-
 ## ALB vs NLB vs CLB -1
 
 | Feature |  Application Load Balancer | Network Load Balancer | Classic Load Balancer |
@@ -829,7 +664,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | Protocols Supported  | HTTP, HTTPS (Layer 7) | TCP, UDP, TLS (Layer 4) | TCP, SSL/TLS, HTTP, HTTPS(Layer 4 & 7) |
 | Connection draining  |  &nbsp;&nbsp;&nbsp;✓ |  |  &nbsp;&nbsp;&nbsp;&nbsp;✓ |
 | Dynamic Host Port Mapping  |  &nbsp;&nbsp;&nbsp;✓ |  &nbsp;&nbsp;&nbsp;&nbsp;✓ | &nbsp; |
-
 
 ## ALB vs NLB vs CLB - 2
 
@@ -842,7 +676,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | Elastic IP address  |  |  ✓ |  |
 | Preserve Source IP address |  |  ✓ |  |
 | WebSockets  |  ✓ |  ✓ | &nbsp; |
-
 
 ## ALB vs NLB vs CLB - Routing
 
@@ -858,8 +691,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 | HTTP method-based routing   |  ✓ |  |  |
 | Query string parameter-based routing |  ✓ |  | &nbsp; |
 
-
-
 ## Important Load Balancer Scenarios - Quick Review
  
 | Scenario |Solution  | 
@@ -870,15 +701,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 |How to ensure that in-flight requests to unhealthy instances are given an opportunity to complete execution?| Enable connection draining (1 to 3600 seconds. Default timeout - 300 seconds)|
 |Give warm up time to EC2 instances before they start receiving load from ELB|Configure Health Check Grace Period |
 
-
-
 ## Important Load Balancer Scenarios - Quick Review
  
 | Scenario |Solution  | 
 |--|--|
 |Protect ELB from web attacks - SQL injection or cross-site scripting| Integrate with AWS WAF (Web Application Firewall)|
 |Protect web applications from DDoS attacks| Application Load Balancer (ALB) protects you from common DDoS attacks, like SYN floods or UDP reflection attacks.|
-
 
 ## Architecture Considerations for EC2 & ELB
 
@@ -893,7 +721,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Prefer creating an **custom AMI** to installing software using userdata
 - Choose the right ELB for your use case
 	- Prefer Network Load Balancer for **high performance** load balancing
-
 
 ## Architecture Considerations for EC2 & ELB - 2
 
@@ -910,11 +737,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Use CloudWatch for monitoring
 - **(Disaster recovery)** Upto date AMI copied to multiple regions
 
-
-
 # Reference
-
-
 
 ## Application Load Balancer - Health Check Settings
 - **(Goal)** Route traffic to healthy instances only!
@@ -928,14 +751,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- **HealthyThresholdCount** - How many health check successes before marking an instance as healthy?
 	- **UnhealthyThresholdCount** - How many health check failures before marking an instance as unhealthy?
 
-
 ## Elastic Load Balancer Terminology
 - **Connection draining** - Before an instance is terminated, requests in execution are given time to complete (deregistration_delay.timeout_seconds)
 - **Dynamic Host Port Mapping** - Useful with containers. Two instances of the same task can be running on the same ECS container instance
 - **Cross-zone load balancing** - Distribute load between available instances in multiple AZs in One Region
 - **Sticky sessions** - Send requests from same user to same instance (cookies with configurable expiration  - Stickiness duration default - 1 day)
 - **Preserve Source IP address**  - Allows instances to know where the request is coming from
-
 
 ## Elastic Load Balancer Terminology 2
 
@@ -945,12 +766,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Query string parameter-based routing** - /user?target=target1 vs /user?target=target2
 - **Server Name Indication (SNI)** - Support multiple websites with different SSL certificates with one Load Balancer
 
-
-
-
 # AWS Managed Services
-
-
 
 ## IAAS (Infrastructure as a Service) 
 ![](/images/aws/cloud-0-IAAS.png)
@@ -964,8 +780,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- OS upgrades and patches
 	- Availability
 	- etc.. ( and a lot of things!)
-
-
 
 ## PAAS (Platform as a Service) 
 
@@ -995,10 +809,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Amazon RDS** - Relational Databases - MySQL, Oracle, SQL Server etc
 - And a lot more...
 
-
-
 # AWS Elastic BeanStalk
-
 
 ## AWS Elastic BeanStalk
 - **Simplest way** to deploy and scale your web application in AWS
@@ -1011,10 +822,8 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Managed platform updates 
 	- Application health monitoring
 
-
 ## AWS Elastic BeanStalk Demo
 - Deploy an application to cloud using AWS Elastic Beanstalk
-
 
 ## AWS Elastic Beanstalk Concepts
 - **Application** - A container for environments, versions and configuration
@@ -1023,7 +832,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Environment Tier**:
 	- For batch applications, use **worker tier**
 	- For web applications, use **web server tier**
-
 
 ## AWS Elastic BeanStalk - Remember
 - You **retain full control** over AWS resources created
@@ -1036,10 +844,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - You can configure SNS notifications based on health
 - Delete your environment!
 
-
-
 # Containers and <BR/>Container Orchestration
-
 
 ## Microservices
 ![](/images/aws/microservices.png)
@@ -1050,10 +855,8 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - How can we have **one way of deploying** Go, Java, Python or JavaScript .. microservices?
 	- Enter **containers**!
 
-
 ## Docker
 ![](/images/aws/docker.png)
-
 
 - Create **Docker images** for each microservice
 - Docker image **contains everything a microservice needs** to run:
@@ -1065,17 +868,14 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Corporate data center
 	- Cloud
 
-
 ## Docker - Advantages
 ![](/images/aws/docker.png)
-
 
 - Docker containers are **light weight** (compared to Virtual Machines)
 - Docker provides **isolation** for containers
 - Docker is **cloud neutral**
 - (NEW CHALLENGE) How do you manage 1000's of containers belonging to multiple microservices?
 	- Enter **Container Orchestration**!
-
 
 ## Container Orchestration
 ![](/images/aws/container-orchestration.png) 
@@ -1087,7 +887,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- **Load Balancer** - Distribute load among multiple instances of a microservice
 	- **Self Healing** - Do health checks and replace failing instances
 	- **Zero Downtime Deployments** - Release new versions without downtime
-
 
 ## Container Orchestration Options
 ![](/images/aws/container-orchestration.png) 
@@ -1101,7 +900,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- AWS Fargate : Serverless version of AWS ECS
 	- AWS Fargate does not have a free tier
 
-
 ## Amazon Elastic Container Service (Amazon ECS)
 ![](/images/aws/ecs.png) 
 
@@ -1112,7 +910,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Batch Processing. Run batch workloads on ECS using AWS Batch
 - DEMO
 
-
 ## Amazon ECS - Task Definition
 ![](/images/aws/ecs-concepts.png) 
 - **Container Definition(s)**
@@ -1121,7 +918,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Task Role** (Optional): If you need access to AWS services (Amazon RDS etc)
 - **Task execution IAM role**: Provides permissions to pull container images and publish container logs to Amazon CloudWatch
 
-
 ## Amazon ECS - Terminology
 ![](/images/aws/ecs-concepts.png) 
 - **Service**
@@ -1129,7 +925,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **ECS cluster**
 	- Grouping of one or more container instances (EC2 instances) where you run your tasks
 	- For AWS Fargate (serverless ECS), you DON'T need to worry about EC2 instances
-
 
 ## Amazon Elastic Container Service - Remember
 - **Container Instance** - EC2 instance in the cluster running a **container agent** (helps it communicate with the cluster)
@@ -1156,7 +951,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- AWS managed service for Kubernetes
 	- Recommended if you are already using Kubernetes and would want to move the workload to AWS
 
-
 ## **Amazon ECR** (Elastic Container Registry)
 - You've created docker images for your microservices:
 	- **Where do you store them?**
@@ -1164,16 +958,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Amazon ECR** is a Fully-managed Docker container registry provided by AWS
 - (Alternative) Docker Hub
 
-
 ## Additional Resources
 - Docker: https://www.youtube.com/watch?v=Rt5G5Gj7RP0
 - Kubernetes: https://www.youtube.com/watch?v=rTNR7vDQDD8
 - AWS Fargate and ECS: https://www.youtube.com/watch?v=2oXVYxIPs88
 
-
-
 # Serverless Fundamentals - Lambda and API Gateway
-
 
 ## Serverless
 ![](/images/aws/00-icons/lambda.png) 
@@ -1187,7 +977,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **What if we do not need to worry about servers and focus on building our application?**
 - Enter **Serverless**
 
-
 ## Serverless
 - Remember: **Serverless does NOT mean "No Servers"**
 - **Serverless for me**:
@@ -1197,7 +986,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Pay for use:
 		- You don't have to provision servers or capacity!
 - **You focus on code** and the cloud managed service takes care of all that is needed to scale your code to serve millions of requests!
-
 
 ## AWS Lambda
 ![](/images/aws/00-icons/lambda.png) 
@@ -1210,7 +998,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Duration of requests
 	- Memory consumed
 
-
 ## AWS Lambda - Supported Languages
 - Java
 - Go 
@@ -1220,7 +1007,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Python, 
 - Ruby
 - and a lot more...
-
 
 ## AWS Lambda Event Sources
 - Amazon API Gateway
@@ -1234,10 +1020,8 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Amazon Simple Notification Service
 - The list is endless...
 
-
 ## AWS Lambda Demo
 - Let's get our hands dirty!
-
 
 ## AWS Lambda Function
 - Stateless - store data to Amazon S3 or Amazon DynamoDB
@@ -1250,7 +1034,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Monitor function executions through Amazon CloudWatch
 - Maximum allowed time for lambda execution is 900 seconds (default - 3 seconds)
 - Integrates with AWS X-Ray(tracing), AWS CloudWatch (monitoring and logs)
-
 
 ## REST API Challenges
 ![](/images/aws/00-icons/user.png)
@@ -1267,7 +1050,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- You would want to monitor your API calls
 	- You would want to be able to cache API requests
 
-
 ## Amazon API Gateway
 ![](/images/aws/00-icons/user.png)
 ![](/images/arrow.png) 
@@ -1276,7 +1058,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 ![](/images/aws/00-icons/lambdafunction.png) 
 - How about a **fully managed service** with auto scaling that can act as a **"front door"** to your APIs?
 - Welcome **"Amazon API Gateway"**
-
 
 ## Amazon API Gateway
 ![](/images/aws/00-icons/user.png)
@@ -1290,7 +1071,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Supports HTTP(S) and WebSockets (two way communication - chat apps and streaming dashboards)
 - Serverless. **Pay for use** (API calls and connection duration)
 - Demo!
-
 
 ## Amazon API Gateway - Remember
 
@@ -1308,10 +1088,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- Amazon Cognito
 	- Lambda authorizer (custom authorization with JWT tokens or SAML)
 
-
-
 # Virtual Private Cloud (VPC) Fundamentals
-
 
 ## Need for Amazon VPC 
 
@@ -1326,7 +1103,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - How do you do create **your own private network** in the cloud?
 	- Enter **Virtual Private Cloud (VPC)**
 
-
 ## Amazon VPC (Virtual Private Cloud)
 
 ![](/images/aws/00-icons/VPC.png)
@@ -1336,7 +1112,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **(Best Practice)** Create all your AWS resources (compute, storage, databases etc) **within a VPC**
 	- Secure resources from unauthorized access AND 
 	- Enable secure communication between your cloud resources
-
 
 ## Need for VPC Subnets
 ![](/images/aws/00-icons/user.png)
@@ -1354,7 +1129,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- ONLY applications within your network (VPC) should be able to access them(**private** resources)
 - How do you **separate public resources from private resources** inside a VPC?
 
-
 ## VPC Subnets
 
 ![](/images/aws/vpc/8-vpc-subnets.png)
@@ -1365,7 +1139,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Each VPC is created in a Region
 - Each Subnet is created in an Availability Zone
 - **Example** : VPC - us-east-1 => Subnets - AZs us-east-1a or us-east-1b or ..
-
 
 ## Addressing for Resources - IP address
 
@@ -1383,7 +1156,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - We are running out of the IPv4 address space => IPv6 is introduced as an extension
 - While IPv4 and IPv6 are supported on AWS, IPv4 is the most popularly used address format within an AWS VPC. 
 
-
 ## CIDR (Classless Inter-Domain Routing) Blocks
 - Typically resources in same network use similar IP address to make routing easy:
 	- Example: Resources inside a specific network can use IP addresses from 69.208.0.0 to 69.208.0.15
@@ -1394,7 +1166,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Quick Tip**: 69.208.0.0/28 indicates that the first 28 bits (out of 32) are fixed. 
 	- Last 4 bits can change => 2 to the power 4  = 16 addresses
 
-
 ## CIDR Exercises
 ![](/images/aws/cidr-examples.png)
 - Exercise : How many addresses does **69.208.0.0/26** represent?
@@ -1403,7 +1174,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- 2 to the power (32-30 = 2) = 4 addresses from 69.208.0.0 to 69.208.0.3
 - Exercise : What is the difference between **0.0.0.0/0** and **0.0.0.0/32**?
 	- 0.0.0.0/0 represent all IP addresses. 0.0.0.0/32 represents just one IP address 0.0.0.0.
-
 
 ## CIDR Block Example - Security Group
 
@@ -1419,14 +1189,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - All other inbound/outbound traffic is denied
 - CIDR Demo : Security Groups
 
-
 ## VPC CIDR Blocks
 ![](/images/aws/cidr-examples.png)
 - Each VPC is associated with a **CIDR Block**
 - CIDR block of VPC can be from /16 (65536 IP addresses) to /28 (16 IP addresses)
 - **Example 1** : VPC with CIDR block 69.208.0.0/24 - 69.208.0.0 to 69.208.0.255
 - **Example 2** : VPC with CIDR block 69.208.0.0/16 - 69.208.0.0 to 69.208.255.255
-
 
 ## Choosing a CIDR Block for VPC
 
@@ -1436,7 +1204,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - All addresses inside a VPC CIDR range are **private addresses**:
 	- Cannot route to private addresses from internet
 	- Assign and use public IP addresses to communicate with VPC resources from internet
-
 
 ## Choosing a CIDR Block for a Subnet
 
@@ -1449,10 +1216,8 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - (Remember) Address range of a VPC CAN be extended (Add new CIDR Block)
 - (Remember) Address range of a Subnet CANNOT be changed.
 
-
 ## VPC and Subnets Demo
 ![](/images/aws/vpc/9-vpc-regions-az-subnets.png)
-
 
 ## Public Subnet
 
@@ -1464,14 +1229,12 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Communication allowed from subnet to internet
 - Communication allowed from internet to subnet
 
-
 ## Routing on the internet
 ![](/images/aws/vpc/10-vpc-router.png)
 - You have an IP address of a website you want to visit
 - There is **no direct connection** from your computer to the website
 - Internet is actually a **set of routers** routing traffic
 - Each router has a set of rules that help it decide the path to the destination IP address
-
 
 ## Routing inside AWS
 | Destination             | Target                 |
@@ -1486,7 +1249,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- What CIDR blocks (range of addresses) should be routed to which target resource?
 - **Rule 1** - Route requests to VPC CIDR 172.31.0.0/16 (172.31.0.0 to 172.31.255.255) to local resources within the VPC
 - **Rule 2** - Route all other IP addresses (0.0.0.0/0) to internet (internet gateway)
-
 
 ## Execution of Route Table
 | Destination             | Target                 |
@@ -1503,17 +1265,13 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
  	- Result : Routing to internet
 - The **most specific matching route** wins
 
-
-
 ## Public Subnet vs Private Subnet
-
 
 ![](/images/aws/00-icons/subnet.png) 
 ![](/images/arrowbi.png) 
 ![](/images/aws/00-icons/internetgateway.png) 
 ![](/images/arrowbi.png) 
 ![](/images/aws/00-icons/internet.png) 
-
 
 |Name | Destination             | Target                 | Explanation               |
 |--|--|--|--|
@@ -1523,7 +1281,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - An **Internet Gateway** enables internet communication for subnets
 - Any subnet which has a route to an internet gateway is called a **public subnet**
 - Any subnet which **DOES NOT** have route to an internet gateway is called a **private subnet**
-
 
 ## More about Internet Gateway
 ![](/images/aws/00-icons/subnet.png) 
@@ -1538,7 +1295,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Translate private IP address to public IP address and vice-versa
 - **DHCP option set**: Assign custom host names and IP addresses to EC2 instances
 
-
 ## Private Subnet - Download Patches
 ![](/images/aws/00-icons/ec2.png) 
 ![](/images/arrow.png) 
@@ -1551,7 +1307,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - Cannot be accessed from internet.
 - Might allow traffic to internet using a NAT Device.
 
-
 ## Network Address Translation(NAT) Instance and Gateway
 - How do you **allow instances in a private subnet to download software updates** and security patches while denying inbound traffic from internet?
 - How do you allow instances in a private subnet to **connect privately to other AWS Services** outside the VPC?
@@ -1559,7 +1314,6 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 	- **NAT Instance**: Install a EC2 instance with specific NAT AMI and configure as a gateway
 	- **NAT Gateway**: Managed Service
 	- **Egress-Only Internet Gateways**: For IPv6 subnets
-
 
 ## NAT instance
 
@@ -1573,7 +1327,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Outbound - HTTP(80) & HTTPS(443) to internet (0.0.0.0/0)
 - **Step 3**: Private Subnet Route Table
 	- Redirect all outbound traffic (0.0.0.0/0) to the NAT instance
-
 
 ## NAT gateway
 ![](/images/aws/00-icons/ec2.png) 
@@ -1590,7 +1343,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - Step 3: Private subnet route  - **all outbound traffic (0.0.0.0/0) to NAT gateway**.
 - DEMO
 
-
 ## NAT gateway - Remember
 ![](/images/aws/00-icons/ec2.png) 
 ![](/images/arrow.png) 
@@ -1606,7 +1358,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Use Egress-Only Internet Gateways for IPv6.
 - NAT Gateway uses the Internet Gateway.
 
-
 ## NAT gateway vs NAT instance
 |Feature|NAT gateway|NAT instance|
 |--|:--|:--|
@@ -1619,7 +1370,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |Disable source destination check|No|Required|
 |Security groups| No specific configuration needed| Needed on NAT instance |
 |Bastion servers| No| Can be used as a Bastion server|
-
 
 ## VPC and Subnets - Questions
 
@@ -1635,15 +1385,10 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 | Can I have two subnets in one availability zone?| Yes|
 | Can I have a subnet in availability zone ap-south-1a if it's VPC is in the region us-east-1?| No. Subnet should be in AZs belonging to the VPC's region|
 
-
-
-
 ## VPC Main Route Table
-
 
 ![](/images/aws/00-icons/vpc.png) 
 ![](/images/aws/00-icons/vpcrouter.png) 
-
 
 | Destination             | Target                 |
 |--|--|
@@ -1654,9 +1399,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - Default route rule CANNOT be deleted/edited
 - HOWEVER you can add/edit/delete other routing rules to the main route table
 
-
 ## Subnet Route Tables
-
 
 ![](/images/aws/00-icons/subnet.png) 
 ![](/images/aws/00-icons/vpcrouter.png) 
@@ -1665,7 +1408,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - If a subnet does not have a route table associated with it, it **implicitly** uses the route table of its VPC
 - Multiple subnets can share a route table
 - HOWEVER at any point in time, a subnet can be associated with one route table ONLY
-
 
 ## Quick Review of Security Groups - Default Security Group
 
@@ -1683,7 +1425,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- However, you can change it at any point - during launch or later
 - Security Group has a **many to many relationship** with Resources (in same VPC)
 
-
 ## New Security Groups
 
 | Direction | Protocol | Port Range | Source/Destination   |
@@ -1696,7 +1437,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Denies all inbound traffic
 	- Allows all outbound traffic
 - You can add, edit and delete outbound and inbound rules
-
 
 ## Security Groups - Important Ports
  
@@ -1711,8 +1451,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 | MySQL/Aurora   | 3306  |
 | MSSQL   | 1433  |
 
-
-
 ## Security Group Scenario Questions
  
 | Scenario | Solution  |
@@ -1720,7 +1458,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 | Can source/destination of a security group be another security group?| Yes. It can even be same security group.| 
 |A new security group is created and assigned to a database and an ec2 instance. Can these instances talk to each other?| No. New security group does not allow any incoming traffic from same security group. <BR/>Two resources associated with same security group can talk with each other only if you configure rules allowing the traffic.|
 |The default security group (unchanged) in the VPC is assigned to a database and an ec2 instance. Can these instances talk to each other?|Yes. Default security group (by default) has a rule allowing traffic between resources with same security group.|
-
 
 ## Network Access Control List
 ![](/images/aws/00-icons/nacl.png)
@@ -1735,9 +1472,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Lower number => Higher priority.
 - Hands-on
 
-
 ## Security Group vs NACL
-
 
 ![](/images/aws/00-icons/user.png)
 ![](/images/arrowbi.png)
@@ -1754,7 +1489,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |State | Stateful. Return traffic is automatically allowed. | Stateless. You should explicitly allow return traffic.                    |
 |Evaluation | Traffic allowed if there is a matching rule        | Rules are prioritized. Matching rule with highest priority wins.          |
 
-
 ## Scenario: EC2 instance cannot be accessed from internet 
 ![](/images/aws/00-icons/nacl.png)
 ![](/images/aws/00-icons/subnet.png)
@@ -1767,10 +1501,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - Check the route table for the subnet. Is there a route to the internet gateway? 
 - Check your security group rules. Are you allowing inbound traffic from your IP address to the port?
 
-
-
 # Amazon S3 Fundamentals
-
 
 ## Amazon S3 (Simple Storage Service)
 ![](/images/aws/00-icons/s3.png)
@@ -1788,10 +1519,8 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Backups of your databases or storage devices
 	- Staging data during on-premise to cloud database migration
 
-
 ## Amazon S3 Demo
 - DEMO
-
 
 ## Amazon S3 - Objects and Buckets
 ![](/images/aws/00-icons/s3.png)
@@ -1807,7 +1536,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Max object size is **5 TB**
 - (Remember) **No hierarchy** of buckets, sub-buckets or folders
 
-
 ## Amazon S3 Key Value Example
 
 ![](/images/aws/s3-folder-structure.png)
@@ -1820,8 +1548,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 | 2030/11/course2.png | image-binary-content |
 | 2030/11/course3.png | image-binary-content |
 
-
-
 ## Amazon S3 Versioning
 
 ![](/images/aws/00-icons/s3bucket.png)
@@ -1833,14 +1559,12 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - You cannot turn off versioning on a versioned bucket
 	- You can only **suspend** versioning
 
-
 ## Amazon S3 Static Website Hosting
 - Use S3 to host a static website using a bucket
 - Step 1 : Upload website content
 - Step 2 : Enable **Static website hosting**
 - Step 3 : Disable "Block public access"
 - Step 4 : Configure "Bucket policy" to enable public read access
-
 
 ## Resource-based policies - Bucket policies
 ```
@@ -1874,7 +1598,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - Can be used in creating ** lifecycle policies**
 - Can be **updated continuously** during the lifetime of an object
 
-
 ## Amazon S3 Event Notifications
 
 ![](/images/aws/00-icons/s3bucket.png)
@@ -1891,9 +1614,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Amazon SQS queue
 	- AWS Lambda function
 
-
-
-
 ## Amazon S3 - Prefix
 ![](/images/aws/s3-folder-structure.png)
 - Allows you to search for keys **starting with a certain prefix**
@@ -1903,7 +1623,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Above URL would work only when public access is allowed
 - Supported by REST API, AWS SDK, AWS CLI and AWS Management Console
 - **Used in IAM and Bucket Policies** to restrict access to specific files or group of files
-
 
 ## Bucket ACLs and Object ACLs 
 - **Bucket/Object ACLs**
@@ -1919,11 +1638,9 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- **CANNOT** grant permissions to other individual users
 - (Remember) ACLs are **primarily** used to grant permissions to public or other AWS accounts
 
-
 ## Amazon S3 Storage Classes - Introduction
 ![](/images/aws/00-icons/s3.png)
 ![](/images/aws/00-icons/glacier.png)
-
 
 - **Different kinds of data** can be stored in Amazon S3
 	- Media files and archives
@@ -1934,7 +1651,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - **Trade-off** between access time and cost
 - **S3 storage classes** help to optimize your costs while meeting access time needs
 	- Designed for durability of **99.999999999%(11 9’s)**
-
 
 ## Amazon S3 Storage Classes
 
@@ -1948,8 +1664,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |Glacier Deep Archive|Archive data that rarely, if ever, needs to be accessed with retrieval times in hours|>=3|
 |Reduced Redundancy (Not recommended)|Frequently accessed, non-critical data|>=3|
 
-
-
 ## Amazon S3 Storage Classes - Comparison
 | Feature |Standard | Intelligent Tiering | Standard IA| One Zone IA | Glacier | Glacier Deep Archive |
 |--|--|--|--|--|--|--|
@@ -1962,8 +1676,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |Per GB Cost (varies)| $0.025 | varies | $0.018 | $0.0144 | $0.005|$0.002|
 |Encryption|Optional|Optional|Optional|Optional|Mandatory|Mandatory|
 
-
-
 ## S3 Lifecycle configuration
 ![](/images/aws/s3-lifecycle-transitions.png)
 https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html
@@ -1975,7 +1687,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- **transition** actions (one storage class to another)
 	- **expiration** actions (delete objects) 
 - Object can be identified by tags or prefix.
-
 
 ## Amazon S3 Replication - Same Region and Multiple Region
 
@@ -1991,7 +1702,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - (Advantage) Reduces latency and helps you meet regulations
 - (USECASE) Object replication between dev & test environments
 
-
 ## Amazon S3 - Object level configuration
 ![](/images/aws/00-icons/s3.png)
 ![](/images/aws/00-icons/s3bucket.png)
@@ -1999,7 +1709,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Storage class
 	- Encryption
 	- Objects ACLs
-
 
 ## Amazon S3 Consistency
 ![](/images/aws/00-icons/s3.png)
@@ -2015,7 +1724,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- You might get a previous version of data immediately after an object update using PUT/DELETE
 	- You will never get partial or inconsistent data
 
-
 ## Amazon S3 Presigned URL
 - Grant **time-limited permission** (few hours to 7 days) to download objects
 - **Avoid** web site scraping and unintended access
@@ -2029,15 +1737,12 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Java code 
 		- *GeneratePresignedUrlRequest(bucketName, objectKey).withMethod(HttpMethod.GET).withExpiration(expiration);*
 
-
 ## Amazon S3 Access Points
 ![](/images/aws/s3_access_points.png)
 - **Simplifies** bucket policy configuration 
 - Create **application specific access points** with an application specific policy
 - Provide **multiple customized paths** with unique hostname and access policy for each bucket
 - “dual-stack” endpoint supports IPv4 and IPv6 access
-
-
 
 ## Amazon S3 Scenarios - Security 
 
@@ -2048,7 +1753,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Protect from changing versioning state of a bucket| Use MFA Delete. You need to be an owner of the bucket AND Versioning should be enabled.|
 |Avoid content scraping. Provide secure access.| Pre Signed URLS. Also called Query String Authentication. |
 |Enable cross domain requests to S3 hosted website (from www.abc.com to www.xyz.com)|Use Cross-origin resource sharing (CORS)|
-
 
 ## Amazon S3 Cost
 ![](/images/aws/00-icons/s3.png)
@@ -2063,7 +1767,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Data transfer from Amazon S3 to Amazon CloudFront
 	- Data transfer from Amazon S3 to services in the same region
 
-
 ## Amazon S3 Scenarios - Costs
 
 | Scenario | Solution  | 
@@ -2072,7 +1775,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Analyze storage access patterns and decide the right storage class for my data|Use Intelligent Tiering. <BR/> Use Storage Class Analysis reports to get an analysis.|
 |Move data automatically between storage classes|Use Lifecycle Rules|
 |Remove objects from buckets after a specified time period|Use Lifecycle Rules and configure Expiration policy|
-
 
 ## Amazon S3 Performance
 ![](/images/aws/00-icons/s3.png)
@@ -2087,7 +1789,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - **Transfer acceleration**
 	- Enable fast, easy and secure transfers of files to and from your bucket
 
-
 ## Amazon S3 Scenarios - Performance
 
 | Scenario | Solution  | 
@@ -2097,7 +1798,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Get part of the object | Use **Byte-Range Fetches** - Range HTTP header in GET Object request <BR/> Recommended: GET them in the same part sizes used in multipart upload |
 |Is this recommended: <BR/> EC2 (Region A) <-> S3 bucket (Region B) | No. **Same region recommended**. <BR/>Reduce network latency and data transfer costs|
 
-
 ## Amazon S3 Scenarios - Features
 
 | Scenario | Solution  | 
@@ -2106,8 +1806,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Create an inventory of objects in S3 bucket|Use **S3 inventory report** |
 |I want to change object metadata or manage tags or ACL or invoke Lambda function for billions of objects stored in a single S3 bucket|Generate **S3 inventory report** <BR/> Perform **S3 Batch Operations** using the report|
 |Need S3 Bucket (or Object) Access Logs|Enable **S3 Server Access Logs** (default: off). Configure the bucket to use and a prefix (logs/). |
-
-
 
 # S3 Glacier
 
@@ -2125,7 +1823,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - Cannot upload objects to Glacier using Management Console
 	- Use REST API, AWS CLI, AWS SDK
 
-
 ## Amazon S3 vs S3 Glacier
  
 | Feature |Amazon S3 | S3 Glacier | 
@@ -2137,7 +1834,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Management Console|Almost all bucket and object operations supported|Only vault operations are supported. You cannot upload/delete/update archives.|
 |Encryption|Optional| Mandatory using AWS managed keys and AES-256. <BR/>You can use client side encryption on top of this.|
 |WORM Write Once Read Many Times| Enable Object Lock Policy|Enable Vault lock policy| 
-
 
 ## Retrieving archives from S3 Glacier
 ![](/images/aws/00-icons/glacier.png)
@@ -2155,10 +1851,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 		- Standard retrieval (upto 12 hours)
 		- Bulk retrieval (upto 48 hours)
 
-
-
 # IAM - Fundamentals
-
 
 ## Typical identity management in the cloud
 
@@ -2170,7 +1863,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - How do you configure resources they can access? 
 - How can you configure what actions to allow?
 - In AWS, *Identity and Access Management (IAM)* provides this service
-
 
 ## AWS Identity and Access Management (IAM)
 
@@ -2187,7 +1879,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 		- from a specific IP address
 		- during a specific time window
 
-
 ## Important IAM Concepts
 
 ![](/images/aws/iam-overview.png) 
@@ -2201,7 +1892,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- **AWS managed policies** - Standalone policy predefined by AWS
 	- **Customer managed policies** - Standalone policy created by you
 	- **Inline policies** - Directly embedded into a user, group or role
-
 
 ## AWS IAM Policies - Authorization
 
@@ -2224,7 +1914,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Condition - Are there any restrictions on IP address ranges or time intervals?
 - Example above: AWS Managed Policy : AdministratorAccess
 
-
 ## AWS Managed Policy : AmazonS3ReadOnlyAccess
 ```
 {
@@ -2241,7 +1930,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
     ]
 }
 ```
-
 
 ## Customer Managed Policy : ReadSpecificS3Bucket
 
@@ -2262,7 +1950,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 }
 ```
 
-
 ## IAM Scenarios
 
 | Scenario | User/Role  | Recommendation|
@@ -2272,9 +1959,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |EC2 instance talks with Amazon S3 or a database|IAM role|&nbsp;|
 |Cross Account Access|IAM role|&nbsp;|
 
-
 ## Instance Profile
-
 
 ![](/images/aws/00-icons/ec2instance.png)
 ![](/images/arrow.png)
@@ -2288,7 +1973,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Explicitly manage Instance Profiles - CreateInstanceProfile etc
 - (REMEMBER) Instance profile is a simple container for IAM Role
 
-
 ## IAM Role Use case 1 : EC2 talking with S3
 ![](/images/aws/00-icons/ec2instance.png) 
 ![](/images/arrow.png) 
@@ -2297,7 +1981,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - Assign IAM role to EC2 instance
 - No need to store credentials in config files
 - No need for rotation of keys
-
 
 ## IAM Role Use case 2: Cross Account Access
 
@@ -2316,7 +1999,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Background: Call is made to AWS Security Token Service (AWS STS) AssumeRole API for the ProdS3AccessRole role
 	- Gets access!
 
-
 ## IAM  - Corporate Directory Federation
 ![](/images/aws/iam2.png)
 
@@ -2324,7 +2006,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- For SAML2.0 compliant identity systems, establish a trust relationship with IAM
 	- For enterprise using Microsoft AD (Active Directory), use AWS Directory Service to establish trust
 	- Otherwise, set up a custom proxy server to translate user identities from enterprise to IAM roles
-
 
 ## IAM  - Web Identity Federation
 
@@ -2334,14 +2015,12 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - Configure Role to use Web Identity as trusted entity 
 	- Authentication tokens exchanged using **STS AssumeRoleWithWebIdentity** API
 
-
 ## Identity-based and Resource-based policies
 ![](/images/aws/01-S3/2-S3-AccessPolicies.png)
 - By default only account owner has access to a S3 bucket
 - Access policies enable other users to access S3 buckets and objects:
 	- **Identity-based policies** : Attached to an IAM user, group, or role
 	- **Resource-based policies and ACLs** : Attached to a resource - S3 buckets, Amazon SQS queues, and AWS KMS keys  
-
 
 ## Identity-based and Resource-based policies
  
@@ -2355,7 +2034,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Supported by|All services|Subset of services - S3, SQS, SNS, KMS etc|
 |Policy Conditions|When (dates),  Where(CIDR blocks), Enforcing MFA|When (dates),  Where(CIDR blocks), Is SSL Mandatory?|
 
-
 ## IAM Scenario Questions
 |Scenario|Solution|
 |--|:--|
@@ -2363,7 +2041,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |How are multiple permissions resolved in IAM Policy| If there is an explicit deny - return deny <BR/> If there is no explicit deny and there is an explicit allow - allow<BR/> If there is no explicit allow or deny - deny|
 |Which region are IAM users created in | IAM Users are **global entities**. <BR/>Can use AWS services in any geographic region|
 |What is the difference between <BR/>IAM user, Federated user and Web identity federation user|**IAM users** - created and maintained in your AWS account <BR/> **Federated users** - managed outside of AWS - corporate directory <BR/> **Web identity federation users** - Amazon Cognito, Amazon, Google, or any OpenID Connect-compatible provider Accounts |
-
 
 ## Authentication with IAM  - Remember
 - IAM Users identities exist until they are **explicitly deleted**
@@ -2376,7 +2053,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - An IAM role is **NOT** associated with an IAM user. 
 - Am IAM user can assume an IAM role temporarily.
 
-
 ## Authentication with IAM  - Remember
 - An IAM role is **NOT associated** with long-term credentials 
 	- When a user, a resource (For example, an EC2 instance) or an application assumes a Role, it is provided with temporary credentials
@@ -2387,10 +2063,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 		- Hardware device - Gemalto
 		- Virtual device - An app on a smart phone
 
-
-
 # Data Encryption <BR/> KMS & Cloud HSM
-
 
 ## Data States
 
@@ -2411,7 +2084,6 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - **Data in use**: Active data processed in a non-persistent state
 	- Example: Data in your RAM
 
-
 ## Encryption
 - If you store data as is, what would happen if an **unauthorized entity gets access** to it?
 	- Imagine losing an unencrypted hard disk
@@ -2423,14 +2095,12 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - Is it sufficient if you encrypt data at rest? 
 	- **No**. **Encrypt data in transit** - between  application to database as well.
 
-
 ## Symmetric Key Encryption
 ![](/images/aws/iam/symetrickey.png)
 - Symmetric encryption algorithms use the **same key for encryption and decryption**
 - Key Factor 1: Choose the **right encryption algorithm**
 - Key Factor 2: How do we **secure the encryption key**?
 - Key Factor 3: How do we **share the encryption key**?
-
 
 ## Asymmetric Key Encryption
 
@@ -2444,7 +2114,6 @@ https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_(colored).png
 	- Will somebody not figure out private key using the public key?
 - How do you create Asymmetric Keys?
 
-
 ## KMS and Cloud HSM
 
 ![](/images/aws/00-icons/kms.png)
@@ -2454,7 +2123,6 @@ https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_(colored).png
 - AWS provides two important services - **KMS** and **Cloud HSM**
 	- Manage your keys
 	- Perform encryption and decryption
-
 
 ## AWS KMS
 
@@ -2468,7 +2136,6 @@ https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_(colored).png
 	- No need to re-encrypt previously encrypted data (versions of master key are maintained)
 - **Schedule key deletion** to verify if the key is used
 	- Mandatory minimum wait period of 7 days (max-30 days)
-
 
 ## Server Side Encryption with KMS
 
@@ -2484,7 +2151,6 @@ https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_(colored).png
 	- **Encryption of data key** - **KMS** using CMK
 	- **Encryption of data** - AWS Service - **Amazon S3** using data key
 
-
 ## Envelope Encryption
 ![](/images/aws/kms-key-hierarchy-master.png) 
 
@@ -2495,9 +2161,7 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Master key **never leaves KMS**
 - KMS **encrypts small pieces of data** (usually data keys) less than 4 KB
 
-
 ## Decryption of data using KMS
-
 
 ![](/images/aws/00-icons/s3.png) 
 ![](/images/arrowbi.png) 
@@ -2512,9 +2176,7 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- (Optional) You can associate a key/value map called **encryption context** with any cryptographic operation
 	- (TIP) If encryption context is different, decryption will NOT succeed
 
-
 ## AWS CloudHSM
-
 
 ![](/images/aws/00-icons/cloudhsm.png)
 - Managed (highly available & auto scaling) **dedicated** **single-tenant** Hardware Security Module(HSM) for regulatory compliance
@@ -2524,7 +2186,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- In KMS, AWS can access your master keys
 	- Be ultra safe with your keys when you are using CloudHSM
 	- **(Recommendation)** Use two or more HSMs in separate AZs in a production cluster
-
 
 ## AWS CloudHSM
 
@@ -2543,7 +2204,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Digital Rights Management
 	- TDE for Oracle databases
 
-
 ## Server Side Encryption
  
 ![](/images/aws/01-S3/3-server-side-encryption.png)
@@ -2552,7 +2212,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - Recommended to **use HTTPS endpoints** to ensure encryption of data in transit
 	- All AWS services (including S3) provides HTTPS endpoints
 	- Encryption is optional with S3 but highly recommended in flight and at rest
-
 
 ## Server Side Encryption - S3
 
@@ -2574,7 +2233,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- S3 performs encryption and decryption without storing the key
 	- HTTPS is mandatory
 
-
 ## Client Side Encryption
  
 ![](/images/aws/01-S3/4-client-side-encryption.png)
@@ -2583,10 +2241,7 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - AWS service stores data as is
 - For Amazon S3, you can use a client library (Amazon S3 Encryption Client)
 
-
-
 # Storage Fundamentals
-
 
 ## Storage Types - Block Storage and File Storage
 ![](/images/aws/001-basic-drawings/01-storage-types.png)
@@ -2594,7 +2249,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- **Block Storage**
 - You've created a file share to share a set of files with your colleagues in a enterprise. What type of storage are you using?
 	- **File Storage**
-
 
 ## Block Storage
 
@@ -2607,14 +2261,12 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- **Storage Area Network (SAN)** - High-speed network connecting a pool of storage devices
 		- Used by Databases - Oracle and Microsoft SQL Server
 
-
 ## File Storage	
 
 ![](/images/aws/001-basic-drawings/02-storage-types-file.png)
 - Media workflows need huge shared storage for supporting processes like video editing
 - Enterprise users need a quick way to share files in a secure and organized way
 - These file shares are shared by several virtual servers
-
 
 ## AWS - Block Storage and File Storage
 ![](/images/aws/00-icons/efs.png)
@@ -2626,7 +2278,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Amazon EFS (for Linux instances)
 	- Amazon FSx Windows File Servers 
 	- Amazon FSx for Lustre (high performance use cases)
-
 
 ## EC2 - Block Storage
 
@@ -2641,8 +2292,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- More durable
 	- Lifecycle NOT tied to EC2 instance
 
-
-
 ## Instance Store
 
 ![](/images/aws/001-basic-drawings/03-storage-types.png)
@@ -2654,7 +2303,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - **Lifecycle is tied** to EC2 instance
 - Data is **NOT lost** on instance reboot
 - Only some of the EC2 instance types support **Instance Store**
-
 
 ## Instance Store - Advantages and Disadvantages
 
@@ -2671,7 +2319,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Fixed size based on instance type
 	- You cannot detach and attach it to another EC2 instance
 
-
 ## Amazon Elastic Block Store (EBS)
 
 ![](/images/aws/001-basic-drawings/04-ebs.png)
@@ -2685,7 +2332,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - *99.999% Availability* & replicated within the same AZ
 - **Use case** : Run your custom database
 
-
 ## Amazon EBS vs Instance Store
 |Feature|Elastic Block Store (EBS)|Instance Store|
 |--|:--|:--|
@@ -2698,7 +2344,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 |Use case| Permanent storage| Ephemeral storage|
 |Boot up time| Low| High|
 
-
 ## Elastic Block Store - Hands-on
 
 ![](/images/aws/00-icons/ec2instance.png)
@@ -2709,8 +2354,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Instance A in AZ A - Root volume
 	- Instance B in AZ A - Root volume and Secondary volume
 	- Instance C in AZ B - Root volume
-
-
 
 ## Hard Disk Drive vs Solid State Drive
 
@@ -2724,7 +2367,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 |Recommended for| Large streaming or big data workloads| Transactional workloads|
 |Cost| Low| Expensive|
 |Boot Volumes|Not Recommended| Recommended|
-
 
 ## Amazon Elastic Block Store (EBS) SSD Types
 
@@ -2740,7 +2382,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - Delivers consistent performance for **random and sequential** access
 - **Use cases** : large relational or NoSQL databases
 
-
 ## Amazon Elastic Block Store (EBS) HDD Types
 
 ![](/images/aws/00-icons/ebs.png) 
@@ -2753,7 +2394,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 - Lowest Cost
 - **Use cases** : infrequent data access - very low transaction databases
 
-
 ## Amazon Elastic Block Store (EBS) Types
 |                       | Provisioned IOPS SSD | General Purpose SSD | Throughput Optimized HDD | Cold HDD |
 |--|:--|:--|:--|:--|
@@ -2761,7 +2401,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 | Max IOPS/Volume       | 64,000               | 16,000              | 500                      | 250            |
 | Max Throughput/Volume | 1,000 MB/s           | 250 MB/s            | 500 MB/s                 | 250 MB/s       |
 | Boot Volume | ✓          | ✓           |         X        |   X     |
-
 
 ## Amazon Elastic Block Store (EBS)
 ![](/images/aws/00-icons/volume.png)
@@ -2777,7 +2416,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- Snapshots cannot be accessed directly from S3
 	- Use EC2 APIs to restore them to EBS volumes
 
-
 ## Amazon EBS Snapshots
 - Snapshots are **incremental**
 	- BUT you don't lose data by deleting older snapshots
@@ -2790,7 +2428,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 	- To use in other regions, copy it
 - **Fast Snapshot Restore** speeds up the process of creating volumes from snapshots
 	- **Eliminates need for pre-warming** volumes created from snapshots
-
 
 ## Amazon EBS Encryption
 ![](/images/aws/00-icons/ebs.png)
@@ -2805,7 +2442,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 		- Between EC2 instances and EBS volume
 		- Between EBS volume and EBS snapshots
 
-
 ## Faster I/O performance between EC2 and EBS
 
 ![](/images/aws/00-icons/ec2.png)
@@ -2819,7 +2455,6 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 |**Enhanced networking** through Elastic Network Adapter (ENA)|Increases throughput(PPS) <BR/>Needs custom configuration|
 |Use **Elastic Fabric Adapter (EFA)**|Available on select instances <BR/>NOT available on Windows EC2 instances<BR/> EFA = ENA + OS-bypass<BR/>**Ideal for** High Performance Computing (HPC) applications like weather modeling|
 
-
 ## EC2 Instance Lifecycle
 
 ![](/images/aws/instance_lifecycle.png)
@@ -2831,8 +2466,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- Provides **quick restarts** for use cases with either long running processes or slow boot up times
 - Hibernating can be done for a **max of 60 days**
 
-
-
 ## RAID
 ![](/images/aws/001-basic-drawings/05-raid-0.png)
 - Need **higher durability** than one EBS volume? 
@@ -2842,7 +2475,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- Use **RAID 0** structure
 	- Double the storage, IOPS and throughput BUT data lost even if one disk fails
 	- Use this when **I/O performance is more important than fault tolerance**. Ex: Replicated Database
-
 
 ## EBS Snapshots and AMIs
 ![](/images/aws/00-icons/ebs.png)
@@ -2857,7 +2489,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- AMI from EC2 instance and vice versa
 	- AMI from root EBS volume snapshots
 
-
 ## Using an AMI from different AWS account or region
 ![](/images/aws/00-icons/ami.png)
 ![](/images/arrow.png)
@@ -2871,9 +2502,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 		- Create an EC2 instances from AMI
 		- Create a new AMI from EC2 instance
 
-
 ## Amazon EBS Scenarios - with EC2
-
 
 | Scenario | Solution  | 
 |--|:--|
@@ -2885,9 +2514,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 |How do you ensure that an EBS volume is deleted when EC2 instance is terminated?|Enable **Delete on Termination** on EC2 instance|
 |How do you retain EBS volume even if an EBS backed EC2 instance fails?|Remember : On termination of EC2 instance all data on root volume is lost (even if it is EBS backed) <BR/>Detach the EBS volume before terminating the instance<BR/>Recover data by connecting the EBS volume to another EC2 instance|
 
-
 ## Amazon EBS Scenarios - Snapshots
-
 
 | Scenario | Solution  | 
 |--|:--|
@@ -2896,7 +2523,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 |What is the lowest cost option to maintain snapshots with EBS?|Store just the latest snapshot. Other snapshots can be deleted without a problem|
 |How do you encrypt an unencrypted EBS volume?|Take a snapshot <BR/> Encrypt the snapshot <BR/> Create new encrypted volume from snapshot|
 |How do you automate the complete lifecycle (creation, retention, and deletion) of Amazon EBS snapshots?|Use **Amazon Data Lifecycle Manager** <BR/> Reduces costs and maintenance effort|
-
 
 ## Amazon EBS - Summary
 
@@ -2913,8 +2539,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- **Provisioned IOPS SSD**: Transactional workloads needing very high IOPS
 - EBS volume <-> Snapshot -> AMI
 
-
-
 ## Amazon EFS
 
 ![](/images/aws/001-basic-drawings/efs.png)
@@ -2928,7 +2552,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- Use **Max I/O Mode** for higher throughput (with a small increase in latency for all file operations)
 - **Use cases** :  home directories, file share, media workflows and content management
 
-
 ## Amazon FSx for Lustre
 - File system **optimized for performance**
 	- For high performance computing (HPC), machine learning, and media processing use cases
@@ -2939,7 +2562,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 	- Connect Linux-based applications without having to make any changes
 - File system data is automatically encrypted at-rest and in-transit
 
-
 ## Amazon FSx Windows File Servers
 - Fully managed Windows file servers 
 - Uses Service Message Block (SMB) protocol
@@ -2949,7 +2571,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 - File system data is automatically encrypted at rest and in transit.
 - (Remember) All File Sharing options are accessible on AWS or on premises
 
-
 ## Review of storage options
 | Type    | Examples                            | Latency         | Throughput | Shareable |
 |--|--|--|--|
@@ -2958,10 +2579,8 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 |  Object | S3                                  |  Low            | Web Scale | Yes|
 |  Archival| Glacier                            | Minutes to hours| High | No|
 
-
 Note:
 Performance Pillar 9
-
 
 ## AWS Storage Gateway
 
@@ -2975,7 +2594,6 @@ Performance Pillar 9
 	- AWS Storage Volume Gateway
 - VM image with AWS Storage Gateway software deployed on-premises
 
-
 ## AWS Storage File Gateway
 
 ![](/images/aws/storage-gateway-file-gateway.png)
@@ -2987,7 +2605,6 @@ Performance Pillar 9
 	- Files **stored** in **Amazon S3 & Glacier**
 	- Supports **Network File System (NFS)** and **Server Message Block (SMB)**
 
-
 ## AWS Storage File Gateway
 
 ![](/images/aws/01-S3/6-FileGateway.png)
@@ -2998,7 +2615,6 @@ Performance Pillar 9
 - Benefits from **S3 integrations** 
 	- Data analytics and machine learning applications using Amazon EMR or Amazon Athena
 - Each file gateway supports **up to 10 bucket shares**
-
 
 ## AWS Storage Tape Gateway
 
@@ -3013,7 +2629,6 @@ Performance Pillar 9
 - Use **S3 lifecycle management**
 	- move data to S3 Glacier and S3 Glacier Deep Archive
 
-
 ## AWS Storage Volume Gateway
 
 ![](/images/aws/01-S3/7-volume-gateway.png)
@@ -3025,7 +2640,6 @@ Performance Pillar 9
 - Use cases
 	- Backup and disaster recovery
 	- Migration of application data
-
 
 ## AWS Storage Volume Gateway - Cached and Stored
 
@@ -3042,7 +2656,6 @@ Performance Pillar 9
 	- Stored as EBS snapshots
 		- For disaster recovery, restore to EBS volumes
 
-
 ## AWS Storage Gateway - Summary
 - Key to look for : **Hybrid storage** (cloud + on premise)
 	- File share (NFS or SMB) + Looking for S3 features and integrations => **AWS Storage File Gateway**
@@ -3053,10 +2666,7 @@ Performance Pillar 9
 - Needs additional setup on-premises
 	- **VM image** with AWS Storage Gateway **software** deployed on-premises or on EC2 instance
 
-
-
 # Database Fundamentals
-
 
 ## Databases Primer
 
@@ -3071,7 +2681,6 @@ Performance Pillar 9
 	- Transactions etc
 - Let's get started on a **simple journey** to understand these
 
-
 ## Database - Getting Started
 
 ![](/images/aws/rds/1-single-db.png)
@@ -3079,7 +2688,6 @@ Performance Pillar 9
 - Let's consider some challenges:
 	- **Challenge 1**: Your database will go down if the data center crashes or the server storage fails
 	- **Challenge 2**: You will lose data if the database crashes
-
 
 ## Database - Snapshots
 
@@ -3091,7 +2699,6 @@ Performance Pillar 9
 		- You can setup database from latest snapshot. But depending on when failure occurs you can lose up to an hour of data
 	- **Challenge 3**(NEW): Database will be slow when you take snapshots
 
-
 ## Database - Transaction Logs
 
 ![](/images/aws/rds/3-single-db-snapshot-transaction.png)
@@ -3101,7 +2708,6 @@ Performance Pillar 9
 	- **Challenge 2** (SOLVED): You will lose data if the database crashes
 		- You can setup database from latest snapshot and apply transaction logs
 	- **Challenge 3**: Database will be slow when you take snapshots
-
 
 ## Database - Add a Standby
 
@@ -3115,8 +2721,6 @@ Performance Pillar 9
 		- Take snapshots from standby. 
 		- Applications connecting to master will get good performance always
 
-
-
 ## Availability and Durability
 - **Availability**
 	- Will I be able to access my data now and when I need it?
@@ -3129,14 +2733,12 @@ Performance Pillar 9
 - Typically, an **availability of four 9's** is considered very good
 - Typically, a **durability of eleven 9's** is considered very good
 
-
 ## Availability
 | Availability | Downtime (in a month)  | Comment |
 |--|--|--|
 | 99.95% | 22 minutes||
 | 99.99% (4 9's)| 4 and 1/2 minutes | Typically online apps aim for 99.99% (4 9's) availability|
 | 99.999% (5 9's) | 26 seconds| Achieving 5 9's availability is tough|
-
 
 ## Durability
 
@@ -3147,7 +2749,6 @@ Performance Pillar 9
 - Why should durability be high?
 	- Because **we hate losing data**
 	- Once we lose data, it is gone
-
 
 ## Increasing Availability and Durability of Databases
 
@@ -3163,7 +2764,6 @@ Performance Pillar 9
 - **Replicating data** comes with its own challenges!
 	- We will talk about them a little later
 
-
 ## Database Terminology : RTO and RPO
 
 ![](/images/aws/00-icons/database.png) 
@@ -3178,13 +2778,11 @@ Performance Pillar 9
 - Achieving **minimum RTO and RPO is expensive** 
 - **Trade-off** based on the criticality of the data
 
-
 ## Question - RTO and RPO
 
 - You are running an EC2 instance storing its data on a EBS. You are taking EBS snapshots every 48 hours. If the EC2 instance crashes, you can manually bring it back up in 45 minutes from the EBS snapshot. What is your RTO and RPO?
 	- RTO - 45 minutes
 	- RPO - 48 hours
-
 
 ## Achieving RTO and RPO - Failover Examples
 
@@ -3195,8 +2793,6 @@ Performance Pillar 9
 | Very small data loss (RPO - 1 minute) <BR/> BUT I can tolerate some downtimes (RTO - 15 minutes)| **Warm standby** - Automatically synchronize data <BR/> Have a standby with minimum infrastructure <BR/> Scale it up when a failure happens|
 | Data is critical (RPO - 1 minute) but I can tolerate downtime of a few hours (RTO - few hours)| Create regular data **snapshots and transaction logs** <BR/> Create database from snapshots and transactions logs when a failure happens|
 | Data can be lost without a problem (for example: cached data)|Failover to a completely new server|
-
-
 
 ## (New Scenario) Reporting and Analytics Applications
 
@@ -3209,7 +2805,6 @@ Performance Pillar 9
 	- **Create a database cluster** - typically database clusters are expensive to setup
 	- **Create read replicas** - Run read only applications against read replicas
 
-
 ## Database - Read Replicas
 
 ![](/images/aws/rds/6-sep-reporting-database-application.png)
@@ -3219,7 +2814,6 @@ Performance Pillar 9
 - Upgrade read replica to master database (supported by some databases)
 - Create read replicas **in multiple regions**
 - **Take snapshots** from read replicas
-
 
 ## Consistency
 
@@ -3233,7 +2827,6 @@ Performance Pillar 9
 	- Examples : Social Media Posts - Facebook status messages, Twitter tweets, Linked in posts etc
 - **Read-after-Write consistency** - Inserts are immediately available. Updates and deletes are eventually consistent
 	- Amazon S3 provides read-after-write consistency
-
 
 ## Database Categories
 
@@ -3252,7 +2845,6 @@ Performance Pillar 9
 	- **How much data** will be stored? (MBs or GBs or TBs or PBs)
 	- and a lot more...
 
-
 ## Relational Databases
 
 ![Database](./images/aws/relational-schema.png)
@@ -3263,8 +2855,6 @@ Performance Pillar 9
 - Used for 
 	- OLTP (Online Transaction Processing) use cases and
 	- OLAP (Online Analytics Processing) use cases
-
-
 
 ## Relational Database - OLTP (Online Transaction Processing)
 
@@ -3279,7 +2869,6 @@ Performance Pillar 9
 	- **Amazon RDS**
 	- Supports Amazon Aurora, PostgreSQL, MySQL, MariaDB (Enhanced MySQL), Oracle Database, and SQL Server
 
-
 ## Relational Database - OLAP (Online Analytics Processing)
 
 ![](/images/aws/00-icons/redshift.png) 
@@ -3290,7 +2879,6 @@ Performance Pillar 9
 - Recommended AWS Managed Service 
 	- **Amazon Redshift**
 	- **Petabyte-scale** distributed data ware house based on PostgreSQL
-
 
 ## Relational Databases - OLAP vs OLTP
 
@@ -3308,7 +2896,6 @@ Performance Pillar 9
 	- **Distribute data** - one table in multiple cluster nodes 
 	- **Execute single query across multiple nodes** - Complex queries can be executed efficiently
 
-
 ## Document Database
 
 ![](/images/aws/database-document.png)
@@ -3322,8 +2909,6 @@ Performance Pillar 9
 - Recommended AWS Managed Service 
 	- **Amazon DynamoDB**
 
-
-
 ## Key-value
 ![Database](./images/aws/database-key-value.png)
 ![Database](./images/aws/database-session-store.png)
@@ -3333,13 +2918,11 @@ Performance Pillar 9
 - Recommended AWS Managed Service - **Amazon DynamoDB** again
 - **Use cases** : shopping carts, session stores, gaming applications and very high traffic web apps
 
-
 ## Graph
 ![Database](./images/aws/graph.png)
 - **Store and navigate** data with complex relationships
 - **Use cases** : Social Networking Data (Twitter, Facebook), Fraud Detection
 - Recommended AWS Managed Service - **Amazon Neptune**
-
 
 ## In-memory Databases
 
@@ -3353,7 +2936,6 @@ Performance Pillar 9
 		- Memcached is recommended for simple caches
 - **Use cases** : Caching, session management, gaming leader boards, geospatial applications
 
-
 ## Databases - Summary
 
 | Database Type | AWS Service  | Description |
@@ -3362,13 +2944,11 @@ Performance Pillar 9
 |Relational OLAP databases|Amazon Redshift|Columnar storage <BR/>Reporting, analytics & intelligence apps needing **predefined schema**|
 |Document & Key Databases|Amazon DynamoDB|Apps needing **quickly evolving** semi structured data (**schema-less**) <BR/> Scale to **terabytes of data** with **millisecond responses** upto **millions of TPS**<BR/>Content management, catalogs, user profiles, shopping carts, session stores and gaming applications|
 
-
 ## Databases - Summary
 | Database Type | AWS Service  | Description |
 |--|:--|:--|
 |Graph Databases|Amazon Neptune|Store and navigate data with **complex relationships**<BR/>Social Networking Data (Twitter, Facebook), Fraud Detection|
 |In memory databases/caches|Amazon ElastiCache|Applications needing **microsecond** responses<BR/>**Redis** - persistent data<BR/>**Memcached** - simple caches|
-
 
 ## Databases - Questions
 
@@ -3379,7 +2959,6 @@ Performance Pillar 9
 |Very high consistency of data is needed while processing thousands of transactions per second| RDS |
 |Cache data from database for a web application| Amazon ElastiCache |
 |Relational database for analytics processing of petabytes of data| Amazon Redshift |
-
 
 ## Amazon RDS (Relational Database Service)
 
@@ -3395,7 +2974,6 @@ Performance Pillar 9
 	- Oracle Database
 	- Microsoft SQL Server
 
-
 ## Amazon RDS - Features
 
 ![](/images/aws/00-icons/rds.png) 
@@ -3408,7 +2986,6 @@ Performance Pillar 9
 - Storage auto scaling (up to a configured limit)
 - Automated backups (restore to point in time)
 - Manual snapshots
-
 
 ## Amazon RDS - You vs AWS
 
@@ -3427,7 +3004,6 @@ Performance Pillar 9
 	- SSH into database EC2 instances or setup custom software (NOT ALLOWED)
 	- Install OS or DB patches. RDS takes care of them (NOT ALLOWED)
 
-
 ## Multi-AZ Deployments
 
 ![](/images/aws/rds/7-multi-az-deployment.png)
@@ -3440,7 +3016,6 @@ Performance Pillar 9
 	- Promote standby to primary
 	- Perform maintenance on (old) primary
 - **Avoid I/O suspension** when data is backed up (snapshots are taken from standby)
-
 
 ## Multi-AZ Deployments
 
@@ -3456,7 +3031,6 @@ Performance Pillar 9
 	- Database performance issues (long running queries or deadlocks) will NOT cause a failover
 - (Good Practice) Use DNS name of database in applications configuration
 
-
 ## Read Replicas
 
 ![](/images/aws/rds/8-read-replica-deployment.png)
@@ -3469,7 +3043,6 @@ Performance Pillar 9
 	- For higher consistency, read from master
 - Need to be **explicitly deleted** (Not deleted when database is deleted)
 
-
 ## Read Replicas - Few Tips
 - (Mandatory) Enable automatic backups before you can create read replicas
 	- Set Backup Retention period to a value other than 0
@@ -3479,7 +3052,6 @@ Performance Pillar 9
 	- Aurora - 15
 	- SQL Server does not support read replicas
 
-
 ## Multi-AZ vs Multi-Region vs Read replicas
 
 |Feature|Multi-AZ deployments|Multi-Region Read Replicas|Multi-AZ Read replicas|
@@ -3487,7 +3059,6 @@ Performance Pillar 9
 |Main purpose|High availability|Disaster recovery and local performance|Scalability|
 |Replication|Synchronous (except for Aurora - Asynchronous)|Asynchronous|Asynchronous|
 |Active|Only master (For Aurora - all)|All read replicas|All read replicas|
-
 
 ## Amazon Aurora
 
@@ -3523,7 +3094,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 	- Configure Read Replicas
 	- For Aurora  (Multi-master, Writer with multiple readers etc)
 
-
 ## RDS - Operations
 
 ![](/images/aws/00-icons/rds.png) 
@@ -3542,7 +3112,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 	- If you do not configure a 30 minute backup window, RDS chooses one randomly
 - Achieve RPO of up to 5 minutes
 
-
 ## RDS - Security and Encryption
 
 ![](/images/aws/00-icons/kms.png)
@@ -3560,14 +3129,12 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 - Data In-flight Encryption
 	- Using SSL certificates
 
-
 ## RDS - Costs - Key Elements
 - **DB instance hours** - How many hours is the DB instance running? 
 - **Storage (per GB per month)** - How much storage have you provisioned for your DB instance?
 - **Provisioned IOPS per month** - If you are using Amazon RDS Provisioned IOPS (SSD) Storage
 - **Backups and snapshot storage** (across multi AZ) - More backups, More snapshots => More cost
 - **Data transfer costs**
-
 
 ## Amazon RDS - When to use?
 
@@ -3584,7 +3151,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 	- When you need heavy customizations for your database or need access to underlying EC2 instances
 		- Go for a custom database installation
 
-
 ## RDS - Scenarios
 
 | Scenario | Solution  | 
@@ -3593,7 +3159,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 |You want to migrate data from an on-premise database to cloud database of the same type|Consider using AWS Database Migration Service|
 |You want to migrate data from one database engine to another (Example : Microsoft SQL Server to Amazon Aurora)|Consider using AWS Schema Conversion Tool|
 |What are retained when you delete a RDS database instance?|All automatic backups are deleted<BR/>All manual snapshots are retained (until explicit deletion)<BR/>(Optional) Take a final snapshot|
-
 
 ## RDS - Scenarios
 
@@ -3605,7 +3170,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 |Are you billed if you stop your DB instance? |You are billed for storage, IOPS, backups and snapshots. You are NOT billed for DB instance hours|
 |I will need RDS for at least one year. How can I reduce costs?|Use Amazon RDS reserved instances.|
 |Efficiently manage database connections| Use Amazon RDS Proxy <BR/> Sits between client applications (including lambdas) and RDS|
-
 
 ## Amazon DynamoDB 
 
@@ -3622,8 +3186,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 - Provides an expensive serverless mode
 - Use cases: User profiles, shopping carts, high volume read write applications
 
-
-
 ## DynamoDB Tables
 
 ![](/images/aws/document-database-example.png)
@@ -3635,9 +3197,7 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 - Max 400 KB per item in table
 	- Use S3 for large objects and DynamoDB for smaller objects
 
-
 ## DynamoDB - Keys
-
 
 ![](/images/aws/rds-diagrams/xx-rds-dynamodb-partition.png)
 
@@ -3647,7 +3207,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 - Primary key should be unique
 - Partition key decides the partition (input to hash function)
 - Same partition key items stored together (sorted by sort key)
-
 
 ## DynamoDB - Indexes
 
@@ -3677,7 +3236,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 	- Supports paging above 1 MB
 	- Filter items using expressions
 
-
 ## DynamoDB Consistency Levels
 
 ![](/images/aws/00-icons/dynamodb.png) 
@@ -3689,8 +3247,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 - Supports transactions
 	- All-or-nothing changes to multiple items both within and across tables
 	- Twice the cost
-
-
 
 ## DynamoDB Read/Write Capacity Modes
 
@@ -3708,9 +3264,7 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 		- Workloads are really spiky causing low utilization of Provisioned Capacity OR
 		- Usage is very low (for example, in test environments) making manual adjustments expensive
 
-
 ## DynamoDB Read/Write Capacity Used
-
 
 ![](/images/aws/00-icons/dynamodb.png) 
 - Capacity used depends on size of item, read consistency, transactions etc
@@ -3723,9 +3277,7 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 Note:
 - RCU vs WCU (RCU is cheaper than WCU. So, it is cheaper for read workloads.)
 
-
 ## DynamoDB - Operations
-
 
 ![](/images/aws/00-icons/dynamodb.png) 
 
@@ -3734,7 +3286,6 @@ Note:
 - Migrate data from RDS or MongoDB to DynamoDB - AWS Database Migration Service
 - (Feature) Enable point-in-time recovery (max 35 days)
 - Use Time to Live (TTL) to automatically expire items
-
 
 ## DynamoDB - IAM and Encryption
 
@@ -3750,7 +3301,6 @@ Note:
 		- AmazonDynamoDBFullAccess etc
 	- Fine-grained control at the individual item level
 
-
 ##  DynamoDB vs RDS
 
 |Feature  | DynamoDB  | RDS|
@@ -3762,7 +3312,6 @@ Note:
 |Scaling| No upper limits| 64 TB |
 |Consistency| Typically lower consistency | Typically higher consistency|
 
-
 ## DynamoDB Accelerator (DAX)
 ![](/images/aws/03-serverless/07-lamdba-dax.png)
 - In-memory caching for DynamoDB providing microsecond response times
@@ -3773,8 +3322,6 @@ Note:
 	- If you need strongly consistent reads or 
 	- Your application is write-intensive with very few reads
 
-
-
 ## Amazon ElastiCache 
 
 ![](/images/aws/00-icons/elasticache.png) 
@@ -3783,7 +3330,6 @@ Note:
 - Two Options:
 	- Redis
 	- Memcached
-
 
 ## Amazon ElastiCache for Redis
 
@@ -3802,7 +3348,6 @@ Note:
 	- Geospatial Apps (Ride hailing, restaurant recommendations)
 	- Queues
 
-
 ## Amazon ElastiCache for Redis - Cluster
 
 ![](/images/aws/00-icons/elasticache.png) 
@@ -3815,7 +3360,6 @@ Note:
 	- If Multi-AZ replication group is enabled, read replica is promoted to primary
 	- DNS entry is updated
 
-
 ## ElastiCache Redis - Backup and Snapshot
 ![](/images/aws/00-icons/elasticache.png) 
 ![](/images/arrow.png)
@@ -3826,7 +3370,6 @@ Note:
 	- Configure backup window and 
 	- Days of backup you want to store
 - Manual snapshots are available until they are manually deleted
-
 
 ## Amazon ElastiCache for Memcached
 
@@ -3840,7 +3383,6 @@ Note:
 - Create upto 20 cache nodes
 - Use Auto Discovery to discover cache nodes
 
-
 ## Amazon ElastiCache for Memcached - Limitations
 
 ![](/images/aws/00-icons/elasticache.png) 
@@ -3850,9 +3392,7 @@ Note:
 	- When a node fails, all data in the node is lost
 	- Reduce impact of failure by using large number of small nodes
 
-
 ## ElastiCache Memcached vs Redis
-
 
 ![](/images/aws/00-icons/elasticache.png) 
 
@@ -3865,11 +3405,7 @@ Note:
 	- Read replicas and failover
 	- Encryption
 
-
-
-
 # CloudTrail, Config & CloudWatch
-
 
 ## AWS CloudTrail
 
@@ -3884,7 +3420,6 @@ Note:
 - Delivers log files to S3 and/or Amazon cloud watch logs log group ( S3 is default )
 - You can setup SNS notifications for log file delivery
 
-
 ## AWS Cloud Trail Types
 
 ![](/images/aws/00-icons/cloudtrail.png)
@@ -3895,7 +3430,6 @@ Note:
 	- Only events from one region
 	- Destination S3 bucket can be in any region
 
-
 ## AWS Cloud Trail - Good to know
 
 ![](/images/aws/00-icons/cloudtrail.png)
@@ -3903,7 +3437,6 @@ Note:
 - You can configure S3 Lifecycle rules to archive or delete log files
 - Supports log file integrity 
 	- You can prove that a log file has not been altered
-
 
 ## AWS Config
 
@@ -3923,8 +3456,6 @@ Note:
 - **Consistent rules and compliance** across AWS accounts:
 	- Group Config Rules and Remediation Actions into Conformance Packs
 
-
-
 ## Predefined Config Rule Examples (80+)
 
 ![](/images/aws/00-icons/config.png) 
@@ -3934,7 +3465,6 @@ Note:
 - **encrypted-volumes** - Are all EC2 instance attached EBS volumes encrypted?
 - **eip-attached** - Are all Elastic IP addresses used?
 - **restricted-ssh** - Checks whether security groups that are in use disallow unrestricted incoming SSH traffic
-
 
 ## AWS Config Rules
 
@@ -3947,7 +3477,6 @@ Note:
 	- No Free Tier
 	- More rules to check => More $$$$
 
-
 ## AWS Config + AWS CloudTrail
 
 ![](/images/aws/00-icons/config.png) 
@@ -3957,7 +3486,6 @@ Note:
 	- What did my AWS resource look like?
 - AWS CloudTrail 
 	- Who made an API call to modify this resource?
-
 
 ## Monitoring AWS with Amazon CloudWatch
 
@@ -3985,7 +3513,6 @@ Note:
 	- Or archive logs to S3 bucket (Typically involves a delay of 12 hours)
 	- Or stream real time to Amazon Elasticsearch Service (Amazon ES) cluster using CloudWatch Logs subscription
 
-
 ## Amazon CloudWatch Logs
 - **CloudWatch Logs Agent** 
 	- Installed on ec2 instances to move logs from servers to CloudWatch logs
@@ -3993,7 +3520,6 @@ Note:
 	- Write queries and get actionable insights from your logs
 - **CloudWatch Container Insights** 
 	- Monitor, troubleshoot, and set alarms for your containerized applications running in EKS, ECS and Fargate
-
 
 ## Amazon CloudWatch Alarms
 ![](/images/aws/00-icons/cloudwatchalarm.png)
@@ -4008,7 +3534,6 @@ Note:
 	- Amazon DynamoDB table throughput or 
 	- Your own custom metrics
 
-
 ## Amazon CloudWatch Alarms
 ![](/images/aws/00-icons/cloudwatchalarm.png)
 ![](/images/arrow.png)
@@ -4021,18 +3546,15 @@ Note:
 		- Send an email using SNS
 	- Execute an Auto Scaling policy
 
-
 ## Amazon CloudWatch Alarm - Example
 - You set a CPU Utilization alarm on EC2 instance with a threshold of 80% over 3 periods of 10 minutes. If CPU utilization is 90% for 20 minutes, does the alarm get triggered?
 	- No
-
 
 ## Amazon CloudWatch Dashboards
 ![](/images/aws/cloudwatch-ec2.png) 
 - Create auto refreshed graphs around all CloudWatch metrics
 - Automatic Dashboards are available for most AWS services and resources
 - Each Dashboard can have graphs from multiple regions
-
 
 ## Amazon CloudWatch Events
 
@@ -4045,14 +3567,10 @@ Note:
 	- Schedule a call to Lambda function every hour
 	- Send a notification to Amazon SNS topic every 3 hours
 
-
-
 # Decoupling Applications <BR/>with SQS, SNS and MQ
-
 
 ## Need for Asynchronous Communication
 - Why do we need asynchronous communication?
-
 
 ## Synchronous Communication
 ![](/images/aws/02-Queuing/0-SQS-00.png)
@@ -4062,7 +3580,6 @@ Note:
 - What if all of sudden, there is high load and there are lot of logs coming in?
 	- Log Service is not able to handle the load and goes down very often
 
-
 ## Asynchronous Communication - Decoupled
 ![](/images/aws/02-Queuing/0-SQS-01.png)
 - Create a queue or a topic
@@ -4070,11 +3587,9 @@ Note:
 - They would be picked up when the logging service is ready
 - Good example of decoupling!
 
-
 ## Asynchronous Communication - Scale up
 ![](/images/aws/02-Queuing/0-SQS-02.png)
 - You can have multiple logging service instances reading from the queue!
-
 
 ## Asynchronous Communication - Pull Model - SQS
 
@@ -4091,7 +3606,6 @@ Note:
 - Decoupling
 	- Make changes to consumers without effect on producers worrying about them
 
-
 ## Asynchronous Communication - Push Model - SNS
 
 ![](/images/aws/02-Queuing/3-SNS.png)
@@ -4104,8 +3618,6 @@ Note:
 - Availability
 	- Producer up even if a subscriber is down
 
-
-
 ## Simple Queuing Service
 
 ![](/images/aws/02-Queuing/2-sqs.png)
@@ -4114,7 +3626,6 @@ Note:
 - Unlimited scaling
 	- Auto scale to process billions of messages per day
 - Low cost (Pay for use)
-
 
 ## Standard and FIFO Queues
 
@@ -4135,7 +3646,6 @@ Note:
 	- Standard SQS queue if throughput is important
 	- FIFO Queue if order of events is important
 
-
 ## Sending and receiving a SQS Message - Best case scenario
 
 ![](/images/aws/02-Queuing/sqs-simple-flow.png)
@@ -4149,13 +3659,11 @@ Note:
 	- Calls delete message (using receipt handle XYZ)
 	- Message is removed from the queue
 
-
 ## Simple Queuing Service Lifecycle of a message
 ![](/images/aws/02-Queuing/4-Queuing-LifeCycle.png)
 
 Note:
 - When a message is sent to queue, it is redundantly distributed among SQS servers
-
 
 ## SQS - Auto Scaling
 
@@ -4170,7 +3678,6 @@ Note:
 - Use target tracking scaling policy 
 - Use a SQS metric like ApproximateNumberOfMessages
 
-
 ## SQS Queue - Important configuration
  
 | Configuration | Description  | 
@@ -4179,7 +3686,6 @@ Note:
 | DelaySeconds   | Time period before a new message is visible on the queue <BR/>Delay Queue = Create Queue + Delay Seconds <BR/>default - 0, max - 15 minutes<BR/>Can be set at Queue creation or updated using SetQueueAttributes<BR/>Use message timers to configure a message specific DelaySeconds value      |
 | Message retention period | Maximum period a message can be on the queue <BR/>Default - 4 days, Min - 60 seconds, Max - 14 days|
 | MaxReceiveCount | Maximum number of failures in processing a message|
-
 
 ## Simple Queuing Service Security
 ![](/images/aws/00-icons/sqs.png)
@@ -4190,9 +3696,7 @@ Note:
 - By default only the queue owner is allowed to use the queue
 	- Configure SQS Queue Access Policy to provide access to other AWS accounts
 
-
 ## SQS - Scenarios
-
 
 |Scenario | Result |
 |--|:--|
@@ -4203,14 +3707,11 @@ Note:
 
 ## SQS - Scenarios
 
-
 |Scenario | Result |
 |--|:--|
 |How to reduce number of API calls to SQS?|Use Long Polling - When looking for messages, you can specify a WaitTimeSeconds upto 20 seconds|
 |Your receive messages and start processing them after a week. You see that some messages are not processed at all!| Exceeded message retention period. Default message retention period is 4 days. Max 14 days.|
 |Give high priority to premium customers| Create separate queues for free and premium customers|
-
-
 
 ## Amazon Simple Notification Service(SNS)
 
@@ -4223,7 +3724,6 @@ Note:
 	- When an SNS Topic receives an event notification (from publisher), it is broadcast to all Subscribers
 - Use Cases : Monitoring Apps, workflow systems, mobile apps
 
-
 ## Amazon Simple Notification Service(SNS)
 
 ![](/images/aws/00-icons/sns.png)
@@ -4235,7 +3735,6 @@ Note:
 - REMEMBER : SNS does not need SQS or a Queue
 - You can allow access to other AWS accounts using AWS SNS generated policy
 
-
 ## Amazon MQ
 - Managed message broker service for Apache ActiveMQ
 - (Functionally) Amazon MQ = Amazon SQS (Queues) + Amazon SNS (Topics)
@@ -4246,10 +3745,7 @@ Note:
 - Scenario: An enterprise uses AMQP (standard message broker protocol). They want to migrate to AWS without making code changes 
 	- Recommend Amazon MQ
 
-
-
 # Routing and Content Delivery
-
 
 ## Content Delivery Network
 
@@ -4258,7 +3754,6 @@ Note:
 - Content Delivery Networks distribute content to multiple edge locations around the world
 - AWS provides 200+ edge locations around the world
 - Provides high availability and performance
-
 
 ## Amazon CloudFront
 
@@ -4270,7 +3765,6 @@ Note:
 - If content is not available at the edge location, it is retrieved from the origin server and cached
 - No minimum usage commitment
 - Provides features to protect your private content
-
 
 ## Amazon CloudFront
 
@@ -4286,7 +3780,6 @@ Note:
 	- Zero cost for data transfer between S3 and CloudFront
 	- Reduce compute workload for your EC2 instances
 
-
 ## Amazon CloudFront Distribution
 
 ![](/images/aws/001-basic-drawings/cloudfrontdistribution.png)
@@ -4301,7 +3794,6 @@ Note:
 	- Default is to support both HTTP and HTTPS
 	- You can configure CloudFront to redirect HTTP to HTTPS
 
-
 ## Amazon CloudFront - Cache Behaviors
 
 ![](/images/aws/001-basic-drawings/cloudfrontdistribution.png)
@@ -4311,7 +3803,6 @@ Note:
 	- Should we use https?
 	- TTL
 
-
 ## Amazon CloudFront - Private content
 
 ![](/images/aws/001-basic-drawings/cfprivatecontent.png)
@@ -4320,7 +3811,6 @@ Note:
 - Origin Access Identities(OAI) 
 	- Ensures that only CloudFront can access S3
 	- Allow access to S3 only to a special CloudFront user
-
 
 ## Amazon CloudFront - Signed URLs and Cookies
 
@@ -4334,14 +3824,12 @@ Note:
 	- Multiple files (You have a subscriber website)
 	- Does not need any change in application URLs
 
-
 ## Amazon CloudFront - Origin Access Identities(OAI)
 ![](/images/aws/04-content-delivery/03-OAI.png)
 - Only CloudFront can access S3
 - Create a Special CloudFront user - Origin Access Identities(OAI)
 - Associate OAI with CloudFront distribution
 - Create a S3 Bucket Policy allowing access to OAI
-
 
 ## Bucket Policy - S3 ONLY through Cloud Front
 ![](/images/aws/00-icons/user.png)
@@ -4368,7 +3856,6 @@ Note:
 }
 ```
 
-
 ![](/images/aws/001-basic-drawings/cloudfrontdistribution.png)
 ## Amazon CloudFront - Remember
 - Old content automatically expires from CloudFront
@@ -4384,7 +3871,6 @@ Note:
 	- Enable CloudFront Geo restriction
 	- Configure White list(countries to be allowed) and Blacklist(countries to be blocked)
 
-
 ## Route 53 
 
 ![](/images/aws/00-icons/route53.png) 
@@ -4395,7 +3881,6 @@ Note:
 - Route 53 = Domain Registrar + DNS
 	- Buy your domain name
 	- Setup your DNS routing for in28minutes.com
-
 
 ## Route 53 - DNS (Domain Name Server)
 
@@ -4409,7 +3894,6 @@ Note:
 	- Route email (ranga@in28minutes.com) to the mail server(mail.in28minutes.com)
 	- Each record is associated with a TTL (Time To Live) - How long is your mapping cached at the routers and the client?
 
-
 ## Route 53 Hosted Zone
 
 ![](/images/aws/00-icons/route53.png) 
@@ -4420,7 +3904,6 @@ Note:
 	- private - routing within VPCs
 	- public - routing on internet
 - Manage the DNS records in a Hosted Zone
-
 
 ## Standard DNS Records
 
@@ -4435,7 +3918,6 @@ Note:
 		- Redirect to Route 53 Name Servers
 - MX - Mail Exchange
 - CNAME - Name1 to Name2
-
 
 ## Route 53 Specific Extension - Alias records
 
@@ -4452,7 +3934,6 @@ Note:
 - COMPARED to CNAME records which can only be created for 
 	- non root domains (api.in28minutes.com)
 
-
 ## Route 53 - Routing
 
 ![](/images/aws/route53-routing.png)
@@ -4460,8 +3941,6 @@ Note:
 - Route 53 can route across Regions
 	- Create ALBs in multiple regions and route to them!
 	- Offers multiple routing policies
-
-
 
 ## Route 53 Routing Policies 
  
@@ -4475,9 +3954,7 @@ Note:
 |Multivalue answer |Return multiple healthy records (upto 8) at random <BR/>You can configure an (optional) health check against every record|
 |Geolocation | Choose based on the location of the user|
 
-
 ## Route 53 Routing Policies - Geolocation
-
 
 ![](/images/aws/00-icons/route53.png) 
 
@@ -4491,7 +3968,6 @@ Note:
 - (RECOMMENDED) Configure a default policy (used if none of the location records match)
 	- Otherwise, Route 53 returns a "no answer" if none of the location records match
 
-
 ## Need for AWS Global Accelerator
 
 ![](/images/aws/04-content-delivery/01-content-delivery.png)
@@ -4499,7 +3975,6 @@ Note:
 	- clients might cache DNS answers causing a delay in propagation of configuration updates
 - High latency 
 	- users connect to the region over the internet
-
 
 ## AWS Global Accelerator
 
@@ -4510,10 +3985,7 @@ Note:
 	- Distribute traffic across multiple endpoint resources in multiple AWS Regions
 - Works with Network Load Balancers, Application Load Balancers, EC2 Instances, and Elastic IP addresses
 
-
-
 # ETL & Big Data <BR/> Redshift and EMR
-
 
 ## Amazon Redshift
 
@@ -4527,7 +3999,6 @@ Note:
 	- Can we use a different approach to design the database? 
 	- How about creating a cluster and splitting the execution of the same query across several nodes? 
 - Redshift is a **petabyte-scale distributed data ware house** based on PostgreSQL
-
 
 ## Amazon Redshift 
 
@@ -4543,7 +4014,6 @@ Note:
 - Start with a single node configuration and scale to multi node configuration
 - You can dynamically add and remove nodes
 
-
 ## Amazon Redshift 
 
 ![](/images/aws/00-icons/redshift.png) 
@@ -4555,7 +4025,6 @@ Note:
 	- Automatic replication (maintains 3 copies of your data)
 	- Automated backups (to S3. Default retention - 1 day. Max - 35 days)
 	- Automatic recovery from any node failures
-
 
 ## Redshift Cluster
 
@@ -4584,7 +4053,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 	- Example 2 : Join columns with other tables 
 	- Example 3 : Timestamp columns if you use the most recent data frequently
 
-
 ## Redshift - Designing Tables - Distribution Strategy
 
 ![](/images/aws/00-icons/redshift.png) 
@@ -4598,7 +4066,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - ALL - entire table on all nodes
 	- Used for lookup tables
 
-
 ## Loading Data into Amazon Redshift
 
 | Scenario | Solution  | 
@@ -4611,7 +4078,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 |Recommendation| Prefer COPY over INSERT for bulk operations as COPY is done in parallel|
 |Recommendation| Prefer COPY from multiple files. Split large files into multiple small input files|
 
-
 ## Redshift Workload Management
 
 ![](/images/aws/rds-diagrams/xx-redshift-wlm.png)
@@ -4619,7 +4085,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - Create multiple queues with different concurrency level for different purposes
 - One queue for long running queries with low concurrency
 - One queue for short running queries with high concurrency (upto 50 concurrent queries)
-
 
 ## Redshift Security
 ![](/images/aws/00-icons/redshift.png)
@@ -4634,7 +4099,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - IAM to manage user permissions for cluster operations
 	- Grant permissions on a per cluster basis instead of per table basis
 
-
 ## Redshift Operations
 ![](/images/aws/00-icons/redshift.png)
 ![](/images/aws/00-icons/cloudwatch.png)
@@ -4644,7 +4108,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 	- Use SQL queries to query against system tables or download to S3
 - Monitor performance & queries with Cloud Watch and Redshift web console
 - When deleting a Redshift cluster, take a final snapshot to Amazon S3
-
 
 ## Amazon Redshift Spectrum
 
@@ -4659,8 +4122,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - Integrates with Amazon Athena
 - Query against Amazon EMR (as well)
 
-
-
 ## Amazon EMR - Elastic MapReduce
 - Managed Hadoop service with high availability and durability
 - EMR gives access to underlying OS => You can SSH into it
@@ -4672,7 +4133,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 	- Click stream analysis for advertisers
 	- Genomic and life science dataset processing
 
-
 ## Amazon EMR - Storage Types
  
 | Feature |Hadoop Distributed File System (HDFS)  | EMR File System (EMRFS) | 
@@ -4683,7 +4143,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 |Persistent Clusters running 24 X 7 analysis| ✓ (low latency on instance storage)||
 |Transient Clusters running Infrequent big data jobs||✓(Run MapReduce jobs against S3 bucket)|
 
-
 ## Amazon Redshift and EMR Alternatives
 
 | Alternative | Scenario  | 
@@ -4693,10 +4152,7 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 | Amazon Redshift Spectrum | Run queries directly against S3 without worrying about loading entire data from S3 into a data warehouse|
 | Amazon Athena | Quick ad-hoc queries without worrying about provisioning a compute cluster (serverless) <BR/> Amazon Redshift Spectrum is recommended if you are executing queries frequently against structured data|
 
-
-
 # Handling Workflows
-
 
 ## Amazon Simple Workflow Service (SWF)
 
@@ -4709,7 +4165,6 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - A workflow can start when receiving an order, receiving a request for a taxi
 - Workflows can run upto 1 year
 - Deciders and activity workers can use long polling
-
 
 ## Amazon SWF - Order Process
 
@@ -4727,8 +4182,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- Loop continues until decider returns decision to close workflow
 - SWF archives history and closes workflow
 
-
-
 # Handling Data Streams
 
 ## Streaming Data
@@ -4741,7 +4194,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- Small pieces of data
 	- Sequenced - mostly associated with time
 - How do your process continuous streaming data originating from application logs, social media applications?
-
 
 ## S3 Notifications
 
@@ -4756,7 +4208,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- S3 notification -> Lambda
 	- Almost negligible cost (storage for file + invocation)
 
-
 ## DynamoDB Streams
 ![](/images/aws/001-basic-drawings/dynamodbstreams.png)
 - Each event from DynamoDB (in time sequenced order) is buffered in a stream near real-time
@@ -4764,7 +4215,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - Use case - Send email when user registers
 	- Tie a Lambda function to DynamoDB Streams
 - Stream allow iteration through records (**last 24 hours**)
-
 
 ## Amazon Kinesis
 
@@ -4780,7 +4230,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - Amazon Kinesis Video Streams
 	- Monitor video streams
 
-
 ## Amazon Kinesis Data Streams
 
 ![](/images/aws/02-Queuing/4-kinesis-streams.png)
@@ -4790,7 +4239,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - Supports multiple clients
 	- Each client can track their stream position
 - Retain and replay data (max 7 days & default 1 day)
-
 
 ## Amazon Kinesis Data Streams - Integrations
 
@@ -4803,7 +4251,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- Run on EC2 instances
 	- Written using Kinesis Data Streams APIs
 
-
 ## Amazon Kinesis Data Firehose
 
 ![](/images/aws/02-Queuing/5-kinesis-firehose.png)
@@ -4814,12 +4261,10 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - Use existing analytics tools based on S3, Redshift and Elasticsearch
 - Pay for volume of data ingested (Serverless)
 
-
 ## Amazon Kinesis Analytics
 ![](/images/aws/02-Queuing/5-kinesis-analytics.png)
 - You want to continuously find active number of users on a website in the last 5 minutes based on streaming website data
 - With Amazon Kinesis Analytics, you can write SQL queries and build Java applications to continuously analyze your streaming data
-
 
 ## Amazon Kinesis Video Streams
 ![](/images/aws/02-Queuing/5-kinesis-video-streams.png)
@@ -4827,11 +4272,7 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - Examples: traffic lights, shopping malls, homes etc
 - Integrate with machine learning frameworks to get intelligence
 
-
-
-
 # AWS Data Lakes
-
 
 ## AWS Data Lakes - Simplified Big Data Solutions
 
@@ -4842,7 +4283,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 - How to build flexibility while saving cost?
 - Data Lake 
 	- Single platform with combination of solutions for data storage, data management and data analytics
-
 
 ## AWS Data Lakes - Storage and Ingestion
 ![](/images/aws/00-icons/kinesisfirehose.png)
@@ -4859,7 +4299,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 		- Transformation operations - compress, encrypt, concatenate multiple records into one (to reduce S3 transactions cost) and execute lambda functions 
 	- Bulk data from on-premises - AWS Snowball
 	- Integrate on-premises platforms with Amazon S3 - AWS Storage Gateway
-
 
 ## Amazon S3 Query in Place
 
@@ -4883,7 +4322,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- Run queries directly against S3 without loading complete data from S3 into a data warehouse
 	- Recommended if you are executing queries frequently against structured data
 
-
 ## Amazon S3 Query in Place - Recommendations
 - You want to get quick insights from your cold data stored in S3 Glacier. You want to run queries against archives stored in S3 Glacier without restoring the archives.
 	- Use S3 Glacier Select to perform filtering and basic querying using SQL queries 
@@ -4895,7 +4333,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 	- Multiple compression standards are supported BUT GZIP is recommended
 		- Supported by Amazon Athena, Amazon EMR and Amazon Redshift
 
-
 ## AWS Data Lakes -  Analytics with data in S3 Data Lake
  
 | Service | Description  | 
@@ -4904,7 +4341,6 @@ https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
 |Amazon Machine Learning (ML)|Create and run models for predictive analytics and machine learning (using data from Amazon S3, Amazon Redshift, or Amazon RDS)|
 | Amazon QuickSight |For visualizations (using data from Amazon Redshift, Amazon RDS, Amazon Athena, and Amazon S3)|
 |Amazon Rekognition | Build image recognition capabilities around images stored in Amazon S3. <BR/>Example use case : Face based verification|
-
 
 ## AWS Data Lakes -  Data Cataloging
 
@@ -4916,7 +4352,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Question 1 - Stored in comprehensive data catalog
 - Questions 2 and 3 - Stored using a Hive Meta store Catalog (HCatalog)
 - AWS Glue also supports storing HCatalog
-
 
 ##  AWS Glue
 
@@ -4933,8 +4368,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Amazon EMR
 	- Amazon Redshift Spectrum
 
-
-
 # More Serverless
 
 ## Serverless Options - Compute
@@ -4948,7 +4381,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - AWS Fargate
 	- Container Orchestration without worrying about ec2 instances
 
-
 ## Serverless Options - Storage
 ![](/images/aws/00-icons/s3.png)
 ![](/images/aws/00-icons/efs.png)  
@@ -4957,8 +4389,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- We've talking sufficiently about it already!
 - Amazon Elastic File System 
 	- Elastic file storage for UNIX compatible systems
-
-
 
 ![](/images/aws/00-icons/dynamodb.png) 
 ## Serverless Options - Databases
@@ -4974,7 +4404,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Sits between client applications (including lambdas) and your RDS database
 	- Efficient management of short lived database connections (by pooling database connections)
 
-
 ## Serverless Options - API Proxy and Orchestration
 ![](/images/aws/00-icons/apigateway.png) 
 ![](/images/aws/00-icons/stepfunctions.png) 
@@ -4984,7 +4413,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - AWS Step Functions  
 	- Setup workflows involving services like AWS Lambda and AWS Fargate
 	- Orchestration and state management
-
 
 ## Serverless Options - Application Integration and Analytics
 
@@ -5003,7 +4431,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Query using SQL on data in Amazon S3
 	- Pay only for queries!
 
-
 ## Serverless Options - Others
 ![](/images/aws/00-icons/cognito.png) 
 - Amazon Cognito
@@ -5011,21 +4438,17 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - AWS Serverless Application Model
 	- Open source framework for building serverless applications
 
-
-
 ## Serverless Use case 1 - Full Stack Web Application
 ![](/images/aws/03-serverless/01-serverless.png)
 - Static content stored in S3
 - API Gateway and Lambda are used for the REST API
 - DynamoDB is used to store your data
 
-
 ## Serverless Use case 2 - Real time event processing
 
 ![](/images/aws/03-serverless/02-realtime-processing.png)
 - User uploads videos to S3
 - S3 notifications are used to invoke Lambda functions to optimize videos for different devices.
-
 
 ## Amazon API Gateway Features
 
@@ -5049,7 +4472,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - How do you authenticate a REST API call?
 	- Attach a signature or token with your API call
 
-
 ## Amazon API Gateway - Authentication and Authorization Approaches
 
 - AWS Signature Version 4
@@ -5061,7 +4483,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Amazon Cognito
 	- We will look at authentication with Cognito next
 
-
 ## Amazon Cognito
 
 ![](/images/aws/00-icons/cognito.png) 
@@ -5072,7 +4493,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Let's go : Amazon Cognito
 - Support for SAML
 
-
 ## Amazon Cognito - User Pools
 
 ![](/images/aws/00-icons/cognito.png) 
@@ -5080,7 +4500,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Do you want to create sign-up pages?
 - Do you want a built-in, customizable web UI to sign in users (with option to social sign-in )?
 - Create a user pool
-
 
 ## Amazon Cognito - Identity pools
 ![](/images/aws/cognito-identity-pools.png)
@@ -5105,7 +4524,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- (If valid token) Identity Pool creates temporary credentials (access key, secret key, and session token) using STS
 - App sends a request with the credentials to the AWS service
 
-
 ## Lambda@Edge
 - Run lambda functions at AWS Edge Locations 
 	- Lowest network latency for end users
@@ -5118,7 +4536,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - LIMITATION : Supports ONLY Node.js and Python programming languages
 - LIMITATION : No free tier and more expensive than Lambda
 
-
 ## Serverless Application Model
 - 1000s of Lambda functions to manage, versioning, deployment etc 
 - Serverless projects can become a maintenance headache
@@ -5130,7 +4547,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Define a YAML with all the serverless resources you want:
 		- Functions, APIs, Databases etc
 	- BEHIND THE SCENES : Your configuration is used to create a AWS CloudFormation syntax to deploy your application
-
 
 ## AWS AppSync
 
@@ -5145,7 +4561,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- NoSQL data stores, RDS or Lambda
 - (Alternative) Cognito Sync is limited to storing simple key-value pairs
 	- AppSync recommended for almost all use cases
-
 
 ## AWS Step Functions 
 
@@ -5162,7 +4577,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Retry a step multiple times until it succeeds
 	- Maximum duration of 1 year
 
-
 ## AWS Step Functions 
 
 ![](/images/aws/00-icons/stepfunctions.png) 
@@ -5178,11 +4592,7 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Complex orchestration code  (external signals,  launch child processes)
 - Step Functions is recommended for all new workflows UNLESS you need to write complex code for orchestration
 
-
-
-
 # Extend and Secure Your VPCs - In AWS and To On-Premises
-
 
 ## VPC Peering
 
@@ -5194,7 +4604,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- Owner of the peer VPC has one week to accept
 - Remember : Peering is not transitive
 - Remember : Peer VPCs cannot have overlapping address ranges
-
 
 ## VPC Endpoint 
 
@@ -5211,8 +4620,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - (Avoid DDoS & MTM attacks) Traffic does NOT go thru internet
 - (Simple) Does NOT need Internet Gateway, VPN or NAT
 
-
-
 ## VPC Flow Logs
 
 ![](/images/aws/00-icons/vpcflowlogs.png) 
@@ -5226,7 +4633,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Publish logs to Amazon CloudWatch Logs or Amazon S3
 - Flow log records contain ACCEPT or REJECT 
 	- Is traffic is permitted by security groups or network ACLs?
-
 
 ## Troubleshoot using VPC Flow Logs 
 
@@ -5247,8 +4653,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Problem with response => Problem with NACL
 - Problem with request could be problems with NACL or SG
 
-
-
 ## AWS and On-Premises - Overview
 
 ![](/images/aws/Aws-Onpremises-01.png)
@@ -5256,7 +4660,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 	- IPsec VPN tunnels from  VPC to customer network
 - AWS Direct Connect (DX)
 	- Private dedicated network connection from on-premises to AWS
-
 
 ## AWS Managed VPN
 
@@ -5266,7 +4669,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - VPN gateway to connect one VPC to customer network
 - Customer gateway installed in customer network
 	- You need a Internet-routable IP address of customer gateway
-
 
 ## AWS Direct Connect (DC)
 
@@ -5287,17 +4689,13 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - (REMEMBER) Establish a redundant DC for maximum reliability
 - (REMEMBER) Direct Connect DOES NOT encrypt data (Private Connection ONLY)
 
-
 ## AWS Direct Connect Plus VPN
-
 
 ![](/images/aws/aws-direct-connect-vpn.png)
 https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html
 
 - IPsec Site-to-Site VPN tunnel from an direct connect location to customer network
 - Traffic is encrypted using IPsec protocol
-
-
 
 ## Software VPN
 
@@ -5310,7 +4708,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - You are responsible for patches and updates to Software VPN appliance
 - Software VPN appliance becomes a Single Point of Failure 
 
-
 ## AWS VPN CloudHub
 
 ![](/images/aws/aws-vpn-cloudhub.png) 
@@ -5319,7 +4716,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Operates on a simple hub-and-spoke model 
 - Uses Amazon VPC virtual private gateway with multiple gateways
 
-
 ## VPC Connections - Review
 - VPC peering: Connect to other VPCs
 - NAT gateways: Allow internet traffic from private subnets
@@ -5327,10 +4723,7 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - AWS Direct Connect: Private pipe to on-premises
 - AWS VPN: Encrypted (IPsec) tunnel over internet to on-premises
 
-
-
 # Moving Data between AWS and On-premises
-
 
 ## Amazon S3 Transfer Acceleration
 
@@ -5340,7 +4733,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Enable S3 Transfer Acceleration and use endpoints 
 	- s3-accelerate.amazonaws.com or 
 	- .s3-accelerate.dualstack.amazonaws.com
-
 
 ## AWS Snowball
 
@@ -5356,7 +4748,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Manage jobs with AWS Snowball console
 - Data is automatically encrypted with KMS (AES-256)
 
-
 ## AWS Snowball
 
 ![](/images/aws/00-icons/snowball.png) 
@@ -5370,14 +4761,12 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Choose Snowball if direct transfer takes over a week
 	- 5TB can be transferred on 100Mbps line in a week at 80% utilization
 
-
 ## AWS Snowmobile
 ![](/images/aws/snowmobile.jpeg)
 - How do I transfer dozens of petabytes to exabytes of data from on-premises to AWS for cloud migration?
 - 100PB storage per truck
 - If needed, use multiple trucks in parallel
 - Data is automatically encrypted with KMS (AES-256)
-
 
 ## AWS DataSync - Transfer File Storage to Cloud
 - Secure and 10x faster (100s of TB) data transfers from/to AWS over internet or AWS Direct Connect
@@ -5388,15 +4777,12 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - (Alternative) Use S3 Transfer Acceleration when your applications are integrated with S3 API. If not, prefer AWS DataSync(Supports multiple destinations, built-in retry)
 - (Integration) Migrate data using DataSync and use AWS Storage Gateway for ongoing updates from on-premises applications
 
-
-
 ## AWS Data Pipeline
 ![](/images/aws/01-S3/9-datapipeline.png)
 - Process and move data (ETL) between S3, RDS, DynamoDB, EMR, On-premise data sources
 - Create complex data processing workloads that are fault tolerant, repeatable, and highly available
 - Launches required resources and tear them down after execution
 - REMEMBER : NOT for streaming data!
-
 
 ## AWS Database Migration Service
 ![](/images/aws/00-icons/datacenter.png)
@@ -5410,7 +4796,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - (AFTER MIGRATION) Keep databases in sync and pick right moment to switch
 - (Use case) Consolidate multiple databases into a single target database
 - (Use case) Continuous Data Replication can be used for Disaster Recovery
-
 
 ## AWS Schema Conversion Tool
 
@@ -5426,7 +4811,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 	- Fan-in (multiple sources - single target) 
 	- Fan-out (single source - multiple targets)
 
-
 ## Database Migration Service VS Schema Conversion Tool
 ![](/images/aws/00-icons/datacenter.png)
 ![](/images/arrow.png)
@@ -5439,11 +4823,7 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 	- Prefer SCT for migrations to Amazon Redshift
 - Only DMS provides continuous data replication after migration
 
-
-
-
 # DevOps
-
 
 ## DevOps
 ![](/images/aws/devops-06-teams.png)
@@ -5451,7 +4831,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 	- Communication - Get teams together
 	- Feedback - Earlier you find a problem, easier it is to fix
 	- Automation - Automate testing, infrastructure provisioning, deployment, and monitoring
-
 
 ## DevOps - CI, CD
 
@@ -5463,7 +4842,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Continuous Delivery 
 	- Continuously deploy to production
 
-
 ## DevOps - CI, CD Tools
 ![](/images/aws/00-icons/codecommit.png) 
 ![](/images/aws/00-icons/codepipeline.png) 
@@ -5473,7 +4851,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - AWS CodePipeline - Orchestrate CI/CD pipelines
 - AWS CodeBuild - Build and Test Code (application packages and containers)
 - AWS CodeDeploy - Automate Deployment (EC2, ECS, Elastic Beanstalk, EKS, Lambda etc)
-
 
 ## DevOps - IAAC
 ![](/images/aws/devops-06-iaac-2-overview.png) 
@@ -5491,7 +4868,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 		- Open Source Tools - Chef, Puppet, Ansible
 		- AWS Service - OpsWorks
 
-
 ## AWS Cloud​Formation - Introduction
 
 ![](/images/aws/00-icons/cloudformation.png) 
@@ -5503,7 +4879,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 	- Dev, QA, Stage and Production!
 - CloudFormation can help you do all these with a simple (actually NOT so simple) script!
 
-
 ## AWS CloudFormation - Advantages
 
 ![](/images/aws/00-icons/cloudformation.png) 
@@ -5512,9 +4887,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Avoid configuration drift
 - Avoid mistakes with manual configuration
 - Think of it as version control for your environments
-
-
-
 
 ![](/images/aws/00-icons/cloudformation.png) 
 
@@ -5528,7 +4900,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 - Version control your configuration file and make changes to it over time
 - Free to use - Pay only for the resources provisioned
 	- Get an automated estimate for your configuration
-
 
 ## AWS Cloud​Formation - Example 1 - JSON
 ```
@@ -5544,7 +4915,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 }
 ```
 
-
 ## AWS CloudFormation - Example 2 - YAML
 ```
 Resources:
@@ -5553,8 +4923,6 @@ Resources:
     Properties:
       AccessControl: PublicRead
 ```
-
-
 
 ## AWS CloudFormation - Example 3
 ```
@@ -5577,7 +4945,6 @@ Resources:
           CidrIp: 0.0.0.0/0
 ```
 
-
 ## AWS Cloud​Formation - Terminology
 - Template 
 	- A Cloud​Formation JSON or YAML defining multiple resources
@@ -5588,7 +4955,6 @@ Resources:
 	- To make changes to stack, update the template
 	- Change set shows what would change if you execute
 	- Allows you to verify the changes and then execute
-
 
 ## AWS Cloud​Formation - Important template elements
 
@@ -5613,7 +4979,6 @@ Resources:
 - Outputs - Return values from execution 
 	- See them on console and use in automation
 
-
 ## AWS CloudFormation - Mappings Example
 
 ```
@@ -5628,7 +4993,6 @@ Resources:
 }
 ```
 
-
 ## AWS Cloud​Formation - Remember
 
 ![](/images/aws/00-icons/cloudformation.png)  
@@ -5640,7 +5004,6 @@ Resources:
 - AWS CloudFormation StackSets 
 	- Create, update, or delete stacks across multiple accounts and regions with a single operation
 
-
 ## Cloud​Formation vs AWS Elastic Beanstalk
 ![](/images/aws/00-icons/elastic-beanstalk.png) 
 ![](/images/arrow.png)
@@ -5651,7 +5014,6 @@ Resources:
 	- You choose what you want
 	- (Background) A Cloud Formation template is created and executed
 	- The environment is ready!
-
 
 ## AWS OpsWorks - Configuration Management
 
@@ -5666,11 +5028,7 @@ Resources:
 - (IMPORTANT) All configuration management tools can also do infrastructure provisioning
 	- However, I would recommend NOT doing that as they are not good at infrastructure provisioning
 
-
-
-
 # AWS Certification - FAQ
-
 
 ## High Availability 
 - High Availability - 99.99% or 99.9% - You can fail a few times
@@ -5682,14 +5040,11 @@ Resources:
 	- Need : 4 EC2 instances running all the time
 		- 2 instances in AZ1 and 2 instances in AZ2 and 2 instances in AZ3
 
-
-
 ## High Availability vs Fault Tolerance
 - Fault Tolerant - Zero chance of failure
 - If you want fault tolerance, you need to take additional precautions
 	- 2 EC2 instances running all the time
 		- 2 instances in AZ1 and 2 instances in AZ2 and 2 instances in AZ3
-
 
 ## Data Transfer Costs
 
@@ -5707,10 +5062,7 @@ Resources:
 		- Amazon SNS, Amazon SQS, Amazon Kinesis
 - (Best Practice) Maximize traffic that stays with an AZ (at least with a Region)
 
-
-
 # More AWS Services
-
 
 ## AWS Shield
 ![](/images/aws/00-icons/shield.png) 
@@ -5728,8 +5080,6 @@ Resources:
 	- Amazon Elastic Compute Cloud (EC2) instances
 	- Elastic Load Balancers (ELB)
 
-
-
 ## AWS Shield - Standard and Advanced
 
 ![](/images/aws/00-icons/shield.png) 
@@ -5745,7 +5095,6 @@ Resources:
 	- Protects your AWS bill from usage spikes as a result of a DDoS attack
 - Protect any web application (from Amazon S3 or external) from DDoS by putting Amazon CloudFront enabled with AWS Shield in front of it
 
-
 ## AWS WAF - Web Application Firewall
 
 ![](/images/aws/00-icons/waf.png) 
@@ -5759,8 +5108,6 @@ Resources:
 - Web traffic filtering : block attacks
 	- Filter traffic based on IP addresses, geo locations, HTTP headers and body (block attacks from specific user-agents, bad bots, or content scrapers)
 
-
-
 ![](/images/aws/00-icons/organizations.png) 
 ## AWS Organizations 
 - Organizations typically have multiple AWS accounts 
@@ -5770,8 +5117,6 @@ Resources:
 - Welcome AWS Organizations!
 - Organize accounts into Organizational Units (OU)
 - Provides API to automate creation of new accounts
-
-
 
 ## AWS Organizations - Features
 
@@ -5787,7 +5132,6 @@ Resources:
 	- Require MFA to stop an Amazon EC2 instance
 	- Require a tag upon resource creation
 
-
 ## AWS Resource Access Manager
 - Share AWS resources with any AWS account or within your AWS Organization
 	- AWS Transit Gateways
@@ -5797,9 +5141,7 @@ Resources:
 - Reduce Operational Overhead
 - Optimize Costs
 
-
 ## AWS Trusted Advisor
-
 
 ![](/images/aws/00-icons/trustedadvisor.png) 
 - Recommendations for cost optimization, performance, security and fault tolerance
@@ -5813,7 +5155,6 @@ Resources:
 	- Disable those you are not interested in
 	- How much will you save by using Reserved Instances?
 	- How does your resource utilization look like? Are you right sized?
-
 
 ## AWS Trusted Advisor Recommendations
 
@@ -5832,13 +5173,10 @@ Resources:
 - Service Limits 
 	- Identify if your service usage is more than 80% of service limits
 
-
 ## AWS Service Quotas
 - AWS account has Region-specific default quotas or limits for each service
 	- You don't need to remember all of them :)
 - Service Quotas allows you to manage your quotas for over 100 AWS services, from one location
-
-
 
 ## AWS Directory Service
 
@@ -5856,12 +5194,10 @@ Resources:
 	- Use your existing on-premise directory with AWS cloud services
 	- Your users use existing credentials to access AWS resources
 
-
 ## AWS Workspaces
 - Desktop-as-a-Service (DaaS)
 - Provision Windows or Linux desktops in minutes
 - Eliminate traditional desktop management - Virtual Desktop Infrastructure (VDI)
-
 
 ## AWS Systems Manager Parameter Store 
 - Manage application environment configuration and secrets 
@@ -5873,14 +5209,12 @@ Resources:
 - Maintains history of configuration over a period of time
 - Integrates with KMS, IAM, CloudWatch and SNS
 
-
 ## AWS Secrets Manager
 - Rotate, Manage and retrieve database credentials, API keys, and other secrets for your applications
 - Integrates with KMS(encryption), Amazon RDS, Amazon Redshift, and Amazon DocumentDB
 - (KEY FEATURE) Rotate secrets automatically without impacting applications
 - (KEY FEATURE) Service dedicated to secrets management
 - Recommended for workloads needing HIPAA, PCI-DSS compliance
-
 
 ## AWS Elemental MediaConvert
 - New video transcoding service
@@ -5891,7 +5225,6 @@ Resources:
 	- Use AWS Elastic Transcoder to create WebM video, MP3 audio, or animated GIF files
 	- For all other video processing use cases, AWS Elemental MediaConvert is recommended
 - (Alternative) For live video, use AWS Elemental MediaLive
-
 
 ## Amazon Macie
 - Fully managed data security and data privacy service
@@ -5904,7 +5237,6 @@ Resources:
 - Provides you with dashboards and alerts 
 	- Gives visibility into how data is being accessed or moved
 
-
 ## AWS Single Sign On
 - Cloud-based single sign-on (SSO) service
 - Centrally manage SSO access to all of your AWS accounts
@@ -5912,7 +5244,6 @@ Resources:
 - Supports Security Assertion Markup Language (SAML) 2.0
 - Deep integration with AWS Organizations (Centrally manage access to multiple AWS accounts)
 - One place auditing in AWS CloudTrail
-
 
 ## AWS Elasticsearch
 - AWS Managed Service around Elasticsearch
@@ -5925,10 +5256,7 @@ Resources:
 	- Application monitoring (Get intelligence from your application logs)
 	- Infrastructure monitoring (Get intelligence from your server logs)
 
-
-
 # Architecture and Best Practices
-
 
 ## Well Architected Framework
 
@@ -5945,7 +5273,6 @@ Resources:
 	- Performance Efficiency
 	- Cost Optimization
 
-
 ## Operational Excellence
 ![](/images/aws/00-icons/lambda.png)
 ![](/images/aws/00-icons/cloudformation.png)
@@ -5958,7 +5285,6 @@ Resources:
 	- Deployment
 	- Monitoring
 	- Support
-
 
 ## Operational Excellence - Solutions and AWS services
 
@@ -5981,7 +5307,6 @@ Resources:
 	- CodeDeploy
 - Perform frequent, small reversible changes
 
-
 ## Operational Excellence - Solutions and AWS services
  
 ![](/images/aws/00-icons/config.png) 
@@ -5999,7 +5324,6 @@ Resources:
 - Evolve: Get intelligence
 	- Use Amazon Elasticsearch to analyze your logs
 
-
 ## Security Pillar
 ![](/images/aws/00-icons/iam.png) 
 ![](/images/aws/00-icons/shield.png) 
@@ -6013,7 +5337,6 @@ Resources:
 - Actively monitor for security issues
 - Centralize security policies for multiple AWS accounts
 
-
 ## Security Pillar - Principle of least privilege for least time
 ![](/images/aws/00-icons/iam.png)
 - Use temporary credentials when possible (IAM roles, Instance profiles)
@@ -6022,9 +5345,7 @@ Resources:
 - Enforce MFA
 - Rotate credentials regularly
 
-
 ## Security Pillar - Security in Depth 
-
 
 ![](/images/aws/00-icons/vpc.png) 
 ![](/images/aws/00-icons/ami.png) 
@@ -6042,7 +5363,6 @@ Resources:
 	- Protect web applications from CSS, SQL injection etc
 - Use CloudFormation
 	 - Automate provisioning infrastructure that adheres to security policies
-
 
 ## Security Pillar - Protecting Data at Rest
 
@@ -6062,7 +5382,6 @@ Resources:
 - Amazon RDS
 	- AWS KMS, TDE
 
-
 ## Security Pillar - Protecting Data in Transit 
 ![](/images/aws/00-icons/certificatemanager.png)
 - Data coming in and going out of AWS
@@ -6071,8 +5390,6 @@ Resources:
 - Ensure that your data goes through AWS network as much as possible
 	- VPC Endpoints and AWS PrivateLink
 
-
-
 ## Security Pillar - Detect Threats
 ![](/images/aws/00-icons/cloudwatch.png)
 ![](/images/aws/00-icons/organizations.png)
@@ -6080,7 +5397,6 @@ Resources:
 	- Monitor CloudWatch Logs
 	- Use Amazon GuardDuty to detect threats and continuously monitor for malicious behavior
 - Use AWS Organization to centralize security policies for multiple AWS accounts
-
 
 ## Reliability
 ![](/images/aws/00-icons/lambda.png) 
@@ -6091,7 +5407,6 @@ Resources:
 - Ability to
 	- Recover from infrastructure and application issues
 	- Adapt to changing demands in load
-
 
 ## Reliability - Best Practices
 ![](/images/aws/00-icons/autoscaling.png)
@@ -6106,7 +5421,6 @@ Resources:
 	- Multiple Direct Connect connections
 	- Multiple Regions and Availability Zones
 
-
 ## Reliability - Best Practices
 ![](/images/aws/00-icons/lambda.png) 
 ![](/images/aws/00-icons/sqs.png) 
@@ -6119,7 +5433,6 @@ Resources:
 - Distributed System Best Practices
 	- Use Amazon API Gateway for throttling requests
 	- AWS SDK provides retry with exponential backoff
-
 
 ## Loosely coupled architectures
 
@@ -6140,7 +5453,6 @@ Resources:
 	- Multiple clients
 	- Each client can track their stream position
 
-
 ## Troubleshooting on AWS - Quick Review
  
 | Option | Details  | When to Use |
@@ -6148,7 +5460,6 @@ Resources:
 |Amazon S3 Server Access Logs | S3 data request details - request type, the resources requested, and the date and time of request      |  Troubleshoot bucket access issues and data requests       |
 |Amazon ELB Access Logs|Client's IP address, latencies, and server responses|Analyze traffic patterns and troubleshoot network issues|
 |Amazon VPC Flow Logs|Monitor network traffic|Troubleshoot network connectivity and security issues|
-
 
 ## Troubleshooting on AWS - Quick Review
 | Option | Details  | When to Use |
@@ -6158,11 +5469,9 @@ Resources:
 |AWS Config|AWS resource inventory. History. Rules.|Inventory and History|
 |Amazon CloudTrail|History of AWS API calls made via AWS Management Console, AWS CLI, AWS SDKs etc.|Auditing and troubleshooting. Determine who did what, when, and from where.|
 
-
 ## Performance Efficiency
 - Meet needs with minimum resources (efficiency)
 - Continue being efficient as demand and technology evolves
-
 
 ## Performance Efficiency - Best Practices
 ![](/images/aws/00-icons/cloud.png) 
@@ -6179,7 +5488,6 @@ Resources:
 	- Cloud makes it easy to experiment
 - Monitor Performance
 	- Trigger CloudWatch alarms and perform actions through Amazon SQS and Lambda
-
 
 ## Performance Efficiency - Choose the right solution
 
@@ -6202,8 +5510,6 @@ Resources:
 - Use product specific features 
 	- Enhanced Networking, S3 Transfer Acceleration, EBS optimized instances
 
-
-
 ## Cost Optimization
 
 ![](/images/aws/00-icons/autoscaling.png) 
@@ -6212,8 +5518,6 @@ Resources:
 ![](/images/aws/00-icons/cloudwatch.png) 
 ![](/images/aws/00-icons/cloudfront.png) 
 - Run systems at lowest cost
-
-
 
 ## Cost Optimization - Best Practices
 
@@ -6231,7 +5535,6 @@ Resources:
 	- AWS Budgets to trigger alerts
 	- Use tags on resources
 
-
 ## Cost Optimization - Choose Cost-Effective Solutions
 
 ![](/images/aws/00-icons/autoscaling.png) 
@@ -6246,14 +5549,12 @@ Resources:
 - Avoid expensive software : MySQL vs Aurora vs Oracle
 - Optimize data transfer costs using AWS Direct Connect and Amazon CloudFront
 
-
 ## Shared Responsibility Model
 ![](/images/aws/Shared_Responsibility_Model.png) 
 
 https://aws.amazon.com/compliance/shared-responsibility-model/
 
 Security & Compliance is shared responsibility between AWS and customer
-
 
 ## Shared Responsibility Model - Amazon EC2
 ![](/images/aws/00-icons/ec2.png) 
@@ -6265,7 +5566,6 @@ Security & Compliance is shared responsibility between AWS and customer
 	- Application software installed
 	- Configuring Security Groups (or firewalls)
 - AWS is responsible for infrastructure layer only
-
 
 ## Shared Responsibility Model - Managed Services
 
@@ -6285,10 +5585,7 @@ Security & Compliance is shared responsibility between AWS and customer
 		- Configuring the right security groups (control inbound and outbound traffic)
 		- Disabling external access (public vs private)
 
-
-
 # Get Ready
-
 
 ## Certification Resources
 
@@ -6297,7 +5594,6 @@ Security & Compliance is shared responsibility between AWS and customer
 | Certification - Home Page | https://aws.amazon.com/certification/certified-solutions-architect-associate/ |
 | AWS Architecture Home Page |  https://aws.amazon.com/architecture/     |
 | AWS FAQs   |   https://aws.amazon.com/faqs/ (EC2, S3, VPC, RDS, SQS etc)   |
-
 
 ## Certification Exam 
 - Multiple Choice Questions
@@ -6310,7 +5606,6 @@ Security & Compliance is shared responsibility between AWS and customer
 - Result immediately shown after exam completion
 - Email with detailed scores (a couple of days later)
 
-
 ## Certification Exam - My Recommendations
 - Read the entire question 
 - Read all answers at least once
@@ -6320,23 +5615,17 @@ Security & Compliance is shared responsibility between AWS and customer
 - If you do NOT know the answer, eliminate wrong answers first
 - Mark questions for future consideration and review them before final submission
 
-
 ## Registering for Exam
 
 - Certification - Home Page - https://aws.amazon.com/certification/certified-solutions-architect-associate/ |
 
-
-
 # You are all set!
-
 
 ## Let's clap for you!
 - You have a lot of patience! Congratulations
 - You have put your best foot forward to be an AWS Solution Architect
 - Make sure you prepare well and 
 - Good Luck!
-
-
 
 ## Do Not Forget!
 - Recommend the course to your friends!
