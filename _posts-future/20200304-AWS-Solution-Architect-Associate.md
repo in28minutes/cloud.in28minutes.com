@@ -1,89 +1,4 @@
-## Introducing ALB Auto Scaling Groups
-![](/images/aws/ec2/4-elb-target-groups.png)
-- Target Groups are configured with a static set of instances. How do you scale out and scale in **automatically**?
-	- Configure a Auto Scaling Group
 
-## ALB Auto Scaling Groups
-![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
-- Auto Scaling Group responsibilities:
-	- **Maintain** configured number of instances (using periodic health checks)
-		- If an instance goes down, ASG launches replacement instance
-	- **Auto scale** to adjust to load (scale-in and scale-out based on auto scaling policies)
-- ASG can launch On-Demand Instances, Spot Instances, or both 
-	- **Best Practice**: Use Launch Template
-- An ELB can distribute load to **active instances** as ASG expands and contracts based on the load
-- **DEMO:** Creating Auto Scaling Groups
-
-## Auto Scaling Components
-![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
-
-- **Launch Configuration/Template**
-	- EC2 instance size and AMI
-- **Auto Scaling Group**
-	- Reference to Launch Configuration/Template
-	- Min, max and desired size of ASG
-	- EC2 health checks by default. Optionally enable ELB health checks.
-	- **Auto Scaling Policies**
-		- When and How to execute scaling?
-
-## Auto Scaling Group - Use Cases
-
-![](/images/aws/asg.png) 
-
-| ASG Use case | Description  | More details | 
-|--|--|--|
-| Maintain current instance levels at all times   |  min = max = desired = CONSTANT<BR/> When an instance becomes unhealthy, it is replaced.     |   Constant load |
-| Scale manually    |   Change desired capacity as needed   |  You need complete control over scaling  |
-| Scale based on a schedule |  Schedule a date and time for scaling up and down. | Batch programs with regular schedules|
-| Scale based on demand (Dynamic/Automatic Scaling) | Create scaling policy (what to monitor?) and scaling action (what action?) | Unpredictable load |
-
-## Dynamic Scaling Policy Types
-![](/images/aws/asg.png) 
-
-| Scaling Policy | Example(s)  | Description | 
-|--|--|--|
-| Target tracking scaling   |  Maintain CPU Utilization at 70%.|  Modify current capacity based on a target value for a specific metric.    |
-|  Simple scaling   | +5 if CPU utilization > 80% <BR/> -3 if CPU utilization < 60%| Waits for cooldown period before triggering additional actions. | 
-|  Step scaling   | +1 if CPU utilization between 70% and 80%<BR/> +3 if CPU utilization between 80% and 100%<BR/> Similar settings for scale down| Warm up time can be configured for each instance| 
-
-## Scaling Policies - Background
-![](/images/aws/00-icons/cloudwatchalarm.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/autoscaling.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/ec2instances.png)
-- Two parts:
-	- CloudWatch alarm (Is CPU utilization >80%? or < 60%). 
-	- Scaling action (+5 EC2 instances or -3 EC2 instances)
-
-## Auto Scaling - Scenarios
-![](/images/aws/asg.png) 
-
-| Scenario | Solution | 
-|--|--|
-|Change instance type or size of ASG instances|Launch configuration or Launch template cannot be edited. Create a new version and ensure that the ASG is using the new version. Terminate instances in small groups.|
-|Roll out a new security patch (new AMI) to ASG instances| Same as above.|
-| Perform actions before an instance is added or removed| Create a Lifecycle Hook. You can configure CloudWatch to trigger actions based on it. |
-
-## Auto Scaling - Scenarios
-![](/images/aws/00-icons/cloudwatchalarm.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/autoscaling.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/ec2instances.png)
-
-| Scenario | Solution | 
-|--|--|
-|Which instance in an ASG is terminated first when a scale-in happens?| (**Default Termination Policy**) Within constraints, goal is to distribute instances evenly across available AZs. Next priority is to terminate older instances.|
-| Preventing frequent scale up and down | Adjust cooldown period to suit your need (default - 300 seconds). Align CloudWatch monitoring interval |
-| I would want to protect newly launched instances from scale-in|Enable instance scale-in protection|
-
-## Review
-
-##### Concepts
-- **Auto Scaling Group** - Maintain configured number of instances (using periodic health checks). Auto scale to adjust to load.
-- **Dynamic Scaling Policies** - Target tracking scaling, Simple scaling and Step scaling.
-- **CloudWatch alarms** track the metric (Is CPU utilization >80%? or < 60%) and trigger the auto scaling action (+5 EC2 instances or -3 EC2 instances)
 
 # EC2 & ELB for Architects
 
@@ -427,7 +342,7 @@
 | HTTP method-based routing   |  ✓ |  |  |
 | Query string parameter-based routing |  ✓ |  | &nbsp; |
 
-## Important Load Balancer Scenarios - Quick Review
+## Important Load Balancer Certification and Interview Questions - Quick Review
  
 | Scenario |Solution  | 
 |--|--|
@@ -437,7 +352,7 @@
 |How to ensure that in-flight requests to unhealthy instances are given an opportunity to complete execution?| Enable connection draining (1 to 3600 seconds. Default timeout - 300 seconds)|
 |Give warm up time to EC2 instances before they start receiving load from ELB|Configure Health Check Grace Period |
 
-## Important Load Balancer Scenarios - Quick Review
+## Important Load Balancer Certification and Interview Questions - Quick Review
  
 | Scenario |Solution  | 
 |--|--|
@@ -1483,7 +1398,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - Provide **multiple customized paths** with unique hostname and access policy for each bucket
 - “dual-stack” endpoint supports IPv4 and IPv6 access
 
-## Amazon S3 Scenarios - Security 
+## Amazon S3 Certification and Interview Questions - Security 
 
 | Scenario | Solution  | 
 |--|:--|
@@ -1506,7 +1421,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 	- Data transfer from Amazon S3 to Amazon CloudFront
 	- Data transfer from Amazon S3 to services in the same region
 
-## Amazon S3 Scenarios - Costs
+## Amazon S3 Certification and Interview Questions - Costs
 
 | Scenario | Solution  | 
 |--|:--|
@@ -1528,7 +1443,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 - **Transfer acceleration**
 	- Enable fast, easy and secure transfers of files to and from your bucket
 
-## Amazon S3 Scenarios - Performance
+## Amazon S3 Certification and Interview Questions - Performance
 
 | Scenario | Solution  | 
 |--|:--|
@@ -1537,7 +1452,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 |Get part of the object | Use **Byte-Range Fetches** - Range HTTP header in GET Object request <BR/> Recommended: GET them in the same part sizes used in multipart upload |
 |Is this recommended: <BR/> EC2 (Region A) <-> S3 bucket (Region B) | No. **Same region recommended**. <BR/>Reduce network latency and data transfer costs|
 
-## Amazon S3 Scenarios - Features
+## Amazon S3 Certification and Interview Questions - Features
 
 | Scenario | Solution  | 
 |--|:--|
@@ -1689,7 +1604,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-con
 }
 ```
 
-## IAM Scenarios
+## IAM Certification and Interview Questions
 
 | Scenario | User/Role  | Recommendation|
 |--|--|:--|
@@ -2241,7 +2156,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 		- Create an EC2 instances from AMI
 		- Create a new AMI from EC2 instance
 
-## Amazon EBS Scenarios - with EC2
+## Amazon EBS Certification and Interview Questions - with EC2
 
 | Scenario | Solution  | 
 |--|:--|
@@ -2253,7 +2168,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 |How do you ensure that an EBS volume is deleted when EC2 instance is terminated?|Enable **Delete on Termination** on EC2 instance|
 |How do you retain EBS volume even if an EBS backed EC2 instance fails?|Remember : On termination of EC2 instance all data on root volume is lost (even if it is EBS backed) <BR/>Detach the EBS volume before terminating the instance<BR/>Recover data by connecting the EBS volume to another EC2 instance|
 
-## Amazon EBS Scenarios - Snapshots
+## Amazon EBS Certification and Interview Questions - Snapshots
 
 | Scenario | Solution  | 
 |--|:--|
@@ -2892,7 +2807,7 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 	- When you need heavy customizations for your database or need access to underlying EC2 instances
 		- Go for a custom database installation
 
-## RDS - Scenarios
+## RDS - Certification and Interview Questions
 
 | Scenario | Solution  | 
 |--|:--|
@@ -2901,7 +2816,7 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 |You want to migrate data from one database engine to another (Example : Microsoft SQL Server to Amazon Aurora)|Consider using AWS Schema Conversion Tool|
 |What are retained when you delete a RDS database instance?|All automatic backups are deleted<BR/>All manual snapshots are retained (until explicit deletion)<BR/>(Optional) Take a final snapshot|
 
-## RDS - Scenarios
+## RDS - Certification and Interview Questions
 
 | Scenario | Solution  | 
 |--|:--|
@@ -3437,7 +3352,7 @@ Note:
 - By default only the queue owner is allowed to use the queue
 	- Configure SQS Queue Access Policy to provide access to other AWS accounts
 
-## SQS - Scenarios
+## SQS - Certification and Interview Questions
 
 |Scenario | Result |
 |--|:--|
@@ -3446,7 +3361,7 @@ Note:
 |DelaySeconds is configured on the queue| Message is delayed for DelaySeconds before it is available|
 |Receiver wants to decide how to handle the message without looking at message body | Configure Message Attributes|
 
-## SQS - Scenarios
+## SQS - Certification and Interview Questions
 
 |Scenario | Result |
 |--|:--|
