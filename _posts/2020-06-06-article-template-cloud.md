@@ -17,6 +17,14 @@ Let's get a quick overview of TOPIC from an AWS certification perspective. We wi
 - When?
 
 ## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
+
+Each Cheat Sheet contains
+- FAQs and Tutorials with 5-20 slides
+- Notes to quickly review and prepare for certification exam
+- Certification Exam Tips
+- Certification and Interview Questions
+
+**Download Now**
 - [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
