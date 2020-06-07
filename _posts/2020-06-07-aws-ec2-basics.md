@@ -261,9 +261,6 @@ curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/
 - Amazon CloudWatch is used to **monitor** EC2 instances
 - (FREE) **Basic monitoring** ("Every 5 minutes") provided for all EC2 instance types
 - ($$$$) EC2 **Detailed Monitoring** can be enabled for detailed metrics every 1 minute
-
-## Monitoring EC2 instances - Metrics
-![](/images/aws/cloudwatch-ec2.png) 
 - EC2 **System level** metrics (CPU, Disk, Network) are tracked by CloudWatch:
 	- CPU utilization
 	- Network In and Out
