@@ -1,8 +1,8 @@
-# Spring Boot Tutorial
+# Your Cloud Certifications Home Page
 
 [cloud.in28minutes.com](https://cloud.in28minutes.com)
 
-This is the github repository for our spring boot tutorials website.
+This is the github repository for our cloud website
 
 ## Contributing
 
