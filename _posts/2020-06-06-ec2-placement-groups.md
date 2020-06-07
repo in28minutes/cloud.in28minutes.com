@@ -20,7 +20,7 @@ Let's understand the three types of EC2 Placement Groups
 - Why do you need EC2 Placement Groups?
 - When do you use Cluster, Spread and Partition EC2 Placement Groups?
 
-## Free Course - Get Started with AWS Certification
+## AWS Certification - Download 25 Cheat Sheets and a Free Course
 - [AWS Certified Solutions Architect Associate - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
 
 
