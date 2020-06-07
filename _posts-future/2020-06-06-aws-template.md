@@ -1,17 +1,19 @@
 ---
 layout:     post
-title:      TOPIC - TOPIC_ABBREVIATION - AWS Certification
+title:      REPLACE_TOPIC - REPLACE_ABBREVIATION - AWS Certification
 date:       2020-06-06 12:31:19
-summary:    Let's get a quick overview of TOPIC from an AWS certification perspective. We will look at important certification questions regarding TOPIC. 
-categories:  AWS_CLOUD TOPIC
-permalink:  /aws-certification-topic-abbreviation
+summary:    REPLACE_SUMMARY 
+categories:  AWS_CLOUD REPLACE_CATEGORY
+permalink:  REPLACE_URL
 ---
 
-Let's get a quick overview of TOPIC from an AWS certification perspective. We will look at important certification questions regarding TOPIC.
+REPLACE_SUMMARY
 
 ## You will learn
-- What?
-- Why?
+- What is ?
+- What are ?
+- Why do we need?
+- What is the difference between?
 - How?
 - Where?
 - When?
@@ -30,6 +32,6 @@ Each cheat sheet contains:
 ## Article Begins
 Some theory
 
-## TOPIC - AWS Certification Exam Practice Questions
+## REPLACE_ENDTITLE
 
 Coming Soon..

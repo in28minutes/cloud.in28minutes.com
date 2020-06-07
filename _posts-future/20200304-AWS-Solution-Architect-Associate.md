@@ -13,9 +13,6 @@
 	- Managed platform updates 
 	- Application health monitoring
 
-## AWS Elastic BeanStalk Demo
-- Deploy an application to cloud using AWS Elastic Beanstalk
-
 ## AWS Elastic Beanstalk Concepts
 - **Application** - A container for environments, versions and configuration
 - **Application Version** - A specific version of deployable code (stored in S3)
@@ -99,7 +96,6 @@
 - Use cases:
 	- Microservices Architectures - Create containers for your microservices and orchestrate them using ECS or Fargate
 	- Batch Processing. Run batch workloads on ECS using AWS Batch
-- DEMO
 
 ## Amazon ECS - Task Definition
 ![](/images/aws/ecs-concepts.png) 
@@ -211,8 +207,6 @@
 - Amazon Simple Notification Service
 - The list is endless...
 
-## AWS Lambda Demo
-- Let's get our hands dirty!
 
 ## AWS Lambda Function
 - Stateless - store data to Amazon S3 or Amazon DynamoDB
@@ -261,7 +255,6 @@
 - Integrates with AWS Lambda, Amazon EC2, Amazon ECS or any web application
 - Supports HTTP(S) and WebSockets (two way communication - chat apps and streaming dashboards)
 - Serverless. **Pay for use** (API calls and connection duration)
-- Demo!
 
 ## Amazon API Gateway - Remember
 
@@ -378,7 +371,6 @@
 - Allows SSH (TCP - 22) from a single IP address (183.82.143.132/32)
 - Allows all outbound communication
 - All other inbound/outbound traffic is denied
-- CIDR Demo : Security Groups
 
 ## VPC CIDR Blocks
 ![](/images/aws/cidr-examples.png)
@@ -406,9 +398,6 @@
 - Every new AWS account has a default VPC (/16) in every region with a public subnet(/20) in every AZ
 - (Remember) Address range of a VPC CAN be extended (Add new CIDR Block)
 - (Remember) Address range of a Subnet CANNOT be changed.
-
-## VPC and Subnets Demo
-![](/images/aws/vpc/9-vpc-regions-az-subnets.png)
 
 ## Public Subnet
 
@@ -534,7 +523,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 - Step 1: Get an **Elastic IP Address**
 - Step 2: Create NAT gateway in a **PUBLIC subnet** with the Elastic IP Address.
 - Step 3: Private subnet route  - **all outbound traffic (0.0.0.0/0) to NAT gateway**.
-- DEMO
 
 ## NAT gateway - Remember
 ![](/images/aws/00-icons/ec2.png) 
@@ -712,8 +700,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Backups of your databases or storage devices
 	- Staging data during on-premise to cloud database migration
 
-## Amazon S3 Demo
-- DEMO
 
 ## Amazon S3 - Objects and Buckets
 ![](/images/aws/00-icons/s3.png)
