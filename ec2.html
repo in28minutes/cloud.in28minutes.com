@@ -8,7 +8,7 @@ tags: EC2
   Here are some of the important resources related to EC2
   <ul>
   {% for post in site.categories['EC2'] %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{post.title | replace: "- AWS Certification", "" }}</a></li>
   {% endfor %}
   </ul>
 
