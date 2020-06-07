@@ -87,21 +87,3 @@ Let's understand the three types of EC2 Placement Groups
 
 Coming Soon...
 
-## Free Videos - Get Started with AWS Certification
-
-- [AWS Certified Solutions Architect Associate - Video Playlist](https://links.in28minutes.com/cloud-in28minutes-top-link-videos){:target="_blank"}
-
-
-## Complete Course - AWS Certified Solutions Architect Associate
-
-Get our amazing course pursued by thousands of learners
-- 400+ Lectures
-- 28 hours on-demand video
-- 18 articles
-- 2 downloadable resources
-- Full lifetime access
-- And lots of learning from Ranga
-
-[![Image](https://www.springboottutorial.com/images/Course-aws-architect-associate-certification.png "AWS Architect Associate Certification")](https://links.in28minutes.com/aws-architect-associate-certification)
-
-
