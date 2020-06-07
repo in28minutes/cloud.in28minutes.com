@@ -2740,6 +2740,7 @@ Performance Pillar 9
 - Typically, a **durability of eleven 9's** is considered very good
 
 ## Availability
+
 | Availability | Downtime (in a month)  | Comment |
 |--|--|--|
 | 99.95% | 22 minutes||

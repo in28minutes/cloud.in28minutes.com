@@ -67,7 +67,6 @@ Each cheat sheet contains:
 ## Load Balancers - Security Group Best Practice
 
 
-
 Load Balancer allow traffic from everywhere!
 ![](/images/aws/loadbalancer-inbound-sg-rules.png) 
 
