@@ -102,3 +102,31 @@ Each cheat sheet contains:
 	- in multiple AZs in multiple regions
 - **Auto scale**: Auto Scaling Group
 - **Distribute load** : Elastic Load Balancer, Route53
+
+
+## Architecture Considerations for EC2
+
+##### Security
+- Use **Security Groups** to restrict traffic
+- Place EC2 instances in **private subnets**
+- Use **Dedicated Hosts** when you have regulatory needs
+
+##### Performance
+- Choose right **instance family** (Optimized combination of compute, memory, disk (storage) and networking)
+- Use appropriate placement groups
+- Prefer creating an **custom AMI** to installing software using userdata
+
+## Architecture Considerations for EC2 & ELB - 2
+
+##### Cost Efficiency
+- Have optimal **number and type** of EC2 instances running
+- Use the **right mix** of:
+	- Savings Plans
+	- Reserved Instances
+	- On demand Instances
+	- Spot Instances
+
+##### Resiliency
+- Configure the right **health checks**
+- Use CloudWatch for monitoring
+- **(Disaster recovery)** Upto date AMI copied to multiple regions

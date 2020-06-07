@@ -129,6 +129,18 @@ EC2 Security Group **ONLY** allows traffic from Load Balancer Security Group
 - (Remember) Classic Load Balancer, **does NOT** support multiple target groups.
 	
 
+## Application Load Balancer - Health Check Settings
+- **(Goal)** Route traffic to healthy instances only!
+- Periodic requests are sent to targets to test their status
+- Important Settings:
+	- **HealthCheckProtocol**: Which protocol?
+	- **HealthCheckPort**: Which port?
+	- **HealthCheckPath**: Destination path (default - /)
+	- **HealthCheckTimeoutSeconds** - Maximum wait time
+	- **HealthCheckIntervalSeconds** - How often should a health check be performed?
+	- **HealthyThresholdCount** - How many health check successes before marking an instance as healthy?
+	- **UnhealthyThresholdCount** - How many health check failures before marking an instance as unhealthy?
+
 ## Listener Rules
 ![](/images/aws/elb-listener-rules.png)
 - How do I identify which request should be sent to which target group?
@@ -190,7 +202,19 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Target group** is a group representing the targets (ex: EC2 instances)
 - One ALB or NLB can support multiple microservices (multiple target groups)!
 
+## Important Load Balancer Certification and Interview Questions - Quick Review
+ 
+| Scenario |Solution  | 
+|--|--|
+|You want to maintain sticky sessions|	Enable stickiness on ELB(cookie name: AWSELB)|
+|You want to distribute load only to healthy instances| Configure health check. Health check can be a ping, connection or a web page request. You can configure interval, max wait time, threshold for number of failures. An instance can be InService/OutOfService. |
+|Distribute load among two AZs in same region| Enable Cross Zone Load Balancing|
+|How to ensure that in-flight requests to unhealthy instances are given an opportunity to complete execution?| Enable connection draining (1 to 3600 seconds. Default timeout - 300 seconds)|
+|Give warm up time to EC2 instances before they start receiving load from ELB|Configure Health Check Grace Period |
 
-## Elastic Load Balancers - AWS Certification Exam Practice Questions
-
-Coming Soon..
+## Important Load Balancer Certification and Interview Questions - Quick Review
+ 
+| Scenario |Solution  | 
+|--|--|
+|Protect ELB from web attacks - SQL injection or cross-site scripting| Integrate with AWS WAF (Web Application Firewall)|
+|Protect web applications from DDoS attacks| Application Load Balancer (ALB) protects you from common DDoS attacks, like SYN floods or UDP reflection attacks.|
