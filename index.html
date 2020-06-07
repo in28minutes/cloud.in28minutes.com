@@ -8,6 +8,14 @@ tags: about
 
   <p>Our goal is to help you master the cloud with <b>hands-on, practical videos, articles and courses</b>.</p>
 
+  <h2>Recommended Certification Topics</h2>
+  <ul>
+  {% for page in site.pages %}
+    <li><a href="{{ page.url | prepend: site.baseurl }}" class="post-link">{{ page.title }}</a></li>
+  {% endfor %}
+  </ul>
+
+
   {% capture tags %}
     {% for tag in site.categories %}
       {{ tag[0] }}
