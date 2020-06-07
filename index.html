@@ -14,7 +14,7 @@ permalink: /
   <ul>
     {% for page in site.pages %}
     {% for tag in page.tags %}
-    <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}
+    <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title | replace: "- AWS Certification", "" }}
     </a></li>
     {% endfor %}
     {% endfor %}
