@@ -1254,6 +1254,7 @@ https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/application/introduc
 - **Rule 2** - Route all other IP addresses (0.0.0.0/0) to internet (internet gateway)
 
 ## Execution of Route Table
+
 | Destination             | Target                 |
 |--|--|
 | 172.31.0.0/16           | Local                  |
@@ -1668,6 +1669,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |Reduced Redundancy (Not recommended)|Frequently accessed, non-critical data|>=3|
 
 ## Amazon S3 Storage Classes - Comparison
+
 | Feature |Standard | Intelligent Tiering | Standard IA| One Zone IA | Glacier | Glacier Deep Archive |
 |--|--|--|--|--|--|--|
 |Availability (Designed)|99.99%|99.9%|99.9%|99.5%|99.99%|99.99%|
@@ -2575,6 +2577,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
 - (Remember) All File Sharing options are accessible on AWS or on premises
 
 ## Review of storage options
+
 | Type    | Examples                            | Latency         | Throughput | Shareable |
 |--|--|--|--|
 |  Block  |  EBS, Instance Store                |  Lowest         | Single  | Attached to one instance at a time. Take snapshots to share.|
