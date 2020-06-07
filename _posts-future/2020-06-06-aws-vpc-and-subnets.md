@@ -152,6 +152,18 @@ Each cheat sheet contains:
 - (Remember) Address range of a VPC CAN be extended (Add new CIDR Block)
 - (Remember) Address range of a Subnet CANNOT be changed.
 
+## VPC and Subnets - Questions
+
+| Question | Answer  | 
+|--|--|
+|Can I have a VPC spread over two regions? | No|
+|Can I have multiple VPCs in same region?| Yes|
+|Is communication between two resources in a VPC visible outside VPC? | No |
+|Can you allow external access to your resources in a VPC?| Yes|
+|Can I have a subnet spread over two regions?| No|
+|Can I have a subnet spread over two availability zones?| No|
+| Can I have two subnets in one availability zone?| Yes|
+| Can I have a subnet in availability zone ap-south-1a if it's VPC is in the region us-east-1?| No. Subnet should be in AZs belonging to the VPC's region|
 
 ## Virtual Private Cloud - AWS Certification Exam Practice Questions
 
