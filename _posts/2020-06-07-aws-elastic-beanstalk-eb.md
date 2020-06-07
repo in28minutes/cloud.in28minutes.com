@@ -10,10 +10,9 @@ permalink:  /aws-certification-elastic-beanstalk-eb
 Let's get a quick overview of Elastic Beanstalk from an AWS certification perspective. We will look at important certification questions regarding Elastic Beanstalk.
 
 ## You will learn
-- What is Elastic Beanstalk?
-- Why do we need Elastic Beanstalk?
-- What is the difference between?
-- When do you use Elastic Beanstalk?
+- What is AWS Elastic Beanstalk?
+- Why do we need AWS Elastic Beanstalk?
+- When do you use AWS Elastic Beanstalk?
 
 ## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
 
