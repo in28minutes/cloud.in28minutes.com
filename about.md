@@ -2,7 +2,6 @@
 layout: page
 title: About Us
 permalink: /about/
-tags: generic
 ---
 
 ## About in28Minutes
