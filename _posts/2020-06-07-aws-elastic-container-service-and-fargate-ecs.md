@@ -133,7 +133,7 @@ Each cheat sheet contains:
 - AWS Fargate and ECS: https://www.youtube.com/watch?v=2oXVYxIPs88
 
 
-## AWS Elastic Container Service and Fargate - AWS Certification Exam Practice Questions
+## AWS Elastic Container Service and Fargate - AWS Certification Questions
 
 When do you use these services to run Docker Containers in AWS?
 - **Elastic Beanstalk** 
