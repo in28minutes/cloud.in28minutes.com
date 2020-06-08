@@ -1,3 +1,4 @@
+- Videos to upload to YouTube and Link To
 - Consistency and flow
 - Images
 - Quiz and Practice Test Questions
