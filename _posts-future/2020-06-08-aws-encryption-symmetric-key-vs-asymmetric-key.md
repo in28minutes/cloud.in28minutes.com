@@ -16,7 +16,7 @@ Let's get a quick overview of Encryption - Symmetric Key vs Asymmetric Key.
 - How is Symmetric Key Encryption different from Asymmetric Key Encryption?
 - What are different Data States?
 
-## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
+## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
@@ -24,7 +24,9 @@ Each cheat sheet contains:
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 
-**Download Now** - [25 AWS Cheat Sheets and Free Course - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target=""_blank""}
+<div>
+ <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+</div>
 
 
 ## Data States

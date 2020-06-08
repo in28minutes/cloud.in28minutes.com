@@ -16,7 +16,7 @@ Let's compare the options to connect AWS network with your corporate network -  
 - Comparison - AWS VPN vs AWS Direct Connect vs Software VPN vs AWS VPN CloudHub
 - When do we use - AWS VPN vs AWS Direct Connect vs Software VPN vs CloudHub?
 
-## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
+## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
@@ -24,7 +24,9 @@ Each cheat sheet contains:
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 
-**Download Now** - [25 AWS Cheat Sheets and Free Course - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target=""_blank""}
+<div>
+ <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+</div>
 
 ## AWS and On-Premises - Overview
 

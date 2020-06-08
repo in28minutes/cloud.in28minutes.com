@@ -15,7 +15,7 @@ Let's get a quick overview of File Storage options in AWS - Amazon EFS vs FSx fo
 - How do these compare - Amazon EFS vs FSx for Lustre vs FSx Windows File Servers?
 - Why do we use -  Amazon EFS vs FSx for Lustre vs FSx Windows File Servers?
 
-## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
+## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
@@ -23,7 +23,9 @@ Each cheat sheet contains:
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 
-**Download Now** - [25 AWS Cheat Sheets and Free Course - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target="_blank"}
+<div>
+ <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+</div>
 
 ## File Storage	
 ![](/images/aws/001-basic-drawings/02-storage-types-file.png)

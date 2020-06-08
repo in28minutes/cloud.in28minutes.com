@@ -16,7 +16,7 @@ Let's get a quick overview of AWS Storage Gateway from an AWS certification pers
 - How is AWS Storage Gateway different from?
 - Compare Storage Gateway Options - AWS Storage File Gateway vs  AWS Storage Tape Gateway vs  AWS Storage Volume Gateway
 
-## AWS Certification - Download 25 PDF Cheat Sheets and a Free Course
+## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
@@ -24,7 +24,9 @@ Each cheat sheet contains:
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 
-**Download Now** - [25 AWS Cheat Sheets and Free Course - Getting Started](https://links.in28minutes.com/cloud-in28minutes-teachable-free-link){:target=""_blank""}
+<div>
+ <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+</div>
 
 ## AWS Storage Gateway
 
