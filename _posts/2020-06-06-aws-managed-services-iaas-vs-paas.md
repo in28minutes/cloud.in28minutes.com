@@ -3,7 +3,7 @@ layout:     post
 title:      Managed Services - IAAS vs PAAS - Shared Responsibility - AWS Certification
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Managed Services - IAAS and PAAS - from an AWS certification perspective. We will look at important certification questions regarding Managed Services - IAAS and PAAS. 
-categories:  AWS_CLOUD Services
+categories:  AWS_CLOUD AWS_SERVICES
 permalink:  /aws-certification-managed-services-iaas-paas
 ---
 

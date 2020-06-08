@@ -1,412 +1,4 @@
 
-# Handling Workflows
-
-## Amazon Simple Workflow Service (SWF)
-
-![](/images/aws/00-icons/swf.png) 
-- Build and run background jobs with
-	- parallel or sequential steps
-	- synchronously or asynchronously
-	- with human inputs (can indefinitely wait for human inputs)
-- (Use cases) Order processing and video encoding workflows
-- A workflow can start when receiving an order, receiving a request for a taxi
-- Workflows can run upto 1 year
-- Deciders and activity workers can use long polling
-
-## Amazon SWF - Order Process
-
-![](/images/aws/swf-overview.png) 
-https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
-- Key Actors : Workflow starter, Decider and Activity worker
-- Workflow starter calls SWF action to start workflow 
-	- Example: when an order is received
-- SWF receives request and schedules a decider
-	- Decider receives the task and returns decision to SWF: 
-		- For example, schedule an activity "Activity 1"
-	- SWF schedules "Activity 1"
-	- Activity worker performs "Activity 1". Returns result to SWF.
-	- SWF updates workflow history. Schedules another decision task.
-	- Loop continues until decider returns decision to close workflow
-- SWF archives history and closes workflow
-
-# Handling Data Streams
-
-## Streaming Data
-
-![](/images/datastream.png) 
-- Imagine implementing analytics for a website:
-	- You have a continuous stream of data (page views, link clicks etc)
-- Characteristics of streaming data:
-	- Continuously generated
-	- Small pieces of data
-	- Sequenced - mostly associated with time
-- How do your process continuous streaming data originating from application logs, social media applications?
-
-## S3 Notifications
-
-![](/images/aws/00-icons/s3bucket.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/lambdafunction.png)
-- Send notifications to SNS, SQS, trigger lambda functions on 
-	- creation, deletion or update of an S3 object
-- Setup at bucket level
-	- You can use prefix and suffix to configure
-- Cost efficient for simple use cases
-	- S3 notification -> Lambda
-	- Almost negligible cost (storage for file + invocation)
-
-## DynamoDB Streams
-![](/images/aws/001-basic-drawings/dynamodbstreams.png)
-- Each event from DynamoDB (in time sequenced order) is buffered in a stream near real-time
-- Can be enabled or disabled
-- Use case - Send email when user registers
-	- Tie a Lambda function to DynamoDB Streams
-- Stream allow iteration through records (**last 24 hours**)
-
-## Amazon Kinesis
-
-![](/images/datastream.png) 
-- Handle streaming data
-	- NOT recommended for ETL Batch Jobs
-- Amazon Kinesis Data Streams
-	- Process Data Streams
-- Amazon Kinesis Firehose
-	- Data ingestion for streaming data : S3, Elasticsearch etc
-- Amazon Kinesis Analytics
-	- Run queries against streaming data
-- Amazon Kinesis Video Streams
-	- Monitor video streams
-
-## Amazon Kinesis Data Streams
-
-![](/images/aws/02-Queuing/4-kinesis-streams.png)
-- Limitless Real time stream processing 
-	- Sub second processing latency
-- Alternative for Kafka
-- Supports multiple clients
-	- Each client can track their stream position
-- Retain and replay data (max 7 days & default 1 day)
-
-## Amazon Kinesis Data Streams - Integrations
-
-![](/images/aws/02-Queuing/4-kinesis-streams.png)
-	
-- Use application integrations to generate streams
-	- Toolkits : AWS SDK, AWS Mobile SDK, Kinesis Agent
-	- Service Integrations : AWS IOT, CloudWatch Events and Logs
-- Process streams using Kinesis Stream Applications 
-	- Run on EC2 instances
-	- Written using Kinesis Data Streams APIs
-
-## Amazon Kinesis Data Firehose
-
-![](/images/aws/02-Queuing/5-kinesis-firehose.png)
-- Data ingestion for streaming data
-	- Receive
-	- Process ( transform - Lambda, compress, encrypt ) 
-	- Store stream data to S3, Elasticsearch, Redshift and Splunk
-- Use existing analytics tools based on S3, Redshift and Elasticsearch
-- Pay for volume of data ingested (Serverless)
-
-## Amazon Kinesis Analytics
-![](/images/aws/02-Queuing/5-kinesis-analytics.png)
-- You want to continuously find active number of users on a website in the last 5 minutes based on streaming website data
-- With Amazon Kinesis Analytics, you can write SQL queries and build Java applications to continuously analyze your streaming data
-
-## Amazon Kinesis Video Streams
-![](/images/aws/02-Queuing/5-kinesis-video-streams.png)
-- Monitor video streams from web-cams 
-- Examples: traffic lights, shopping malls, homes etc
-- Integrate with machine learning frameworks to get intelligence
-
-# AWS Data Lakes
-
-## AWS Data Lakes - Simplified Big Data Solutions
-
-![](/images/aws/data-lake-architecture.png)
-- Usual big data solutions are complex
-- How can we make collecting, analyzing (reporting, analytics, machine learning) and visualizing huge data sets easy? 
-- How to design solutions that scale? 
-- How to build flexibility while saving cost?
-- Data Lake 
-	- Single platform with combination of solutions for data storage, data management and data analytics
-
-## AWS Data Lakes - Storage and Ingestion
-![](/images/aws/00-icons/kinesisfirehose.png)
-![](/images/aws/00-icons/snowball.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/s3.png)
-![](/images/aws/00-icons/glacier.png)
-
-- Storage
-	- Amazon S3 and S3 Glacier provide an ideal storage solution for data lakes
-- Data Ingestion
-	- Streaming data - Amazon Kinesis Firehose
-		- Transform and store to Amazon S3
-		- Transformation operations - compress, encrypt, concatenate multiple records into one (to reduce S3 transactions cost) and execute lambda functions 
-	- Bulk data from on-premises - AWS Snowball
-	- Integrate on-premises platforms with Amazon S3 - AWS Storage Gateway
-
-## Amazon S3 Query in Place
-
-![](/images/aws/00-icons/athena.png) 
-![](/images/aws/00-icons/redshift.png) 
-![](/images/arrow.png)
-![](/images/aws/00-icons/s3.png)
-![](/images/aws/00-icons/glacier.png)	
-
-- Run your analytics directly from Amazon S3 and S3 Glacier
-- S3 Select and Glacier Select
-	- SQL queries to retrieve subset of data
-		- Supports CSV, JSON, Apache Parquet formats
-	- Build serverless apps connecting S3 Select with AWS Lambda
-	- Integrate into big data workflows 
-		- Enable Presto, Apache Hive and Apache Spark frameworks to scan and filter data
-- Amazon Athena
-	- Direct ad-hoc SQL querying on data stored in S3
-	- Uses Presto and supports CSV, JSON,  Apache Parquet and Avro
-- Amazon Redshift Spectrum 
-	- Run queries directly against S3 without loading complete data from S3 into a data warehouse
-	- Recommended if you are executing queries frequently against structured data
-
-## Amazon S3 Query in Place - Recommendations
-- You want to get quick insights from your cold data stored in S3 Glacier. You want to run queries against archives stored in S3 Glacier without restoring the archives.
-	- Use S3 Glacier Select to perform filtering and basic querying using SQL queries 
-	- Stores results in S3 bucket
-	- No need to temporarily stage data and then run queries
-- Recommendations:
-	- Store data in Amazon S3 in Parquet format
-		- Reduce storage (upto 85%) and improve querying (upto 99%) compared to formats like CSV, JSON, or TXT
-	- Multiple compression standards are supported BUT GZIP is recommended
-		- Supported by Amazon Athena, Amazon EMR and Amazon Redshift
-
-## AWS Data Lakes -  Analytics with data in S3 Data Lake
- 
-| Service | Description  | 
-|--|:--|
-| Amazon EMR | EMR integrates well with Amazon S3 - Use big data frameworks like Apache Spark, Hadoop, Presto, or Hbase. For example: machine learning, graph analytics etc|
-|Amazon Machine Learning (ML)|Create and run models for predictive analytics and machine learning (using data from Amazon S3, Amazon Redshift, or Amazon RDS)|
-| Amazon QuickSight |For visualizations (using data from Amazon Redshift, Amazon RDS, Amazon Athena, and Amazon S3)|
-|Amazon Rekognition | Build image recognition capabilities around images stored in Amazon S3. <BR/>Example use case : Face based verification|
-
-## AWS Data Lakes -  Data Cataloging
-
-![](/images/aws/data-cataloging.png) 
-https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-cataloging.html
-- 1 : What data (or assets) is stored?
-- 2 : What is the format of data?
-- 3 : How is the data structured?
-- Question 1 - Stored in comprehensive data catalog
-- Questions 2 and 3 - Stored using a Hive Meta store Catalog (HCatalog)
-- AWS Glue also supports storing HCatalog
-
-##  AWS Glue
-
-![](/images/aws/00-icons/glue.png)
-
-- Fully managed extract, transform, and load (ETL) service
-- Simplify data preparation (capturing metadata) for analytics: 
-	- Connect AWS Glue to your data on AWS (Aurora, RDS, Redshift, S3 etc)
-	- AWS Glue creates a AWS Glue Data Catalog with metadata abstracted from your data
-	- Your data is ready for searching and querying
-- Run your ETL jobs using Apache Spark
-- Metadata from AWS Glue Data Catalog can be used from:
-	- Amazon Athena
-	- Amazon EMR
-	- Amazon Redshift Spectrum
-
-# More Serverless
-
-## Serverless Options - Compute
-![](/images/aws/00-icons/lambda.png)
-- AWS Lambda
-	- Run code without provisioning servers! 
-	- Also called FAAS (Function as a Service)
-- Lambda@Edge
-	- Run lambda functions at AWS Edge Locations
-	- Integrated with CloudFront
-- AWS Fargate
-	- Container Orchestration without worrying about ec2 instances
-
-## Serverless Options - Storage
-![](/images/aws/00-icons/s3.png)
-![](/images/aws/00-icons/efs.png)  
-- Amazon S3 
-	- Highly scalable object storage
-	- We've talking sufficiently about it already!
-- Amazon Elastic File System 
-	- Elastic file storage for UNIX compatible systems
-
-![](/images/aws/00-icons/dynamodb.png) 
-## Serverless Options - Databases
-- Amazon DynamoDB
-	- Fast, scalable, distributed and flexible non-relational (NoSQL) database service for any scale
-	- Need to configure read and write capacity for tables 
-		- NOT truly serverless BUT don't tell that to AWS
-		- Truly serverless mode is expensive
-- Amazon Aurora Serverless
-	- Use Amazon RDS with Aurora in serverless mode
-	- WARNING : I would still consider this early stage
-- Amazon RDS Proxy 
-	- Sits between client applications (including lambdas) and your RDS database
-	- Efficient management of short lived database connections (by pooling database connections)
-
-## Serverless Options - API Proxy and Orchestration
-![](/images/aws/00-icons/apigateway.png) 
-![](/images/aws/00-icons/stepfunctions.png) 
-- Amazon API Gateway
-	- API Management platform helping you create, publish, maintain, monitor and secure your APIs
-	- Provides authorization, rate limiting and versioning
-- AWS Step Functions  
-	- Setup workflows involving services like AWS Lambda and AWS Fargate
-	- Orchestration and state management
-
-## Serverless Options - Application Integration and Analytics
-
-![](/images/aws/00-icons/sns.png) 
-![](/images/aws/00-icons/sqs.png) 
-![](/images/aws/00-icons/kinesis.png) 
-![](/images/aws/00-icons/athena.png) 
-- Amazon SNS
-	- Follows “publish-subscribe” (pub-sub) messaging paradigm to broadcast asynchronous event notifications - SMS, e-mails, push notifications etc
-- Amazon SQS
-	- Fully managed queuing service
-	- Helps you decouple your applications
-- Amazon Kinesis
-	- Multiple solutions to process streaming data
-- Amazon Athena
-	- Query using SQL on data in Amazon S3
-	- Pay only for queries!
-
-## Serverless Options - Others
-![](/images/aws/00-icons/cognito.png) 
-- Amazon Cognito
-	- Fully managed solution providing authorization and authentication solutions for web/mobile apps
-- AWS Serverless Application Model
-	- Open source framework for building serverless applications
-
-## Serverless Use case 1 - Full Stack Web Application
-![](/images/aws/03-serverless/01-serverless.png)
-- Static content stored in S3
-- API Gateway and Lambda are used for the REST API
-- DynamoDB is used to store your data
-
-## Serverless Use case 2 - Real time event processing
-
-![](/images/aws/03-serverless/02-realtime-processing.png)
-- User uploads videos to S3
-- S3 notifications are used to invoke Lambda functions to optimize videos for different devices.
-
-
-## Amazon Cognito
-
-![](/images/aws/00-icons/cognito.png) 
-- Want to quickly add a sign-up page and authentication for your mobile and web apps?
-- Want to integrate with web identity providers (example: Google, Facebook, Amazon) and provide a social sign-in?
-- Do you want security features such as multi-factor authentication (MFA), phone and email verification?
-- Want to create your own user database without worrying about scaling or operations?
-- Let's go : Amazon Cognito
-- Support for SAML
-
-## Amazon Cognito - User Pools
-
-![](/images/aws/00-icons/cognito.png) 
-- Do you want to create your own secure and scalable user directory?
-- Do you want to create sign-up pages?
-- Do you want a built-in, customizable web UI to sign in users (with option to social sign-in )?
-- Create a user pool
-
-## Amazon Cognito - Identity pools
-![](/images/aws/cognito-identity-pools.png)
-- Identity pools provide AWS credentials to grant your users access to other AWS services
-- Connect identity pools with authentication (identity) providers 
-	- Your own user pool OR
-	- Amazon, Apple, Facebook, Google+, Twitter OR
-	- OpenID Connect provider OR
-	- SAML identity providers (SAML 2.0)
-- Configure multiple authentication (identity) providers for each identity pool
-- Federated Identity 
-	- An external authentication (identity) provider
-	- ex: Amazon, Apple, Facebook, OpenID or SAML identity providers
-	
-
-## Amazon Cognito - How does it work?
-
-![](/images/aws/03-serverless/05-cognito.png)
-- Application sends user credentials to identity provider
-	- (If authenticated) Identity provider sends a token to application
-- Application sends the token to Identity Pool
-	- (If valid token) Identity Pool creates temporary credentials (access key, secret key, and session token) using STS
-- App sends a request with the credentials to the AWS service
-
-## Lambda@Edge
-- Run lambda functions at AWS Edge Locations 
-	- Lowest network latency for end users
-- Use cases : Search Engine Optimization, A/B Testing, Dynamically routing to different origins
-- Can be triggered on these Amazon CloudFront events:
-	- Viewer Request - when request arrives at edge location
-	- Origin Request - Just before sending request to origin (when object is not in cache)
-	- Origin Response - After the edge location receives response from origin
-	- Viewer Response - Just before a response is sent back from edge location
-- LIMITATION : Supports ONLY Node.js and Python programming languages
-- LIMITATION : No free tier and more expensive than Lambda
-
-## Serverless Application Model
-- 1000s of Lambda functions to manage, versioning, deployment etc 
-- Serverless projects can become a maintenance headache
-- How to test serverless projects with Lambda, API Gateway and DynamoDB in your local?
-- How to ensure that your serverless projects are adhering to best practices?
-	- Tracing (X-Ray), CI/CD(CodeBuild, CodeDeploy, CodePipeline) etc
-- Welcome SAM - Serverless Application Model
-	- Open source framework for building serverless applications
-	- Define a YAML with all the serverless resources you want:
-		- Functions, APIs, Databases etc
-	- BEHIND THE SCENES : Your configuration is used to create a AWS CloudFormation syntax to deploy your application
-
-## AWS AppSync
-
-![](/images/aws/001-basic-drawings/appsync.png)
-- We are in multi device world
-	- Want to synchronize app data across devices?
-	- Want to create apps which work in off-line state?
-	- Want to automatically sync data once user is back online?
-- Welcome AWS AppSync
-- Based on GraphQL
-- App data can be accessed from anywhere 
-	- NoSQL data stores, RDS or Lambda
-- (Alternative) Cognito Sync is limited to storing simple key-value pairs
-	- AppSync recommended for almost all use cases
-
-## AWS Step Functions 
-
-![](/images/aws/00-icons/stepfunctions.png) 
-- Create a serverless workflow in 10 Minutes using a visual approach
-- Orchestrate multiple AWS services into serverless workflows:
-	- Invoke an AWS Lambda function
-	- Run an Amazon Elastic Container Service or AWS Fargate task
-	- Get an existing item from an Amazon DynamoDB table or put a new item into a DynamoDB table
-	- Publish a message to an Amazon SNS topic
-	- Send a message to an Amazon SQS queue
-- Build workflows as a series of steps:
-	- Output of one step flows as input into next step
-	- Retry a step multiple times until it succeeds
-	- Maximum duration of 1 year
-
-## AWS Step Functions 
-
-![](/images/aws/00-icons/stepfunctions.png) 
-- Integrates with Amazon API Gateway
-	- Expose API around Step Functions
-	- Include human approvals into workflows
-- (Use case) Long-running workflows 
-	- Machine learning model training, report generation, and IT automation
-- (Use case) Short duration workflows 
-	- IoT data ingestion, and streaming data processing
-- (Benefits) Visual workflows with easy updates and less code
-- (Alternative) Amazon Simple Workflow Service (SWF) 
-	- Complex orchestration code  (external signals,  launch child processes)
-- Step Functions is recommended for all new workflows UNLESS you need to write complex code for orchestration
-
 # Extend and Secure Your VPCs - In AWS and To On-Premises
 
 ## VPC Peering
@@ -468,75 +60,6 @@ https://docs.aws.amazon.com/whitepapers/latest/building-data-lakes/data-catalogi
 - Problem with response => Problem with NACL
 - Problem with request could be problems with NACL or SG
 
-## AWS and On-Premises - Overview
-
-![](/images/aws/Aws-Onpremises-01.png)
-- AWS Managed VPN 
-	- IPsec VPN tunnels from  VPC to customer network
-- AWS Direct Connect (DX)
-	- Private dedicated network connection from on-premises to AWS
-
-## AWS Managed VPN
-
-![](/images/aws/001-basic-drawings/sitetositevpn.png)
-- IPsec VPN tunnels from  VPC to customer network
-- Traffic over internet - encrypted using IPsec protocol
-- VPN gateway to connect one VPC to customer network
-- Customer gateway installed in customer network
-	- You need a Internet-routable IP address of customer gateway
-
-## AWS Direct Connect (DC)
-
-![](/images/aws/00-icons/datacenter.png)
-![](/images/arrowbi.png)
-![](/images/aws/00-icons/directconnect.png)
-![](/images/arrowbi.png)
-![](/images/aws/00-icons/aws.png)	
-- Private dedicated network connection from on-premises to AWS
-- Advantages:
-	- Private network 
-	- Reduce your (ISP) bandwidth costs
-	- Consistent Network performance because of private network
-- Connection options:
-	- Dedicated: Dedicated 1 Gbps or 10 Gbps network connections
-	- Hosted: Shared 50Mbps to 10 Gbps network connections
-- (REMEMBER) Establishing DC connection can take more than a month
-- (REMEMBER) Establish a redundant DC for maximum reliability
-- (REMEMBER) Direct Connect DOES NOT encrypt data (Private Connection ONLY)
-
-## AWS Direct Connect Plus VPN
-
-![](/images/aws/aws-direct-connect-vpn.png)
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html
-
-- IPsec Site-to-Site VPN tunnel from an direct connect location to customer network
-- Traffic is encrypted using IPsec protocol
-
-## Software VPN
-
-![](/images/aws/aws-software-vpn.png)
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-vpn-cloudhub-network-to-amazon.html
-- Provides flexibility to fully manage both sides of your Amazon VPC connectivity
-- Run software VPN appliance in your VPC
-- Recommended for compliance - You need to manage both sides of connection
-- Recommended when you use gateway devices which are not supported by Amazon VPN solution
-- You are responsible for patches and updates to Software VPN appliance
-- Software VPN appliance becomes a Single Point of Failure 
-
-## AWS VPN CloudHub
-
-![](/images/aws/aws-vpn-cloudhub.png) 
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-vpn-cloudhub-network-to-amazon.html
-- Use either VPN or AWS Direct Connect to setup connectivity between multiple branch offices
-- Operates on a simple hub-and-spoke model 
-- Uses Amazon VPC virtual private gateway with multiple gateways
-
-## VPC Connections - Review
-- VPC peering: Connect to other VPCs
-- NAT gateways: Allow internet traffic from private subnets
-- Internet gateway: Connect to internet
-- AWS Direct Connect: Private pipe to on-premises
-- AWS VPN: Encrypted (IPsec) tunnel over internet to on-premises
 
 # Moving Data between AWS and On-premises
 
@@ -1034,3 +557,78 @@ Resources:
 	- Search (Provide fast search for websites)
 	- Application monitoring (Get intelligence from your application logs)
 	- Infrastructure monitoring (Get intelligence from your server logs)
+
+# Handling Workflows
+
+## Amazon Simple Workflow Service (SWF)
+
+![](/images/aws/00-icons/swf.png) 
+- Build and run background jobs with
+	- parallel or sequential steps
+	- synchronously or asynchronously
+	- with human inputs (can indefinitely wait for human inputs)
+- (Use cases) Order processing and video encoding workflows
+- A workflow can start when receiving an order, receiving a request for a taxi
+- Workflows can run upto 1 year
+- Deciders and activity workers can use long polling
+
+## Amazon SWF - Order Process
+
+![](/images/aws/swf-overview.png) 
+https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-actors.html
+- Key Actors : Workflow starter, Decider and Activity worker
+- Workflow starter calls SWF action to start workflow 
+	- Example: when an order is received
+- SWF receives request and schedules a decider
+	- Decider receives the task and returns decision to SWF: 
+		- For example, schedule an activity "Activity 1"
+	- SWF schedules "Activity 1"
+	- Activity worker performs "Activity 1". Returns result to SWF.
+	- SWF updates workflow history. Schedules another decision task.
+	- Loop continues until decider returns decision to close workflow
+- SWF archives history and closes workflow
+
+
+## Lambda@Edge
+- Run lambda functions at AWS Edge Locations 
+	- Lowest network latency for end users
+- Use cases : Search Engine Optimization, A/B Testing, Dynamically routing to different origins
+- Can be triggered on these Amazon CloudFront events:
+	- Viewer Request - when request arrives at edge location
+	- Origin Request - Just before sending request to origin (when object is not in cache)
+	- Origin Response - After the edge location receives response from origin
+	- Viewer Response - Just before a response is sent back from edge location
+- LIMITATION : Supports ONLY Node.js and Python programming languages
+- LIMITATION : No free tier and more expensive than Lambda
+
+
+
+## AWS Step Functions 
+
+![](/images/aws/00-icons/stepfunctions.png) 
+- Create a serverless workflow in 10 Minutes using a visual approach
+- Orchestrate multiple AWS services into serverless workflows:
+	- Invoke an AWS Lambda function
+	- Run an Amazon Elastic Container Service or AWS Fargate task
+	- Get an existing item from an Amazon DynamoDB table or put a new item into a DynamoDB table
+	- Publish a message to an Amazon SNS topic
+	- Send a message to an Amazon SQS queue
+- Build workflows as a series of steps:
+	- Output of one step flows as input into next step
+	- Retry a step multiple times until it succeeds
+	- Maximum duration of 1 year
+
+## AWS Step Functions 
+
+![](/images/aws/00-icons/stepfunctions.png) 
+- Integrates with Amazon API Gateway
+	- Expose API around Step Functions
+	- Include human approvals into workflows
+- (Use case) Long-running workflows 
+	- Machine learning model training, report generation, and IT automation
+- (Use case) Short duration workflows 
+	- IoT data ingestion, and streaming data processing
+- (Benefits) Visual workflows with easy updates and less code
+- (Alternative) Amazon Simple Workflow Service (SWF) 
+	- Complex orchestration code  (external signals,  launch child processes)
+- Step Functions is recommended for all new workflows UNLESS you need to write complex code for orchestration
