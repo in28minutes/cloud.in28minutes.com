@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon SQS - Simple Queuing Service - FIFO vs Standard Queue - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-06-10 12:31:19
 summary:    Let's get a quick overview of Amazon SQS from an AWS certification perspective. We will look at important certification questions regarding Amazon SQS. 
 categories:  AWS_CLOUD AWS_ASYNCHRONOUS
 permalink:  /aws-certification-amazon-sqs-simple-queuing-service
@@ -14,6 +14,7 @@ Let's get a quick overview of Amazon SQS from an AWS certification perspective. 
 - Why do we need Amazon SQS?
 - When do we use Amazon SQS?
 - What is difference between FIFO vs Standard Queue?
+- What are the steps involved in processing a message from Amazon SQS queue?
 - How do you implement auto scaling with CloudWatch Alarms for SQS Queue?
 
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
@@ -30,17 +31,20 @@ Each cheat sheet contains:
 
 ## Simple Queuing Service
 
-![](/images/aws/02-Queuing/2-sqs.png)
-- Reliable, scalable, fully-managed message queuing service
+Simple Queuing Service is a highly reliable, scalable, fully-managed message queuing service.
+
+Here are some of the important features:
 - High availability
 - Unlimited scaling
 	- Auto scale to process billions of messages per day
 - Low cost (Pay for use)
 
-## Standard and FIFO Queues
+![](/images/aws/02-Queuing/2-sqs.png)
 
-![](/images/aws/00-icons/sqs.png)
 
+## Two Types of Simple Queuing Service Queues
+
+There are Two Types of Simple Queuing Service Queues:
 - Standard Queue 
 	- Unlimited throughput
 	- BUT NO guarantee of ordering (Best-Effort Ordering) 
@@ -52,13 +56,16 @@ Each cheat sheet contains:
 	- BUT throughput is lower 
 		- Upto 300 messages per second (300 send, receive, or delete operations per second)
 		- If you batch 10 messages per operation (maximum), up to 3,000 messages per second 
-- Choose
-	- Standard SQS queue if throughput is important
-	- FIFO Queue if order of events is important
+
+Choose between Two Types of Simple Queuing Service Queues
+- Standard SQS queue if throughput is important
+- FIFO Queue if order of events is important
 
 ## Sending and receiving a SQS Message - Best case scenario
 
 ![](/images/aws/02-Queuing/sqs-simple-flow.png)
+
+Let's see the steps involved in sending and receiving a message on the SQS queue:
 - Producer places message on queue 
 	- Receives globally unique message ID ABCDEFGHIJ (used to track the message)
 - Consumer polls for messages 
@@ -70,12 +77,15 @@ Each cheat sheet contains:
 	- Message is removed from the queue
 
 ## Simple Queuing Service Lifecycle of a message
+
+The picture below shows the service lifecycle of a message
 ![](/images/aws/02-Queuing/4-Queuing-LifeCycle.png)
 
-Note:
-- When a message is sent to queue, it is redundantly distributed among SQS servers
+When a message is sent to queue, it is redundantly distributed among SQS servers
 
 ## SQS - Auto Scaling
+
+You can also implement auto scaling for your SQS queue using CloudWatch based on number of messages in the queue.
 
 ![](/images/aws/00-icons/sqs.png)
 ![](/images/arrow.png)
@@ -90,6 +100,8 @@ Note:
 
 ## SQS Queue - Important configuration
  
+The table below shows some of the important SQS queue configuration:
+
 | Configuration | Description  | 
 |--|:--|
 |Visibility timeout| Other consumers will not receive a message being processed for the configured time period (default - 30 seconds, min - 0, max - 12 hours)  <BR/> Consumer processing a message can call ChangeMessageVisibility to increase visibility timeout of a message (before visibility timeout)|
@@ -102,6 +114,7 @@ Note:
 ![](/images/arrowbi.png)
 ![](/images/aws/00-icons/iam.png)
 
+Here are the important things to consider about security of the SQS queue:
 - You can provide access to other AWS resources to access SQS using IAM roles (EC2 -> SQS)
 - By default only the queue owner is allowed to use the queue
 	- Configure SQS Queue Access Policy to provide access to other AWS accounts
