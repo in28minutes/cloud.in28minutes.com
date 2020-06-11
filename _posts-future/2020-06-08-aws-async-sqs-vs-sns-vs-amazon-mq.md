@@ -30,27 +30,26 @@ Each cheat sheet contains:
 </div>
 
 ## Synchronous Communication
-![](/images/aws/02-Queuing/0-SQS-00.png)
+Lets take an example of synchronous communication.
 - Applications on your web server make synchronous calls to the logging service
 - What if your logging service goes down?
 	- Will you applications go down too?
 - What if all of sudden, there is high load and there are lot of logs coming in?
 	- Log Service is not able to handle the load and goes down very often
+![](/images/aws/02-Queuing/0-SQS-00.png)
 
 ## Asynchronous Communication - Decoupled
-![](/images/aws/02-Queuing/0-SQS-01.png)
+How can we address the issue of synchronous communication?
 - Create a queue or a topic
 - Your applications put the logs on the queue
 - They would be picked up when the logging service is ready
 - Good example of decoupling!
-
+![](/images/aws/02-Queuing/0-SQS-01.png)
 ## Asynchronous Communication - Scale up
 ![](/images/aws/02-Queuing/0-SQS-02.png)
 - You can have multiple logging service instances reading from the queue!
-
 ## Asynchronous Communication - Pull Model - SQS
-
-![](/images/aws/02-Queuing/2-sqs.png)
+SQS is based on pull model. Lets look at the possibilities.
 - Producers put messages on the queue
 - Consumers poll on the queue
 	- Only one of the consumers will successfully process a given message
@@ -62,21 +61,9 @@ Each cheat sheet contains:
 	- Work is not lost due to insufficient resources
 - Decoupling
 	- Make changes to consumers without effect on producers worrying about them
-
-## Asynchronous Communication - Push Model - SNS
-
-![](/images/aws/02-Queuing/3-SNS.png)
-
-- Subscribers subscribe to a topic
-- Producers send notifications to a topic
-	- Notification sent out to all subscribers
-- Decoupling
-	- Producers don't care about who is listening
-- Availability
-	- Producer up even if a subscriber is down
+![](/images/aws/02-Queuing/2-sqs.png)
 
 ## Simple Queuing Service
-
 ![](/images/aws/02-Queuing/2-sqs.png)
 - Reliable, scalable, fully-managed message queuing service
 - High availability
@@ -84,9 +71,18 @@ Each cheat sheet contains:
 	- Auto scale to process billions of messages per day
 - Low cost (Pay for use)
 
+## Asynchronous Communication - Push Model - SNS
+SNS is based on push model. Lets look how this works.
+- Subscribers subscribe to a topic
+- Producers send notifications to a topic
+	- Notification sent out to all subscribers
+- Decoupling
+	- Producers don't care about who is listening
+- Availability
+	- Producer up even if a subscriber is down
+![](/images/aws/02-Queuing/3-SNS.png)
 
 ## Amazon Simple Notification Service(SNS)
-
 ![](/images/aws/02-Queuing/3-SNS.png)
 - Publish-Subscribe (pub-sub) paradigm
 - Broadcast asynchronous event notifications
@@ -95,11 +91,6 @@ Each cheat sheet contains:
 	- Subscribers can register for a Topic
 	- When an SNS Topic receives an event notification (from publisher), it is broadcast to all Subscribers
 - Use Cases : Monitoring Apps, workflow systems, mobile apps
-
-## Amazon Simple Notification Service(SNS)
-
-![](/images/aws/00-icons/sns.png)
-
 - Provides mobile and enterprise messaging web services
 	- Push notifications to Apple, Android, FireOS, Windows devices
 	- Send SMS to mobile users
