@@ -30,7 +30,7 @@ Each cheat sheet contains:
 </div>
 
 ## Synchronous Communication
-Lets take an example of synchronous communication.
+Lets take an example of synchronous communication and the challenges in this type of communication.
 - Applications on your web server make synchronous calls to the logging service
 - What if your logging service goes down?
 	- Will you applications go down too?
@@ -38,8 +38,11 @@ Lets take an example of synchronous communication.
 	- Log Service is not able to handle the load and goes down very often
 ![](/images/aws/02-Queuing/0-SQS-00.png)
 
+Two major concerns with the synchronous communications are
+- Tightly coupled
+- Performance bottleneck & Inability to scale
+What is the best approach to solve these coupling and scaling issues.
 ## Asynchronous Communication - Decoupled
-How can we address the issue of synchronous communication?
 - Create a queue or a topic
 - Your applications put the logs on the queue
 - They would be picked up when the logging service is ready
@@ -48,8 +51,13 @@ How can we address the issue of synchronous communication?
 ## Asynchronous Communication - Scale up
 ![](/images/aws/02-Queuing/0-SQS-02.png)
 - You can have multiple logging service instances reading from the queue!
-## Asynchronous Communication - Pull Model - SQS
-SQS is based on pull model. Lets look at the possibilities.
+
+In asynchronous communication there are two possible models
+- Pull Model - Consumers have to pull messages from the queue/topic
+- Push Model - Messages are pushed to the various interested consumers
+
+## Asynchronous Communication - Pull Model
+Lets look at how this model addresses various enterprise concerns.
 - Producers put messages on the queue
 - Consumers poll on the queue
 	- Only one of the consumers will successfully process a given message
@@ -64,7 +72,7 @@ SQS is based on pull model. Lets look at the possibilities.
 ![](/images/aws/02-Queuing/2-sqs.png)
 
 ## Simple Queuing Service
-![](/images/aws/02-Queuing/2-sqs.png)
+SQS is based on pull model. 
 - Reliable, scalable, fully-managed message queuing service
 - High availability
 - Unlimited scaling
@@ -72,7 +80,7 @@ SQS is based on pull model. Lets look at the possibilities.
 - Low cost (Pay for use)
 
 ## Asynchronous Communication - Push Model - SNS
-SNS is based on push model. Lets look how this works.
+Lets look how it addresses various enterprise concerns.
 - Subscribers subscribe to a topic
 - Producers send notifications to a topic
 	- Notification sent out to all subscribers
@@ -83,7 +91,7 @@ SNS is based on push model. Lets look how this works.
 ![](/images/aws/02-Queuing/3-SNS.png)
 
 ## Amazon Simple Notification Service(SNS)
-![](/images/aws/02-Queuing/3-SNS.png)
+SNS is based on push model. 
 - Publish-Subscribe (pub-sub) paradigm
 - Broadcast asynchronous event notifications
 - Simple process
