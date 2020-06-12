@@ -30,37 +30,51 @@ Each cheat sheet contains:
 </div>
 
 ## Synchronous Communication
-Lets take an example of synchronous communication and the challenges in this type of communication.
-- Applications on your web server make synchronous calls to the logging service
+
+Lets take an example of synchronous communication and the challenges with synchronous communication:
+
+Applications on your web server make synchronous calls to the logging service.
+![](/images/aws/02-Queuing/0-SQS-00.png)
+
+Consider these situations:
 - What if your logging service goes down?
 	- Will you applications go down too?
 - What if all of sudden, there is high load and there are lot of logs coming in?
 	- Log Service is not able to handle the load and goes down very often
-![](/images/aws/02-Queuing/0-SQS-00.png)
 
-Two major concerns with the synchronous communications are
-- Tightly coupled
+Two major concerns with the synchronous communications are:
+- Tight Coupling
 - Performance bottleneck & Inability to scale
-What is the best approach to solve these coupling and scaling issues.
+
 ## Asynchronous Communication - Decoupled
+
+What is the best approach to solve these coupling and scaling issues? How about going asynchronous?
 - Create a queue or a topic
 - Your applications put the logs on the queue
 - They would be picked up when the logging service is ready
 - Good example of decoupling!
 ![](/images/aws/02-Queuing/0-SQS-01.png)
-## Asynchronous Communication - Scale up
-![](/images/aws/02-Queuing/0-SQS-02.png)
-- You can have multiple logging service instances reading from the queue!
 
+## Asynchronous Communication - Scale up
+
+Amazing thing about the asynchronous communication is that it enables you scale up very easily.
+
+You can have multiple logging service instances reading from the queue!
+![](/images/aws/02-Queuing/0-SQS-02.png)
+
+## Asynchronous Communication - Models
 In asynchronous communication there are two possible models
 - Pull Model - Consumers have to pull messages from the queue/topic
 - Push Model - Messages are pushed to the various interested consumers
 
-## Asynchronous Communication - Pull Model
-Lets look at how this model addresses various enterprise concerns.
+### Asynchronous Communication - Pull Model
+
+Quick overview of the pull model:
 - Producers put messages on the queue
 - Consumers poll on the queue
 	- Only one of the consumers will successfully process a given message
+
+Here are the advantages of using SQS:
 - Scalability
 	- Scale consumer instances under high load
 - Availability
@@ -69,10 +83,12 @@ Lets look at how this model addresses various enterprise concerns.
 	- Work is not lost due to insufficient resources
 - Decoupling
 	- Make changes to consumers without effect on producers worrying about them
+
 ![](/images/aws/02-Queuing/2-sqs.png)
 
 ## Simple Queuing Service
-SQS is based on pull model. 
+
+SQS is based on pull model. Here are some of the important features:
 - Reliable, scalable, fully-managed message queuing service
 - High availability
 - Unlimited scaling
@@ -80,18 +96,23 @@ SQS is based on pull model.
 - Low cost (Pay for use)
 
 ## Asynchronous Communication - Push Model - SNS
-Lets look how it addresses various enterprise concerns.
+
+Here's a quick overview of the SNS approach:
 - Subscribers subscribe to a topic
 - Producers send notifications to a topic
 	- Notification sent out to all subscribers
+
+Here are the advantages of using SNS:
 - Decoupling
 	- Producers don't care about who is listening
 - Availability
 	- Producer up even if a subscriber is down
+
 ![](/images/aws/02-Queuing/3-SNS.png)
 
 ## Amazon Simple Notification Service(SNS)
-SNS is based on push model. 
+
+SNS is based on push model. Here are some of the important features:
 - Publish-Subscribe (pub-sub) paradigm
 - Broadcast asynchronous event notifications
 - Simple process
@@ -107,7 +128,10 @@ SNS is based on push model.
 - You can allow access to other AWS accounts using AWS SNS generated policy
 
 ## Amazon MQ
-- Managed message broker service for Apache ActiveMQ
+
+Amazon MQ is a managed message broker service for Apache ActiveMQ.
+
+Here are some of the important features:
 - (Functionally) Amazon MQ = Amazon SQS (Queues) + Amazon SNS (Topics)
 	- BUT with restricted scalability
 - Supports traditional APIs (JMS) and protocols (AMQP, MQTT, OpenWire, and STOMP)
