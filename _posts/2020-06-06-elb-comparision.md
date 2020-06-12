@@ -30,6 +30,8 @@ Each cheat sheet contains:
 
 ## ALB vs NLB vs CLB 
 
+Here's a table comparing the features of different load balancers. You can find details about these features below the table.
+
 | Feature |  Application Load Balancer | Network Load Balancer | Classic Load Balancer |
 |--|--|--|--|
 | Version  | New v2 | New v2 | Old v1|
@@ -55,6 +57,8 @@ Each cheat sheet contains:
 | Query string parameter-based routing |  ✓ |  | &nbsp; |
 
 ## Elastic Load Balancer Terminology
+
+Here is some of the important terminology referred to in the above table:
 - **Connection draining** - Before an instance is terminated, requests in execution are given time to complete (deregistration_delay.timeout_seconds)
 - **Dynamic Host Port Mapping** - Useful with containers. Two instances of the same task can be running on the same ECS container instance
 - **Cross-zone load balancing** - Distribute load between available instances in multiple AZs in One Region

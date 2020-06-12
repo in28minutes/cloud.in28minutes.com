@@ -28,78 +28,71 @@ Each cheat sheet contains:
 
 
 ## Regions and Zones 
+
+Let's first understand the need for Regions and Zones with an example:
+
+Imagine that your application is deployed in a data center in London.
 ![](/images/aws/vpc/1-SingleDataCenter.png)
-- Imagine that your application is deployed in a data center in London
-- What would be the challenges?
-	- Challenge 1 : Slow access for users from other parts of the world (**high latency**)
-	- Challenge 2 : What if the data center crashes? 
-		- Your application goes down (**low availability**)
 
-
+What would be the challenges?
+- Challenge 1 : Slow access for users from other parts of the world (**high latency**)
+- Challenge 2 : What if the data center crashes? 
+	- Your application goes down (**low availability**)
 
 ## Multiple data centers
-![](/images/aws/vpc/2-2-datacenters-london.png)
-- Let's **add in one more data center** in London
-- What would be the challenges?
-	- Challenge 1 : Slow access for users from other parts of the world
-	- Challenge 2 (**SOLVED**) : What if one data center crashes?
-		- Your application is **still available** from the other data center
-	- Challenge 3 : What if **entire region** of London is unavailable?
-		- Your application goes down
-		
 
+Let's **add in one more data center** in London.
+
+![](/images/aws/vpc/2-2-datacenters-london.png)
+
+What would be the challenges now?
+- Challenge 1 : Slow access for users from other parts of the world
+- Challenge 2 (**SOLVED**) : What if one data center crashes?
+	- Your application is **still available** from the other data center
+- Challenge 3 : What if **entire region** of London is unavailable?
+	- Your application goes down
+		
 ## Multiple regions
+
+Let's add a new region : Mumbai.
 ![](/images/aws/vpc/3-2-datacenters-london-mumbai.png)
-- Let's add a new region : Mumbai
-- What would be the challenges?
-	- Challenge 1 (**PARTLY SOLVED**) : Slow access for users from other parts of the world
-		- You can solve this by adding deployments for your applications in other regions
-	- Challenge 2 (SOLVED) : What if one data center crashes?
-		- Your application is still live from the other data centers
-	- Challenge 3 (**SOLVED**) : What if entire region of London is unavailable?
-		- Your application is served from Mumbai
+
+What would be the challenges?
+- Challenge 1 (**PARTLY SOLVED**) : Slow access for users from other parts of the world
+	- You can solve this by adding deployments for your applications in other regions
+- Challenge 2 (SOLVED) : What if one data center crashes?
+	- Your application is still live from the other data centers
+- Challenge 3 (**SOLVED**) : What if entire region of London is unavailable?
+	- Your application is served from Mumbai
 
 
 ## Regions
 ![](/images/aws/aws-regions-and-az.png)
-- Imagine setting up your own data centers in different regions around the world 
-	- **Would that be easy?**
-- (Solution) AWS provides **20+ regions** around the world (expanding every year)
-- Regions - Advantages
-	- High Availability
-	- Low Latency
-	- Adhere to government **regulations**
+Imagine setting up your own data centers in different regions around the world 
+- **Would that be easy?**
 
-## How do you choose AWS Regions?
-![](/images/aws/region.png)
-- Choose the right region(s) based on:
-	- Where are your users located?
-	- Where is your data located?
-	- Regulatory and security compliance needs
-- AWS Services can be:
-	- Regional (OR)
-	- Global
+AWS provides **20+ regions** around the world (expanding every year). Advantages of Regions include:
+- High Availability
+- Low Latency
+- Adhere to government **regulations**
 
-
+Choose the right region(s) based on:
+- Where are your users located?
+- Where is your data located?
+- Regulatory and security compliance needs
 
 ## AWS Availability Zones
+
+Availability Zones are **Isolated locations** in a Region. Each AWS Region has at least two Availability Zones. Availability Zones **increase availability** of applications in the same region.
 ![](/images/aws/region-az.png) 
-- **Isolated locations** in a Region
-- Each AWS Region has at least two Availability Zones
-- **Increase availability** of applications in the same region
 
 
 ## AWS Regions and Availability Zones examples
 
- 
-> New Regions and AZs are constantly added
+New Regions and AZs are constantly added. Here is table showing examples of regions and AZs.
  
 | Region Code | Region  | Availability Zones | Availability Zones List |
 |:--:|--|:--:|--|
 | us-east-1   |  US East (N. Virginia)   | 6        | us-east-1a us-east-1b <BR/>us-east-1c  us-east-1d<BR/> us-east-1e us-east-1f      |
 |  eu-west-2   |   Europe (London)     |   3     |  eu-west-2a eu-west-2b <BR/>eu-west-2c   |
 |ap-south-1|Asia Pacific(Mumbai)|3|ap-south-1a ap-south-1b <BR/>ap-south-1c|
-
-## Regions and Availability Zones - AWS Certification Exam Practice Questions
-
-Coming Soon..

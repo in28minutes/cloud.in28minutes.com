@@ -66,13 +66,13 @@ Choose between Two Types of Simple Queuing Service Queues
 ![](/images/aws/02-Queuing/sqs-simple-flow.png)
 
 Let's see the steps involved in sending and receiving a message on the SQS queue:
-- Producer places message on queue 
+- Step I: Producer places message on queue 
 	- Receives globally unique message ID ABCDEFGHIJ (used to track the message)
-- Consumer polls for messages 
+- Step II: Consumer polls for messages 
 	- Receives the message ABCDEFGHIJ along with a receipt handle XYZ
-- Message remains in the queue while the consumer processes the message
+- Step III: Message remains in the queue while the consumer processes the message
 	- Other consumers will not receive ABCDEFGHIJ even if they poll for messages
-- Consumer processes the message successfully 
+- Step IV: Consumer processes the message successfully 
 	- Calls delete message (using receipt handle XYZ)
 	- Message is removed from the queue
 
@@ -95,6 +95,7 @@ You can also implement auto scaling for your SQS queue using CloudWatch based on
 ![](/images/arrow.png)
 ![](/images/aws/00-icons/ec2instances.png)
 
+Recommendations:
 - Use target tracking scaling policy 
 - Use a SQS metric like ApproximateNumberOfMessages
 
@@ -120,6 +121,8 @@ Here are the important things to consider about security of the SQS queue:
 	- Configure SQS Queue Access Policy to provide access to other AWS accounts
 
 ## SQS - Certification and Interview Questions
+
+Let's look a few scenarios regarding SQS.
 
 |Scenario | Result |
 |--|:--|

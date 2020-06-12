@@ -31,6 +31,8 @@ Each cheat sheet contains:
 
 ## EC2 Pricing Models Overview
 
+Table below gives a quick overview of the EC2 pricing models. 
+
 | Pricing Model | Description  | Details|
 |--|--|--|
 | On Demand | Request when you want it | Flexible and Most Expensive|
@@ -38,21 +40,24 @@ Each cheat sheet contains:
 | Reserved  | Reserve ahead of time  | Upto 75% off. 1 or 3 years reservation. |
 | Savings Plans | Commit spending $X per hour on (EC2 or AWS Fargate or Lambda)| Upto 66% off. No restrictions. 1 or 3 years reservation.|
 
+Let's go in-depth in the next sections.
+
 ## EC2 On-Demand
 
-![](/images/aws/ec2-host.png) 
-![](/images/aws/ec2-host.png) 
-- On demand resource provisioning - **Use and Throw**!
-- Highest cost and highest flexibility
-- This is what we have been using until now in this course
-- **Ideal for**:
-	- A web application which receives spiky traffic
-	- A batch program which has unpredictable runtime and cannot be interrupted
-	- A batch program being moved from on-premises to cloud for the first time
+On Demand is all about "On demand resource provisioning" - **Use and Throw**! This provides highest flexibility at highest cost.
+
+EC2 On-Demand is **Ideal for**:
+- A web application which receives spiky traffic
+- A batch program which has unpredictable runtime and cannot be interrupted
+- A batch program being moved from on-premises to cloud for the first time
 
 ## EC2 Spot instances
-- **(Old Model)** Bid a price. Highest bidder wins
-- **(New Model)** Quote your maximum price. Prices decided by long term trends. 
+
+In the older model, you bid for spot instances and the highest bidder wins.
+
+In the new model, you quote your maximum price. Prices decided by long term trends. 
+
+Important things to note:
 - Up to 90% off (compared to On-Demand)
 - Can be terminated with a **2 minute** notice
 - Ideal for **Non time-critical workloads** that can **tolerate interruptions** (fault-tolerant)
@@ -61,78 +66,102 @@ Each cheat sheet contains:
 
 ## EC2 Spot Block and Spot Fleet
 
-##### Spot Block 
+Spot instances can also be requested for specific duration and across a range of instance types. Let's look at these variations now.
+
+Spot Block 
 - Request Spot instances for a **specific duration** (1 or 2 or .. or 6 hours) 
 - For jobs that take finite time to complete
 
-##### Spot Fleet 
+Spot Fleet 
 - Request spot instances across a **range of instance types**
 - The more instance types that you specify, the better your chances of having your target capacity fulfilled
 
 ## EC2 Linux Spot Instances - Pricing
+
+Let's understand the pricing of Spot Instances:
 - ZERO charge if terminated or stopped by Amazon EC2 in the first instance hour
 - Otherwise you are charged by second
-- Examples:
-	- If EC2 terminates spot instance after 50 minutes, you pay ZERO
-	- If you terminate spot instance after 50 minutes, you pay for 50 minutes
-	- If either EC2 or you yourselves terminate spot instance after 70 minutes, you pay for 70 minutes
+
+Let's look at a few examples:
+- If EC2 terminates spot instance after 50 minutes, you pay ZERO
+- If you terminate spot instance after 50 minutes, you pay for 50 minutes
+- If either EC2 or you yourselves terminate spot instance after 70 minutes, you pay for 70 minutes
 
 ## EC2 Spot Instances - Remember
-- Spot instances can be terminated, stopped, or hibernated when interrupted
-	- Default - terminated
-	- Use **maintain option** while creating spot request for stop and hibernate options
-	- Hibernating a Spot instance allows you to save state of EC2 instances and **quickly start up**
-- To **completely close** a spot request:
-	- Step 1. Cancel Spot Request
-	- Step 2. Terminate all Spot Instances
-	- **(Remember)** Canceling a spot request might not terminate active spot instances
+Spot instances can be terminated, stopped, or hibernated when interrupted
+- Default - terminated
+- Use **maintain option** while creating spot request for stop and hibernate options
+- Hibernating a Spot instance allows you to save state of EC2 instances and **quickly start up**
+
+To **completely close** a spot request:
+- Step 1. Cancel Spot Request
+- Step 2. Terminate all Spot Instances
+- **(Remember)** Canceling a spot request might not terminate active spot instances
 
 ## EC2 Reserved Instances
-- Reserve EC2 instances ahead of time!
-- **Three types** of reserved instances:
-	- Standard
-	- Convertible
-	- Scheduled
-- **Payment models**:
-	- No Upfront - $0 upfront. Pay monthly installment. 
-	- Partial Upfront - $XYZ upfront. Pay monthly installment
-	- All Upfront - Full amount upfront. $0 monthly installment. 
-	- **Cost wise** : Earlier you pay, more the discount. All Upfront <  Partial Upfront < No Upfront
-	- A difference upto 5%
+EC2 Reserved Instances is all about reserving EC2 instances ahead of time!
 
-## EC2 Standard Reserved Instances
-- **Commitment** : (In a region) I reserve an EC2 instance with a **specific platform**(for example, Linux), a **specific instance type**(for example, t2.micro) for a term of **1 year** or **3 years**
+**Three types** of reserved instances:
+- Standard
+- Convertible
+- Scheduled
+
+Different **Payment models**:
+- No Upfront - $0 upfront. Pay monthly installment. 
+- Partial Upfront - $XYZ upfront. Pay monthly installment
+- All Upfront - Full amount upfront. $0 monthly installment. 
+
+**Cost wise** : Earlier you pay, more the discount. All Upfront <  Partial Upfront < No Upfront
+- A difference upto 5%
+
+### EC2 Standard Reserved Instances
+
+**Commitment** : (In a region) I reserve an EC2 instance with a **specific platform**(for example, Linux), a **specific instance type**(for example, t2.micro) for a term of **1 year** or **3 years**
+
+Important things to note:
 - You can switch to other instance sizes within the same instance family (t2.large to t2.xlarge)
 - You can switch Availability Zones
 - You **CANNOT** change instance families, operating systems, or tenancies (default or dedicated)
 
-## EC2 Convertible Reserved Instances
-- **Commitment** : (In a region) I reserve an EC2 instance for a term of **1 year** or **3 years**
+### EC2 Convertible Reserved Instances
+
+**Commitment** : (In a region) I reserve an EC2 instance for a term of **1 year** or **3 years**
+
+Important things to note:
 - You **can change** instance families, operating systems, or tenancies (default or dedicated)
 - You can switch Availability Zones and instance size
 
-## EC2 Scheduled Reserved Instances
-- Commitment : (In a region) I reserve an EC2 instance part-time for a year - **X hours every month/week/day** at a specific time ZZ:ZZ
+### EC2 Scheduled Reserved Instances
+
+Commitment : (In a region) I reserve an EC2 instance part-time for a year - **X hours every month/week/day** at a specific time ZZ:ZZ
+
+Important things to note:
 - (Restriction) Only available for a **few instance types** (ex: C3, C4, M4, R3) **in a few regions** (ex: US East (N. Virginia), US West (Oregon), Europe (Ireland))
 - (Use case) Bills are generated on the first day of the month
 - (Use case) A batch program runs for a few hours every day
 - (Use case) Weekend batch program runs for a few hours every week
 
-## EC2 Reserved Instances - Summary
+### EC2 Reserved Instances - Summary
+
+Let's look at the summary of EC2 reserved instances:
 - Standard: Commit for a EC2 platform and instance family for 1 year or 3 years. (Up to 75% off)
 - Convertible: Standard + **flexibility** to change EC2 platform and instance family. (Up to 54% off)
 - Scheduled: Reserve for **specific time period** in a day. (5% to 10% off)
 - You can **sell reserved instances** on the AWS Reserved instance marketplace if you do not want to use your reservation
 
 ## EC2 Compute Savings Plans
-- **Commitment** : I would spend X dollars per hour on AWS compute resources (Amazon EC2 instances, AWS Fargate and/or AWS Lambda) for a 1 or 3 year period
+**Commitment** : I would spend X dollars per hour on AWS compute resources (Amazon EC2 instances, AWS Fargate and/or AWS Lambda) for a 1 or 3 year period
+
+Important things to note:
 - Up to 66% off (compared to on demand instances)
 - Provides **complete flexibility**: 
 	- You can change instance family, size, OS, tenancy or AWS Region of your Amazon EC2 instances
 	- You can switch between Amazon EC2, AWS Fargate and/or AWS Lambda
 
 ## EC2 Instance Savings Plans 
-- **Commitment** : I would spend X dollars per hour on Amazon EC2 instances of a specific instance family (General Purpose, for example) within a specific region (us-east-1, for example)
+**Commitment** : I would spend X dollars per hour on Amazon EC2 instances of a specific instance family (General Purpose, for example) within a specific region (us-east-1, for example)
+
+Important things to note:
 - Up to 72% off (compared to on demand instances)
 - You can switch operating systems (Windows to Linux, for example)
 

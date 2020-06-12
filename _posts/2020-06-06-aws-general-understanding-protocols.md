@@ -30,16 +30,23 @@ Each cheat sheet contains:
 
 ## Understanding Need for Protocols and Layers
 
-![](/images/application-transport-layers.png)
-- Computers use protocols to communicate
-- Multiple layers and multiple protocols
+Computers use protocols to communicate. Different layers use different  protocols.
+
+Let's first understand the roles of different layers involved in network communication between two systems:
 - **Network Layer** - Transfer bits and bytes
 - **Transport Layer** - Are the bits and bytes transferred properly?
 - **Application Layer** - Make REST API calls and Send Emails
-- (Remember) Each layer makes use of the layers beneath it
-- (Remember) Most applications talk at application layer. BUT some applications talk at transport layer directly(high performance).
+
+Important things to note:
+- Each layer makes use of the layers beneath it
+- Most applications talk at application layer. BUT some applications talk at transport layer directly(high performance).
+
+![](/images/application-transport-layers.png)
+
 
 ## Network Layer vs Transport Layer vs Application Layer
+
+Let's now compare the three important layers:
 - Network Layer:
 	- IP (Internet Protocol): Transfer bytes. Unreliable.
 - Transport Layer:
@@ -52,13 +59,9 @@ Each cheat sheet contains:
 	- SMTP: Email Transfer Protocol
 	- and a lot of others...
 
-## HTTP vs HTTPS vs TCP vs TLS vs UDP
-- **Most applications** typically communicate at application layer
-	- Web apps/REST API(HTTP/HTTPS), Email Servers(SMTP), File Transfers(FTP)
-	- All these applications use TCP/TLS at network layer(for reliability)
-- **HOWEVER** applications needing high performance **directly** communicate at transport layer:
-	- Gaming applications and live video streaming use UDP (sacrifice reliability for performance)
+**Most applications** typically communicate at application layer
+- Web apps/REST API(HTTP/HTTPS), Email Servers(SMTP), File Transfers(FTP)
+- All these applications use TCP/TLS at network layer(for reliability)
 
-## HTTP vs HTTPS vs TCP vs TLS vs UDP - AWS Certification Exam Practice Questions
-
-Coming Soon..
+**HOWEVER** applications needing high performance **directly** communicate at transport layer:
+- Gaming applications and live video streaming use UDP (sacrifice reliability for performance)

@@ -29,38 +29,42 @@ Each cheat sheet contains:
 
 
 ## IAAS (Infrastructure as a Service) 
+
+IAAS (Infrastructure as a Service) is all about using **only infrastructure** from cloud provider. It is also called "**Lift and Shift**". **Example**: Using EC2 to deploy your applications or databases
+
+With IAAS, you are responsible for:
+- Application Code and Runtime
+- Configuring load balancing
+- Auto scaling
+- OS upgrades and patches
+- Availability
+- etc.. ( and a lot of things!)
+
 ![](/images/aws/cloud-0-IAAS.png)
-- Use **only infrastructure** from cloud provider
-- Also called "**Lift and Shift**"
-- **Example**: Using EC2 to deploy your applications or databases
-- You are responsible for:
-	- Application Code and Runtime
-	- Configuring load balancing
-	- Auto scaling
-	- OS upgrades and patches
-	- Availability
-	- etc.. ( and a lot of things!)
+
 
 ## PAAS (Platform as a Service) 
 
+PAAS (Platform as a Service) is all about using a platform provided by cloud
+
+**Cloud provider** is responsible for:
+- OS (incl. upgrades and patches)
+- Application Runtime
+- Auto scaling, Availability & Load balancing etc..
+
+**You** are responsible for:
+- Application code
+- Configuration
+
 ![](/images/aws/cloud-2-PAAS.png)
 
-- Use a platform provided by cloud
-- **Cloud provider** is responsible for:
-	- OS (incl. upgrades and patches)
-	- Application Runtime
-	- Auto scaling, Availability & Load balancing etc..
-- **You** are responsible for:
-	- Application code
-	- Configuration
+Examples of PAAS
 - **CAAS (Container as a Service)**: Containers instead of Applications
 - **FAAS (Function as a Service)** or **Serverless**: Functions instead of Applications
 
 ## AWS Managed Service Offerings
-![](/images/aws/00-icons/elb.png)
-![](/images/aws/00-icons/ecs.png) 
-![](/images/aws/00-icons/rds.png)
 
+Here are some of the AWS Managed Service Offerings:
 - **Elastic Load Balancing** - Distribute incoming traffic across multiple targets
 - **AWS Elastic Beanstalk** - Run and Manage Web Apps
 - **Amazon Elastic Container Service (ECS)** - Containers orchestration on AWS
@@ -69,10 +73,11 @@ Each cheat sheet contains:
 - **Amazon RDS** - Relational Databases - MySQL, Oracle, SQL Server etc
 - And a lot more...
 
-## Shared Responsibility Model
-![](/images/aws/Shared_Responsibility_Model.png) 
+![](/images/aws/00-icons/elb.png)
+![](/images/aws/00-icons/ecs.png) 
+![](/images/aws/00-icons/rds.png)
 
-https://aws.amazon.com/compliance/shared-responsibility-model/
+## Shared Responsibility Model
 
 Security & Compliance is shared responsibility between AWS and customer
 
@@ -80,27 +85,31 @@ Security & Compliance is shared responsibility between AWS and customer
 ![](/images/aws/00-icons/ec2.png) 
 ![](/images/aws/00-icons/securitygroup.png) 
 ![](/images/aws/00-icons/ami.png) 
-- Amazon EC2 instances is Infrastructure as a Service (IaaS)
-- You are responsible for
-	- Guest OS (incl. security patches)
-	- Application software installed
-	- Configuring Security Groups (or firewalls)
-- AWS is responsible for infrastructure layer only
+Amazon EC2 instances is Infrastructure as a Service (IaaS).
+
+You are responsible for:
+- Guest OS (incl. security patches)
+- Application software installed
+- Configuring Security Groups (or firewalls)
+
+AWS is responsible for infrastructure layer only.
 
 ## Shared Responsibility Model - Managed Services
 
 ![](/images/aws/00-icons/s3.png) 
 ![](/images/aws/00-icons/dynamodb.png) 
-- Amazon S3 & DynamoDB are managed services
-- AWS manages infrastructure layer, OS, and platform
-- You are responsible for
-	- Managing your data 
-	- Managing security of data at rest(encryption) 
-	- Managing security of data in transit 
-		- Mandating SSL/HTTPS 
-		- Using the right network - AWS global network or dedicated private network when possible
-	- Managing access to the service
-		- Configure right permissions (IAM users/roles/user policies/resource policies)
-		- (FOR AWS RDS) Managing in database users 
-		- Configuring the right security groups (control inbound and outbound traffic)
-		- Disabling external access (public vs private)
+Amazon S3 & DynamoDB are managed services.
+
+AWS manages infrastructure layer, OS, and platform.
+
+You are responsible for
+- Managing your data 
+- Managing security of data at rest(encryption) 
+- Managing security of data in transit 
+	- Mandating SSL/HTTPS 
+	- Using the right network - AWS global network or dedicated private network when possible
+- Managing access to the service
+	- Configure right permissions (IAM users/roles/user policies/resource policies)
+	- (FOR AWS RDS) Managing in database users 
+	- Configuring the right security groups (control inbound and outbound traffic)
+	- Disabling external access (public vs private)
