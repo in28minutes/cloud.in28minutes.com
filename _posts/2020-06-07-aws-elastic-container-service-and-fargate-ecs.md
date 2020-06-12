@@ -110,11 +110,12 @@ Note: EKS does not have a free tier
 Note: AWS Fargate does not have a free tier
 
 ## Amazon Elastic Container Service (Amazon ECS)
-![](/images/aws/ecs.png) 
 
 Amazon Elastic Container Service (Amazon ECS) is a fully managed service for container orchestration.
 
 **AWS Fargate** is a serverless option.
+
+![](/images/aws/ecs.png) 
 
 Use cases include:
 - Microservices Architectures - Create containers for your microservices and orchestrate them using ECS or Fargate
@@ -135,7 +136,6 @@ Two important task related configuration to remember:
 - **Task execution IAM role**: Provides permissions to pull container images and publish container logs to Amazon CloudWatch
 
 ## Amazon ECS - Terminology
-![](/images/aws/ecs-concepts.png) 
 
 Here is the important terminology used in ECS
 - **Service**:  Allows you to run and **maintain** a specified number (the "desired count") of tasks

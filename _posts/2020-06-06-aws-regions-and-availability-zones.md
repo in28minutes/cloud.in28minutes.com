@@ -32,6 +32,7 @@ Each cheat sheet contains:
 Let's first understand the need for Regions and Zones with an example:
 
 Imagine that your application is deployed in a data center in London.
+
 ![](/images/aws/vpc/1-SingleDataCenter.png)
 
 What would be the challenges?
@@ -55,6 +56,7 @@ What would be the challenges now?
 ## Multiple regions
 
 Let's add a new region : Mumbai.
+
 ![](/images/aws/vpc/3-2-datacenters-london-mumbai.png)
 
 What would be the challenges?
@@ -67,7 +69,9 @@ What would be the challenges?
 
 
 ## Regions
+
 ![](/images/aws/aws-regions-and-az.png)
+
 Imagine setting up your own data centers in different regions around the world 
 - **Would that be easy?**
 
@@ -84,6 +88,7 @@ Choose the right region(s) based on:
 ## AWS Availability Zones
 
 Availability Zones are **Isolated locations** in a Region. Each AWS Region has at least two Availability Zones. Availability Zones **increase availability** of applications in the same region.
+
 ![](/images/aws/region-az.png) 
 
 

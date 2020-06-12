@@ -68,6 +68,7 @@ Let's now look at how we can make EC2 instances highly available:
 - Configure proper EC2 and ELB **health checks**
 
 The diagram below shows a simple example.
+
 ![](/images/aws/ec2/3-elb-crosszone-lb.png)
 
 

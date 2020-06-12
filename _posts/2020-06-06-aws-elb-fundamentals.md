@@ -30,7 +30,9 @@ Each cheat sheet contains:
 
 
 ## Elastic Load Balancer
+
 Elastic Load Balancer are used to distribute traffic across EC2 instances in one or more AZs in a single region.
+
 ![](/images/aws/ec2/1-simple-elb.png)
 
 Few important things to note:
@@ -52,13 +54,16 @@ Three Types of Elastic Load Balancers include:
 	- Very high performance usecases
 
 ## Classic Load Balancer
+
 - **Older** version of ELB
 - **Not recommended anymore**
 - Supports TCP, SSL/TLS and HTTP(S) (Layer 4 and 7)
 - **Demo**: Create a Classic Load Balancer
 
 ## Application Load Balancer
+
 ![](/images/aws/ec2/1-simple-elb.png)
+
 - **Most popular** and frequently used ELB in AWS
 - Supports WebSockets and HTTP/HTTPS (Layer 7)
 - Supports all important load balancer features
@@ -73,9 +78,11 @@ Three Types of Elastic Load Balancers include:
 Best Practice is to Restrict allowed traffic using Security Groups.
 
 Load Balancer allow traffic from everywhere!
+
 ![](/images/aws/loadbalancer-inbound-sg-rules.png) 
 
 EC2 Security Group **ONLY** allows traffic from Load Balancer Security Group
+
 ![](/images/aws/ec2-inbound-sg-rules.png)
 
 
@@ -86,13 +93,16 @@ Each listener has:
 - a protocol
 - a port
 - a set of rules to route requests to targets
+
 ![](/images/aws/elb-listener.png)
 
 
 ## Multiple Listeners
+
 You can have multiple listeners listening for a different protocol or port
 
 ![](/images/aws/elb-listeners-multiple.png)
+
 In the above example:
 - HTTP requests on port 80 are routed to the EC2 instances target group
 - HTTPS requests on port 443 are routed to port 80
@@ -127,6 +137,7 @@ Load balancer stops routing new requests to a target when you unregister it. Wha
 Deregistration delay ensures that load balancer gives **in-flight requests** a chance to complete execution. This is also called Connection Draining. Can vary from 0 to 3600 seconds (default 300 seconds).
 
 ## Microservices architectures - Multiple Target Group(s)
+
 Microservices architectures have 1000s of microservices
 - http://www.xyz.com/microservice-a 
 - http://www.xyz.com/microservice-b 
@@ -250,11 +261,13 @@ When using Elastic Load Balancer there are two Communication hops
 ![](/images/aws/00-icons/ec2instance.png)
 
 ## Elastic Load Balancer - SSL/TLS Termination
+
 ![](/images/aws/00-icons/client.png)
 ![](/images/arrowbi.png)
 ![](/images/aws/00-icons/elb.png)
 ![](/images/arrowbi.png)
 ![](/images/aws/00-icons/ec2instance.png)
+
 - Application/Classic Load Balancer - SSL Termination
 	- Client to ELB: HTTPS
 	- ELB to EC2 instance: HTTP

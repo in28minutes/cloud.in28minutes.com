@@ -34,6 +34,7 @@ Each cheat sheet contains:
 
 
 ## EC2 Placement Groups
+
 ![](/images/aws/ec2-host.png)
 ![](/images/aws/ec2-host.png)
 ![](/images/aws/ec2-host.png)
@@ -48,7 +49,9 @@ You can control placement of EC2 instances using EC2 placement groups:
 - Partition (multiple partitions with low network latency)
 
 ## EC2 Cluster Placement Group
+
 ![](/images/aws/ec2/ec2-placement-groups-cluster.png) 
+
 - When low latency network communication between EC2 instances is critical
 - Example: Big Data or High Performance Computing needing extreme low latency
 - EC2 instances placed near to each other in single AZ
@@ -57,7 +60,9 @@ You can control placement of EC2 instances using EC2 placement groups:
 
  
 ## EC2 Spread Placement Group
+
 ![](/images/aws/ec2/ec2-placement-groups-spread.png) 
+
 - Spread EC2 instances across distinct racks
 - Each rack has its own network and power source
 - **Avoid simultaneous failures**  of EC2 instances
@@ -65,14 +70,18 @@ You can control placement of EC2 instances using EC2 placement groups:
 - Maximum of seven running instances per AZ in a spread placement group
 
 ## EC2 Partition Placement Group - Use Case
+
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
-- In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 instances need to be **divided into multiple groups**:
-	- Low latency communication between instances in a group
-	- Each group is placed on a different rack
+
+In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 instances need to be **divided into multiple groups**:
+- Low latency communication between instances in a group
+- Each group is placed on a different rack
 
 
 ## EC2 Partition Placement Group
+
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
+
 - A partition is a group of EC2 instances
 - Each partition will be **placed on a different rack**
 - You can choose the partition where EC2 instance is launched into

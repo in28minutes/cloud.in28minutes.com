@@ -124,6 +124,7 @@ EC2 Security Group is a **Virtual firewall** to control **incoming and outgoing*
 ![](./images/aws/00-icons/ec2instance.png)
 
 ### Security Groups Rules
+
 ![](./images/aws/security-group-example.png)
 
 Let's look at some of the important rules regarding Security Groups:
@@ -199,6 +200,7 @@ How about creating a **Launch Template**?
 A Launch Template allows you to launch Spot instances and Spot fleets as well.
 
 ## Reducing Launch Time with Customized AMI
+
 ![](./images/aws/00-icons/ec2instance.png)
 ![](./images/arrow.png)
 ![](./images/aws/00-icons/ami.png)
@@ -212,9 +214,11 @@ How about creating customized AMIs with OS patches and software **pre-installed*
 **Prefer** using Customized AMI to userdata
 
 ## AMI - Amazon Machine Image
+
 ![](./images/aws/00-icons/ami.png)
 ![](./images/arrow.png)
 ![](./images/aws/00-icons/ec2instances.png)
+
 You need to choose the Amazon Machine Image or AMI based on what operating system and what software do you want on the EC2 instance.
 
 Three AMI sources:
@@ -307,7 +311,9 @@ Let's do a quick Review of EC2 for AWS Certification.
 
 
 ## Elastic Network Interface
+
 ![](/images/aws/eni.png) 
+
 Elastic Network Interface is a Logical networking component that represents a **virtual network card**. It supports IPv4 (110.120.120.145) and IPv6 (2001:0db8:85a3:0000:0000:8a2e:0370:7334).
 
 Each Elastic Network Interface can provide:
@@ -317,7 +323,7 @@ Each Elastic Network Interface can provide:
 - One or more **security groups**
 
 ## Elastic Network Interface - Primary and Secondary
-![](/images/aws/eni.png) 
+
 Each EC2 instance is connected to primary network interface (**eth0**). You can create and attach a secondary network interface - **eth1**.
 
 This allows an instance to be **dual homed** - present in two subnets in a VPC. It can be used to create a **management network** or a low budget high availability solution.
@@ -328,12 +334,14 @@ Important terminology with ENI:
 - **Cold attach**: Attaching ENI at launch time of EC2 instance
 
 ## Monitoring EC2 instances
-![](/images/aws/cloudwatch-ec2.png) 
+
 Amazon CloudWatch is used to **monitor** EC2 instances.
 
 There are two types of monitoring:
 - (FREE) **Basic monitoring** ("Every 5 minutes") provided for all EC2 instance types
 - ($$$$) EC2 **Detailed Monitoring** can be enabled for detailed metrics every 1 minute
+
+![](/images/aws/cloudwatch-ec2.png) 
 
 EC2 **System level** metrics (CPU, Disk, Network) are tracked by default by CloudWatch:
 - CPU utilization

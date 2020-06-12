@@ -79,6 +79,7 @@ Let's see the steps involved in sending and receiving a message on the SQS queue
 ## Simple Queuing Service Lifecycle of a message
 
 The picture below shows the service lifecycle of a message
+
 ![](/images/aws/02-Queuing/4-Queuing-LifeCycle.png)
 
 When a message is sent to queue, it is redundantly distributed among SQS servers

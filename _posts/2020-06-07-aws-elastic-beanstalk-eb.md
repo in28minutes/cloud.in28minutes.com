@@ -27,6 +27,7 @@ Each cheat sheet contains:
 </div>
 
 ## AWS Elastic BeanStalk
+
 AWS Elastic BeanStalk is the **Simplest way** to deploy and scale your web application in AWS. It provides end-to-end web application management.
 
 AWS Elastic BeanStalk Supports Java, .NET, Node.js, PHP, Ruby, Python, Go, and Docker applications

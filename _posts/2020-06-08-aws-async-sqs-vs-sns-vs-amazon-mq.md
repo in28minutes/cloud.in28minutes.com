@@ -34,6 +34,7 @@ Each cheat sheet contains:
 Lets take an example of synchronous communication and the challenges with synchronous communication:
 
 Applications on your web server make synchronous calls to the logging service.
+
 ![](/images/aws/02-Queuing/0-SQS-00.png)
 
 Consider these situations:
@@ -53,6 +54,7 @@ What is the best approach to solve these coupling and scaling issues? How about 
 - Your applications put the logs on the queue
 - They would be picked up when the logging service is ready
 - Good example of decoupling!
+
 ![](/images/aws/02-Queuing/0-SQS-01.png)
 
 ## Asynchronous Communication - Scale up
@@ -60,6 +62,7 @@ What is the best approach to solve these coupling and scaling issues? How about 
 Amazing thing about the asynchronous communication is that it enables you scale up very easily.
 
 You can have multiple logging service instances reading from the queue!
+
 ![](/images/aws/02-Queuing/0-SQS-02.png)
 
 ## Asynchronous Communication - Models
