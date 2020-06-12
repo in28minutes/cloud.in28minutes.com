@@ -28,7 +28,7 @@ Each cheat sheet contains:
 
 ## EC2 & ELB for Architects
 
-> It is not sufficient to get things working. We want more!
+It is not sufficient to get things working. We want more!
 
 - High Availability
 - High Scalability
@@ -37,13 +37,21 @@ Each cheat sheet contains:
 - Low Costs
 - and .....
 
+We want all these for our architectures using EC2 and ELB services.
+
+Let's start with understanding the basics of Availability.
+
 ## Availability
 
-- Are the applications available **when the users need them**?
-- **Percentage of time** an application provides the operations expected of it
-- **Example**: 99.99% availability. Also called four 9's availability
+Availability is all about this question - Are the applications available **when the users need them**?
+
+It is the **Percentage of time** an application provides the operations expected of it
+
+**Example**: 99.99% availability. Also called four 9's availability
 
 ##### Availability Table
+
+Here's a table showing availability and the downtime mapping:
 
 | Availability | Downtime (in a month)  | Comment |
 |--|--|--|
@@ -53,51 +61,75 @@ Each cheat sheet contains:
 
 ## Availability Basics - EC2 and ELB
 
-![](/images/aws/ec2/3-elb-crosszone-lb.png)
+Let's now look at how we can make EC2 instances highly available:
 - Deploy to multiple AZs
 - Use **Cross Zone** Load Balancing
 - Deploy to multiple regions
 - Configure proper EC2 and ELB **health checks**
 
+The diagram below shows a simple example.
+![](/images/aws/ec2/3-elb-crosszone-lb.png)
+
+
 ## Scalability
-- A system is handling 1000 transactions per second. Load is expected to increase 10 times in the next month
-	- Can we handle a **growth in users, traffic, or data size** without any drop in performance?
-	- Does ability to serve more growth increase **proportionally** with resources?
-- Ability to **adapt** to changes in demand (users, data)
-- What are the options that can be considered?
-	- Deploy to a bigger instance with bigger CPU and more memory
-	- Increase the number of application instances and setup a load balancer
-	- And a lot more.
+
+What is Scalability?
+
+A system is handling 1000 transactions per second. Load is expected to increase 10 times in the next month. 
+
+Two important questions to ask
+- Can we handle a **growth in users, traffic, or data size** without any drop in performance?
+- Does ability to serve more growth increase **proportionally** with resources?
+
+Scalability is the ability to **adapt** to changes in demand (users, data).
+
+For EC2 instances, what are the options that can be considered to scale it?
+- Deploy to a bigger instance with bigger CPU and more memory
+- Increase the number of application instances and setup a load balancer
+
+Let's look at the two types of scalability:
+- Vertical Scalability
+- Horizontal Scalability
 
 ## Vertical Scaling
 
+Vertical Scaling is all about deploying application/database to **bigger instance**: 
+- A larger hard drive 
+- A faster CPU
+- More RAM, CPU, I/O, or networking capabilities
+
 ![](/images/vertical-scaling.png) 
-- Deploying application/database to **bigger instance**: 
-	- A larger hard drive 
-	- A faster CPU
-	- More RAM, CPU, I/O, or networking capabilities
-- There are limits to vertical scaling
+
+There are limits to what you can achieve with vertical scaling.
 
 ## Vertical Scaling for EC2
-![](/images/aws/ec2-vertical-scaling.png) 
+
+What does Vertical Scaling for EC2 instances look like?
 - Increasing **EC2 instance size**:
 	- *t2.micro* to *t2.small* or 
 	- *t2.small* to *t2.2xlarge* or 
 	-  ...
 
+![](/images/aws/ec2-vertical-scaling.png) 
+
 ## Horizontal Scaling
+
+What is Horizontal Scaling?
+
+Horizontal Scaling is all about deploying multiple instances of application/database.
+
 ![](/images/horizontal-scaling.png) 
-- Deploying multiple instances of application/database
-- (Typically but not always) Horizontal Scaling is preferred to Vertical Scaling:
-	- Vertical scaling has limits
-	- Vertical scaling can be expensive
-	- Horizontal scaling increases availability
-- (BUT) Horizontal Scaling needs additional infrastructure:
+
+Horizontal Scaling is preferred to Vertical Scaling:
+- Vertical scaling has limits
+- Vertical scaling can be expensive
+- Horizontal scaling increases availability
+
+However, Horizontal Scaling needs additional infrastructure:
 	- Load Balancers etc.
 
 ## Horizontal Scaling for EC2
-![](/images/aws/ec2/3-elb-crosszone-lb.png)
-
+How can you implement Horizontal Scaling for EC2 instances?
 - Distribute EC2 instances 
 	- in a single AZ
 	- in multiple AZs in single region
@@ -105,8 +137,11 @@ Each cheat sheet contains:
 - **Auto scale**: Auto Scaling Group
 - **Distribute load** : Elastic Load Balancer, Route53
 
+![](/images/aws/ec2/3-elb-crosszone-lb.png)
 
-## Architecture Considerations for EC2
+## Architecture Considerations for EC2 and ELB
+
+Here are some the Architecture Considerations for EC2 and ELB:
 
 ##### Security
 - Use **Security Groups** to restrict traffic
@@ -117,8 +152,6 @@ Each cheat sheet contains:
 - Choose right **instance family** (Optimized combination of compute, memory, disk (storage) and networking)
 - Use appropriate placement groups
 - Prefer creating an **custom AMI** to installing software using userdata
-
-## Architecture Considerations for EC2 & ELB - 2
 
 ##### Cost Efficiency
 - Have optimal **number and type** of EC2 instances running
