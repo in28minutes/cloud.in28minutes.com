@@ -38,14 +38,14 @@ Each cheat sheet contains:
 ![](/images/aws/ec2-host.png)
 ![](/images/aws/ec2-host.png)
 
-- Certain usecases need control over placement of a group of EC2 instances
-	- Low latency network communication
-	- High availability
-- You DO NOT want EC2 to decide that for you!
-- Go for EC2 placement groups!
-	- Cluster (low network latency )
-	- Spread (avoid simultaneous failures)
-	- Partition (multiple partitions with low network latency)
+Certain usecases need control over placement of a group of EC2 instances. Examples are use cases needing:
+- Low latency network communication
+- High availability
+
+You can control placement of EC2 instances using EC2 placement groups:
+- Cluster (low network latency )
+- Spread (avoid simultaneous failures)
+- Partition (multiple partitions with low network latency)
 
 ## EC2 Cluster Placement Group
 ![](/images/aws/ec2/ec2-placement-groups-cluster.png) 

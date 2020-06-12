@@ -30,24 +30,28 @@ Each cheat sheet contains:
 
 
 ## Introducing ALB Auto Scaling Groups
+Target Groups are configured with a static set of instances. How do you scale out and scale in **automatically**?
+- Configure a Auto Scaling Group
+
 ![](/images/aws/ec2/4-elb-target-groups.png)
-- Target Groups are configured with a static set of instances. How do you scale out and scale in **automatically**?
-	- Configure a Auto Scaling Group
 
 ## ALB Auto Scaling Groups
+Here are some of the important Auto Scaling Group responsibilities:
+- **Maintain** configured number of instances (using periodic health checks)
+	- If an instance goes down, ASG launches replacement instance
+- **Auto scale** to adjust to load (scale-in and scale-out based on auto scaling policies)
+
 ![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
-- Auto Scaling Group responsibilities:
-	- **Maintain** configured number of instances (using periodic health checks)
-		- If an instance goes down, ASG launches replacement instance
-	- **Auto scale** to adjust to load (scale-in and scale-out based on auto scaling policies)
+
+Important things to note:
 - ASG can launch On-Demand Instances, Spot Instances, or both 
 	- **Best Practice**: Use Launch Template
 - An ELB can distribute load to **active instances** as ASG expands and contracts based on the load
-- **DEMO:** Creating Auto Scaling Groups
 
 ## Auto Scaling Components
 ![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
 
+Important Auto Scaling Components include:
 - **Launch Configuration/Template**
 	- EC2 instance size and AMI
 - **Auto Scaling Group**
@@ -95,23 +99,11 @@ Each cheat sheet contains:
 - **CloudWatch alarms** track the metric (Is CPU utilization >80%? or < 60%) and trigger the auto scaling action (+5 EC2 instances or -3 EC2 instances)
 
 ## Auto Scaling - Certification and Interview Questions
-![](/images/aws/asg.png) 
-
 | Scenario | Solution | 
 |--|--|
 |Change instance type or size of ASG instances|Launch configuration or Launch template cannot be edited. Create a new version and ensure that the ASG is using the new version. Terminate instances in small groups.|
 |Roll out a new security patch (new AMI) to ASG instances| Same as above.|
 | Perform actions before an instance is added or removed| Create a Lifecycle Hook. You can configure CloudWatch to trigger actions based on it. |
-
-## Auto Scaling - Certification and Interview Questions
-![](/images/aws/00-icons/cloudwatchalarm.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/autoscaling.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/ec2instances.png)
-
-| Scenario | Solution | 
-|--|--|
 |Which instance in an ASG is terminated first when a scale-in happens?| (**Default Termination Policy**) Within constraints, goal is to distribute instances evenly across available AZs. Next priority is to terminate older instances.|
 | Preventing frequent scale up and down | Adjust cooldown period to suit your need (default - 300 seconds). Align CloudWatch monitoring interval |
 | I would want to protect newly launched instances from scale-in|Enable instance scale-in protection|
