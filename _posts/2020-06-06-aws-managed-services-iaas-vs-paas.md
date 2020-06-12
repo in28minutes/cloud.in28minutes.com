@@ -82,9 +82,11 @@ Here are some of the AWS Managed Service Offerings:
 Security & Compliance is shared responsibility between AWS and customer
 
 ## Shared Responsibility Model - Amazon EC2
+
 ![](/images/aws/00-icons/ec2.png) 
 ![](/images/aws/00-icons/securitygroup.png) 
 ![](/images/aws/00-icons/ami.png) 
+
 Amazon EC2 instances is Infrastructure as a Service (IaaS).
 
 You are responsible for:
@@ -98,6 +100,7 @@ AWS is responsible for infrastructure layer only.
 
 ![](/images/aws/00-icons/s3.png) 
 ![](/images/aws/00-icons/dynamodb.png) 
+
 Amazon S3 & DynamoDB are managed services.
 
 AWS manages infrastructure layer, OS, and platform.

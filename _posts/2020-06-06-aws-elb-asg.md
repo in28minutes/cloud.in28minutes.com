@@ -49,6 +49,7 @@ Important things to note:
 - An ELB can distribute load to **active instances** as ASG expands and contracts based on the load
 
 ## Auto Scaling Components
+
 ![](/images/aws/ec2/5-elb-autoscaling-groups_new.png)
 
 Important Auto Scaling Components include:
@@ -73,6 +74,7 @@ Important Auto Scaling Components include:
 | Scale based on demand (Dynamic/Automatic Scaling) | Create scaling policy (what to monitor?) and scaling action (what action?) | Unpredictable load |
 
 ## Dynamic Scaling Policy Types
+
 ![](/images/aws/asg.png) 
 
 | Scaling Policy | Example(s)  | Description | 
@@ -82,11 +84,13 @@ Important Auto Scaling Components include:
 |  Step scaling   | +1 if CPU utilization between 70% and 80%<BR/> +3 if CPU utilization between 80% and 100%<BR/> Similar settings for scale down| Warm up time can be configured for each instance| 
 
 ## Scaling Policies - Background
+
 ![](/images/aws/00-icons/cloudwatchalarm.png)
 ![](/images/arrow.png)
 ![](/images/aws/00-icons/autoscaling.png)
 ![](/images/arrow.png)
 ![](/images/aws/00-icons/ec2instances.png)
+
 - Two parts:
 	- CloudWatch alarm (Is CPU utilization >80%? or < 60%). 
 	- Scaling action (+5 EC2 instances or -3 EC2 instances)
