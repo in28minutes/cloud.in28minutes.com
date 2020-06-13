@@ -33,6 +33,7 @@ Each cheat sheet contains:
 Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. 
 It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. 
 DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 Lets look at the key features of DynamoDB.
 - Fast, scalable, distributed for any scale
@@ -62,7 +63,7 @@ Like other database systems, DynamoDB stores records/items in tables.
 
 ## DynamoDB - Keys
 When we create DynamoDB tables we need to also mention a primary key.
-There are two different types of primary keys. 
+
 ![](/images/aws/rds-diagrams/xx-rds-dynamodb-partition.png)
 
 - Two parts:
@@ -86,6 +87,7 @@ DynamoDB supports one or more secondary indexes on a table.
 
 ## DynamoDB Query vs Scan
 DynamoDB provides the following operations for reading data.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 
 - Query 
@@ -104,6 +106,7 @@ DynamoDB provides the following operations for reading data.
 DynamoDB stores data across multiple regions and availability zones. When the applications writes or updates data
 it receives http status 200. This means the write is successful and durable. However it may take sometime before data
 is available across all storage locations.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 
 - By default, eventually consistent (lag of about a second)
@@ -116,6 +119,7 @@ is available across all storage locations.
 
 ## DynamoDB Read/Write Capacity Modes
 DynamoDB has two read/write capacity modes for processing reads and writes on the tables.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 
 - Provisioned 
@@ -132,6 +136,7 @@ DynamoDB has two read/write capacity modes for processing reads and writes on th
 
 ## DynamoDB Read/Write Capacity Used
 Lets look at how much read/write capacity is used for different types of reads & writes.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 - Capacity used depends on size of item, read consistency, transactions etc
 - 1 capacity unit to read 4 KB or smaller (more for bigger items)
@@ -145,6 +150,7 @@ Note:
 
 ## DynamoDB - Operations
 AWS provides various tools that can be used for monitoring & performing various operations on DynamoDB
+
 ![](/images/aws/00-icons/dynamodb.png) 
 
 - Performance Monitoring - CloudWatch
@@ -156,6 +162,7 @@ AWS provides various tools that can be used for monitoring & performing various 
 ## DynamoDB - IAM and Encryption
 DynamoDB protects data stored in the tables through server side and client side encryptions.
 Also through IAM we can authenticate and authorize the control the access to DynamoDB.
+
 ![](/images/aws/00-icons/dynamodb.png) 
 - Server-side encryption in integration with keys from KMS
 	- Always enabled
@@ -182,6 +189,7 @@ Lets looks at DynamoDB & RDS and compare them for different features.
 ## DynamoDB Accelerator (DAX)
 DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data. Certain usecases requires microseconds
 response times
+
 ![](/images/aws/03-serverless/07-lamdba-dax.png)
 - In-memory caching for DynamoDB providing microsecond response times
 	- Typical DynamoDB response times - single-digit milliseconds
