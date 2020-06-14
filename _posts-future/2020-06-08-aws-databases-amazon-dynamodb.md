@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon DynamoDB - DAX and RDS - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-06-13 12:31:19
 summary:    Let's get a quick overview of Amazon DynamoDB from an AWS certification perspective. We will look at important certification questions regarding Amazon DynamoDB. We will compare DynamoDB with RDS. We will also look at when you will use DAX with DynamoDB.
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-dynamodb-vs-rds
@@ -14,7 +14,7 @@ Let's get a quick overview of Amazon DynamoDB from an AWS certification perspect
 - What is Amazon DynamoDB?
 - When do we use Amazon DynamoDB?
 - How is Amazon DynamoDB different from Amazon RDS?
-- When do you DAX with Amazon DynamoDB?
+- When do you use DAX with Amazon DynamoDB?
 
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
@@ -30,8 +30,12 @@ Each cheat sheet contains:
 
 
 ## Amazon DynamoDB 
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. 
+It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. 
+DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second.
 
 ![](/images/aws/00-icons/dynamodb.png) 
+Lets look at the key features of DynamoDB.
 - Fast, scalable, distributed for any scale
 - Flexible NoSQL Key-value & document database (schemaless) 
 - Single-digit millisecond responses for million of TPS
@@ -45,7 +49,9 @@ Each cheat sheet contains:
 - Use cases: User profiles, shopping carts, high volume read write applications
 
 ## DynamoDB Tables
-
+In DynamoDB, tables, items, and attributes are the core concepts you use. 
+A table is a collection of items, and each item contains one or more attributes.
+Like other database systems, DynamoDB stores records/items in tables.
 ![](/images/aws/document-database-example.png)
 - Hierarchy : Table > item(s) > attribute (key value pair)
 - Mandatory primary key
@@ -56,6 +62,7 @@ Each cheat sheet contains:
 	- Use S3 for large objects and DynamoDB for smaller objects
 
 ## DynamoDB - Keys
+When we create DynamoDB tables we need to also mention a primary key.
 
 ![](/images/aws/rds-diagrams/xx-rds-dynamodb-partition.png)
 
@@ -67,8 +74,8 @@ Each cheat sheet contains:
 - Same partition key items stored together (sorted by sort key)
 
 ## DynamoDB - Indexes
+DynamoDB supports one or more secondary indexes on a table.
 
-![](/images/aws/rds-diagrams/xx-rds-dynamodb-partition.png)
 - (Optional) Secondary indexes to query on keys other than primary key
 - Local secondary index 
 	- Same partition key as primary key but different sort key
@@ -79,6 +86,7 @@ Each cheat sheet contains:
 	- Stored separately from the original table
 
 ## DynamoDB Query vs Scan
+DynamoDB provides the following operations for reading data.
 
 ![](/images/aws/00-icons/dynamodb.png) 
 
@@ -95,6 +103,9 @@ Each cheat sheet contains:
 	- Filter items using expressions
 
 ## DynamoDB Consistency Levels
+DynamoDB stores data across multiple regions and availability zones. When the applications writes or updates data
+it receives http status 200. This means the write is successful and durable. However it may take sometime before data
+is available across all storage locations.
 
 ![](/images/aws/00-icons/dynamodb.png) 
 
@@ -107,6 +118,7 @@ Each cheat sheet contains:
 	- Twice the cost
 
 ## DynamoDB Read/Write Capacity Modes
+DynamoDB has two read/write capacity modes for processing reads and writes on the tables.
 
 ![](/images/aws/00-icons/dynamodb.png) 
 
@@ -123,6 +135,7 @@ Each cheat sheet contains:
 		- Usage is very low (for example, in test environments) making manual adjustments expensive
 
 ## DynamoDB Read/Write Capacity Used
+Lets look at how much read/write capacity is used for different types of reads & writes.
 
 ![](/images/aws/00-icons/dynamodb.png) 
 - Capacity used depends on size of item, read consistency, transactions etc
@@ -136,6 +149,7 @@ Note:
 - RCU vs WCU (RCU is cheaper than WCU. So, it is cheaper for read workloads.)
 
 ## DynamoDB - Operations
+AWS provides various tools that can be used for monitoring & performing various operations on DynamoDB
 
 ![](/images/aws/00-icons/dynamodb.png) 
 
@@ -146,6 +160,8 @@ Note:
 - Use Time to Live (TTL) to automatically expire items
 
 ## DynamoDB - IAM and Encryption
+DynamoDB protects data stored in the tables through server side and client side encryptions.
+Also through IAM we can authenticate and authorize the control the access to DynamoDB.
 
 ![](/images/aws/00-icons/dynamodb.png) 
 - Server-side encryption in integration with keys from KMS
@@ -160,7 +176,7 @@ Note:
 	- Fine-grained control at the individual item level
 
 ##  DynamoDB vs RDS
-
+Lets looks at DynamoDB & RDS and compare them for different features. 
 |Feature  | DynamoDB  | RDS|
 |--|:--|:--|
 | Scenario   |  Millisecond latency with millions of TPS    | Stronger consistency (schema) and transactional capabilities|
@@ -171,6 +187,9 @@ Note:
 |Consistency| Typically lower consistency | Typically higher consistency|
 
 ## DynamoDB Accelerator (DAX)
+DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually consistent data. Certain usecases requires microseconds
+response times
+
 ![](/images/aws/03-serverless/07-lamdba-dax.png)
 - In-memory caching for DynamoDB providing microsecond response times
 	- Typical DynamoDB response times - single-digit milliseconds
