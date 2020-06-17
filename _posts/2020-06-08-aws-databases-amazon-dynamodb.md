@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon DynamoDB - DAX and RDS - AWS Certification
-date:       2020-06-13 12:31:19
+date:       2020-06-17 12:31:19
 summary:    Let's get a quick overview of Amazon DynamoDB from an AWS certification perspective. We will look at important certification questions regarding Amazon DynamoDB. We will compare DynamoDB with RDS. We will also look at when you will use DAX with DynamoDB.
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-dynamodb-vs-rds
@@ -35,6 +35,7 @@ It's a fully managed, multiregion, multimaster, durable database with built-in s
 DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second.
 
 ![](/images/aws/00-icons/dynamodb.png) 
+
 Lets look at the key features of DynamoDB.
 - Fast, scalable, distributed for any scale
 - Flexible NoSQL Key-value & document database (schemaless) 
@@ -52,7 +53,9 @@ Lets look at the key features of DynamoDB.
 In DynamoDB, tables, items, and attributes are the core concepts you use. 
 A table is a collection of items, and each item contains one or more attributes.
 Like other database systems, DynamoDB stores records/items in tables.
+
 ![](/images/aws/document-database-example.png)
+
 - Hierarchy : Table > item(s) > attribute (key value pair)
 - Mandatory primary key
 - Other than the primary key, tables are schemaless
@@ -138,6 +141,7 @@ DynamoDB has two read/write capacity modes for processing reads and writes on th
 Lets look at how much read/write capacity is used for different types of reads & writes.
 
 ![](/images/aws/00-icons/dynamodb.png) 
+
 - Capacity used depends on size of item, read consistency, transactions etc
 - 1 capacity unit to read 4 KB or smaller (more for bigger items)
 - 1 capacity unit to write 1 KB or smaller (more for bigger items)
@@ -164,6 +168,7 @@ DynamoDB protects data stored in the tables through server side and client side 
 Also through IAM we can authenticate and authorize the control the access to DynamoDB.
 
 ![](/images/aws/00-icons/dynamodb.png) 
+
 - Server-side encryption in integration with keys from KMS
 	- Always enabled
 	- Automatically encrypts tables, DynamoDB streams, and backups
@@ -191,6 +196,7 @@ DynamoDB Accelerator (DAX) delivers fast response times for accessing eventually
 response times
 
 ![](/images/aws/03-serverless/07-lamdba-dax.png)
+
 - In-memory caching for DynamoDB providing microsecond response times
 	- Typical DynamoDB response times - single-digit milliseconds
 - Very few changes needed to connect to DAX
