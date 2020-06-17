@@ -181,7 +181,8 @@ Also through IAM we can authenticate and authorize the control the access to Dyn
 	- Fine-grained control at the individual item level
 
 ##  DynamoDB vs RDS
-Lets looks at DynamoDB & RDS and compare them for different features. 
+Lets looks at DynamoDB & RDS and compare them for different features.
+ 
 |Feature  | DynamoDB  | RDS|
 |--|:--|:--|
 | Scenario   |  Millisecond latency with millions of TPS    | Stronger consistency (schema) and transactional capabilities|
