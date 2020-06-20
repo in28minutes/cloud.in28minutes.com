@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon RDS - Relational Database Service and Amazon Aurora - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-06-22 12:31:19
 summary:    Let's get a quick overview of Amazon RDS from an AWS certification perspective. We will look at important certification questions regarding Amazon RDS. 
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-rds-relational-database-service
@@ -47,8 +47,6 @@ Each cheat sheet contains:
 
 ## Amazon RDS - Features
 
-![](/images/aws/00-icons/rds.png) 
-
 - Multi-AZ deployment (standby in another AZ)
 - Read replicas:
 	- Same AZ 
@@ -59,8 +57,6 @@ Each cheat sheet contains:
 - Manual snapshots
 
 ## Amazon RDS - You vs AWS
-
-![](/images/aws/00-icons/rds.png) 
 
 - AWS is responsible for 
 	- Availability (according to your configuration)
@@ -96,7 +92,6 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 
 ## RDS - Scaling
 
-![](/images/aws/00-icons/rds.png) 
 - Vertical Scaling: Change DB instance type and scale storage
 	- Storage and compute changes are typically applied during maintenance window
 	- You can also choose to “apply-immediately”

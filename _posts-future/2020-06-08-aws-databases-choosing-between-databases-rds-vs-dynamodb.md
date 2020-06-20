@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Choosing AWS Databases - RDS vs DynamoDB vs Redshift - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-06-21 12:31:19
 summary:    Let's get a quick overview of how you can choose between different AWS Databases. How do you choose RDS vs DynamoDB vs Redshift?
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-choosing-aws-databases
@@ -47,7 +47,7 @@ Each cheat sheet contains:
 
 ## Relational Databases
 
-![Database](./images/aws/relational-schema.png)
+![Database](/images/aws/relational-schema.png)
 - This was the **only option** until a decade back!
 - Most **popular (or unpopular)** type of databases
 - **Predefined schema** with tables and relationships
@@ -82,8 +82,8 @@ Each cheat sheet contains:
 
 ## Relational Databases - OLAP vs OLTP
 
-![Database](./images/aws/database-columnar-storage.png)
-![Database](./images/aws/database-columnar-storage-2.png)
+![Database](/images/aws/database-columnar-storage.png)
+![Database](/images/aws/database-columnar-storage-2.png)
 
 - OLAP and OLTP use **similar data structures**
 - BUT **very different approach in how data is stored**
@@ -110,8 +110,8 @@ Each cheat sheet contains:
 	- **Amazon DynamoDB**
 
 ## Key-value
-![Database](./images/aws/database-key-value.png)
-![Database](./images/aws/database-session-store.png)
+![Database](/images/aws/database-key-value.png)
+![Database](/images/aws/database-session-store.png)
 - Use a **simple key-value pair** to store data. Key is a unique identifier.
 - Values can be objects, compound objects or simple data values
 - **Advantages** : (Horizontally) Scalable to **terabytes of data** with **millisecond responses** upto **millions of transactions per second**
@@ -119,7 +119,7 @@ Each cheat sheet contains:
 - **Use cases** : shopping carts, session stores, gaming applications and very high traffic web apps
 
 ## Graph
-![Database](./images/aws/graph.png)
+![Database](/images/aws/graph.png)
 - **Store and navigate** data with complex relationships
 - **Use cases** : Social Networking Data (Twitter, Facebook), Fraud Detection
 - Recommended AWS Managed Service - **Amazon Neptune**
