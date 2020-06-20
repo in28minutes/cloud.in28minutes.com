@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon ElastiCache for Redis and Memcached -  - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-06-20 12:31:19
 summary:    Let's get a quick overview of Amazon ElastiCache for Redis and Memcached from an AWS certification perspective. We will look at important certification questions regarding Amazon ElastiCache for Redis and Memcached. 
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-elasticache-for-redis-and-memcached
@@ -30,6 +30,7 @@ Each cheat sheet contains:
 
 
 ## Amazon ElastiCache 
+Amazon ElastiCache allows you to seamlessly set up, run, and scale popular open-Source compatible in-memory data stores in the cloud. Build data-intensive apps or boost the performance of your existing databases by retrieving data from high throughput and low latency in-memory data stores. Amazon ElastiCache is a popular choice for real-time use cases like Caching, Session Stores, Gaming, Geospatial Services, Real-Time Analytics, and Queuing.
 
 ![](/images/aws/00-icons/elasticache.png) 
 - Managed service providing highly scalable and low latency in-memory data store
@@ -39,8 +40,6 @@ Each cheat sheet contains:
 	- Memcached
 
 ## Amazon ElastiCache for Redis
-
-![](/images/aws/00-icons/elasticache.png) 
 
 - Highly scalable and low latency in-memory data store
 - Can be used as a cache, database or message broker
@@ -56,8 +55,6 @@ Each cheat sheet contains:
 	- Queues
 
 ## Amazon ElastiCache for Redis - Cluster
-
-![](/images/aws/00-icons/elasticache.png) 
 
 - Shard - collection of one or more nodes
 - One node acts as read/write primary
@@ -80,7 +77,6 @@ Each cheat sheet contains:
 
 ## Amazon ElastiCache for Memcached
 
-![](/images/aws/00-icons/elasticache.png) 
 - Simple caching layer intended for use in speeding up dynamic web applications
 	- Pure cache
 	- Non-persistent
@@ -92,7 +88,6 @@ Each cheat sheet contains:
 
 ## Amazon ElastiCache for Memcached - Limitations
 
-![](/images/aws/00-icons/elasticache.png) 
 - Backup and restore NOT supported
 - Does not support encryption or replication
 - Does not support snapshots
@@ -100,8 +95,6 @@ Each cheat sheet contains:
 	- Reduce impact of failure by using large number of small nodes
 
 ## ElastiCache Memcached vs Redis
-
-![](/images/aws/00-icons/elasticache.png) 
 
 - Use ElastiCache Memcached for
 	- Low maintenance simple caching solution
