@@ -29,6 +29,7 @@ Each cheat sheet contains:
  <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
 </div>
 
+Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. 
 
 ## Content Delivery Network
 
@@ -50,8 +51,6 @@ Each cheat sheet contains:
 - Provides features to protect your private content
 
 ## Amazon CloudFront
-
-![](/images/aws/00-icons/cloudfront.png)
 
 - Use Cases
 	- Static web apps. Audio, video and software downloads. Dynamic web apps
@@ -79,7 +78,6 @@ Each cheat sheet contains:
 
 ## Amazon CloudFront - Cache Behaviors
 
-![](/images/aws/001-basic-drawings/cloudfrontdistribution.png)
 - Configure different CloudFront behavior for different URL path patterns from same origin
 	- Path pattern(can use wild cards - `*.php, *.jsp`), 
 	- Do you want to forward query strings?
