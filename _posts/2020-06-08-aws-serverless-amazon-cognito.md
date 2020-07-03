@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon Cognito - User Pools, Identity Pools - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-07-03 12:31:19
 summary:    Let's get a quick overview of Amazon Cognito from an AWS certification perspective. 
 categories:  AWS_CLOUD AWS_SERVICES
 permalink:  /aws-certification-amazon-cognito-user-authentication-and-authorization
@@ -27,6 +27,8 @@ Each cheat sheet contains:
  <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
 </div>
 
+
+Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
 
 ## Amazon Cognito
 
