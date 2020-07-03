@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon S3 Glacier - vs Amazon S3 - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-07-03 12:31:19
 summary:    Let's get a quick overview of Amazon S3 Glacier from an AWS certification perspective. We will look at important certification questions regarding Amazon S3 Glacier. 
 categories:  AWS_CLOUD AWS_STORAGE
 permalink:  /aws-certification-amazon-s3-glacier-vs-amazon-s3
@@ -54,7 +54,6 @@ Each cheat sheet contains:
 |WORM Write Once Read Many Times| Enable Object Lock Policy|Enable Vault lock policy| 
 
 ## Retrieving archives from S3 Glacier
-![](/images/aws/00-icons/glacier.png)
 
 - **Asynchronous two step process** (Use REST API, AWS CLI or SDK)
 	- Initiate a archive retrieval

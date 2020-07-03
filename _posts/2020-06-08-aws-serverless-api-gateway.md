@@ -50,28 +50,15 @@ Each cheat sheet contains:
 ![](/images/aws/00-icons/apigateway.png)
 ![](/images/arrow.png) 
 ![](/images/aws/00-icons/lambdafunction.png) 
+
 - How about a **fully managed service** with auto scaling that can act as a **"front door"** to your APIs?
 - Welcome **"Amazon API Gateway"**
-
-## Amazon API Gateway
-![](/images/aws/00-icons/user.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/apigateway.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/lambdafunction.png) 
-
 - **"publish, maintain, monitor, and secure APIs at any scale"**
 - Integrates with AWS Lambda, Amazon EC2, Amazon ECS or any web application
 - Supports HTTP(S) and WebSockets (two way communication - chat apps and streaming dashboards)
 - Serverless. **Pay for use** (API calls and connection duration)
 
-## Amazon API Gateway - Remember
-
-![](/images/aws/00-icons/user.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/apigateway.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/lambdafunction.png) 
+## Amazon API Gateway - Key Points to Remember
 
 - API Lifecycle Management for RESTful APIs and WebSocket APIs
 - Run multiple versions of the same API
@@ -98,13 +85,10 @@ Each cheat sheet contains:
 	- Amazon CloudWatch Logs - Debug logging
 	- AWS CloudTrail - Complete history of changes to your REST API
 
-## Amazon API Gateway - Authentication and Authorization
+## Amazon API Gateway - Authentication and Authorization & Approaches
 ![](/images/aws/03-serverless/04-Request-With-SecurityToken.png)
 - How do you authenticate a REST API call?
 	- Attach a signature or token with your API call
-
-## Amazon API Gateway - Authentication and Authorization Approaches
-
 - AWS Signature Version 4
 	- Create a signature using your AWS secret access key and send it with your API request
 	- For API consumers belonging to your AWS account
