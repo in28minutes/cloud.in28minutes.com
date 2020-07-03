@@ -29,6 +29,7 @@ Each cheat sheet contains:
  <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
 </div>
 
+
 Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. 
 
 ## Content Delivery Network
@@ -84,7 +85,7 @@ Amazon CloudFront is a fast content delivery network (CDN) service that securely
 	- Should we use https?
 	- TTL
 
-## Amazon CloudFront - Private content
+## Amazon CloudFront - Private content - Securing & Restricting Access
 
 ![](/images/aws/001-basic-drawings/cfprivatecontent.png)
 - Signed URLs
