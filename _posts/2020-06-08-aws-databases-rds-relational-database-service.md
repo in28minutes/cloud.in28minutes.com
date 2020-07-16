@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon RDS - Relational Database Service and Amazon Aurora - AWS Certification
-date:       2020-06-22 12:31:19
+date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of Amazon RDS from an AWS certification perspective. We will look at important certification questions regarding Amazon RDS. 
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-rds-relational-database-service
@@ -19,6 +19,22 @@ Let's get a quick overview of Amazon RDS from an AWS certification perspective. 
 - What is Amazon Aurora?
 - How do you implement encryption for Amazon RDS in integration with KMS?
 
+## Table of Contents
+
+- [Amazon RDS \(Relational Database Service\)](#amazon-rds-relational-database-service)
+- [Amazon RDS - Features](#amazon-rds---features)
+- [Amazon RDS - You vs AWS](#amazon-rds---you-vs-aws)
+- [Amazon Aurora](#amazon-aurora)
+- [RDS - Scaling](#rds---scaling)
+	- [Vertical Scaling](#vertical-scaling)
+	- [Horizontal Scaling](#horizontal-scaling)
+- [RDS - Operations](#rds---operations)
+- [RDS - Security and Encryption](#rds---security-and-encryption)
+- [RDS - Costs - Key Elements](#rds---costs---key-elements)
+- [Amazon RDS - When to use?](#amazon-rds---when-to-use)
+- [Amazon RDS - Certification and Interview Questions](#amazon-rds---certification-and-interview-questions)
+
+
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
@@ -33,20 +49,21 @@ Each cheat sheet contains:
 
 ## Amazon RDS (Relational Database Service)
 
-![](/images/aws/00-icons/rds.png) 
-- Do you want to manage the setup, backup, scaling, replication and patching of your relational databases? 
-	- Or do you want to use a managed service?
-- Amazon RDS is a managed relational database service for OLTP use cases 
-- Supports: 
-	- Amazon Aurora
-	- PostgreSQL
-	- MySQL (InnoDB storage engine full supported)
-	- MariaDB (Enhanced MySQL)
-	- Oracle Database
-	- Microsoft SQL Server
+Do you want to manage the setup, backup, scaling, replication and patching of your relational databases? Or do you want to use a managed service?
+
+Amazon RDS is a managed relational database service for OLTP use cases 
+
+Supports: 
+- Amazon Aurora
+- PostgreSQL
+- MySQL (InnoDB storage engine full supported)
+- MariaDB (Enhanced MySQL)
+- Oracle Database
+- Microsoft SQL Server
 
 ## Amazon RDS - Features
 
+Some of the important Amazon RDS features include:
 - Multi-AZ deployment (standby in another AZ)
 - Read replicas:
 	- Same AZ 
@@ -58,88 +75,106 @@ Each cheat sheet contains:
 
 ## Amazon RDS - You vs AWS
 
-- AWS is responsible for 
-	- Availability (according to your configuration)
-	- Durability
-	- Scaling (according to your configuration)
-	- Maintenance (patches)
-	- Backups
-- You are responsible for 
-	- Managing database users
-	- App optimization (tables, indexes etc)
-- You CANNOT
-	- SSH into database EC2 instances or setup custom software (NOT ALLOWED)
-	- Install OS or DB patches. RDS takes care of them (NOT ALLOWED)
+Who is responsible for what when you use Amazon RDS?
+
+AWS is responsible for 
+- Availability (according to your configuration)
+- Durability
+- Scaling (according to your configuration)
+- Maintenance (patches)
+- Backups
+
+You are responsible for 
+- Managing database users
+- App optimization (tables, indexes etc)
+
+You CANNOT
+- SSH into database EC2 instances or setup custom software (NOT ALLOWED)
+- Install OS or DB patches. RDS takes care of them (NOT ALLOWED)
 
 ## Amazon Aurora
 
-![](/images/aws/AuroraArch001.png)
-https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html
+Amazon Aurora is one of the database options supported by Amazon RDS.
+
+Here are some of the important things to remember about Amazon Aurora:
 - MySQL and PostgreSQL-compatible
 - 2 copies of data each in a minimum of 3 AZ
 - Up to 15 read replicas (Only 5 for MySQL)
-- Provides "Global Database" option
-	- Up to five read-only, secondary AWS Regions
-		- Low latency for global reads
-		- Safe from region-wide outages
-	- Minimal lag time, typically less than 1 second
-- Deployment Options
-	- Single master (One writer and multiple readers) 
-	- Multi master deployment (multiple writers)
-	- Serverless
 - Uses cluster volume (multi AZ storage)
+
+Amazon Aurora Provides "Global Database" option:
+- Up to five read-only, secondary AWS Regions
+	- Low latency for global reads
+	- Safe from region-wide outages
+- Minimal lag time, typically less than 1 second
+
+Here are some of the deployment options with Amazon Aurora:
+- Single master (One writer and multiple readers) 
+- Multi master deployment (multiple writers)
+- Serverless
 	
 
 ## RDS - Scaling
 
-- Vertical Scaling: Change DB instance type and scale storage
-	- Storage and compute changes are typically applied during maintenance window
-	- You can also choose to “apply-immediately”
-	- RDS would take care of data migration
-		- Takes a few minutes to complete
-	- You can manually scale Aurora, MySQL, MariaDB, Oracle, and PostgreSQL engines to 64 TB
-	- SQL Server can be scaled up to 16 TB
-- Vertical Scaling: RDS also supports auto scaling storage
-- Horizontal Scaling
-	- Configure Read Replicas
-	- For Aurora  (Multi-master, Writer with multiple readers etc)
+How do you scale RDS?
+
+Let's look at some of the options:
+
+### Vertical Scaling 
+
+Change DB instance type and scale storage
+- Storage and compute changes are typically applied during maintenance window
+- You can also choose to “apply-immediately”
+- RDS would take care of data migration
+	- Takes a few minutes to complete
+- You can manually scale Aurora, MySQL, MariaDB, Oracle, and PostgreSQL engines to 64 TB
+- SQL Server can be scaled up to 16 TB
+
+RDS also supports auto scaling storage.
+
+### Horizontal Scaling
+
+You can configure Read Replicas. 
+
+Aurora provides additional options  (Multi-master, Writer with multiple readers etc).
 
 ## RDS - Operations
 
-![](/images/aws/00-icons/rds.png) 
-![](/images/aws/00-icons/cloudwatch.png) 
-![](/images/aws/00-icons/config.png) 
+RDS console shows metrics upto a certain time period. 
 
-- RDS console shows metrics upto a certain time period
-- CloudWatch show historical data
+You can see historical data in CloudWatch.
+
+Here are some of the recommedations:
 - Configure CloudWatch alarms to alert when you near max capacity
 - Enable Enhanced Monitoring to monitor slow queries
-- Automatic backup during backup window (to Amazon S3)
-	- Enables restore to **point in time**
-	- Backups retained for 7 days by default (max - 35 days)
-	- Elevated latency when snapshots are taken (except for Multi-AZ setup)
+
+
+You can configure an Automatic backup during backup window (to Amazon S3)
+- Enables restore to **point in time**
+- Backups retained for 7 days by default (max - 35 days)
+- Elevated latency when snapshots are taken (except for Multi-AZ setup)
 - Backup window used to **apply patches**
 	- If you do not configure a 30 minute backup window, RDS chooses one randomly
 - Achieve RPO of up to 5 minutes
 
 ## RDS - Security and Encryption
 
-![](/images/aws/00-icons/kms.png)
-![](/images/aws/00-icons/subnet.png)
-![](/images/aws/00-icons/rds.png)
-![](/images/aws/00-icons/securitygroup.png)
-
+Here are the important things to consider about Security of RDS:
 - Create in a VPC private subnet
 - Use security groups to control access
+- Enable encryption with keys from KMS
+
+Here are some of the important security features supported by RDS:
 - Option to use IAM Authentication with Aurora, MySQL and PostgreSQL
 	- Use IAM roles and no need for passwords
-- Enable encryption with keys from KMS
 - When encryption is enabled
 	- Data in the database, automated backups, read replicas and snapshots are all encrypted
 - Data In-flight Encryption
 	- Using SSL certificates
 
 ## RDS - Costs - Key Elements
+
+Key elements of RDS Costs include:
 - **DB instance hours** - How many hours is the DB instance running? 
 - **Storage (per GB per month)** - How much storage have you provisioned for your DB instance?
 - **Provisioned IOPS per month** - If you are using Amazon RDS Provisioned IOPS (SSD) Storage
@@ -148,19 +183,24 @@ https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.htm
 
 ## Amazon RDS - When to use?
 
-- Use Amazon RDS for transactional applications needing 
-	- Pre-defined schema
-	- Strong transactional capabilities
-	- Complex queries
-- Amazon RDS is **NOT recommended** when
-	- You need highly scalable massive read/write operations - for example millions of writes/second
-		- Go for DynamoDB
-	- When you want to upload files using simple GET/PUT REST API
-		- Go for Amazon S3
-	- When you need heavy customizations for your database or need access to underlying EC2 instances
-		- Go for a custom database installation
+When do you use Amazon RDS?
+
+Use Amazon RDS for transactional applications needing 
+- Pre-defined schema
+- Strong transactional capabilities
+- Complex queries
+
+Amazon RDS is **NOT recommended** when
+- You need highly scalable massive read/write operations - for example millions of writes/second
+	- Go for DynamoDB
+- When you want to upload files using simple GET/PUT REST API
+	- Go for Amazon S3
+- When you need heavy customizations for your database or need access to underlying EC2 instances
+	- Go for a custom database installation
 
 ## Amazon RDS - Certification and Interview Questions
+
+Here are some of important scenarios and questions regarding Amazon RDS.
 
 | Scenario | Solution  | 
 |--|:--|

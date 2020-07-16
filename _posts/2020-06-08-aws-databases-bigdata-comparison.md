@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon RedShift vs RedShift Spectrum vs Amazon EMR - A comparison - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of the big data options in AWS - Amazon RedShift vs RedShift Spectrum vs Amazon EMR. We will look at important certification questions regarding Amazon RedShift vs RedShift Spectrum vs Amazon EMR. 
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-redshift-vs-redshift-spectrum-vs-amazon-emr
@@ -13,6 +13,13 @@ Let's get a quick overview of the big data options in AWS - Amazon RedShift vs R
 - What are big data options in AWS?
 - How do you choose - Amazon RedShift vs RedShift Spectrum vs Amazon EMR?
 - Comparison - Amazon RedShift vs RedShift Spectrum vs Amazon EMR
+
+## Table of Contents
+- [Amazon Redshift](#amazon-redshift)
+- [Amazon Redshift Spectrum](#amazon-redshift-spectrum)
+- [Amazon EMR - Elastic MapReduce](#amazon-emr---elastic-mapreduce)
+- [Amazon EMR - Storage Types](#amazon-emr---storage-types)
+- [Comparison and Certification Questions - Amazon Redshift and EMR](#comparison-and-certification-questions---amazon-redshift-and-emr)
 
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
@@ -28,26 +35,28 @@ Each cheat sheet contains:
 
 ## Amazon Redshift
 
-![](/images/aws/00-icons/redshift.png) 
+Redshift is a relational database ( tables and relationships). 
 
-- Redshift is a relational database ( tables and relationships)
-- What is the need for another relational database? 
-	- RDS is optimized for online transaction processing
-	- It is optimized to provide a balance between both reads and write operations
-- OLAP workloads have exponentially larger reads on the databases compared to writes: 
-	- Can we use a different approach to design the database? 
-	- How about creating a cluster and splitting the execution of the same query across several nodes? 
-- Redshift is a **petabyte-scale distributed data ware house** based on PostgreSQL
-- Three important characteristics of Redshift:
-	- Massively parallel processing (MPP) - storage and processing can be split across multiple nodes
-	- Columnar data storage
-	- High data compression
+What is the need for another relational database? 
+
+RDS is optimized for online transaction processing. It is optimized to provide a balance between both reads and write operations. OLAP workloads have exponentially larger reads on the databases compared to writes.
+
+The questions are:
+- Can we use a different approach to design the database? 
+- How about creating a cluster and splitting the execution of the same query across several nodes? 
+
+Redshift is a **petabyte-scale distributed data ware house** based on PostgreSQL
+
+Three important characteristics of Redshift:
+- Massively parallel processing (MPP) - storage and processing can be split across multiple nodes
+- Columnar data storage
+- High data compression
 
 ## Amazon Redshift Spectrum
 
-![](/images/aws/001-basic-drawings/redshift-spectrum.png)
-- Run SQL queries against datasets in Amazon S3 
-	- Does need for any intermediate data stores
+Amazon Redshift Spectrum helps you run SQL queries against datasets in Amazon S3. It does need for any intermediate data stores.
+
+Here are some of the important characteristics:
 - Auto scales based on your queries
 - Scale storage and compute independently
 - Metadata defined in Amazon Redshift
@@ -57,18 +66,24 @@ Each cheat sheet contains:
 - Query against Amazon EMR (as well)
 
 ## Amazon EMR - Elastic MapReduce
-- Managed Hadoop service with high availability and durability
+
+Amazon EMR is a managed Hadoop service with high availability and durability.
+
+Here are some of the important characteristics:
 - EMR gives access to underlying OS => You can SSH into it
 - Important tools in Hadoop eco system are natively supported:
 	- Examples: Pig, Hive, Spark or Presto
 - Install others using bootstrap actions
-- Use cases 
-	- Log processing for insights
-	- Click stream analysis for advertisers
-	- Genomic and life science dataset processing
+
+Here are some of the important Use cases of Amazon EMR:
+- Log processing for insights
+- Click stream analysis for advertisers
+- Genomic and life science dataset processing
 
 ## Amazon EMR - Storage Types
- 
+
+The table below shows the different Storage Types in EMR and the differences between them.
+
 | Feature |Hadoop Distributed File System (HDFS)  | EMR File System (EMRFS) | 
 |--|:--|:--|
 |  Standard for Hadoop  |   ✓    |    X     |
@@ -78,6 +93,10 @@ Each cheat sheet contains:
 |Transient Clusters running Infrequent big data jobs||✓(Run MapReduce jobs against S3 bucket)|
 
 ## Comparison and Certification Questions - Amazon Redshift and EMR 
+
+When do you use EMR? When do you use Redshift? 
+
+Let's look at a quick table:
 
 | Alternative | Scenario  | 
 |--|:--|

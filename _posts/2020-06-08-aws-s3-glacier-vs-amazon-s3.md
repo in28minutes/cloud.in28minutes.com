@@ -30,7 +30,9 @@ Each cheat sheet contains:
 ## Amazon S3 Glacier
 ![](/images/aws/00-icons/glacier.png)
 
-- In addition to existing as a S3 Storage Class, S3 Glacier is a seperate AWS Service on it own!
+In addition to existing as a S3 Storage Class, S3 Glacier is a separate AWS Service on it own!
+
+Here are some of the important features:
 - **Extremely low cost storage** for archives and long-term backups:
 	- Old media content
 	- Archives to meet regulatory requirements (old patient records etc)
@@ -38,11 +40,14 @@ Each cheat sheet contains:
 - High durability (11 9s - 99.999999999%)
 - High scalability (unlimited storage)
 - High security (**encrypted** at rest and in transfer)
-- Cannot upload objects to Glacier using Management Console
-	- Use REST API, AWS CLI, AWS SDK
+
+You cannot upload objects to Glacier using Management Console
+- Use REST API, AWS CLI, AWS SDK
 
 ## Amazon S3 vs S3 Glacier
- 
+
+Let's compare Amazon S3 vs S3 Glacier. 
+
 | Feature |Amazon S3 | S3 Glacier | 
 |--|:--|:--|
 | Terminology   |  Objects (files) are stored in Buckets (containers)     |    Archives (files) are stored in Vaults (containers)     |
@@ -55,11 +60,14 @@ Each cheat sheet contains:
 
 ## Retrieving archives from S3 Glacier
 
-- **Asynchronous two step process** (Use REST API, AWS CLI or SDK)
-	- Initiate a archive retrieval
-	- (After archive is available) Download the archive
-- Reduce costs by **optionally specify a range, or portion,** of the archive to retrieve
-- Reduce costs by **requesting longer access times**
+Retrieving archives from S3 Glacier is an **Asynchronous two step process** (Use REST API, AWS CLI or SDK)
+- 1: Initiate a archive retrieval
+- 2: (After archive is available) Download the archive
+
+
+You can reduce S3 Glacier costs by :
+- **Optionally specify a range, or portion,** of the archive to retrieve.
+- **Requesting longer access times**. Here are some of the retrieval options:
 	- Amazon S3 Glacier:
 		- Expedited (1 – 5 minutes)
 		- Standard (3 – 5 hours)

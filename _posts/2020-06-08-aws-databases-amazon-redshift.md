@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Amazon RedShift - Big Data in AWS - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of Amazon RedShift from an AWS certification perspective. We will look at important certification questions regarding Amazon RedShift. 
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-amazon-redshift
@@ -17,6 +17,18 @@ Let's get a quick overview of Amazon RedShift from an AWS certification perspect
 - How do you design Redshift Tables?
 - How do you load data into Amazon Redshift?
 
+## Table of Contents
+- [Amazon Redshift](#amazon-redshift)
+- [Redshift Cluster](#redshift-cluster)
+- [Redshift - Designing Tables](#redshift---designing-tables)
+	- [Compression Encoding \(optional\)](#compression-encoding-optional)
+	- [Sort Keys \(optional\)](#sort-keys-optional)
+	- [Distribution Strategy](#distribution-strategy)
+- [Loading Data into Amazon Redshift](#loading-data-into-amazon-redshift)
+- [Redshift Workload Management](#redshift-workload-management)
+- [Redshift Security](#redshift-security)
+- [Redshift Operations](#redshift-operations)
+
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
 Each cheat sheet contains:
@@ -30,9 +42,7 @@ Each cheat sheet contains:
 </div>
 
 ## Amazon Redshift
-
-![](/images/aws/00-icons/redshift.png) 
-
+Let's look at a few key highlights about Amazon Redshift:
 - Redshift is a relational database ( tables and relationships)
 - What is the need for another relational database? 
 	- RDS is optimized for online transaction processing
@@ -41,11 +51,6 @@ Each cheat sheet contains:
 	- Can we use a different approach to design the database? 
 	- How about creating a cluster and splitting the execution of the same query across several nodes? 
 - Redshift is a **petabyte-scale distributed data ware house** based on PostgreSQL
-
-## Amazon Redshift 
-
-![](/images/aws/00-icons/redshift.png) 
-
 - Three important characteristics of Redshift:
 	- Massively parallel processing (MPP) - storage and processing can be split across multiple nodes
 	- Columnar data storage
@@ -55,10 +60,6 @@ Each cheat sheet contains:
 	- A query to Redshift leader node is distributed to multiple compute nodes for execution
 - Start with a single node configuration and scale to multi node configuration
 - You can dynamically add and remove nodes
-
-## Amazon Redshift 
-
-![](/images/aws/00-icons/redshift.png) 
 - Used for traditional ETL(Extract, Transform, Load), OLAP and Business Intelligence (BI) use cases
 	- Optimized for high-performance analysis and reporting of very large datasets
 - Supports standard SQL 
@@ -70,8 +71,7 @@ Each cheat sheet contains:
 
 ## Redshift Cluster
 
-![](/images/aws/Redshift-NodeRelationships.png) 
-https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png 
+You can create Redshift Clusters with following characteristics:
 - One leader node and multiple compute nodes
 	- Add compute nodes for more performance
 	- Create a cluster subnet group to use a VPC
@@ -79,26 +79,24 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 - Clients communicate with leader node
 	- Leader node divides the query execution between compute nodes
 	- No direct access to compute nodes
-	
 
 ## Redshift - Designing Tables
 
-![](/images/aws/00-icons/redshift.png) 
-- Compression Encoding (optional) 
+Here are some of the important things that you need to take into consideration while designing Redshift tables:
+
+### Compression Encoding (optional) 
 	- Let Redshift choose or configure for each column
 		- Examples : Raw, Bytedict, LZO, Runlength, Text255, Text32K
 	- Find the right compression encoding by running tests
-- Sort Keys (optional) 
+
+### Sort Keys (optional) 
 	- Data is stored in sorted order (using sort key)
 	- Increase efficiency of your queries
 	- Example 1 : Columns used frequently in range (year > 1995 and year < 2005) or equal (year = 2015) conditions
 	- Example 2 : Join columns with other tables 
 	- Example 3 : Timestamp columns if you use the most recent data frequently
 
-## Redshift - Designing Tables - Distribution Strategy
-
-![](/images/aws/00-icons/redshift.png) 
-
+### Distribution Strategy
 - How are the rows of the table distributed across compute nodes? 
 	- Aim to distribute data equally across nodes and minimize data movement during query execution
 - EVEN (default) - data is uniformly distributed
@@ -109,6 +107,8 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 	- Used for lookup tables
 
 ## Loading Data into Amazon Redshift
+
+Here are the important options for Loading Data into Amazon Redshift:
 
 | Scenario | Solution  | 
 |--|:--|
@@ -122,16 +122,17 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 
 ## Redshift Workload Management
 
-![](/images/aws/rds-diagrams/xx-redshift-wlm.png)
+You can use Redshift Workload Management to prioritize your query workloads.
+
+Here are some of the important characteristics:
 - WLM can be configured to prioritize queues
 - Create multiple queues with different concurrency level for different purposes
 - One queue for long running queries with low concurrency
 - One queue for short running queries with high concurrency (upto 50 concurrent queries)
 
 ## Redshift Security
-![](/images/aws/00-icons/redshift.png)
-![](/images/arrow.png)
-![](/images/aws/00-icons/kms.png)
+
+Here are some of the important things you need to remember about Redshift Security:
 - Uses 4-tier, key-based architecture for encryption
 	- master key (chosen from keys in KMS)
 	- a cluster encryption key (CEK)
@@ -142,8 +143,8 @@ https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png
 	- Grant permissions on a per cluster basis instead of per table basis
 
 ## Redshift Operations
-![](/images/aws/00-icons/redshift.png)
-![](/images/aws/00-icons/cloudwatch.png)
+
+Here are some of the important things you need to remember about Operations with Redshift:
 - Add new columns by using ALTER TABLE
 	- Existing columns cannot be modified
 - SQL operations are logged

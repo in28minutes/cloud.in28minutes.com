@@ -10,6 +10,7 @@ permalink:  /aws-certification-amazon-s3-storage-classes
 Let's get a quick overview of Amazon S3 Storage Classes from an AWS certification perspective. We will look at important certification questions regarding Amazon S3 Storage Classes.
 
 ## You will learn
+
 - What are the different Amazon S3 Storage Classes?
 - Why are Amazon S3 Storage Classes important?
 - When do we use Amazon S3 Storage Classes?
@@ -28,20 +29,20 @@ Each cheat sheet contains:
 </div>
 
 ## Amazon S3 Storage Classes - Introduction
-![](/images/aws/00-icons/s3.png)
-![](/images/aws/00-icons/glacier.png)
 
-- **Different kinds of data** can be stored in Amazon S3
-	- Media files and archives
-	- Application packages and logs
-	- Backups of your databases or storage devices
-	- Long term archives
-- Huge variations in **access patterns**
-- **Trade-off** between access time and cost
-- **S3 storage classes** help to optimize your costs while meeting access time needs
-	- Designed for durability of **99.999999999%(11 9’s)**
+**Different kinds of data** can be stored in Amazon S3
+- Media files and archives
+- Application packages and logs
+- Backups of your databases or storage devices
+- Long term archives
 
-## Amazon S3 Storage Classes
+There are Huge variations in **access patterns**. So, you have to **Trade-off** between access time and cost.
+
+**S3 storage classes** help to optimize your costs while meeting access time needs. They are designed for durability of **99.999999999%(11 9’s)**.
+
+## Amazon S3 Storage Classes - Types
+
+Here are the important S3 Storage Classes:
 
 |Storage Class|Scenario|AZs|
 |--|:--|:--|
@@ -55,6 +56,8 @@ Each cheat sheet contains:
 
 ## Amazon S3 Storage Classes - Comparison
 
+Here is the comparison between different S3 Storage Classes:
+
 | Feature |Standard | Intelligent Tiering | Standard IA| One Zone IA | Glacier | Glacier Deep Archive |
 |--|--|--|--|--|--|--|
 |Availability (Designed)|99.99%|99.9%|99.9%|99.5%|99.99%|99.99%|
@@ -65,4 +68,3 @@ Each cheat sheet contains:
 |Min storage days (for billing)|NA|30|30|30|90|180|
 |Per GB Cost (varies)| $0.025 | varies | $0.018 | $0.0144 | $0.005|$0.002|
 |Encryption|Optional|Optional|Optional|Optional|Mandatory|Mandatory|
-

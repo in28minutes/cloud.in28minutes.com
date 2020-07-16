@@ -30,49 +30,37 @@ Each cheat sheet contains:
 
 
 ## REST API Challenges
-![](/images/aws/00-icons/user.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/apigateway.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/lambdafunction.png) 
 
-- Most applications today are built around REST API
-- Management of REST API is not easy:
-	- You've to take care of authentication and authorization
-	- You've to be able to set limits (rate limiting, quotas) for your API consumers
-	- You've to take care of implementing multiple versions of your API
-	- You would want to monitor your API calls
-	- You would want to be able to cache API requests
+Most applications today are built around REST API.
+
+Management of REST API is not easy:
+- You've to take care of authentication and authorization
+- You've to be able to set limits (rate limiting, quotas) for your API consumers
+- You've to take care of implementing multiple versions of your API
+- You would want to monitor your API calls
+- You would want to be able to cache API requests
 
 ## Amazon API Gateway
-![](/images/aws/00-icons/user.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/apigateway.png)
-![](/images/arrow.png) 
-![](/images/aws/00-icons/lambdafunction.png) 
 
-- How about a **fully managed service** with auto scaling that can act as a **"front door"** to your APIs?
-- Welcome **"Amazon API Gateway"**
-- **"publish, maintain, monitor, and secure APIs at any scale"**
-- Integrates with AWS Lambda, Amazon EC2, Amazon ECS or any web application
-- Supports HTTP(S) and WebSockets (two way communication - chat apps and streaming dashboards)
-- Serverless. **Pay for use** (API calls and connection duration)
+How about a **fully managed service** with auto scaling that can act as a **"front door"** to your APIs? Welcome **"Amazon API Gateway"**
 
-## Amazon API Gateway - Key Points to Remember
+Amazon API Gateway helps you to **"publish, maintain, monitor, and secure APIs at any scale"**
 
-- API Lifecycle Management for RESTful APIs and WebSocket APIs
-- Run multiple versions of the same API
-- Rate Limits(request quota limits), throttling and fine-grained access permissions using API Keys for Third-Party Developers
-- Authorization integration with:
-	- AWS IAM (for AWS users using signature version 4)
-	- Amazon Cognito
-	- Lambda authorizer (custom authorization with JWT tokens or SAML)
+You can authorize users by integrating with:
+- AWS IAM (for AWS users using signature version 4)
+- Amazon Cognito
+- Lambda authorizer (custom authorization with JWT tokens or SAML)
 
 
 ## Amazon API Gateway Features
 
-![](/images/aws/00-icons/apigateway.png) 
-
+Here are some of the important features:
+- Integrates with AWS Lambda, Amazon EC2, Amazon ECS or any web application
+- Supports HTTP(S) and WebSockets (two way communication - chat apps and streaming dashboards)
+- Serverless. **Pay for use** (API calls and connection duration)
+- Provides API Lifecycle Management for RESTful APIs and WebSocket APIs
+- You can Run multiple versions of the same API
+- Supports Rate Limits(request quota limits), throttling and fine-grained access permissions using API Keys for Third-Party Developers
 - Lifecycle management for REST APIs 
 - Versioning and multiple environments
 - API keys - Generate API keys to monitor usage
@@ -86,9 +74,16 @@ Each cheat sheet contains:
 	- AWS CloudTrail - Complete history of changes to your REST API
 
 ## Amazon API Gateway - Authentication and Authorization & Approaches
+
+How can you implement Authentication with API Gateway?
+
 ![](/images/aws/03-serverless/04-Request-With-SecurityToken.png)
-- How do you authenticate a REST API call?
-	- Attach a signature or token with your API call
+
+How do you authenticate a REST API call?
+- Attach a signature or token with your API call
+
+
+Here are some of the important options:
 - AWS Signature Version 4
 	- Create a signature using your AWS secret access key and send it with your API request
 	- For API consumers belonging to your AWS account
@@ -96,8 +91,3 @@ Each cheat sheet contains:
 	- Implement a Lambda function to authenticate (JWT, OAuth etc) the token and return IAM policies. 
 	- Integrate with any custom user directory
 - Amazon Cognito
-	- We will look at authentication with Cognito next
-
-## Amazon API Gateway - AWS Certification Exam Practice Questions
-
-Coming Soon..
