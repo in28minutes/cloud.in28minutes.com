@@ -16,10 +16,14 @@ Let's get a quick overview of AWS Data Lakes from an AWS certification perspecti
 - Why is Data Cataloging important?
 - How does AWS Glue help?
 
+
 ## Table of Contents
-- [Multi-AZ Deployments](#multi-az-deployments)
-- [Read Replicas](#read-replicas)
-- [RDS Multi-AZ vs Multi-Region vs Read replicas - Certification Questions and Scenarios](#rds-multi-az-vs-multi-region-vs-read-replicas---certification-questions-and-scenarios)
+- [AWS Data Lakes - Simplified Big Data Solutions](#aws-data-lakes---simplified-big-data-solutions)
+- [AWS Data Lakes - Storage and Ingestion](#aws-data-lakes---storage-and-ingestion)
+- [Amazon S3 Query in Place](#amazon-s3-query-in-place)
+- [AWS Data Lakes -  Analytics with data in S3 Data Lake](#aws-data-lakes---analytics-with-data-in-s3-data-lake)
+- [Data Cataloging](#data-cataloging)
+- [AWS Glue](#aws-glue)
 
 ## AWS Certification - 25 PDF Cheat Sheets + Free Course
 
