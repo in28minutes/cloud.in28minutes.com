@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      HTTP vs HTTPS vs TCP vs TLS vs UDP - AWS Certification
+title:      HTTP vs HTTPS vs TCP vs TLS vs UDP - Protocol Comparison
 date:       2020-06-06 12:31:19
 summary:    Let's compare - HTTP vs HTTPS vs TCP vs TLS vs UDP 
 categories:  AWS_CLOUD General
@@ -37,14 +37,11 @@ Let's first understand the roles of different layers involved in network communi
 - **Transport Layer** - Are the bits and bytes transferred properly?
 - **Application Layer** - Make REST API calls and Send Emails
 
-Important things to note:
-- Each layer makes use of the layers beneath it
-- Most applications talk at application layer. BUT some applications talk at transport layer directly(high performance).
-
-![](/images/application-transport-layers.png)
 
 
 ## Network Layer vs Transport Layer vs Application Layer
+
+![](/images/application-transport-layers.png)
 
 Let's now compare the three important layers:
 - Network Layer:
@@ -59,9 +56,14 @@ Let's now compare the three important layers:
 	- SMTP: Email Transfer Protocol
 	- and a lot of others...
 
+
 **Most applications** typically communicate at application layer
 - Web apps/REST API(HTTP/HTTPS), Email Servers(SMTP), File Transfers(FTP)
 - All these applications use TCP/TLS at network layer(for reliability)
 
 **HOWEVER** applications needing high performance **directly** communicate at transport layer:
 - Gaming applications and live video streaming use UDP (sacrifice reliability for performance)
+
+Here are a couple of important things to note:
+- Each layer makes use of the layers beneath it.
+- Most applications talk at application layer. BUT some applications talk at transport layer directly(high performance).

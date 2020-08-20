@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      EC2 Fundamentals - AWS Certification
+title:      AWS EC2 Fundamentals - AWS Certification
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of EC2 Fundamentals from an AWS certification perspective. We will look at important certification questions regarding EC2. 
 categories:  AWS_CLOUD EC2
@@ -32,9 +32,11 @@ Each cheat sheet contains:
 </div>
 
 
-## EC2(Elastic Compute Cloud)
+## EC2 (Elastic Compute Cloud)
 
-In corporate data centers, applications are deployed to physical servers. Where do you deploy applications in the cloud?
+In corporate data centers, applications are deployed to physical servers. 
+
+Where do you deploy applications in the cloud?
 
 We rent virtual servers.
 
@@ -42,7 +44,7 @@ We rent virtual servers.
 
 **EC2 service** helps you to provision EC2 instances or virtual servers.
 
-## EC2 Features
+### EC2 Features
 
 Some of the important features of EC2 service include:
 - Creating and managing lifecycle of EC2 instances
@@ -50,7 +52,7 @@ Some of the important features of EC2 service include:
 - **Attach storage** (& network storage) to your EC2 instances
 - Manage **network connectivity** for an EC2 instance
 
-## EC2 Instance Types
+### EC2 Instance Types
 
 EC2 service offers a variety of instance types to help you choose an optimized combination of **compute(CPU, GPU), memory, disk (storage) and networking** for your applications.
 
@@ -66,7 +68,7 @@ Let's look at the naming of instance types with an example.
 - **micro** - size.  *(nano < micro < small < medium < large < xlarge < .....)*
 
 
-## EC2 Instance Families
+### EC2 Instance Families
 
 Table below shows some of the important EC2 instance families and highlights the use cases where they are recommended.
 
@@ -81,7 +83,7 @@ Table below shows some of the important EC2 instance families and highlights the
 | f (f1) | **FPGA** instances - customizable field programmable gate arrays | Applications needing massively parallel processing power, such as genomics, data analytics, video processing and financial computing|
 |inf (inf1) | **Machine learning ASIC** instances| Machine learning applications such as image recognition, speech recognition, natural language processing and personalization|
 
-## EC2 Burstable Instances (T family - T2, T3 etc)
+#### EC2 Burstable Instances (T family - T2, T3 etc)
 
 There are special type of EC2 instances called Burstable instances. These instances gather CPU Credits while they are idle. The CPU credits can be consumed at a later point in time (upto a maximum CPU Credit).
 
@@ -93,27 +95,27 @@ You can also use Unlimited Mode - Spike beyond CPU credit at additional cost:
 - For T2 instances, Unlimited Mode is disabled by default. 
 - For T3 instances, Unlimited Mode is enabled by default
 
-## EC2 - Instance Metadata Service and Dynamic Data
+### EC2 - Instance Metadata Service and Dynamic Data
 
 EC2 provides two important services to get details about an EC2 instance from within an EC2 instance:
 - Instance Metadata Service
 - Dynamic Data Service
 
-##### Instance Metadata Service
+#### Instance Metadata Service
 Instance Metadata Service helps you get details about EC2 instance **from inside** an EC2 instance. Some of the important details include AMI ID, storage devices, DNS hostname, instance id, instance type, security groups, IP addresses etc.
 
 URL: **http://169.254.169.254/latest/meta-data/**
 
 Some of the important URL Paths include network, ami-id, hostname, local-hostname, local-ipv4 , public-hostname, public-ipv4, security-groups, placement/availability-zone.
 
-##### Dynamic Data Service:
+#### Dynamic Data Service:
 Dynamic Data Service helps you get dynamic information about EC2 instance.
 
 URL: **http://169.254.169.254/latest/dynamic/**
 
 Example: http://169.254.169.254/latest/dynamic/instance-identity/document
 
-## EC2 Security Groups
+### EC2 Security Groups
 
 EC2 Security Group is a **Virtual firewall** to control **incoming and outgoing** traffic to/from AWS resources (EC2 instances, databases etc). It provides additional layer of security - Defense in Depth.
 
@@ -123,7 +125,7 @@ EC2 Security Group is a **Virtual firewall** to control **incoming and outgoing*
 ![](./images/arrowbi.png)
 ![](./images/aws/00-icons/ec2instance.png)
 
-### Security Groups Rules
+#### Security Groups Rules
 
 ![](./images/aws/security-group-example.png)
 
@@ -142,14 +144,14 @@ Security Groups are **stateful**:
 - If an outgoing request is allowed, the incoming response for it is automatically allowed. 
 - If an incoming request is allowed, an outgoing response for it is automatically allowed
 
-## EC2 Security Group - Trivia
+### EC2 Security Group - Trivia
 What if there are no security group rules configured for inbound and outbound?
 - Default DENY. No traffic is allowed in and out of EC2 instance.
 
 Can I change security groups at runtime?
 - Yes. Changes are immediately effective.
 
-## EC2 IP Addresses
+### EC2 IP Addresses
 
 Let's first look at public vs private IP addresses
 - Public IP addresses are internet addressable. 
@@ -163,7 +165,7 @@ Here are some of the important things to remember regarding the IP addresses of 
 - (Remember) When you stop an EC2 instance, public IP address is lost
  
 
-## Elastic IP Addresses
+### Elastic IP Addresses
 
 When you stop an EC2 instance, public IP address is lost. When you start it again, you have a different public IP address.
 
@@ -177,7 +179,11 @@ You will be charged for Elastic IP when:
 - Elastic IP is NOT associated with an EC2 instance OR
 - EC2 instance associated with Elastic IP is stopped
  
-## Bootstrapping with Userdata
+### Bootstrapping with Userdata
+
+**Bootstrapping**: Install OS patches or software when an EC2 instance is launched. 
+
+In EC2, you can configure **userdata** to bootstrap a script like this.
 
 ```
 #!/bin/bash
@@ -188,11 +194,10 @@ systemctl enable httpd
 curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/www/html/index.html
 ```
 
-- **Bootstrapping**: Install OS patches or software when an EC2 instance is launched. 
-- In EC2, you can configure **userdata** to bootstrap
-- Lookup user data - http://169.254.169.254/latest/user-data/ 
+You can call http://169.254.169.254/latest/user-data/ from inside the EC2 instance to lookup user data configured for that instance.
 
 ## Launch Templates
+
 Why do you need to specify all the EC2 instance details (AMI ID, instance type, and network settings) **every time** you launch an instance?
 
 How about creating a **Launch Template**?
@@ -209,7 +214,9 @@ A Launch Template allows you to launch Spot instances and Spot fleets as well.
 
 Installing OS patches and software using userdata at launch of EC2 instances **increases boot up** time.
 
-How about creating customized AMIs with OS patches and software **pre-installed**? This is called **Hardening an Image**. Customizing EC2 images to your corporate security standards.
+How about creating customized AMIs with OS patches and software **pre-installed**? This is called **Hardening an Image**. 
+
+Customizing EC2 images to your corporate security standards.
 
 **Prefer** using Customized AMI to userdata
 

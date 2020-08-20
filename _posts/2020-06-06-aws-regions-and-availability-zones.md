@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Regions and Availability Zones - AWS Certification
+title:      AWS Regions and Availability Zones - AWS Certification
 date:       2020-06-07 00:00:00
 summary:    Let's get a quick overview of Regions and Availability Zones from an AWS certification perspective. We will look at important certification questions regarding Regions and Availability Zones. 
 categories:  AWS_CLOUD General
@@ -27,20 +27,24 @@ Each cheat sheet contains:
 </div>
 
 
-## Regions and Zones 
+## Regions and Zones - Need
 
-Let's first understand the need for Regions and Zones with an example:
+Why do we need Regions and Zones?
 
-Imagine that your application is deployed in a data center in London.
+Let's first understand that with a simple scenario.
+
+### Step 1 : Single Data Center
+
+Scenario: Imagine that your application is deployed in a data center in London.
 
 ![](/images/aws/vpc/1-SingleDataCenter.png)
 
 What would be the challenges?
 - Challenge 1 : Slow access for users from other parts of the world (**high latency**)
-- Challenge 2 : What if the data center crashes? 
+- Challenge 2 : What if the data center crashes?
 	- Your application goes down (**low availability**)
 
-## Multiple data centers
+### Step 2 : Multiple data centers in London
 
 Let's **add in one more data center** in London.
 
@@ -53,7 +57,7 @@ What would be the challenges now?
 - Challenge 3 : What if **entire region** of London is unavailable?
 	- Your application goes down
 		
-## Multiple regions
+### Step 3 : Multiple regions
 
 Let's add a new region : Mumbai.
 
@@ -72,22 +76,27 @@ What would be the challenges?
 
 ![](/images/aws/aws-regions-and-az.png)
 
-Imagine setting up your own data centers in different regions around the world 
-- **Would that be easy?**
+Imagine setting up your own data centers in different regions around the world. That's not easy unless you are a big corporate!
 
-AWS provides **20+ regions** around the world (expanding every year). Advantages of Regions include:
+AWS provides **20+ regions** around the world (expanding every year). 
+
+Advantages of Regions include:
 - High Availability
 - Low Latency
 - Adhere to government **regulations**
 
-Choose the right region(s) based on:
+You can choose the right region(s) for your application based on:
 - Where are your users located?
 - Where is your data located?
 - Regulatory and security compliance needs
 
 ## AWS Availability Zones
 
-Availability Zones are **Isolated locations** in a Region. Each AWS Region has at least two Availability Zones. Availability Zones **increase availability** of applications in the same region.
+Availability Zones are **Isolated locations** in a Region. 
+
+Each AWS Region has at least two Availability Zones. 
+
+Availability Zones **increase availability** of applications in the same region.
 
 ![](/images/aws/region-az.png) 
 

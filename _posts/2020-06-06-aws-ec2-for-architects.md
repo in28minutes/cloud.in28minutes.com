@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      EC2 - For Architects - Certified Associate - AWS Certification
+title:      EC2 Elastic Compute Cloud - For Architects - AWS Certification
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of EC2 from an AWS Architects certification perspective. We will look at important certification questions regarding EC2 Architecture. 
 categories:  AWS_CLOUD EC2
@@ -49,7 +49,7 @@ It is the **Percentage of time** an application provides the operations expected
 
 **Example**: 99.99% availability. Also called four 9's availability
 
-##### Availability Table
+### Availability Table
 
 Here's a table showing availability and the downtime mapping:
 
@@ -59,9 +59,9 @@ Here's a table showing availability and the downtime mapping:
 | 99.99% (four 9's)| 4 and 1/2 minutes | Most online apps aim for 99.99% (four 9's)|
 | 99.999% (five 9's) | 26 seconds| Achieving 5 9's availability is tough|
 
-## Availability Basics - EC2 and ELB
+### Availability Basics - EC2 and ELB
 
-Let's now look at how we can make EC2 instances highly available:
+Here are some of the options to make EC2 instances highly available:
 - Deploy to multiple AZs
 - Use **Cross Zone** Load Balancing
 - Deploy to multiple regions
@@ -74,17 +74,15 @@ The diagram below shows a simple example.
 
 ## Scalability
 
-What is Scalability?
-
-A system is handling 1000 transactions per second. Load is expected to increase 10 times in the next month. 
+Let's consider a scenario: A system is handling 1000 transactions per second. Load is expected to increase 10 times in the next month. 
 
 Two important questions to ask
 - Can we handle a **growth in users, traffic, or data size** without any drop in performance?
 - Does ability to serve more growth increase **proportionally** with resources?
 
-Scalability is the ability to **adapt** to changes in demand (users, data).
+> Scalability is the ability to **adapt** to changes in demand (users, data).
 
-For EC2 instances, what are the options that can be considered to scale it?
+For EC2 instances, we can:
 - Deploy to a bigger instance with bigger CPU and more memory
 - Increase the number of application instances and setup a load balancer
 
@@ -92,7 +90,7 @@ Let's look at the two types of scalability:
 - Vertical Scalability
 - Horizontal Scalability
 
-## Vertical Scaling
+### Vertical Scaling
 
 Vertical Scaling is all about deploying application/database to **bigger instance**: 
 - A larger hard drive 
@@ -103,7 +101,7 @@ Vertical Scaling is all about deploying application/database to **bigger instanc
 
 There are limits to what you can achieve with vertical scaling.
 
-## Vertical Scaling for EC2
+#### Vertical Scaling for EC2
 
 What does Vertical Scaling for EC2 instances look like?
 - Increasing **EC2 instance size**:
@@ -113,15 +111,13 @@ What does Vertical Scaling for EC2 instances look like?
 
 ![](/images/aws/ec2-vertical-scaling.png) 
 
-## Horizontal Scaling
-
-What is Horizontal Scaling?
+### Horizontal Scaling
 
 Horizontal Scaling is all about deploying multiple instances of application/database.
 
 ![](/images/horizontal-scaling.png) 
 
-Horizontal Scaling is preferred to Vertical Scaling:
+Horizontal Scaling is preferred to Vertical Scaling due to following reasons:
 - Vertical scaling has limits
 - Vertical scaling can be expensive
 - Horizontal scaling increases availability
@@ -129,8 +125,11 @@ Horizontal Scaling is preferred to Vertical Scaling:
 However, Horizontal Scaling needs additional infrastructure:
 	- Load Balancers etc.
 
-## Horizontal Scaling for EC2
+#### Horizontal Scaling for EC2
+
 How can you implement Horizontal Scaling for EC2 instances?
+
+Here are some of the options:
 - Distribute EC2 instances 
 	- in a single AZ
 	- in multiple AZs in single region
@@ -140,7 +139,7 @@ How can you implement Horizontal Scaling for EC2 instances?
 
 ![](/images/aws/ec2/3-elb-crosszone-lb.png)
 
-## Architecture Considerations for EC2 and ELB
+## Architecture Considerations for EC2 and ELB (Certification Exam)
 
 Here are some the Architecture Considerations for EC2 and ELB:
 

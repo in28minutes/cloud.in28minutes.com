@@ -35,10 +35,6 @@ Each cheat sheet contains:
 
 ## EC2 Placement Groups
 
-![](/images/aws/ec2-host.png)
-![](/images/aws/ec2-host.png)
-![](/images/aws/ec2-host.png)
-
 Certain usecases need control over placement of a group of EC2 instances. Examples are use cases needing:
 - Low latency network communication
 - High availability
@@ -48,47 +44,50 @@ You can control placement of EC2 instances using EC2 placement groups:
 - Spread (avoid simultaneous failures)
 - Partition (multiple partitions with low network latency)
 
-## EC2 Cluster Placement Group
+### EC2 Cluster Placement Group
 
 ![](/images/aws/ec2/ec2-placement-groups-cluster.png) 
 
-- When low latency network communication between EC2 instances is critical
-- Example: Big Data or High Performance Computing needing extreme low latency
-- EC2 instances placed near to each other in single AZ
-- **High Network Throughput**: EC2 instances can use 10 Gbps or 25Gbps network
-- (Disadvantage) Low Availability (Rack crashes => All EC2 instances fail)
+Instances in EC2 Cluster Placement Group are optimized for low latency network communication between EC2 instances. EC2 instances are placed near to each other in single AZ. This provides **High Network Throughput**: EC2 instances can use 10 Gbps or 25Gbps network.
+
+Use Case Example: Big Data or High Performance Computing needing extreme low latency
+
+However, the disadvantage is Low Availability (Rack crashes => All EC2 instances fail)
 
  
-## EC2 Spread Placement Group
+### EC2 Spread Placement Group
 
 ![](/images/aws/ec2/ec2-placement-groups-spread.png) 
 
-- Spread EC2 instances across distinct racks
-- Each rack has its own network and power source
-- **Avoid simultaneous failures**  of EC2 instances
+In EC2 Spread Placement Group, we spread EC2 instances across distinct racks having its  own network and power source.
+
+This **Avoid simultaneous failures**  of EC2 instances.
+
+Features:
 - Can be spread across different AZs in same region
 - Maximum of seven running instances per AZ in a spread placement group
 
-## EC2 Partition Placement Group - Use Case
+#### EC2 Partition Placement Group - Use Case
 
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
 
-In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 instances need to be **divided into multiple groups**:
+In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 instances need to be **divided into multiple groups** with:
 - Low latency communication between instances in a group
 - Each group is placed on a different rack
 
 
-## EC2 Partition Placement Group
+### EC2 Partition Placement Group
 
 ![](/images/aws/ec2/ec2-placement-groups-partition.png) 
 
-- A partition is a group of EC2 instances
-- Each partition will be **placed on a different rack**
+A partition is a group of EC2 instances. In a EC2 Partition Placement Group, each partition will be **placed on a different rack**.
+
+Features:
 - You can choose the partition where EC2 instance is launched into
 - Can be spread across **different AZs** in same region
 - Maximum of seven partitions per Availability Zone per group
 
-## EC2 Placement Groups - Best Practices
+## EC2 Placement Groups - Certification Tips
 - **Insufficient capacity error** can happen when:
 	- New instances are added in (OR)
 	- More than one instance type is used (OR)
@@ -100,8 +99,3 @@ In large distributed and replicated workloads (HDFS, HBase, and Cassandra), EC2 
 - **Recommendation**:
 	- Have only one instance type in a launch request AND 
 	- Launch all instances in a single launch request together   
-
-## EC2 Placement Groups - AWS Certification Exam Practice Questions
-
-Coming Soon...
-
