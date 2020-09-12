@@ -1,4 +1,14 @@
-﻿
+﻿---
+layout:     post
+title:      AWS CloudFormation - AWS Certification
+date:       2020-09-12 11:39:00
+summary:    Let's get a quick overview of AWS CloudFormation. We will look at important features and a practical implementation.
+categories:  AWS_CLOUD AWS_CLOUDFORMATION
+permalink:  /aws-certification-amazon-cloudformation
+---
+
+Let's get a quick overview of Amazon API Gateway from an AWS certification perspective. We will look at important certification questions regarding Amazon API Gateway.
+
 # AWS CloudFormation
 
 Greetings from [in28minutes.com](https://courses.in28minutes.com/). In this read, we will take a good look at the **AWS CloudFormation (CF)** and understand the practical implementation of playing around EC2 with CloudFormation scripts.
