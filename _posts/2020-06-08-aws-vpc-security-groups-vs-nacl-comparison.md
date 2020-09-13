@@ -42,6 +42,7 @@ An EC2 Security Groups is **Virtual firewall** to control **incoming and outgoin
 How are Security Groups Rules evaluated?
 
 Let's consider the example below:
+
 ![](./images/aws/security-group-example.png)
 
 Here are few important things to remember:
