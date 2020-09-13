@@ -1,8 +1,8 @@
 # Site settings
-title:       in28Minutes Cloud Certifications
+title:       Learn DevOps, AWS, Azure, Serverless and more..
 email:       
 author:      Ranga Karanam
-description: "Helping your prepare for your AWS certification. Courses, Videos, Certification Exam and Interview Question and Answers, cheat sheets, FAQ, tips, comparisons, exam notes and a lot more..."
+description: "Learn DevOps, AWS, Azure, Serverless and more.."
 baseurl:     ""
 url:         "https://cloud.in28minutes.com"
 date_format: "%b %-d, %Y"
@@ -11,7 +11,7 @@ date_format: "%b %-d, %Y"
 google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
-google_analytics: UA-10756234-2
+google_analytics: UA-32942307-8
 google_tag_manager:
 # Bing services
 bing_verification:
