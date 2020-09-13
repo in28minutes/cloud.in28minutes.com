@@ -30,14 +30,19 @@ Each cheat sheet contains:
 
 
 ## Network Address Translation(NAT) Instance and Gateway
+Consider these two questions:
 - How do you **allow instances in a private subnet to download software updates** and security patches while denying inbound traffic from internet?
 - How do you allow instances in a private subnet to **connect privately to other AWS Services** outside the VPC?
-- **Three Options**:
-	- **NAT Instance**: Install a EC2 instance with specific NAT AMI and configure as a gateway
-	- **NAT Gateway**: Managed Service
-	- **Egress-Only Internet Gateways**: For IPv6 subnets
+
+There are **Three Options**:
+- **NAT Instance**: Install a EC2 instance with specific NAT AMI and configure as a gateway
+- **NAT Gateway**: Managed Service
+- **Egress-Only Internet Gateways**: For IPv6 subnets
 
 ## Private Subnet - Download Patches
+
+Here's the high level architecture:
+
 ![](/images/aws/00-icons/ec2.png) 
 ![](/images/arrow.png) 
 ![](/images/aws/00-icons/natgateway.png) 
@@ -46,13 +51,9 @@ Each cheat sheet contains:
 ![](/images/arrow.png) 
 ![](/images/aws/00-icons/internet.png) 
 
-- Cannot be accessed from internet.
-- Might allow traffic to internet using a NAT Device.
-
 ## NAT instance
 
-![](/images/aws/nat-instance-diagram.png)
-https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
+Here are the steps in setting up a NAT instance:
 - **Step 1**: Create EC2 instance
 	- AMI - Linux *amzn-ami-vpc-nat
 	- Public subnet with **public IP address or Elastic IP**
@@ -63,27 +64,15 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 	- Redirect all outbound traffic (0.0.0.0/0) to the NAT instance
 
 ## NAT gateway
-![](/images/aws/00-icons/ec2.png) 
-![](/images/arrow.png)
-![](/images/aws/00-icons/natgateway.png) 
-![](/images/arrow.png) 
-![](/images/aws/00-icons/internetgateway.png) 
-![](/images/arrow.png) 
-![](/images/aws/00-icons/internet.png) 
 
-- AWS Managed Service 
+NAT gateway is an AWS Managed Service.
+
+Here are the steps in setting it up:
 - Step 1: Get an **Elastic IP Address**
 - Step 2: Create NAT gateway in a **PUBLIC subnet** with the Elastic IP Address.
 - Step 3: Private subnet route  - **all outbound traffic (0.0.0.0/0) to NAT gateway**.
 
-## NAT gateway - Remember
-![](/images/aws/00-icons/ec2.png) 
-![](/images/arrow.png) 
-![](/images/aws/00-icons/natgateway.png) 
-![](/images/arrow.png) 
-![](/images/aws/00-icons/internetgateway.png) 
-![](/images/arrow.png) 
-![](/images/aws/00-icons/internet.png) 
+Here are few things to remember about NAT gateway:
 - Prefer **NAT gateway over NAT instance**
 	- Less administration, more availability and higher bandwidth
 	- NAT Gateway does not need any security group management.
@@ -103,7 +92,3 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
 |Disable source destination check|No|Required|
 |Security groups| No specific configuration needed| Needed on NAT instance |
 |Bastion servers| No| Can be used as a Bastion server|
-
-## Private Subnet Nat Gateway and Instance - AWS Certification Exam Practice Questions
-
-Coming Soon..

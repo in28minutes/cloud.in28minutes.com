@@ -30,34 +30,42 @@ Each cheat sheet contains:
 
 
 ## EC2 Security Groups
+
 ![](./images/aws/00-icons/user.png)
 ![](./images/arrowbi.png)
 ![](./images/aws/00-icons/securitygroup.png)
 ![](./images/arrowbi.png)
 ![](./images/aws/00-icons/ec2instance.png)
 
-- **Virtual firewall** to control **incoming and outgoing** traffic to/from AWS resources (EC2 instances, databases etc)
-- Provides additional layer of security - Defense in Depth
+An EC2 Security Groups is **Virtual firewall** to control **incoming and outgoing** traffic to/from AWS resources (EC2 instances, databases etc). It Provides additional layer of security - Defense in Depth
 
-## Security Groups Rules
+How are Security Groups Rules evaluated?
+
+Let's consider the example below:
 ![](./images/aws/security-group-example.png)
-- Security groups are **default deny**
-	- If there are no rules configured, no outbound/inbound traffic is allowed
+
+Here are few important things to remember:
+- Security groups are **default deny**. If there are no rules configured, no outbound/inbound traffic is allowed.
 - You can specify **allow rules ONLY**
-- You can configure **separate rules** for inbound and outbound traffic
-- You can assign multiple (upto five) security groups to your EC2 instances
-- You can add and delete security groups to EC2 instances at any time. 
-	- Changes are immediately effective
-- Traffic NOT explicitly allowed by Security Group **will not reach** the EC2 instance
-- Security Groups are **stateful**:
-	- If an outgoing request is allowed, the incoming response for it is automatically allowed. 
-	- If an incoming request is allowed, an outgoing response for it is automatically allowed
+- You can configure **separate rules** for inbound and outbound traffic.
+
+You can assign multiple (upto five) security groups to your EC2 instances. 
+
+You can add and delete security groups to EC2 instances at any time. Changes are immediately effective.
+
+Traffic NOT explicitly allowed by Security Group **will not reach** the EC2 instance.
+
+Security Groups are **stateful**:
+- If an outgoing request is allowed, the incoming response for it is automatically allowed. 
+- If an incoming request is allowed, an outgoing response for it is automatically allowed
 
 ## EC2 Security Group - Trivia
-- What if there are no security group rules configured for inbound and outbound?
-	- Default DENY. No traffic is allowed in and out of EC2 instance.
-- Can I change security groups at runtime?
-	- Yes. Changes are immediately effective.
+
+What if there are no security group rules configured for inbound and outbound?
+- Default DENY. No traffic is allowed in and out of EC2 instance.
+
+Can I change security groups at runtime?
+- Yes. Changes are immediately effective.
 
 ## Quick Review of Security Groups - Default Security Group
 
@@ -66,14 +74,15 @@ Each cheat sheet contains:
 | Inbound   |    All   |        All | Security Group ID (sg-xyz) |
 | Outbound  |    All   |        All | 0.0.0.0/0            |
 
-- **Default security group** is created when you create a VPC
-	- Allows all outbound traffic
-	- Allows communication between resources assigned with the default security group
-	- Denies all other inbound traffic (other than resources with the default security group)
-	- Can be edited but not be deleted
-- EC2 instances, by default, are assigned the default security group of the VPC
-	- However, you can change it at any point - during launch or later
-- Security Group has a **many to many relationship** with Resources (in same VPC)
+**Default security group** is created when you create a VPC. A default security group:
+- Allows all outbound traffic
+- Allows communication between resources assigned with the default security group
+- Denies all other inbound traffic (other than resources with the default security group)
+- Can be edited but not be deleted
+
+EC2 instances, by default, are assigned the default security group of the VPC. However, you can change it at any point - during launch or later.
+
+Security Group has a **many to many relationship** with Resources (in same VPC).
 
 ## New Security Groups
 
@@ -81,12 +90,12 @@ Each cheat sheet contains:
 |--|:--:|--:|--|
 | Outbound  |    All   |        All | 0.0.0.0/0            |
 
-- You can create **new security groups**
-- By default:
-	- There are no inbound rules 
-	- Denies all inbound traffic
-	- Allows all outbound traffic
-- You can add, edit and delete outbound and inbound rules
+You can create **new security groups**. By default:
+- There are no inbound rules 
+- Denies all inbound traffic
+- Allows all outbound traffic
+
+You can add, edit and delete outbound and inbound rules.
 
 ## Security Groups - Important Ports
  
@@ -112,25 +121,17 @@ Each cheat sheet contains:
 ## Network Access Control List
 ![](/images/aws/00-icons/nacl.png)
  
-- Security groups control traffic to a specific resource in a subnet. 
-- How about stopping traffic from **even entering the subnet**?
-- NACL provides **stateless firewall** at subnet level. 
-- Each subnet **must** be associated with a NACL.
-- **Default NACL** allows all inbound and outbound traffic.
-- **Custom created NACL** denies all inbound and outbound traffic by default.
-- Rules have a priority number. 
-	- Lower number => Higher priority.
-- Hands-on
+Security groups control traffic to a specific resource in a subnet. How about stopping traffic from **even entering the subnet**?
+
+NACL provides **stateless firewall** at subnet level. 
+
+Each subnet **must** be associated with a NACL.
+
+**Default NACL** allows all inbound and outbound traffic. **Custom created NACL** denies all inbound and outbound traffic by default.
+
+NACL Rules have a priority number.  Lower number => Higher priority.
 
 ## Security Group vs NACL
-
-![](/images/aws/00-icons/user.png)
-![](/images/arrowbi.png)
-![](/images/aws/00-icons/nacl.png)
-![](/images/aws/00-icons/subnet.png)
-![](/images/arrowbi.png)
-![](/images/aws/00-icons/securitygroup.png)
-![](/images/aws/00-icons/ec2.png)
 
 |Feature | Security Group                                     |NACL                                                                      |
 |--|--|--|
@@ -140,12 +141,16 @@ Each cheat sheet contains:
 |Evaluation | Traffic allowed if there is a matching rule        | Rules are prioritized. Matching rule with highest priority wins.          |
 
 ## Scenario: EC2 instance cannot be accessed from internet 
+
+How do you debug this? An EC2 instance cannot be accessed from internet.
+
 ![](/images/aws/00-icons/nacl.png)
 ![](/images/aws/00-icons/subnet.png)
 ![](/images/aws/00-icons/securitygroup.png)
 ![](/images/aws/00-icons/ec2.png)
 ![](/images/aws/00-icons/elasticip.png)
 
+Here are the things to check:
 - Does the EC2 instance have a public IP address or an Elastic IP address assigned?
 - Check the network access control list (ACL) for the subnet. Is inbound and outbound traffic allowed from your IP address to the port?
 - Check the route table for the subnet. Is there a route to the internet gateway? 

@@ -44,7 +44,7 @@ A Gateway endpoint:
 - Endpoint serves as a target in your route table for traffic
 - Provide access to endpoint (endpoint, identity and resource policies)
 
-An Interface endpoint
+An Interface endpoint:
 - Help you to securely connect to AWS services EXCEPT FOR Amazon S3 and DynamoDB
 - Powered by PrivateLink (keeps network traffic within AWS network)
 - Needs a elastic network interface (ENI) (entry point for traffic)
