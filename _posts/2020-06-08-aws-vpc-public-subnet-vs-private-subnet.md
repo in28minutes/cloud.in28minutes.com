@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Public Subnet vs Private Subnet - Routing and Internet Gateway - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-12 12:31:19
 summary:    Let's get a quick overview of Public Subnet vs Private Subnet from an AWS certification perspective. We will look at important certification questions regarding Public Subnet vs Private Subnet. 
 categories:  AWS_CLOUD AWS_VPC
 permalink:  /aws-certification-public-subnet-vs-private-subnet

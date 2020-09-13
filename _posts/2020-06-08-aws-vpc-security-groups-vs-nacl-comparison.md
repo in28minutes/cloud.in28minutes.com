@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Security Groups vs NACL - A Comparison - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-12 12:31:19
 summary:    Let's compare Security Groups vs NACL from an AWS certification perspective. We will look at important certification questions regarding Security Groups and NACL. 
 categories:  AWS_CLOUD AWS_VPC
 permalink:  /aws-certification-security-groups-vs-nacl-comparison
