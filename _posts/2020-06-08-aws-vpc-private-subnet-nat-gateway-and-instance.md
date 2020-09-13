@@ -81,6 +81,7 @@ Here are few things to remember about NAT gateway:
 - NAT Gateway uses the Internet Gateway.
 
 ## NAT gateway vs NAT instance
+
 |Feature|NAT gateway|NAT instance|
 |--|:--|:--|
 |Managed by|AWS|You|
