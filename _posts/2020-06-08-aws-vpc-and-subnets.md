@@ -47,6 +47,7 @@ How do you do create **your own private network** in the cloud?
 ## Amazon VPC (Virtual Private Cloud)
 
 ![](/images/aws/00-icons/VPC.png)
+
 VPC (Virtual Private Cloud) is your **own isolated network** in AWS cloud. Network traffic within a VPC is isolated (not visible) from all other Amazon VPCs:
 - You **control all the traffic** coming in and going outside a VPC
 
@@ -55,6 +56,7 @@ VPC (Virtual Private Cloud) is your **own isolated network** in AWS cloud. Netwo
 - Enable secure communication between your cloud resources
 
 ## Need for VPC Subnets
+
 ![](/images/aws/00-icons/user.png)
 ![](/images/arrow.png) 
 ![](/images/aws/00-icons/elb.png) 
@@ -110,7 +112,9 @@ A **CIDR block** consists of a **starting IP address(69.208.0.0)** and a **range
 **Quick Tip**: 69.208.0.0/28 indicates that the first 28 bits (out of 32) are fixed. Last 4 bits can change => 2 to the power 4  = 16 addresses.
 
 ## CIDR Exercises
+
 ![](/images/aws/cidr-examples.png)
+
 Exercise 1: How many addresses does **69.208.0.0/26** represent?
 - 2 to the power (32-26 = 6) = 64 addresses from 69.208.0.0 to 69.208.0.63
 
@@ -145,6 +149,7 @@ Each VPC is associated with a **CIDR Block**. CIDR block of VPC can be from /16 
 ## Choosing a CIDR Block for VPC
 
 ![](/images/aws/vpc/8-vpc-subnets.png)
+
 Be careful in choosing a CIDR block. **Choose a wider range** than you would need. There **CANNOT be an overlap** of a VPC CIDR block with any other connected network.
 
 All addresses inside a VPC CIDR range are **private addresses**:
@@ -154,6 +159,7 @@ All addresses inside a VPC CIDR range are **private addresses**:
 ## Choosing a CIDR Block for a Subnet
 
 ![](/images/aws/vpc/8-vpc-subnets.png)
+
 Subnet provides a **grouping for resources inside a VPC**.
 
 The CIDR block of a subnet **must be a subset or the same** as the CIDR block for the VPC. **Minimum** subnet range is /28 (16 addresses).

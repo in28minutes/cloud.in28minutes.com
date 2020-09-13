@@ -32,6 +32,7 @@ Each cheat sheet contains:
 ## VPC Endpoint 
 
 ![](/images/aws/00-icons/vpcendpoint.png)
+
 VPC Endpoint helps you to securely connect your VPC to another service.
 
 There are two types
@@ -55,6 +56,7 @@ Important things to remember about VPC Endpoints:
 ## VPC Peering
 
 ![](/images/aws/vpc-peering.png)
+
 VPC Peering helps you to connect VPCs belonging to same or different AWS accounts irrespective of the region of the VPCs.
 
 This allows private communication between the connected VPCs.
@@ -70,6 +72,7 @@ Couple of important things to remember about VPC Peering:
 ## VPC Flow Logs
 
 ![](/images/aws/00-icons/vpcflowlogs.png) 
+
 VPC Flow Logs are used to Monitor network traffic.
 
 Using VPC Flow Logs you can:
