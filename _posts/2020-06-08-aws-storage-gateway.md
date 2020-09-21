@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      AWS Storage Gateway - File vs Tape vs Volume - Stored vs Cached - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-21 00:31:19
 summary:    Let's get a quick overview of AWS Storage Gateway from an AWS certification perspective. We will look at important certification questions regarding AWS Storage Gateway. 
 categories:  AWS_CLOUD AWS_STORAGE
 permalink:  /aws-certification-aws-storage-gateway
@@ -31,6 +31,7 @@ Each cheat sheet contains:
 ## AWS Storage Gateway
 
 ![](/images/aws/01-S3/5-Storage-Gateway.png)
+
 - **Hybrid storage** (cloud + on premise)
 - Unlimited cloud storage for on-premise software applications and users with good performance
 - (Remember) Storage Gateway and S3 Glacier **encrypt data** by default
@@ -43,6 +44,7 @@ Each cheat sheet contains:
 ## AWS Storage File Gateway
 
 ![](/images/aws/storage-gateway-file-gateway.png)
+
 - **Problem Statement**: Large on-premise file share with terabytes of data
 	- Users put files into file share and applications use the files
 	- Managing it is becoming expensive
@@ -54,6 +56,7 @@ Each cheat sheet contains:
 ## AWS Storage File Gateway
 
 ![](/images/aws/01-S3/6-FileGateway.png)
+
 - File gateway **deployed as virtual machine** on-premises 
 	- Maintains a local cache with most recently used objects
 - Benefits from **S3 features**
@@ -65,6 +68,7 @@ Each cheat sheet contains:
 ## AWS Storage Tape Gateway
 
 ![](/images/aws/storage-gateway-tape-gateway.png)
+
 - Tape backups used in enterprises (archives)
 	- Stored off-site - expensive, physical wear and tear
 - **AWS Storage Tape Gateway** - Avoid physical tape backups 
@@ -78,6 +82,7 @@ Each cheat sheet contains:
 ## AWS Storage Volume Gateway
 
 ![](/images/aws/01-S3/7-volume-gateway.png)
+
 - **Volume Gateway** : Move block storage to cloud
 - Supports iSCSI protocol
 - Reduce costs 
@@ -91,6 +96,7 @@ Each cheat sheet contains:
 
 ![](/images/aws/storage-gateway-cached-volume-gateway.png)
 ![](/images/aws/storage-gateway-stored-volume-gateway.png)
+
 - **Cached** (Gateway Cached Volumes):
 	- Primary Data Store - **AWS - Amazon S3**
 	- **On-premise cache** stores frequently accessed data
@@ -103,6 +109,7 @@ Each cheat sheet contains:
 		- For disaster recovery, restore to EBS volumes
 
 ## AWS Storage Gateway - Summary
+
 - Key to look for : **Hybrid storage** (cloud + on premise)
 	- File share (NFS or SMB) + Looking for S3 features and integrations => **AWS Storage File Gateway**
 	- Tapes on cloud => **AWS Storage Tape Gateway**

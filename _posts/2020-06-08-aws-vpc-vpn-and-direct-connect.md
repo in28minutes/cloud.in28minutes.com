@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      AWS VPN vs AWS Direct Connect vs Software VPN vs CloudHub -  AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-21 00:31:19
 summary:    Let's compare the options to connect AWS network with your corporate network -  AWS VPN vs AWS Direct Connect vs Software VPN vs AWS VPN CloudHub from an AWS certification perspective. 
 categories:  AWS_CLOUD AWS_VPC
 permalink:  /aws-certification-aws-vpn-vs-aws-direct-connect-vs-software-vpn-vs-cloudhub-
@@ -31,6 +31,7 @@ Each cheat sheet contains:
 ## AWS and On-Premises - Overview
 
 ![](/images/aws/Aws-Onpremises-01.png)
+
 - AWS Managed VPN 
 	- IPsec VPN tunnels from  VPC to customer network
 - AWS Direct Connect (DX)
@@ -41,6 +42,7 @@ Each cheat sheet contains:
 ## AWS Managed VPN
 
 ![](/images/aws/001-basic-drawings/sitetositevpn.png)
+
 - IPsec VPN tunnels from  VPC to customer network
 - Traffic over internet - encrypted using IPsec protocol
 - VPN gateway to connect one VPC to customer network
@@ -54,6 +56,7 @@ Each cheat sheet contains:
 ![](/images/aws/00-icons/directconnect.png)
 ![](/images/arrowbi.png)
 ![](/images/aws/00-icons/aws.png)	
+
 - Private dedicated network connection from on-premises to AWS
 - Advantages:
 	- Private network 
@@ -68,16 +71,11 @@ Each cheat sheet contains:
 
 ## AWS Direct Connect Plus VPN
 
-![](/images/aws/aws-direct-connect-vpn.png)
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-direct-connect-plus-vpn-network-to-amazon.html
-
 - IPsec Site-to-Site VPN tunnel from an direct connect location to customer network
 - Traffic is encrypted using IPsec protocol
 
 ## Software VPN
 
-![](/images/aws/aws-software-vpn.png)
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-vpn-cloudhub-network-to-amazon.html
 - Provides flexibility to fully manage both sides of your Amazon VPC connectivity
 - Run software VPN appliance in your VPC
 - Recommended for compliance - You need to manage both sides of connection
@@ -87,8 +85,6 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-
 
 ## AWS VPN CloudHub
 
-![](/images/aws/aws-vpn-cloudhub.png) 
-https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/aws-vpn-cloudhub-network-to-amazon.html
 - Use either VPN or AWS Direct Connect to setup connectivity between multiple branch offices
 - Operates on a simple hub-and-spoke model 
 - Uses Amazon VPC virtual private gateway with multiple gateways

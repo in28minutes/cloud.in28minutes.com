@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      VPC and Subnet Route Tables - Routing in AWS - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-21 00:31:19
 summary:    Let's get a quick overview of Routing and Route Tables in AWS.
 categories:  AWS_CLOUD AWS_VPC
 permalink:  /aws-certification-vpc-route-table-and-routing
@@ -30,7 +30,9 @@ Each cheat sheet contains:
 </div>
 
 ## Routing on the internet
+
 ![](/images/aws/vpc/10-vpc-router.png)
+
 - You have an IP address of a website you want to visit
 - There is **no direct connection** from your computer to the website
 - Internet is actually a **set of routers** routing traffic

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Moving Data between AWS and On-premises - Snowball vs Snowmobile vs DataSync - AWS Certification
-date:       2020-06-06 12:31:19
+date:       2020-09-21 00:31:19
 summary:    Let's get a quick overview of Moving Data between AWS and On-premises - Snowball vs Snowmobile vs DataSync. 
 categories:  AWS_CLOUD AWS_STORAGE
 permalink:  /aws-certification-moving-data-aws-on-prem-snowball-vs-snowmobile-vs-datasync
@@ -29,6 +29,7 @@ Each cheat sheet contains:
 ## Amazon S3 Transfer Acceleration
 
 ![](/images/aws/01-S3/1-S3-EdgeLocation.png)
+
 - Most basic option when you are transferring less data (upto a few terabytes) into S3
 - Uses Amazon CloudFront's Edge Locations to enable fast transfer of files to/from your clients
 - Enable S3 Transfer Acceleration and use endpoints 
@@ -38,6 +39,7 @@ Each cheat sheet contains:
 ## AWS Snowball
 
 ![](/images/aws/01-S3/8-snowball.png)
+
 - Transfer dozens of terabytes to petabytes of data from on-premises to AWS
 - 100TB (80 TB usable) per appliance
 	- If needed, request multiple appliances
@@ -48,10 +50,6 @@ Each cheat sheet contains:
 	- Ship it back
 - Manage jobs with AWS Snowball console
 - Data is automatically encrypted with KMS (AES-256)
-
-## AWS Snowball
-
-![](/images/aws/00-icons/snowball.png) 
 - Current versions of AWS Snowball use Snowball Edge devices 
 	- Provide both compute and storage
 	- Pre-process data (using Lambda functions)
@@ -63,13 +61,16 @@ Each cheat sheet contains:
 	- 5TB can be transferred on 100Mbps line in a week at 80% utilization
 
 ## AWS Snowmobile
+
 ![](/images/aws/snowmobile.jpeg)
+
 - How do I transfer dozens of petabytes to exabytes of data from on-premises to AWS for cloud migration?
 - 100PB storage per truck
 - If needed, use multiple trucks in parallel
 - Data is automatically encrypted with KMS (AES-256)
 
 ## AWS DataSync - Transfer File Storage to Cloud
+
 - Secure and 10x faster (100s of TB) data transfers from/to AWS over internet or AWS Direct Connect
 - Transfer from on-premise file storage (NFS, SMB) to S3, EFS or FSx for Windows
 - Monitor progress using Amazon CloudWatch
