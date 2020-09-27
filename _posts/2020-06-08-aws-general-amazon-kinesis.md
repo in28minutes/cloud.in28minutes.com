@@ -10,6 +10,7 @@ permalink:  /aws-certification-amazon-kinesis-data-streams-firehose-analytics-an
 Let's get a quick overview of Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams. We will look at important certification questions regarding Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams. 
 
 ## You will learn
+
 - How do you handle streaming data in AWS?
 - What is Amazon Kinesis?
 - What are the different Amazon Kinesis Options - Data Streams, Firehose, Analytics and Video Streams?
@@ -30,8 +31,11 @@ Each cheat sheet contains:
 ## Amazon Kinesis
 
 ![](/images/datastream.png) 
-- Handle streaming data
-	- NOT recommended for ETL Batch Jobs
+
+Amazon Kinesis Handles streaming data:
+- NOT recommended for ETL Batch Jobs
+
+Some of the important components in Amazon Kinesis include:
 - Amazon Kinesis Data Streams
 	- Process Data Streams
 - Amazon Kinesis Firehose
@@ -44,14 +48,16 @@ Each cheat sheet contains:
 ## Amazon Kinesis Data Streams
 
 ![](/images/aws/02-Queuing/4-kinesis-streams.png)
-- Limitless Real time stream processing 
-	- Sub second processing latency
+
+Amazon Kinesis Data Streams is a limitless Real time stream processing. Provides Sub second processing latency.
+
+Here are some of the important features of Amazon Kinesis Data Streams:
 - Alternative for Kafka
 - Supports multiple clients
 	- Each client can track their stream position
 - Retain and replay data (max 7 days & default 1 day)
 
-## Amazon Kinesis Data Streams - Integrations
+### Amazon Kinesis Data Streams - Integrations
 
 ![](/images/aws/02-Queuing/4-kinesis-streams.png)
 	
@@ -65,6 +71,7 @@ Each cheat sheet contains:
 ## Amazon Kinesis Data Firehose
 
 ![](/images/aws/02-Queuing/5-kinesis-firehose.png)
+
 - Data ingestion for streaming data
 	- Receive
 	- Process ( transform - Lambda, compress, encrypt ) 
@@ -73,12 +80,16 @@ Each cheat sheet contains:
 - Pay for volume of data ingested (Serverless)
 
 ## Amazon Kinesis Analytics
+
 ![](/images/aws/02-Queuing/5-kinesis-analytics.png)
+
 - You want to continuously find active number of users on a website in the last 5 minutes based on streaming website data
 - With Amazon Kinesis Analytics, you can write SQL queries and build Java applications to continuously analyze your streaming data
 
 ## Amazon Kinesis Video Streams
+
 ![](/images/aws/02-Queuing/5-kinesis-video-streams.png)
+
 - Monitor video streams from web-cams 
 - Examples: traffic lights, shopping malls, homes etc
 - Integrate with machine learning frameworks to get intelligence

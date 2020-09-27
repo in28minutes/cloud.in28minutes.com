@@ -60,7 +60,9 @@ Each cheat sheet contains:
 	- **No**. **Encrypt data in transit** - between  application to database as well.
 
 ## Symmetric Key Encryption
+
 ![](/images/aws/iam/symetrickey.png)
+
 - Symmetric encryption algorithms use the **same key for encryption and decryption**
 - Key Factor 1: Choose the **right encryption algorithm**
 - Key Factor 2: How do we **secure the encryption key**?
@@ -68,8 +70,6 @@ Each cheat sheet contains:
 
 ## Asymmetric Key Encryption
 
-![](/images/aws/Asymmetric_encryption.png) 
-https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_(colored).png 
 - **Two Keys** : Public Key and Private Key
 - Also called **Public Key Cyptography**
 - Encrypt data with Public Key and decrypt with Private Key

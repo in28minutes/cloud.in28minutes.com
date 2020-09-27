@@ -7,10 +7,6 @@ categories:  AWS_CLOUD AWS_SECURITY_GROUPS_VS_NETWORK_ACCESS_CONTROL_LIST
 permalink:  /aws-security-groups-vs-network-access-control-list
 ---
 
-# Difference between Security Groups (SG) and Network Access Control List (NACL)
-
-Greetings from [in28minutes.com](https://courses.in28minutes.com/). 
-
 In this read, we will take a good look at some of the differences between *Security Groups (SG)* and *Network Access Control List (NACL)* in AWS. Let's get started.
 
 | Security Groups (SG) | Network Access Control List (NACL)  | 

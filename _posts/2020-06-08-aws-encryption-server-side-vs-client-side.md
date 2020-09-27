@@ -40,6 +40,7 @@ Each cheat sheet contains:
 ## AWS KMS
 
 ![](/images/aws/00-icons/kms.png)
+
 - Create and manage **cryptographic keys** (symmetric and asymmetric)
 - **Control their use** in your applications and AWS Services
 - Define key usage permissions (including **cross account** access)
@@ -53,6 +54,7 @@ Each cheat sheet contains:
 ## Server Side Encryption
  
 ![](/images/aws/01-S3/3-server-side-encryption.png)
+
 - Client sends data (as is) to AWS service
 - AWS service interacts with KMS to perform encryption on the server side
 - Recommended to **use HTTPS endpoints** to ensure encryption of data in transit
@@ -82,6 +84,7 @@ Each cheat sheet contains:
 ## Client Side Encryption
  
 ![](/images/aws/01-S3/4-client-side-encryption.png)
+
 - Client **manages encryption process** and sends encrypted data to AWS service
 	- AWS will not be aware of master key or data key
 - AWS service stores data as is

@@ -30,7 +30,9 @@ Each cheat sheet contains:
 </div>
 
 ## DevOps
+
 ![](/images/aws/devops-06-teams.png)
+
 - Getting Better at "**Three Elements of Great Software Teams**"
 	- Communication - Get teams together
 	- Feedback - Earlier you find a problem, easier it is to fix
@@ -39,6 +41,7 @@ Each cheat sheet contains:
 ## DevOps - CI, CD
 
 ![](/images/aws/devops-05-continuous-delivery.png) 
+
 - Continuous Integration 
 	- Continuously run your tests and packaging
 - Continuous Deployment 
@@ -47,16 +50,19 @@ Each cheat sheet contains:
 	- Continuously deploy to production
 
 ## DevOps - CI, CD Tools
+
 ![](/images/aws/00-icons/codecommit.png) 
 ![](/images/aws/00-icons/codepipeline.png) 
 ![](/images/aws/00-icons/codebuild.png) 
 ![](/images/aws/00-icons/codedeploy.png) 
+
 - AWS CodeCommit - Private source control (Git)
 - AWS CodePipeline - Orchestrate CI/CD pipelines
 - AWS CodeBuild - Build and Test Code (application packages and containers)
 - AWS CodeDeploy - Automate Deployment (EC2, ECS, Elastic Beanstalk, EKS, Lambda etc)
 
 ## DevOps - IAAC
+
 ![](/images/aws/devops-06-iaac-2-overview.png) 
 
 - Treat infrastructure the same way as application code
@@ -75,6 +81,7 @@ Each cheat sheet contains:
 ## AWS Cloud​Formation - Introduction
 
 ![](/images/aws/00-icons/cloudformation.png) 
+
 - Lets consider an example:
 	- I would want to create a new VPC and a subnet
 	- I want to provision a ELB, ASG with 5 EC2 instances and an RDS database in the subnet
@@ -95,6 +102,7 @@ Each cheat sheet contains:
 ![](/images/aws/00-icons/cloudformation.png) 
 
 ## AWS Cloud​Formation
+
 - All configuration is defined in a simple text file - JSON or YAML
 	- I want a VPC, a subnet, a database and ...
 - CloudFormation understands dependencies
@@ -200,6 +208,7 @@ Resources:
 ## AWS Cloud​Formation - Remember
 
 ![](/images/aws/00-icons/cloudformation.png)  
+
 - Deleting a stack deletes all the associated resources
 	- EXCEPT for resources with DeletionPolicy attribute set to "Retain"
 	- You can enable termination protection for the entire stack
@@ -222,6 +231,7 @@ Resources:
 ## AWS OpsWorks - Configuration Management
 
 ![](/images/aws/00-icons/opsworks.png) 
+
 - OpsWorks is used for Configuration Management 
 	- How do you ensure that 100 servers have the same configuration?
 	- How can I make a change across 100 servers?

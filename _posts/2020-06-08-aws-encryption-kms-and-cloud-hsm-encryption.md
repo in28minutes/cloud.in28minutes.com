@@ -42,6 +42,7 @@ Each cheat sheet contains:
 ## AWS KMS
 
 ![](/images/aws/00-icons/kms.png)
+
 - Create and manage **cryptographic keys** (symmetric and asymmetric)
 - **Control their use** in your applications and AWS Services
 - Define key usage permissions (including **cross account** access)
@@ -65,9 +66,7 @@ Each cheat sheet contains:
 	- **Encryption of data** - AWS Service - **Amazon S3** using data key
 
 ## Envelope Encryption
-![](/images/aws/kms-key-hierarchy-master.png) 
 
-https://docs.aws.amazon.com/kms/latest/developerguide/
 - The process KMS uses for encryption is called **Envelope Encryption**
 	- Data is encrypted using **data key**
 	- Data key is encrypted using Master key
@@ -92,6 +91,7 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 ## AWS CloudHSM
 
 ![](/images/aws/00-icons/cloudhsm.png)
+
 - Managed (highly available & auto scaling) **dedicated** **single-tenant** Hardware Security Module(HSM) for regulatory compliance
 	- (Remember) AWS KMS is a multi-tenant service
 - FIPS 140-2 Level 3 compliant
@@ -107,6 +107,7 @@ https://docs.aws.amazon.com/kms/latest/developerguide/
 ![](/images/aws/00-icons/kms.png)
 ![](/images/arrowbi.png)
 ![](/images/aws/00-icons/cloudhsm.png)
+
 - AWS KMS can use CloudHSM cluster as **"custom key store"** to store the keys:
 	- AWS Services can continue to talk to KMS for data encryption
 	- (AND) KMS does the necessary integration with CloudHSM cluster
