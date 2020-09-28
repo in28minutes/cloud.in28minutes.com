@@ -4,7 +4,7 @@ title:      NAT Gateway vs Instance - A Comparison - AWS Certification
 date:       2020-09-25 22:15:00
 summary:    Let's compare NAT Gateway and NAT Instance from an AWS certification perspective.
 categories:  AWS_CLOUD AWS_VPC
-permalink:  /aws-certification-security-groups-vs-nacl-comparison
+permalink:  /aws-certification-nat-gateway-vs-nat-instance
 ---
 
 # Difference between NAT Gateway and NAT Instance
