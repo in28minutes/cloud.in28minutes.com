@@ -1,10 +1,10 @@
 ﻿---
 layout:     post
-title:      EBS SSD Storages - A Comparison - AWS Certification
+title:      EBS SSD Storages - A Difference - AWS Certification
 date:       2020-10-06 20:12:00
-summary:    Let's compare the different EBS SSD Storages
+summary:    Let's compare the different EBS SSD Storage types
 categories:  AWS_CLOUD AWS_STORAGE
-permalink:  /aws-certification-ebs-ssd-storages-comparison
+permalink:  /aws-certification-ebs-ssd-storage-differences
 ---
 
 # Understanding different EBS SSD Storages
