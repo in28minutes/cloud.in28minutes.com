@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Choosing AWS Databases - RDS vs DynamoDB vs Redshift - AWS Certification
-date:       2020-06-23 12:31:19
+date:       2020-09-20 12:31:19
 summary:    Let's get a quick overview of how you can choose between different AWS Databases. How do you choose RDS vs DynamoDB vs Redshift?
 categories:  AWS_CLOUD AWS_DATABASES
 permalink:  /aws-certification-choosing-aws-databases
