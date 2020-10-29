@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon RDS - Relational Database Service and Amazon Aurora - AWS Certification
+title:      Amazon RDS - Relational Database Service and Amazon Aurora - AWS Certification Cheat Sheet
 date:       2020-09-20 12:31:19
 summary:    Let's get a quick overview of Amazon RDS from an AWS certification perspective. We will look at important certification questions regarding Amazon RDS. 
 categories:  AWS_CLOUD AWS_DATABASES

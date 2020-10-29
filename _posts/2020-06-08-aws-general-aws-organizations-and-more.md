@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Managing Multiple AWS Accounts - Organizations, Trusted Advisor and more - AWS Certification
-date:       2020-06-06 12:31:19
+title:      Managing Multiple AWS Accounts - Organizations, Trusted Advisor and more - AWS Certification Cheat Sheet
+date:       2020-10-28 12:31:19
 summary:    Let's get a quick overview of Managing Multiple AWS Accounts - Organizations, Trusted Advisor and more. 
 categories:  AWS_CLOUD AWS_SERVICES
 permalink:  /aws-certification-managing-aws-accounts-organizations
@@ -10,6 +10,7 @@ permalink:  /aws-certification-managing-aws-accounts-organizations
 Let's get a quick overview of Managing Multiple AWS Accounts - Organizations, Trusted Advisor and more.
 
 ## You will learn
+
 - How can you manage multiple AWS accounts together?
 - How can you use AWS Organizations, Trusted Advisor and more?
 
@@ -26,7 +27,9 @@ Each cheat sheet contains:
 </div>
 
 ## AWS Organizations 
+
 ![](/images/aws/00-icons/organizations.png) 
+
 - Organizations typically have multiple AWS accounts 
 	- Different business units 
 	- Different environments
@@ -36,6 +39,7 @@ Each cheat sheet contains:
 - Provides API to automate creation of new accounts
 
 ## AWS Organizations - Features
+
 - One consolidated bill for all AWS accounts
 - Centralized compliance management for AWS Config Rules
 - Send AWS CloudTrail data to one S3 bucket (across accounts)
@@ -48,6 +52,7 @@ Each cheat sheet contains:
 	- Require a tag upon resource creation
 
 ## AWS Resource Access Manager
+
 - Share AWS resources with any AWS account or within your AWS Organization
 	- AWS Transit Gateways
 	- Subnets
@@ -59,6 +64,7 @@ Each cheat sheet contains:
 ## AWS Trusted Advisor
 
 ![](/images/aws/00-icons/trustedadvisor.png) 
+
 - Recommendations for cost optimization, performance, security and fault tolerance
 	- Red - Action recommended Yellow - investigate and Green - Good to go
 - All AWS customers get 4 checks for free:
@@ -89,6 +95,7 @@ Each cheat sheet contains:
 	- Identify if your service usage is more than 80% of service limits
 
 ## AWS Service Quotas
+
 - AWS account has Region-specific default quotas or limits for each service
 	- You don't need to remember all of them :)
 - Service Quotas allows you to manage your quotas for over 100 AWS services, from one location
@@ -96,6 +103,7 @@ Each cheat sheet contains:
 ## AWS Directory Service
 
 ![](/images/aws/00-icons/directoryservice.png) 
+
 - Provide AWS access to on-premise users without IAM users
 - Managed service deployed across multiple AZs
 - Option 1 : AWS Directory Service for Microsoft AD
@@ -110,6 +118,7 @@ Each cheat sheet contains:
 	- Your users use existing credentials to access AWS resources
 
 ## AWS Workspaces
+
 - Desktop-as-a-Service (DaaS)
 - Provision Windows or Linux desktops in minutes
 - Eliminate traditional desktop management - Virtual Desktop Infrastructure (VDI)

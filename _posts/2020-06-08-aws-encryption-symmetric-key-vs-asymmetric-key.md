@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Encryption - Symmetric Key vs Asymmetric Key 
+title:      Encryption - Symmetric Key vs Asymmetric Key - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Encryption - Symmetric Key vs Asymmetric Key.
 categories:  AWS_CLOUD General

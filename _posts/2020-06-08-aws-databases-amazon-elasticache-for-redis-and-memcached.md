@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon ElastiCache for Redis and Memcached -  - AWS Certification
+title:      Amazon ElastiCache for Redis and Memcached - AWS Certification Cheat Sheet
 date:       2020-06-20 12:31:19
 summary:    Let's get a quick overview of Amazon ElastiCache for Redis and Memcached from an AWS certification perspective. We will look at important certification questions regarding Amazon ElastiCache for Redis and Memcached. 
 categories:  AWS_CLOUD AWS_DATABASES

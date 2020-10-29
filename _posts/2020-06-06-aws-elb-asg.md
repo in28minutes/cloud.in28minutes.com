@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      ALB Auto Scaling Groups and Dynamic Scaling Policies - AWS Certification
+title:      ALB Auto Scaling Groups and Dynamic Scaling Policies - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Auto Scaling Groups and Dynamic Scaling Policies from an AWS certification perspective. We will look at important certification questions regarding Auto Scaling Groups and Dynamic Scaling Policies. 
 categories:  AWS_CLOUD ELB

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon S3 Glacier - vs Amazon S3 - AWS Certification
+title:      Amazon S3 Glacier - vs Amazon S3 - AWS Certification Cheat Sheet
 date:       2020-07-03 12:31:19
 summary:    Let's get a quick overview of Amazon S3 Glacier from an AWS certification perspective. We will look at important certification questions regarding Amazon S3 Glacier. 
 categories:  AWS_CLOUD AWS_STORAGE

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon RedShift - Big Data in AWS - AWS Certification
+title:      Amazon RedShift - Big Data in AWS - AWS Certification Cheat Sheet
 date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of Amazon RedShift from an AWS certification perspective. We will look at important certification questions regarding Amazon RedShift. 
 categories:  AWS_CLOUD AWS_DATABASES

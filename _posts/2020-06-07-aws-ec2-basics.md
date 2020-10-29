@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      AWS EC2 Fundamentals - AWS Certification
+title:      AWS EC2 Fundamentals - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of EC2 Fundamentals from an AWS certification perspective. We will look at important certification questions regarding EC2. 
 categories:  AWS_CLOUD EC2

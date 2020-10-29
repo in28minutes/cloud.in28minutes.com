@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      HTTP vs HTTPS vs TCP vs TLS vs UDP - Protocol Comparison
+title:      HTTP vs HTTPS vs TCP vs TLS vs UDP - Protocol Comparison - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's compare - HTTP vs HTTPS vs TCP vs TLS vs UDP 
 categories:  AWS_CLOUD General

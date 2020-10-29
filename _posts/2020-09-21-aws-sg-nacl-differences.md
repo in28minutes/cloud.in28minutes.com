@@ -1,6 +1,6 @@
 ﻿---
 layout:     post
-title:      AWS Security Groups and Network Access Control List - A Comparison - AWS Certification
+title:      AWS Security Groups and Network Access Control List - A Comparison - AWS Certification Cheat Sheet
 date:       2020-09-21 16:14:00
 summary:    Let us understand the differences between security groups and network access control list in aws.
 categories:  AWS_CLOUD AWS_SECURITY_GROUPS_VS_NETWORK_ACCESS_CONTROL_LIST

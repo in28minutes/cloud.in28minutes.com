@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Virtual Private Cloud and Subnet Fundamentals - VPC - AWS Certification
+title:      Virtual Private Cloud and Subnet Fundamentals - VPC - AWS Certification Cheat Sheet
 date:       2020-09-12 12:31:19
 summary:    Let's get a quick overview of Virtual Private Cloud and Subnets from an AWS certification perspective. We will look at important certification questions regarding Virtual Private Cloud and Subnets. 
 categories:  AWS_CLOUD AWS_VPC

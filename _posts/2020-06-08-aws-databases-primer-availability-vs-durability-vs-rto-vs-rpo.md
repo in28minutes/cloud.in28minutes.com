@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Database Primer - Availability vs Durability vs RTO vs RPO vs Consistency - AWS Certification
+title:      Database Primer - Availability vs Durability vs RTO vs RPO vs Consistency - AWS Certification Cheat Sheet
 date:       2020-07-15 12:31:19
 summary:    Let's get a primer on Databases from an Architectural perspective. Let's understand the different terminology - Availability vs Durability vs RTO vs RPO vs Consistency.
 categories:  AWS_CLOUD AWS_DATABASES

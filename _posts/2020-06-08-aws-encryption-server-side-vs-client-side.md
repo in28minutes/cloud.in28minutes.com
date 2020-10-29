@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Server Side vs Client Side Encryption - KMS-S3 - AWS Certification
+title:      Server Side vs Client Side Encryption - KMS-S3 - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Server Side vs Client Side Encryption for Amazon S3 using KMS. 
 categories:  AWS_CLOUD AWS_SERVICES

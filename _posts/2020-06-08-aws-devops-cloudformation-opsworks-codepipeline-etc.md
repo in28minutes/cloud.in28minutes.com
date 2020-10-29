@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      DevOps in AWS - CloudFormation vs CodePipeline vs CodeBuild vs CodeDeploy vs OpsWorks
+title:      DevOps in AWS - CloudFormation vs CodePipeline vs CodeBuild vs CodeDeploy vs OpsWorks - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of DevOps in AWS. What are the different DevOps tools? Which one is the right option for which scenario - CloudFormation vs CodePipeline vs CodeBuild vs CodeDeploy vs OpsWorks?
 categories:  AWS_CLOUD AWS_SERVICES

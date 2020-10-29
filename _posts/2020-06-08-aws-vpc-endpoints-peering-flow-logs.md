@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      VPC Endpoints - Gateway vs Interface, VPC Peering and VPC Flow Logs
+title:      VPC Endpoints - Gateway vs Interface, VPC Peering and VPC Flow Logs - AWS Certification Cheat Sheet
 date:       2020-09-12 12:31:19
 summary:    Let's get a quick overview of VPC Endpoints (Gateway vs Interface), VPC Peering and VPC Flow Logs. 
 categories:  AWS_CLOUD AWS_VPC

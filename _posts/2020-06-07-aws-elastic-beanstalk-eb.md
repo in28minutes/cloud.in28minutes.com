@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Elastic Beanstalk - EB - AWS Certification
+title:      Elastic Beanstalk - EB - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Elastic Beanstalk from an AWS certification perspective. We will look at important certification questions regarding Elastic Beanstalk. 
 categories:  AWS_CLOUD AWS_COMPUTE

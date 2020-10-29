@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      KMS and Cloud HSM - Encryption - AWS Certification
+title:      KMS and Cloud HSM - Encryption - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of KMS and Cloud HSM from an AWS certification perspective. We will look at important certification questions regarding KMS and Cloud HSM. 
 categories:  AWS_CLOUD AWS_SERVICES

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon RedShift vs RedShift Spectrum vs Amazon EMR - A comparison - AWS Certification
+title:      Amazon RedShift vs RedShift Spectrum vs Amazon EMR - A comparison - AWS Certification Cheat Sheet
 date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of the big data options in AWS - Amazon RedShift vs RedShift Spectrum vs Amazon EMR. We will look at important certification questions regarding Amazon RedShift vs RedShift Spectrum vs Amazon EMR. 
 categories:  AWS_CLOUD AWS_DATABASES

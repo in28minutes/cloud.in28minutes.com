@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams - AWS Certification
+title:      Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams. We will look at important certification questions regarding Amazon Kinesis - Data Streams, Firehose, Analytics and Video Streams. 
 categories:  AWS_CLOUD AWS_SERVICES

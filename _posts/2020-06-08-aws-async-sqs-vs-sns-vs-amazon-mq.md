@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SQS vs SNS vs Amazon MQ - Comparison - AWS Certification
+title:      SQS vs SNS vs Amazon MQ - Comparison - AWS Certification Cheat Sheet
 date:       2020-06-11 12:31:19
 summary:    Let's get a quick overview of comparison between SQS vs SNS vs Amazon MQ.
 categories:  AWS_CLOUD AWS_ASYNCHRONOUS

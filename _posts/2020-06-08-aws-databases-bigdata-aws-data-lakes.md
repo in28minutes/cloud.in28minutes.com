@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      AWS Data Lakes - Simplified Big Data Solutions - AWS Certification
+title:      AWS Data Lakes - Simplified Big Data Solutions - AWS Certification Cheat Sheet
 date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of AWS Data Lakes from an AWS certification perspective.  
 categories:  AWS_CLOUD AWS_DATABASES

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Private Subnets - NAT Gateway vs NAT Instance - AWS Certification
+title:      Private Subnets - NAT Gateway vs NAT Instance - AWS Certification Cheat Sheet
 date:       2020-09-12 12:31:19
 summary:    Let's get a quick overview of how you can enable Private Subnets to download patches using NAT Gateway and NAT Instance. We will look at important certification questions regarding Private Subnet, NAT Gateway and NAT Instance. 
 categories:  AWS_CLOUD AWS_VPC

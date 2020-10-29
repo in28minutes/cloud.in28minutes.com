@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Multi-AZ vs Multi-Region vs Read replicas - Amazon RDS - AWS Certification
+title:      Multi-AZ vs Multi-Region vs Read replicas - Amazon RDS - AWS Certification Cheat Sheet
 date:       2020-07-15 12:31:19
 summary:    Let's get a quick overview of Multi-AZ vs Multi-Region vs Read replicas for Amazon RDS from an AWS certification perspective. 
 categories:  AWS_CLOUD AWS_DATABASES

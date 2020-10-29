@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      AWS Elastic Load Balancers - ELB Fundamentals - AWS Certification
+title:      AWS Elastic Load Balancers - ELB Fundamentals - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Elastic Load Balancers from an AWS certification perspective. We will look at important certification questions regarding Elastic Load Balancers. 
 categories:  AWS_CLOUD ELB

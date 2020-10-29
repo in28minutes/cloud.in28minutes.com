@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon DynamoDB - DAX and RDS - AWS Certification
+title:      Amazon DynamoDB - DAX and RDS - AWS Certification Cheat Sheet
 date:       2020-06-17 12:31:19
 summary:    Let's get a quick overview of Amazon DynamoDB from an AWS certification perspective. We will look at important certification questions regarding Amazon DynamoDB. We will compare DynamoDB with RDS. We will also look at when you will use DAX with DynamoDB.
 categories:  AWS_CLOUD AWS_DATABASES

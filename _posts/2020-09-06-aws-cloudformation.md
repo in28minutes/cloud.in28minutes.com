@@ -1,6 +1,6 @@
 ﻿---
 layout:     post
-title:      AWS CloudFormation - AWS Certification
+title:      AWS CloudFormation - AWS Certification Cheat Sheet
 date:       2020-09-12 11:39:00
 summary:    Let's get a quick overview of AWS CloudFormation. We will look at important features and a practical implementation.
 categories:  AWS_CLOUD AWS_CLOUDFORMATION

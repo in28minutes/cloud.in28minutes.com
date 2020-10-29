@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon CloudFront - Signed URLs, Cookies and OAI - AWS Certification
+title:      Amazon CloudFront - Signed URLs, Cookies and OAI - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Amazon CloudFront from an AWS certification perspective. We will look at important certification questions regarding Amazon CloudFront. How do you distribute private content from Amazon S3 using Amazon CloudFront ?
 categories:  AWS_CLOUD AWS_SERVICES

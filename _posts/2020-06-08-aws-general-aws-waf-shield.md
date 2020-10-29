@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      AWS Shield, AWS WAF and AWS Macie - Protect Resources and Data - AWS Certification
-date:       2020-06-06 12:31:19
+title:      AWS Shield vs AWS WAF vs AWS Macie - Protect Resources and Data - AWS Certification Cheat Sheet
+date:       2020-10-28 12:31:19
 summary:    Let's get a quick overview of AWS Shield, AWS WAF and AWS Macie. 
 categories:  AWS_CLOUD AWS_SERVICES
 permalink:  /aws-certification-aws-shield-waf-macie
@@ -10,6 +10,7 @@ permalink:  /aws-certification-aws-shield-waf-macie
 Let's get a quick overview of AWS Shield, AWS WAF and AWS Macie.
 
 ## You will learn
+
 - What is AWS Shield and AWS WAF?
 - When do we use AWS Shield and WAF?
 - How does AWS Macie help in protecting your data in Amazon S3?
@@ -27,11 +28,8 @@ Each cheat sheet contains:
 </div>
 
 ## AWS Shield
+
 ![](/images/aws/00-icons/shield.png) 
-![](/images/aws/00-icons/route53.png) 
-![](/images/aws/00-icons/cloudfront.png) 
-![](/images/aws/00-icons/ec2.png) 
-![](/images/aws/00-icons/elb.png) 
 
 - Shields from Distributed Denial of Service (DDoS) attacks
 	- Disrupt normal traffic of a server by overwhelming it with a flood of Internet traffic
@@ -43,9 +41,6 @@ Each cheat sheet contains:
 	- Elastic Load Balancers (ELB)
 
 ## AWS Shield - Standard and Advanced
-
-![](/images/aws/00-icons/shield.png) 
-![](/images/aws/00-icons/cloudfront.png)
 
 - AWS Shield Standard
 	- Zero Cost. Automatically enabled.
@@ -59,7 +54,6 @@ Each cheat sheet contains:
 
 ## AWS WAF - Web Application Firewall
 
-![](/images/aws/00-icons/waf.png) 
 - AWS WAF protect your web applications from OWASP Top 10 exploits, CVE and a lot more!
 	- OWASP (Open Web Application Security Project) Top 10 
 		- List of broadly agreed "**most critical security risks to web applications**" 
@@ -71,6 +65,7 @@ Each cheat sheet contains:
 	- Filter traffic based on IP addresses, geo locations, HTTP headers and body (block attacks from specific user-agents, bad bots, or content scrapers)
 
 ## Amazon Macie
+
 - Fully managed data security and data privacy service
 - Automatically discover, classify, and protect sensitive data in Amazon S3 buckets
 - When migrating data to AWS use S3 for staging 

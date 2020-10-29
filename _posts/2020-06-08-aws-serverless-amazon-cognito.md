@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon Cognito - User Pools, Identity Pools - AWS Certification
+title:      Amazon Cognito - User Pools, Identity Pools - AWS Certification Cheat Sheet
 date:       2020-07-03 12:31:19
 summary:    Let's get a quick overview of Amazon Cognito from an AWS certification perspective. 
 categories:  AWS_CLOUD AWS_SERVICES

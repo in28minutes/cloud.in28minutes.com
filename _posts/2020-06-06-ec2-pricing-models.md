@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      EC2 - Pricing Models - On Demand vs Spot vs Reserved vs Savings Plans - AWS Certification
+title:      EC2 - Pricing Models - On Demand vs Spot vs Reserved vs Savings Plans - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of EC2 Pricing Models from an AWS certification perspective. We will look at important certification questions regarding EC2 Pricing Models - On Demand vs Spot vs Reserved vs Savings Plans. 
 categories:  AWS_CLOUD EC2

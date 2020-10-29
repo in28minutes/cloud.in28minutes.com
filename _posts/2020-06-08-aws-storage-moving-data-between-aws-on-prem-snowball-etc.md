@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Moving Data between AWS and On-premises - Snowball vs Snowmobile vs DataSync - AWS Certification
+title:      Moving Data between AWS and On-premises - Snowball vs Snowmobile vs DataSync - AWS Certification Cheat Sheet
 date:       2020-09-21 00:31:19
 summary:    Let's get a quick overview of Moving Data between AWS and On-premises - Snowball vs Snowmobile vs DataSync. 
 categories:  AWS_CLOUD AWS_STORAGE

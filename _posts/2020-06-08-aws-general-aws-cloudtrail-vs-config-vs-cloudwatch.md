@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      AWS CloudTrail vs Config vs CloudWatch - AWS Certification
-date:       2020-06-06 12:31:19
+title:      AWS CloudTrail vs Config vs CloudWatch - AWS Certification Cheat Sheet
+date:       2020-10-28 12:31:19
 summary:    Let's get a quick overview of differences between AWS CloudTrail, AWS Config and Amazon CloudWatch. 
 categories:  AWS_CLOUD AWS_SERVICES
 permalink:  /aws-certification-aws-cloudtrail-vs-config-vs-cloudwatch
@@ -32,6 +32,7 @@ Each cheat sheet contains:
 ## AWS CloudTrail
 
 ![](/images/aws/00-icons/cloudtrail.png)
+
 - Track events, API calls, changes made to your AWS resources: 
 	- Who made the request?
 	- What action was performed?
@@ -45,6 +46,7 @@ Each cheat sheet contains:
 ## AWS Cloud Trail Types
 
 ![](/images/aws/00-icons/cloudtrail.png)
+
 - Multi Region Trail 
 	- One trail of all AWS regions
 	- Events from all regions can be sent to one CloudWatch logs log group
@@ -55,6 +57,7 @@ Each cheat sheet contains:
 ## AWS Cloud Trail - Good to know
 
 ![](/images/aws/00-icons/cloudtrail.png)
+
 - Log files are automatically encrypted with Amazon S3 SSE
 - You can configure S3 Lifecycle rules to archive or delete log files
 - Supports log file integrity 
@@ -80,7 +83,6 @@ Each cheat sheet contains:
 
 ## Predefined Config Rule Examples (80+)
 
-![](/images/aws/00-icons/config.png) 
 - **alb-http-to-https-redirection-check** - Checks whether HTTP to HTTPS redirection is configured on all HTTP listeners of Application Load Balancers
 - **ebs-optimized-instance** - Checks whether EBS optimization is enabled for your EC2 instances that can be EBS-optimized
 - **ec2-instance-no-public-ip** - Do EC2 instances have public IPs?
@@ -90,7 +92,6 @@ Each cheat sheet contains:
 
 ## AWS Config Rules
 
-![](/images/aws/00-icons/config.png) 
 - (Feature) Create Lambda functions with your custom rules
 - (Feature) You can setup auto remediation for each rule
 	- Take immediate action on a non compliant resource
@@ -101,9 +102,6 @@ Each cheat sheet contains:
 
 ## AWS Config + AWS CloudTrail
 
-![](/images/aws/00-icons/config.png) 
-![](/images/aws/00-icons/cloudtrail.png) 
-
 - AWS Config 
 	- What did my AWS resource look like?
 - AWS CloudTrail 
@@ -111,7 +109,6 @@ Each cheat sheet contains:
 
 ## Monitoring AWS with Amazon CloudWatch
 
-![](/images/aws/00-icons/cloudwatch.png) 
 - Monitoring and observability service
 - Collects monitoring and operational data in the form of logs, metrics, and events
 - Set alarms, visualize logs, take automated actions and troubleshoot issues

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      VPC and Subnet Route Tables - Routing in AWS - AWS Certification
+title:      VPC and Subnet Route Tables - Routing in AWS - AWS Certification Cheat Sheet
 date:       2020-09-21 00:31:19
 summary:    Let's get a quick overview of Routing and Route Tables in AWS.
 categories:  AWS_CLOUD AWS_VPC

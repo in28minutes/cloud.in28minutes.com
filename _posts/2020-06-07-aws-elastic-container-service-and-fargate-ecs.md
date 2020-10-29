@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazon Elastic Container Service and Fargate - ECS - AWS Certification
+title:      Amazon Elastic Container Service and Fargate - ECS - AWS Certification Cheat Sheet
 date:       2020-06-06 12:31:19
 summary:    Let's get a quick overview of Amazon Elastic Container Service and Fargate from an AWS certification perspective. We will look at important certification questions regarding AWS Elastic Container Service and Fargate. 
 categories:  AWS_CLOUD AWS_COMPUTE
