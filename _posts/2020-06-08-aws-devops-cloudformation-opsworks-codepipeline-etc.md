@@ -17,11 +17,11 @@ Let's get a quick overview of DevOps in AWS. What are the different DevOps tools
 - What is OpsWorks?
 - How do these compare against each other - CodePipeline vs CodeBuild vs CodeDeploy?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

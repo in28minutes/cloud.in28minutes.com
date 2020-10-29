@@ -25,11 +25,11 @@ Let's get a quick overview of AWS Data Lakes from an AWS certification perspecti
 - [Data Cataloging](#data-cataloging)
 - [AWS Glue](#aws-glue)
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

@@ -19,11 +19,11 @@ Let's get a quick overview of EC2 from an AWS certification perspective. We will
 - What are EC2 Launch Templates?
 - How can you use AMI and Launch Templates to simplify Bootstrapping of an EC2 instance?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

@@ -16,11 +16,11 @@ Let's get a quick overview of VPC Endpoints (Gateway vs Interface), VPC Peering 
 - What is VPC Peering?
 - How do you use VPC Flow Logs to debug problems?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

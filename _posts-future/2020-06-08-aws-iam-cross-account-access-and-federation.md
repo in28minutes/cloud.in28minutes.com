@@ -15,11 +15,11 @@ Let's get a quick overview of Cross Account Access and Federation from an AWS ce
 - Why do we need Cross Account Access and Federation?
 - How is Corporate Directory Federation different from Web Identity Federation?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

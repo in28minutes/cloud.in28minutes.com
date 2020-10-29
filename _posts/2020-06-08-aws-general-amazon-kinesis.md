@@ -16,11 +16,11 @@ Let's get a quick overview of Amazon Kinesis - Data Streams, Firehose, Analytics
 - What are the different Amazon Kinesis Options - Data Streams, Firehose, Analytics and Video Streams?
 - When do you use - Amazon Kinesis Data Streams vs Amazon Kinesis Firehose vs Amazon Kinesis Analytics vs Amazon Kinesis Video Streams?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

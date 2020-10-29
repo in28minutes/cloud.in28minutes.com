@@ -13,11 +13,11 @@ Let's get a quick overview of AWS Serverless Options - Compute, Storage and Data
 - What are the different AWS Serverless Options for Compute, Storage and Databases?
 - What are the use cases for serverless in AWS?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 

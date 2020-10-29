@@ -16,11 +16,11 @@ Let's get a quick overview of KMS and Cloud HSM from an AWS certification perspe
 - How is KMS different from Cloud HSM?
 - How do you manage keys with KMS and Cloud HSM?
 
-## AWS Certification - 25 PDF Cheat Sheets + Free Course
+## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
 
 Each cheat sheet contains:
 - FAQs and Tutorials with 5-20 slides
-- Notes to quickly review and prepare for certification exam
+- Study Material and Notes to quickly review and prepare for certification exam
 - Certification Exam Tips
 - Certification and Interview Scenario Questions
 
