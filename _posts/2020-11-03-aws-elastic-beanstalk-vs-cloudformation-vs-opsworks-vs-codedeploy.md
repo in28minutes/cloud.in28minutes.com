@@ -2,8 +2,8 @@
 layout:     post
 title:      Elastic Beanstalk vs Cloudformation vs Opswork vs Codedeploy - A Difference - AWS Certification
 date:       2020-11-03 18:45:00
-summary:    Let's compare the different EBS HDD Storage types
-categories:  AWS_CLOUD AWS_STORAGE
+summary:    Let's compare the different AWS services
+categories:  AWS_CLOUD
 permalink:  /aws-certification-elastic-beanstalk-cloud-formation-opswork-codedeploy-differences
 ---
 
