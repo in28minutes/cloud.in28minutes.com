@@ -1,13 +1,12 @@
 ---
 layout:     post
 title:      Deploy Spring Boot Application with Nginx Ubuntu on AWS Beanstalk
-date:       2021-07-27 16:13:00
+date:       2021-07-27 15:00:00
 summary:    In this tutorial, we will explain how to deploy Spring Boot Application with Nginx Ubuntu on AWS Beanstalk.
-categories:  AWS_CLOUD AWS_VPC
+categories:  AWS_CLOUD
 permalink:  /deploy-spring-boot-application-with-nginx-aws
 ---
-
-
+# Deploy Spring Boot Application with Nginx Ubuntu on AWS Beanstalk
 
 - The Spring Framework is an application framework and inversion of control container for the Java platform. The framework&apos;s core features can be used by any Java application, but there are extensions for building web applications on top of the Java EE platform.
 
