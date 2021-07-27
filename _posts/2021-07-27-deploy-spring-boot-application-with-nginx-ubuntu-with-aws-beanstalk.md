@@ -5,7 +5,6 @@ date:       2021-07-27 16:13:00
 summary:    In this tutorial, we will explain how to deploy Spring Boot Application with Nginx Ubuntu on AWS Beanstalk.
 categories:  AWS_CLOUD AWS_VPC
 permalink:  /deploy-spring-boot-application-with-nginx-aws
-
 ---
 
 
