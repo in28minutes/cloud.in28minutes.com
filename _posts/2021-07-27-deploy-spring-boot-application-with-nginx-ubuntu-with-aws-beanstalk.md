@@ -1,4 +1,4 @@
-﻿---
+---
 layout:     post
 title:      Deploy Spring Boot Application with Nginx Ubuntu on AWS Beanstalk
 date:       2021-07-27 16:13:00
