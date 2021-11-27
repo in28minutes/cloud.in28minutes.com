@@ -71,12 +71,8 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 - The entire course is all about GCP. You will learn it as we go further.
 
 ##Best path to learn GCP!
-![compute-engine-card](https://user-images.githubusercontent.com/57451228/143690131-a8c89df3-98d2-4099-a454-60f4065772de.png) 
-![functions-card](https://user-images.githubusercontent.com/57451228/143690186-2cd0e6c3-eb75-49cd-8c07-49ee01df0c2c.png)
-![datastore-card](https://user-images.githubusercontent.com/57451228/143690209-eadb0ff2-837a-4993-b05d-5ad459efb3a9.png)
-![sql](https://user-images.githubusercontent.com/57451228/143690224-acd4bde0-135b-49fd-a196-393adf64bdba.png)
-![app-engine](https://user-images.githubusercontent.com/57451228/143690233-947c469e-8ce5-493e-895a-6f63ee407a4f.png)
-![compute-engine](https://user-images.githubusercontent.com/57451228/143690250-ddaaf19e-7392-4c2c-a0c0-2995f6018607.png)
+
+![compute-engine](https://user-images.githubusercontent.com/57451228/143690282-464c7e80-4a8a-40b0-ba23-28925b2f4304.png) ![functions](https://user-images.githubusercontent.com/57451228/143690300-89fae136-cc18-43d1-ae5c-cee65eadcd06.png) ![datastore](https://user-images.githubusercontent.com/57451228/143690309-3a03941d-84de-4ea9-a4ad-178a93c7397f.png) ![sql](https://user-images.githubusercontent.com/57451228/143690224-acd4bde0-135b-49fd-a196-393adf64bdba.png) ![app-engine](https://user-images.githubusercontent.com/57451228/143690233-947c469e-8ce5-493e-895a-6f63ee407a4f.png) ![compute-engine](https://user-images.githubusercontent.com/57451228/143690250-ddaaf19e-7392-4c2c-a0c0-2995f6018607.png)
 
 - Cloud applications make use of multiple GCP services
 - There is no single path to learn these services independently
