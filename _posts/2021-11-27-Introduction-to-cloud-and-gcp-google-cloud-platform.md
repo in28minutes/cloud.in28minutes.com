@@ -23,7 +23,7 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 
 ##Before the Cloud - Example 2 - Startup
 
-![](../../../presentation-google-cloud/images/load-variations.png)
+![load-variations](https://user-images.githubusercontent.com/57451228/143689889-ed5769cc-fdd4-4a79-b762-e8e3e3f878fc.png)
 
 ###Challenge:
 - Startup suddenly becomes popular
@@ -34,7 +34,7 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 
 ##Before the Cloud - Challenges
 
-![](../../../presentation-google-cloud/images/load-variations.png)
+![load-variations](https://user-images.githubusercontent.com/57451228/143689889-ed5769cc-fdd4-4a79-b762-e8e3e3f878fc.png)
 
 - High cost of procuring infrastructure
 - Needs ahead of time planning (Can you guess the future?)
@@ -42,7 +42,8 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 - Dedicated infrastructure maintenance team (Can a startup afford it?)
 
 ##Silver Lining in the Cloud
-![](../../../presentation-google-cloud/images/cloud.png)
+![cloud](https://user-images.githubusercontent.com/57451228/143690074-133b251b-6f09-4bca-b3dd-fd567c4bd44d.png)
+
 - How about provisioning (renting) resources when you want them and releasing them back when you do not need them?
      - On-demand resource provisioning
      - Also called Elasticity
@@ -57,7 +58,9 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 
 # Google Cloud Platform (GCP)
 
-![](../../../presentation-google-cloud/images/00-icons/gcp/google-cloud.png)
+![google-cloud](https://user-images.githubusercontent.com/57451228/143690115-9a0396de-15a7-40ee-8482-d9227c0a0034.png)
+
+
 
 - One of the Top 3 cloud service providers
 - Provides a number of services (200+)
@@ -68,7 +71,13 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 - The entire course is all about GCP. You will learn it as we go further.
 
 ##Best path to learn GCP!
-![](../../../presentation-google-cloud/images/00-icons/gcp/compute-engine.png)  ![](../../../presentation-google-cloud/images/00-icons/gcp/functions.png)   ![](../../../presentation-google-cloud/images/00-icons/gcp/datastore.png)    ![](../../../presentation-google-cloud/images/00-icons/gcp/sql.png)     ![](../../../presentation-google-cloud/images/00-icons/gcp/app-engine.png)     ![](../../../presentation-google-cloud/images/00-icons/gcp/container-engine.png)       
+![compute-engine-card](https://user-images.githubusercontent.com/57451228/143690131-a8c89df3-98d2-4099-a454-60f4065772de.png) 
+![functions-card](https://user-images.githubusercontent.com/57451228/143690186-2cd0e6c3-eb75-49cd-8c07-49ee01df0c2c.png)
+![datastore-card](https://user-images.githubusercontent.com/57451228/143690209-eadb0ff2-837a-4993-b05d-5ad459efb3a9.png)
+![sql](https://user-images.githubusercontent.com/57451228/143690224-acd4bde0-135b-49fd-a196-393adf64bdba.png)
+![app-engine](https://user-images.githubusercontent.com/57451228/143690233-947c469e-8ce5-493e-895a-6f63ee407a4f.png)
+![compute-engine](https://user-images.githubusercontent.com/57451228/143690250-ddaaf19e-7392-4c2c-a0c0-2995f6018607.png)
+
 - Cloud applications make use of multiple GCP services
 - There is no single path to learn these services independently
 - HOWEVER, we've worked out a simple path!
