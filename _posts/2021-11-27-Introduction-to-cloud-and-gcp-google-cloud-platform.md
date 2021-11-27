@@ -11,7 +11,7 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 #GCP - Getting started
 
 ##Before the Cloud - Example 1 - Online Shopping App
-
+load-variations.png
 ![](../../../presentation-google-cloud/images/load-variations.png)
 
 ###Challenge:
