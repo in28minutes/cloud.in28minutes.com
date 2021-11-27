@@ -14,7 +14,7 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 
 ![load-variations](https://user-images.githubusercontent.com/57451228/143689889-ed5769cc-fdd4-4a79-b762-e8e3e3f878fc.png)
 
-###Challenge:
+### Challenge:
 - Peak usage during holidays and weekends
 - Less load during rest of the time
 ###Solution (before the Cloud):
