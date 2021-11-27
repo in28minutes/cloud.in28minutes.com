@@ -42,6 +42,8 @@ permalink:  /introduction-to-cloud-gcp-google-cloud-platform
 - Dedicated infrastructure maintenance team (Can a startup afford it?)
 
 ##Silver Lining in the Cloud
+
+
 ![cloud](https://user-images.githubusercontent.com/57451228/143690074-133b251b-6f09-4bca-b3dd-fd567c4bd44d.png)
 
 - How about provisioning (renting) resources when you want them and releasing them back when you do not need them?
