@@ -100,6 +100,8 @@ New Regions and Zones are constantly added
 |  europe-north1   |   Hamina, Finland, Europe     |   3     |  europe-north1-a, europe-north1-b <BR/>europe-north1-c   |
 |asia-south1|Mumbai, India APAC|3|asia-south1-a, asia-south1-b  <BR/>asia-south1-c|
 
+<BR/>
+
 ```sh
 
 Author 
