@@ -102,17 +102,6 @@ New Regions and Zones are constantly added
 
 <BR/>
 
-```sh
-
-Author 
-- [Ranga Rao Karanam](
-
-Helping Hand 
-- <pre>
-<a href="www.linkedin.com/in/debrup-365/">Debrup</a>
-</pre>
-
-```
 
 <pre>
 Author
