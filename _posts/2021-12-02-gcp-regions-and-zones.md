@@ -115,5 +115,9 @@ Helping Hand
 ```
 
 <pre>
+<p> Author </p>
+<a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
+<br/>
+<h4>Helping Hand<h4/>
 <a href="www.linkedin.com/in/debrup-365/">Debrup</a>
 </pre>
