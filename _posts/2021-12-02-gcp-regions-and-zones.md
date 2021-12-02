@@ -101,8 +101,8 @@ New Regions and Zones are constantly added
 |asia-south1|Mumbai, India APAC|3|asia-south1-a, asia-south1-b  <BR/>asia-south1-c|
 
 
-#### Author 
-##### Ranga Rao Karanam
+### Author 
+- Ranga Rao Karanam
 
-##### Helping Hand 
+### Helping Hand 
 - Debrup ❤️
