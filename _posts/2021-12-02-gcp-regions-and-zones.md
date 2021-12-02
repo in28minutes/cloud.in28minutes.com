@@ -118,6 +118,6 @@ Helping Hand
 Author
 <a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
 <br/>
-<p>Helping Hand<p/>
+Helping Hand
 <a href="www.linkedin.com/in/debrup-365/">Debrup</a>
 </pre>
