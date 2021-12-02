@@ -108,7 +108,9 @@ Author
 - [Ranga Rao Karanam](
 
 Helping Hand 
-- [Debrup ❤️](https://www.linkedin.com/in/debrup-365/)
+- <pre>
+<a href="www.linkedin.com/in/debrup-365/">Debrup</a>
+</pre>
 
 ```
 
