@@ -105,9 +105,9 @@ New Regions and Zones are constantly added
 ```sh
 
 Author 
-- Ranga Rao Karanam
+- [Ranga Rao Karanam](
 
 Helping Hand 
-- Debrup ❤️
+- [Debrup ❤️](https://www.linkedin.com/in/debrup-365/)
 
 ```
