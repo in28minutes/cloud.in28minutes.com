@@ -4,7 +4,7 @@ title:      Google Cloud Regions and Zones - GCP Certification Cheat Sheet
 date:       2021-12-02 11:13:00
 summary:    Let's get a quick overview of Regions and Zones from an GCP certification perspective. We will look at important certification questions regarding Regions and Zones.
 categories:  GCP_General
-permalink:  /gcp-certification-region-availability-zones
+permalink:  /gcp-certification-region-and-zones
 ---
 
 Let's get a quick overview of Regions and Zones from an GCP certification perspective. We will look at important certification questions regarding Regions and Zones.
