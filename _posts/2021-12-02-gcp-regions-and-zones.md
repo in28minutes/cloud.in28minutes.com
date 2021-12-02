@@ -115,7 +115,7 @@ Helping Hand
 ```
 
 <pre>
-<p> Author </p>
+Author
 <a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
 <br/>
 <p>Helping Hand<p/>
