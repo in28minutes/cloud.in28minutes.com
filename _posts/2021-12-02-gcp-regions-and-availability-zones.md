@@ -21,6 +21,5 @@ New Regions and Zones are constantly added
 | Region Code | Region  | Zones | Zones List |
 |:--:|--|:--:|--|
 | us-west1   |  The Dalles, Oregon, North America   | 3        | us-west1-a  <BR/>us-west1-b<BR/> us-west1-c      |
-|  europe-north1   |   Hamina, Finland, Europe     |   3     |  europe-north1-a <BR/>europe-north1-b
-europe-north1-c   |
+|  europe-north1   |   Hamina, Finland, Europe     |   3     |  europe-north1-a europe-north1-b <BR/>europe-north1-c   |
 |asia-south1|Mumbai, India APAC|3|asia-south1-a asia-south1-b  <BR/>asia-south1-c|
