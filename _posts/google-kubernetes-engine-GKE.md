@@ -47,7 +47,9 @@ Enable **Cloud Logging and Cloud Monitoring** with simple configuration
 Uses **Container-Optimized OS,** a hardened OS built by Google
 Provides support for **Persistent disks and Local SSD**
 
-### Kubernetes - A Microservice Journey - Getting Started
+## Kubernetes - A Microservice Journey 
+
+### Getting Started
 
 ![kubernetes-engine-1](https://user-images.githubusercontent.com/57451228/144887814-cdd4bb9b-1969-4880-9a39-ff15d3d5ac30.png)
 
@@ -55,10 +57,22 @@ Provides support for **Persistent disks and Local SSD**
 **Let's Have Some Fun**: Let's get on a journey with Kubernetes:
 - Let's create a cluster, deploy a microservice and play with it in 13 steps!
 **1:** Create a Kubernetes cluster with the default node pool
-gcloud container clusters create or use cloud console
+- gcloud container clusters create or use cloud console
 **2:** Login to Cloud Shell
 **3:** Connect to the Kubernetes Cluster
-gcloud container **clusters get-credentials** my-cluster --zone us-central1-a --project solid-course-258105
+- gcloud container **clusters get-credentials** my-cluster --zone us-central1-a --project solid-course-258105
+
+### Deploy Microservice
+
+**4:** Deploy Microservice to Kubernetes:
+- Create deployment & service using kubectl commands
+  - kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+  - kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+**5:** Increase number of instances of your microservice:
+- kubectl scale deployment hello-world-rest-api --replicas=2
+**6:** Increase number of nodes in your Kubernetes cluster:
+- gcloud container clusters resize my-cluster --node-pool my-node-pool --num-nodes 5
+- You are NOT happy about manually increasing number of instances and nodes!
 
 <BR/>
 
