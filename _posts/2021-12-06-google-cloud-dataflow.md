@@ -30,9 +30,10 @@ Let's get a quick overview of Google Cloud Dataflow from an GCP certification pe
 ### Streaming and Batch Usecases
 - Realtime Fraud Detection, Sensor Data Processing, Log Data Processing, Batch Processing (Load data, convert formats etc)
 
-### Use pre-built templates
-### Based on Apache Beam (supports Java, Python, Go ...)
-### Serverless (and Autoscaling)
+### Other features 
+- Use pre-built templates
+- Based on Apache Beam (supports Java, Python, Go ...)
+- Serverless (and Autoscaling)
 
 
 ## Google Cloud Dataflow - Image
