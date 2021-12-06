@@ -49,7 +49,7 @@ Examples : data on a hard disk, in a database, backups and archives
   - Data in your databases
   - Data on your file servers
 - Is it sufficient if you encrypt data at rest?
-  - **No. Encrypt data in transit - **between application to database as well.
+  - **No. Encrypt data in transit -** between application to database as well.
 
 
 <BR/>
