@@ -3,7 +3,7 @@ layout:     post
 title:      Google Cloud Pricing Calculator - GCP Certification Cheat Sheet
 date:       2021-12-06 11:13:00
 summary:    Let's get a quick overview of Google Cloud Pricing Calculator from an GCP certification perspective. We will look at important certification questions regarding Google Cloud Pricing Calculator.
-categories:  GCP_General
+categories:  GCP_General GCP_Other_Services
 permalink:  /google-cloud-pricing-calculator
 ---
 
