@@ -164,7 +164,7 @@ spec:
   - Runs your pods
   - **Kubelet** - Manages communication with master node(s)
 
-## GKE Cluster Types
+### GKE Cluster Types
 
 |Type	| Description|
 |:--:|--|
@@ -173,6 +173,22 @@ spec:
 |Regional cluster	|Replicas of the control plane runs in multiple zones of a given region. Nodes also run in same zones where control plane runs.|
 |Private cluster	|VPC-native cluster. Nodes only have internal IP addresses.|
 |Alpha cluster	|Clusters with alpha APIs - early feature API's. Used to test new K8S features.|
+
+### Kubernetes - Pods
+
+![kubernetes-deployment-hierarchy](https://user-images.githubusercontent.com/57451228/144892457-d3ae80b7-0fe1-4e34-b659-425e254a8ef2.png)
+
+
+- Smallest deployable unit in Kubernetes
+A Pod contains one or more containers
+Each Pod is assigned an ephemeral IP address
+- All containers in a pod share:
+  - Network
+  - Storage
+  - IP Address
+  - Ports and
+  - Volumes (Shared persistent disks)
+- POD statuses : Running /Pending /Succeeded /Failed /Unknown
 
 <BR/>
 
