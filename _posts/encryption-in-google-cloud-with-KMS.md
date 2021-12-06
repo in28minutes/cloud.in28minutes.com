@@ -9,11 +9,18 @@ permalink:  /encryption-in-google-cloud-with-KMS
 
 Let's get a quick overview of Encryption in Google Cloud with Cloud KMS from an GCP certification perspective. We will look at important certification questions regarding Encryption in Google Cloud with Cloud KMS.
 
-## Encryption
+## You will learn
+- What is Data States?
+- What is Encryptio?
+- Why do we need Encryption?
+- What is Symmetric Key Encryption?
+- What is Asymmetric Key Encryption?
+- What is Cloud KMS?
+- Advantage of Cloud KMS?
 
-### Data States
+
+## Data States
     
-
 - **Data at rest**: Stored on a device or a backup
 Examples : data on a hard disk, in a database, backups and archives
 - **Data in motion:** Being transferred across a network
