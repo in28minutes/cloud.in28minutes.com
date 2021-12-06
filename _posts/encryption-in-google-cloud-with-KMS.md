@@ -70,6 +70,20 @@ Share Public Key with everybody and keep the Private Key with you(YEAH, ITS PRIV
   - Will somebody not figure out private key using the public key?
 - **How do you create Asymmetric Keys?**
 
+## Cloud KMS
+
+![kms](https://user-images.githubusercontent.com/57451228/144871178-e94ef009-0a9e-4e1c-9df3-e45e32add0f2.png)
+
+- Create and manage **cryptographic keys** (symmetric and asymmetric)
+Control their use in your applications and GCP Services
+Provides an API to encrypt, decrypt, or sign data
+Use existing cryptographic keys created on premises
+- **Integrates with almost all GCP services** that need data encryption:
+  - Google-managed key: No configuration required
+  - Customer-managed key: Use key from KMS
+  - Customer-supplied key: Provide your own key
+
+
 <BR/>
 
 
