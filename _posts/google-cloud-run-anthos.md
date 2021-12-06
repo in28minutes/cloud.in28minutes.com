@@ -32,7 +32,7 @@ That's the idea behind Cloud Run.
   - Pay-per-use (For used CPU, Memory, Requests and Networking)
 
 ## Cloud Run - Advantages
-### Fully integrated end-to-end developer experience:
+Fully integrated end-to-end developer experience:
 - No limitations in languages, binaries and dependencies
 - Easily portable because of container based architecture
 - Cloud Code, Cloud Build, Cloud Monitoring & Cloud Logging Integrations
