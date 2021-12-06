@@ -7,7 +7,7 @@ categories:  GCP_General
 permalink:  /google-cloud-pricing-calculator
 ---
 
-Let's get a quick overview of Regions and Zones from an GCP certification perspective. We will look at important certification questions regarding Regions and Zones.
+Let's get a quick overview of Google Cloud Pricing Calculator from an GCP certification perspective. We will look at important certification questions regarding Google Cloud Pricing Calculator.
 
 ## Pricing Calculator
 
