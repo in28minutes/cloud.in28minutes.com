@@ -17,7 +17,7 @@ Let's get a quick overview of Google Cloud Deployment Manager from an GCP certif
 
 ## Google Cloud Deployment Manager - Need
 
-Why do we need Regions and Zones?
+Why do we need Google Cloud Deployment Manager?
 Let's first understand that with a simple scenario.
 
 ### Lets consider an example:
