@@ -30,14 +30,16 @@ That's the idea behind Cloud Run.
 - Fully managed serverless platform for containerized applications
   - ZERO infrastructure management
   - Pay-per-use (For used CPU, Memory, Requests and Networking)
+
+## Cloud Run - Advantages
 ### Fully integrated end-to-end developer experience:
 - No limitations in languages, binaries and dependencies
 - Easily portable because of container based architecture
 - Cloud Code, Cloud Build, Cloud Monitoring & Cloud Logging Integrations
 
-### Anthos - Run Kubernetes clusters anywhere
+## Anthos - Run Kubernetes clusters anywhere
 - Cloud, Multi Cloud and On-Premise
-### Cloud Run for Anthos: 
+## Cloud Run for Anthos: 
 Deploy your workloads to Anthos clusters running on-premises or on Google Cloud
  - Leverage your existing Kubernetes investment to quickly run serverless workloads
 
