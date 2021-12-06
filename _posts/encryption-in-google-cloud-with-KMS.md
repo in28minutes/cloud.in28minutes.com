@@ -83,7 +83,7 @@ Use existing cryptographic keys created on premises
   - Customer-managed key: Use key from KMS
   - Customer-supplied key: Provide your own key
 
-## Cloud KMS - Images
+### Cloud KMS - Images
 <BR/>
 
 ![Screenshot 2021-12-06 at 8 45 45 PM](https://user-images.githubusercontent.com/57451228/144871603-e0bcf284-5a09-4ccf-ab1d-b90ea9e55c3c.png)
