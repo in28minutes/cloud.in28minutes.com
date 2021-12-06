@@ -39,6 +39,18 @@ Examples : data on a hard disk, in a database, backups and archives
    - Example: Data in your RAM
 
 ## Encryption
+ ![compute-instance-card](https://user-images.githubusercontent.com/57451228/144869368-dd3cb711-7861-4acd-8467-922bb9e36d36.png)![arrow-card](https://user-images.githubusercontent.com/57451228/144869384-d3e48e9d-72be-4e07-bbc5-2a7fabaa07fe.png)![persistent-disks-card](https://user-images.githubusercontent.com/57451228/144869399-a7efe4ff-4347-4195-9b47-51d9de400d69.png)
+ 
+- If you store data as is, what would happen if an **unauthorized entity gets access to it?**
+  - Imagine losing an unencrypted hard disk
+- **First law of security :** Defense in Depth
+- Typically, enterprises encrypt all data
+  - Data on your hard disks
+  - Data in your databases
+  - Data on your file servers
+- Is it sufficient if you encrypt data at rest?
+  - **No. Encrypt data in transit - **between application to database as well.
+
 
 <BR/>
 
