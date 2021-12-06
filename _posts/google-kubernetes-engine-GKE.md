@@ -286,9 +286,7 @@ Each Pod is assigned an ephemeral **IP address**
 ## Google Kubernetes Engine - Scenarios - 1
 |Scenario	|Solution|
 |:--:|--|
-|You want to keep your costs low and optimize your GKE implementation	|Consider Preemptible VMs, Appropriate region, Committed-use discounts. 
-E2 machine types are cheaper than N1. 
-Choose right environment to fit your workload type (Use multiple node pools if needed). |
+|You want to keep your costs low and optimize your GKE implementation	|Consider Preemptible VMs, Appropriate region, Committed-use discounts. E2 machine types are cheaper than N1. Choose right environment to fit your workload type (Use multiple node pools if needed). |
 |You want an efficient, completely auto scaling GKE solution	|Configure Horizontal Pod Autoscaler for deployments and Cluster Autoscaler for node pools|
 |You want to execute untrusted third-party code in Kubernetes Cluster	|Create a new node pool with GKE Sandbox. Deploy untrused code to Sandbox node pool.|
 
