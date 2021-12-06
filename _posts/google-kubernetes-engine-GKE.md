@@ -87,6 +87,67 @@ Provides all important container orchestration features:
 - **10:** Add password configuration for your microservice
   - Kubernetes Secrets - kubectl **create secret** generic todo-web-application-secrets-1 --from-literal=RDS_PASSWORD=dummytodos
 
+### Kubernetes Deployment YAML - Deployment
+
+```sh
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-world-rest-api
+  name: hello-world-rest-api
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-world-rest-api
+  template:
+    metadata:
+      labels:
+        app: hello-world-rest-api
+    spec:
+      containers:
+      - image: in28min/hello-world-rest-api:0.0.3.RELEASE
+        name: hello-world-rest-api
+```
+
+### Kubernetes Deployment YAML - Service
+
+```sh
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hello-world-rest-api
+  name: hello-world-rest-api
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello-world-rest-api
+  sessionAffinity: None
+  type: LoadBalancer
+```
+
+### Kubernetes - A Microservice Journey - The End!
+
+- **11:** Deploy a new microservice which needs nodes with a GPU attached
+  - Attach a new node pool with GPU instances to your cluster
+     - gcloud **container node-pools create** POOL_NAME --cluster CLUSTER_NAME
+     - gcloud container node-pools list --cluster CLUSTER_NAME
+  - Deploy the new microservice to the new pool by setting up nodeSelector in the deployment.yaml
+     - nodeSelector: cloud.google.com/gke-nodepool: POOL_NAME
+- **12:** Delete the Microservices
+  - Delete service - kubectl **delete service**
+  - Delete deployment - kubectl **delete deployment**
+- **13:** Delete the Cluster
+  - gcloud container **clusters delete**
+
+
 <BR/>
 
 
