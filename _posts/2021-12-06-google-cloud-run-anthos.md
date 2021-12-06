@@ -63,14 +63,6 @@ Deploy your workloads to Anthos clusters running on-premises or on Google Cloud
 | List available revisions	| gcloud run revisions list |
 | Adjust traffic assignments |	gcloud run services update-traffic myservice --to-revisions=v2=10,v1=90 |
 
-## Cloud Run - Image
-<BR/>
-
-![Screenshot 2021-12-06 at 2 15 13 PM](https://user-images.githubusercontent.com/57451228/144815194-3fe07d97-9077-4bd8-a788-ae84e1e87766.png)
-
-<BR/>
-
-![Screenshot 2021-12-06 at 2 15 34 PM](https://user-images.githubusercontent.com/57451228/144815212-bd2250ce-6b74-42a8-ba0f-6c61f48f4797.png)
 
 
 <BR/>
