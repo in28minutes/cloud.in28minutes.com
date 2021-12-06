@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Google Cloud Run & Cloud Run - GCP Certification Cheat Sheet
+title:      Google Cloud Run & Cloud Run for Anthos - GCP Certification Cheat Sheet
 date:       2021-12-06 11:13:00
 summary:    Let's get a quick overview of Cloud Run & Cloud Run for Anthos from an GCP certification perspective. We will look at important certification questions regarding Cloud Run & Cloud Run for Anthos.
 categories:  GCP_General GCP_Computing_Services 
@@ -15,7 +15,7 @@ Let's get a quick overview of Cloud Run & Cloud Run for Anthos from an GCP certi
 ## You will learn        
 - What is Cloud Run?
 - What is Cloud Run for Anthos?
-- Advantages of Cloud Run & Cloud Run?   
+- Advantages of Cloud Run?   
 - What is Cloud Run - From the Command Line?   
 
 ## Google Cloud Run - Need
