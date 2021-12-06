@@ -9,7 +9,9 @@ permalink:  /google-cloud-dns-cli
 
 Let's get a quick overview of Google Cloud DNS from an GCP certification perspective. We will look at important certification questions regarding Google Cloud DNS.
 
-## You will learn        ![dns](https://user-images.githubusercontent.com/57451228/144802720-8d5f1ff8-db0d-44c5-a071-6753209b168b.png)
+![dns](https://user-images.githubusercontent.com/57451228/144802720-8d5f1ff8-db0d-44c5-a071-6753209b168b.png)
+
+## You will learn        
 - What is Google Cloud DNS?
 - Advantages of Google Cloud DNS?   
 - What is Google Cloud DNS - CLI?   
