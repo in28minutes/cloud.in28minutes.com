@@ -164,6 +164,15 @@ spec:
   - Runs your pods
   - **Kubelet** - Manages communication with master node(s)
 
+## GKE Cluster Types
+
+|Type	| Description|
+|:--:|--|
+|Zonal Cluster	|Single Zone - Single Control plane. Nodes running in the same zone.|
+Multi-zonal - Single Control plane but nodes running in multiple zones
+|Regional cluster	|Replicas of the control plane runs in multiple zones of a given region. Nodes also run in same zones where control plane runs.|
+|Private cluster	|VPC-native cluster. Nodes only have internal IP addresses.|
+|Alpha cluster	|Clusters with alpha APIs - early feature API's. Used to test new K8S features.|
 
 <BR/>
 
