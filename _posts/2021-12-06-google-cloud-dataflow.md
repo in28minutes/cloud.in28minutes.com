@@ -26,7 +26,6 @@ Let's get a quick overview of Google Cloud Dataflow from an GCP certification pe
   - Cloud Storage > Dataflow > Bigtable/CloudSpanner/Datastore/BigQuery (Batch - Load data into databases)
   - Bulk compress files in Cloud Storage (Batch)
   - Convert file formats between Avro, Parquet & csv (Batch)
-  - 
 ### Streaming and Batch Usecases
 - Realtime Fraud Detection, Sensor Data Processing, Log Data Processing, Batch Processing (Load data, convert formats etc)
 
