@@ -75,6 +75,18 @@ Provides all important container orchestration features:
   - gcloud container clusters resize my-cluster --node-pool my-node-pool --num-nodes 5
   - You are NOT happy about manually increasing number of instances and nodes!
 
+### Auto Scaling 
+
+- **7:** Setup auto scaling for your microservice:
+  - kubectl **autoscale deployment** hello-world-rest-api --max=10 --cpu-percent=70
+     - Also called horizontal pod autoscaling - HPA - kubectl get hpa
+- **8:** Setup auto scaling for your Kubernetes Cluster
+  - gcloud **container clusters update** cluster-name --enable-autoscaling --min-nodes=1 --max-nodes=10
+- **9:** Add some application configuration for your microservice
+  - Config Map - kubectl **create configmap** todo-web-application-config --from-literal=RDS_DB_NAME=todos
+- **10:** Add password configuration for your microservice
+  - Kubernetes Secrets - kubectl **create secret** generic todo-web-application-secrets-1 --from-literal=RDS_PASSWORD=dummytodos
+
 <BR/>
 
 
