@@ -9,6 +9,9 @@ permalink:  /gcp-cloud-functions
 
 Let's get a quick overview of Google Cloud Functions from an GCP certification perspective. We will look at important certification questions regarding Google Cloud Functions.
 
+![functions](https://user-images.githubusercontent.com/57451228/144843382-f39261ea-fb00-4657-8d98-84b1ca983493.png)
+
+
 ## You will learn
 - What is a Google Cloud Functions?
 - Why do we need Google Cloud Functions?
@@ -87,6 +90,17 @@ exports.helloPubSub = (message, context) => {
   console.log(`Hello, ${name}!`);
 };
 ```
+## Cloud Functions - Images
+<BR/>
+
+![Screenshot 2021-12-06 at 5 38 18 PM](https://user-images.githubusercontent.com/57451228/144843637-cbcadf25-a3f7-438d-9951-9e254c281828.png)
+
+<BR/>
+
+
+![Screenshot 2021-12-06 at 5 38 48 PM](https://user-images.githubusercontent.com/57451228/144843655-fc252fd5-8d17-4091-a158-321e3313fd48.png)
+
+<BR/>
 
 ## Cloud Functions - Advantages
 
