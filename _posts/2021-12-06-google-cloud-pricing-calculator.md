@@ -14,7 +14,7 @@ Let's get a quick overview of Regions and Zones from an GCP certification perspe
 - Estimating the cost of a Google Cloud solution is NOT easy
 - You would need to take a number of factors into account
 - How do you estimate the cost of your GCP solution?
-   - Use ***Google Cloud Pricing Calculator
+   - Use **Google Cloud Pricing Calculator**
 
 ![Screenshot 2021-12-06 at 11 19 48 AM](https://user-images.githubusercontent.com/57451228/144794316-a93bc669-e498-41df-9230-276f2e0d9ab0.png)
 
@@ -28,7 +28,7 @@ Let's get a quick overview of Regions and Zones from an GCP certification perspe
 - etc
 
 
-***(REMEMBER) These are Estimates! (NOT binding on GCP)
+**(REMEMBER) These are Estimates! (NOT binding on GCP)**
 
 
 <BR/>
