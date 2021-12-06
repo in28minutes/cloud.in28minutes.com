@@ -25,11 +25,10 @@ Let's get a quick overview of Encryption in Google Kubernetes Engine (GKE) from 
 ![container-orchestration](https://user-images.githubusercontent.com/57451228/144887464-a10eb4f3-24aa-4c0a-bca8-3e87716c49ff.png)
 
 
-Most popular open source container orchestration solution
-Provides Cluster Management (including upgrades)
+- Most popular open source container orchestration solution
+- Provides Cluster Management (including upgrades)
   - Each cluster can have different types of virtual machines
-  
-Provides all important container orchestration features:
+- Provides all important container orchestration features:
   - Auto Scaling
   - Service Discovery
   - Load Balancer
