@@ -50,7 +50,7 @@ Examples : data on a hard disk, in a database, backups and archives
   - Data on your file servers
 - Is it sufficient if you encrypt data at rest?
   - **No. Encrypt data in transit -** between application to database as well.
-  - 
+   
 ### Symmetric Key Encryption
 ![symetrickey](https://user-images.githubusercontent.com/57451228/144870527-fbf574e6-8718-44d9-a87d-1c9821900fe0.png)
 
