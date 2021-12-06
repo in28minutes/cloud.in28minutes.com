@@ -207,6 +207,44 @@ Each Pod is assigned an ephemeral **IP address**
   - V2 Replica Set is created
   - Deployment updates V1 Replica Set and V2 Replica Set based on the release strategies
 
+
+## Kubernetes - Service
+
+- Each Pod has its **own IP address:**
+  - How do you ensure that external users are not impacted when:
+     - A pod fails and is replaced by replica set
+     - A new release happens and all existing pods of old release are replaced by ones of new release
+- Create **Service**
+  - kubectl expose deployment name --type=LoadBalancer --port=80
+     - Expose PODs to outside world using a stable IP Address
+     - Ensures that the external world does not get impacted as pods go down and come up
+- Three Types:
+  - **ClusterIP:** Exposes Service on a cluster-internal IP
+     - Use case: You want your microservice only to be available inside the cluster (Intra cluster communication)
+  - **LoadBalancer:** Exposes Service externally using a cloud provider's load balancer
+     - Use case: You want to create individual Load Balancer's for each microservice
+  - **NodePort:** Exposes Service on each Node's IP at a static port (the NodePort)
+     - Use case: You DO not want to create an external Load Balancer for each microservice (You can create one Ingress component to load balance multiple microservices)
+
+
+
+
+## Container Registry - Image Repository
+
+![microservices](https://user-images.githubusercontent.com/57451228/144893522-381550c4-d674-411e-af73-cc7c0d8def76.png)
+
+
+- You've created docker images for your microservices:
+   - **Where do you store them?**
+- **Container Registry -** fully-managed container registry provided by GCP
+- (Alternative) Docker Hub
+- Can be integrated to CI/CD tools to publish images to registry
+- You can secure your container images. Analyze for vulnerabilities and enforce deployment policies.
+- Naming: **HostName/ProjectID/Image:Tag - gcr.io/projectname/helloworld:1**
+
+
+
+
 <BR/>
 
 
