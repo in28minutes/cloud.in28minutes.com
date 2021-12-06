@@ -41,11 +41,11 @@ Provides all important container orchestration features:
 ![kubernetes-engine](https://user-images.githubusercontent.com/57451228/144887611-b39aabbf-7acc-4788-a2d4-b287f7ad16df.png)
 
 
-**Managed** Kubernetes service
+- **Managed** Kubernetes service
 Minimize operations with **auto-repair** (repair failed nodes) and **auto-upgrade** (use latest version of K8S always) features
 Provides Pod and Cluster Autoscaling
-Enable **Cloud Logging and Cloud Monitoring** with simple configuration
-Uses **Container-Optimized OS,** a hardened OS built by Google
+- Enable **Cloud Logging and Cloud Monitoring** with simple configuration
+- Uses **Container-Optimized OS,** a hardened OS built by Google
 Provides support for **Persistent disks and Local SSD**
 
 ## Kubernetes - A Microservice Journey 
