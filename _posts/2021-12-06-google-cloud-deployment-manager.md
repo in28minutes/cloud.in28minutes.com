@@ -40,6 +40,41 @@ Let's first understand that with a simple scenario.
 - Think of it as version control for your environments
 - **Important Note** - Always modify the resources created by Deployment Manager using Deployment Manager
 
+## Google Cloud Deployment Manager
+
+- All configuration is defined in a simple text file - YAML
+   - I want a VPC, a subnet, a database and ...
+- Deployment Manager understands dependencies
+   - Creates VPCs first, then subnets and then the database
+- (Default) Automatic rollbacks on errors (Easier to retry)
+If creation of database fails, it would automatic delete the subnet and VPC
+- Version control your configuration file and make changes to it over time
+- Free to use - Pay only for the resources provisioned
+   - Get an automated estimate for your configuration
+
+## Cloud Deployment Manager - Example
+
+```sh
+- type: compute.v1.instance
+  name: my-first-vm
+  properties:
+    zone: us-central1-a
+    machineType: <<MACHINE_TYPE>>
+    disks:
+    - deviceName: boot
+      type: PERSISTENT
+      boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: <<SOURCE_IMAGE>>
+    networkInterfaces:
+    - network: <<NETWORK>>
+      # Give instance a public IP Address
+      accessConfigs:
+      - name: External NAT
+        type: ONE_TO_ONE_NAT
+```
+
 <BR/>
 
 
