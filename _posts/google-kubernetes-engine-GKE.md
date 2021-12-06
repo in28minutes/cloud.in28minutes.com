@@ -164,7 +164,7 @@ spec:
   - Runs your pods
   - **Kubelet** - Manages communication with master node(s)
 
-### GKE Cluster Types
+## GKE Cluster Types
 
 |Type	| Description|
 |:--:|--|
@@ -174,7 +174,9 @@ spec:
 |Private cluster	|VPC-native cluster. Nodes only have internal IP addresses.|
 |Alpha cluster	|Clusters with alpha APIs - early feature API's. Used to test new K8S features.|
 
-### Kubernetes - Pods
+<BR/>
+
+## Kubernetes - Pods
 
 ![kubernetes-deployment-hierarchy](https://user-images.githubusercontent.com/57451228/144892457-d3ae80b7-0fe1-4e34-b659-425e254a8ef2.png)
 
@@ -189,6 +191,21 @@ Each Pod is assigned an ephemeral IP address
   - Ports and
   - Volumes (Shared persistent disks)
 - POD statuses : Running /Pending /Succeeded /Failed /Unknown
+
+
+## Kubernetes - Deployment vs Replica Set
+
+- A **deployment** is created for each microservice:
+  - kubectl create deployment m1 --image=m1:v1
+  - Deployment represents a microservice (with all its releases)
+  - Deployment manages new releases ensuring zero downtime
+- **Replica set** ensures that a specific number of pods are running for a specific microservice version
+  - kubectl scale deployment m2 --replicas=2
+  - Even if one of the pods is killed, replica set will launch a new one
+- Deploy V2 of microservice - Creates a new replica set
+  - kubectl set image deployment m1 m1=m1:v2
+  - V2 Replica Set is created
+  - Deployment updates V1 Replica Set and V2 Replica Set based on the release strategies
 
 <BR/>
 
