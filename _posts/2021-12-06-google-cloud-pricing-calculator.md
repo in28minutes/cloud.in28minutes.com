@@ -13,7 +13,7 @@ Let's get a quick overview of Google Cloud Pricing Calculator from an GCP certif
 
 - Estimating the cost of a Google Cloud solution is NOT easy
 - You would need to take a number of factors into account
-- 
+
 ### How do you estimate the cost of your GCP solution?
 
    - Use **Google Cloud Pricing Calculator**
