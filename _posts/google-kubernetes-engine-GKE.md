@@ -182,8 +182,8 @@ spec:
 
 
 - Smallest deployable unit in Kubernetes
-A Pod contains **one or more containers**
-Each Pod is assigned an ephemeral **IP address**
+- A Pod contains **one or more containers**
+- Each Pod is assigned an ephemeral **IP address**
 - All containers in a pod share:
   - Network
   - Storage
