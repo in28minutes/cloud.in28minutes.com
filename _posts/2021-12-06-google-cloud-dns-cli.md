@@ -33,8 +33,10 @@ Let's get a quick overview of Google Cloud DNS from an GCP certification perspec
 
 ## Cloud DNS - Images
 <BR/>
+
 ![Screenshot 2021-12-06 at 12 29 47 PM](https://user-images.githubusercontent.com/57451228/144802315-cb848409-48f1-4301-ab5e-b0a307c5ec3c.png)
 <BR/>
+
 ![Screenshot 2021-12-06 at 12 30 18 PM](https://user-images.githubusercontent.com/57451228/144802332-e23e47dc-b06b-4390-9163-3d20809a0beb.png)
 <BR/>
 ## Cloud DNS - CLI
