@@ -24,7 +24,7 @@ In Kubernetes, we needed to create a cluster.
 How about a easier way of deploying containerized applications?
 That's the idea behind Cloud Run.
 
-### Cloud Run - 
+## Cloud Run - 
 "Container to Production in Seconds"
 - Built on top of an open standard - **Knative**
 - Fully managed serverless platform for containerized applications
