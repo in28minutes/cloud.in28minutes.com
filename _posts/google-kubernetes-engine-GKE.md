@@ -147,6 +147,23 @@ spec:
 - **13:** Delete the Cluster
   - gcloud container **clusters delete**
 
+## Google Kubernetes Engine (GKE) Cluster
+
+![kubernetes-02-architecture-cluster](https://user-images.githubusercontent.com/57451228/144890891-eec5159d-0b73-4c65-a0e8-41e19a357170.png)
+
+
+- **Cluster :** Group of Compute Engine instances:
+  - **Master Node(s) -** Manages the cluster
+  - **Worker Node(s) -** Run your workloads (pods)
+- **Master Node** (Control plane) components:
+  - **API Server** - Handles all communication for a K8S cluster (from nodes and outside)
+  - **Scheduler -** Decides placement of pods
+  - **Control Manager -** Manages deployments & replicasets
+  - **etcd -** Distributed database storing the cluster state
+- **Worker Node** components:
+  - Runs your pods
+  - **Kubelet** - Manages communication with master node(s)
+
 
 <BR/>
 
