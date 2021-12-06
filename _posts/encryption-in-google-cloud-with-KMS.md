@@ -50,7 +50,25 @@ Examples : data on a hard disk, in a database, backups and archives
   - Data on your file servers
 - Is it sufficient if you encrypt data at rest?
   - **No. Encrypt data in transit -** between application to database as well.
+  - 
+### Symmetric Key Encryption
+![symetrickey](https://user-images.githubusercontent.com/57451228/144870527-fbf574e6-8718-44d9-a87d-1c9821900fe0.png)
 
+- Symmetric encryption algorithms use the **same key for encryption and decryption**
+- Key Factor 1: Choose the **right encryption algorithm**
+- Key Factor 2: How do we **secure the encryption key?**
+- Key Factor 3: How do we **share the encryption key?**
+
+### Asymmetric Key Encryption
+![Asymmetric_encryption](https://user-images.githubusercontent.com/57451228/144870702-777536a0-ae97-44e5-a56e-850d12afe5f3.png)
+
+- **Two Keys :** Public Key and Private Key
+Also called Public Key Cyptography
+Encrypt data with Public Key and decrypt with Private Key
+Share Public Key with everybody and keep the Private Key with you(YEAH, ITS PRIVATE!)
+- No crazy questions:
+  - Will somebody not figure out private key using the public key?
+**How do you create Asymmetric Keys?**
 
 <BR/>
 
