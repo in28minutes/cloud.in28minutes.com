@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Google Cloud Functions - GCP Certification Cheat Sheet
-date:       2021-12-02 11:13:00
+date:       2021-12-06 11:13:00
 summary:    Let's get a quick overview of Google Cloud Functions from an GCP certification perspective. We will look at important certification questions regarding Google Cloud Functions.
 categories:  GCP_General
 permalink:  /gcp-cloud-functions
