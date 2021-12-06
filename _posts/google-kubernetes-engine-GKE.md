@@ -42,11 +42,11 @@ Provides all important container orchestration features:
 
 
 - **Managed** Kubernetes service
-Minimize operations with **auto-repair** (repair failed nodes) and **auto-upgrade** (use latest version of K8S always) features
-Provides Pod and Cluster Autoscaling
+- Minimize operations with **auto-repair** (repair failed nodes) and **auto-upgrade** (use latest version of K8S always) features
+- Provides Pod and Cluster Autoscaling
 - Enable **Cloud Logging and Cloud Monitoring** with simple configuration
 - Uses **Container-Optimized OS,** a hardened OS built by Google
-Provides support for **Persistent disks and Local SSD**
+- Provides support for **Persistent disks and Local SSD**
 
 ## Kubernetes - A Microservice Journey 
 
