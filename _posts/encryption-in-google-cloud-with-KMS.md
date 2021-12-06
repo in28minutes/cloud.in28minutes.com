@@ -68,8 +68,7 @@ Encrypt data with Public Key and decrypt with Private Key
 Share Public Key with everybody and keep the Private Key with you(YEAH, ITS PRIVATE!)
 - No crazy questions:
   - Will somebody not figure out private key using the public key?
-
-**How do you create Asymmetric Keys?**
+- **How do you create Asymmetric Keys?**
 
 <BR/>
 
