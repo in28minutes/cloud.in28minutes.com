@@ -20,6 +20,10 @@ Let's get a quick overview of Encryption in Google Cloud with Cloud KMS from an 
 
 
 ## Data States
+   ![compute-instance-card](https://user-images.githubusercontent.com/57451228/144869368-dd3cb711-7861-4acd-8467-922bb9e36d36.png)![arrow-card](https://user-images.githubusercontent.com/57451228/144869384-d3e48e9d-72be-4e07-bbc5-2a7fabaa07fe.png)![persistent-disks-card](https://user-images.githubusercontent.com/57451228/144869399-a7efe4ff-4347-4195-9b47-51d9de400d69.png)
+
+
+ 
     
 - **Data at rest**: Stored on a device or a backup
 Examples : data on a hard disk, in a database, backups and archives
@@ -33,6 +37,8 @@ Examples : data on a hard disk, in a database, backups and archives
       - Within cloud
 - **Data in use:** Active data processed in a non-persistent state
    - Example: Data in your RAM
+
+## Encryption
 
 <BR/>
 
