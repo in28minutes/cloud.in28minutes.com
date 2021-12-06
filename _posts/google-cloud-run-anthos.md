@@ -46,7 +46,7 @@ Deploy your workloads to Anthos clusters running on-premises or on Google Cloud
 ## Cloud Run - From the Command Line
 
 | Description	| Command |
-|:--:|--|:--:|--|
+|:--:|--|
 | Deploy a new container	| gcloud run deploy SERVICE_NAME --image IMAGE_URL --revision-suffix v1 
 First deployment creates a service and first revision Next deployments for the same service create new revisions |
 | List available revisions	| gcloud run revisions list |
