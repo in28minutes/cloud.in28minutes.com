@@ -11,12 +11,12 @@ Let's get a quick overview of Encryption in Google Cloud with Cloud KMS from an 
 
 ## You will learn
 - What is Data States?
-- What is Encryptio?
+- What is Encryption?
 - Why do we need Encryption?
 - What is Symmetric Key Encryption?
 - What is Asymmetric Key Encryption?
 - What is Cloud KMS?
-- Advantage of Cloud KMS?
+- Advantages of Cloud KMS?
 
 
 ## Data States
