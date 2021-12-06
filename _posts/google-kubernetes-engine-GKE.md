@@ -242,8 +242,45 @@ Each Pod is assigned an ephemeral **IP address**
 - You can secure your container images. Analyze for vulnerabilities and enforce deployment policies.
 - Naming: **HostName/ProjectID/Image:Tag - gcr.io/projectname/helloworld:1**
 
+## GKE - Remember
+
+- **Replicate master nodes** across multiple zones for high availability
+- (REMEMBER) Some **CPU** on the nodes is **reserved by Control Plane:**
+  - 1st core - 6%, 2nd core - 1%, 3rd/4th - 0.5, Rest - 0.25
+- Creating Docker Image for your microservices(Dockerfile):
+  - Build Image: docker build -t in28min/hello-world-rest-api:0.0.1.RELEASE .
+  - Test it Locally: docker run -d -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
+  - Push it to Container Repository: docker push in28min/hello-world-rest-api:0.0.1.RELEASE
+- Kubernetes supports **Stateful** deployments like Kafka, Redis, ZooKeeper:
+  - StatefulSet - Set of Pods with unique, persistent identities and stable hostnames
+- How do we run services on nodes for **log collection or monitoring?**
+  - **DaemonSet -** One pod on every node! (for background services)
+- (Enabled by default) Integrates with Cloud Monitoring and Cloud Logging
+  - Cloud Logging **System and Application Logs** can be exported to **Big Query or Pub/Sub**
 
 
+## GKE - Cluster Management - Command Line
+
+|Description	|Command|
+|:--:|--|
+|Create Cluster	|gcloud container clusters create my-cluster --zone us-central1-a --node-locations us-central1-c,us-central1-b|
+|Resize Cluster	|gcloud container clusters resize my-cluster --node-pool my-node-pool --num-nodes 10|
+|Autoscale Cluster	|gcloud container clusters update cluster-name --enable-autoscaling --min-nodes=1 --max-nodes=10|
+|Delete Cluster	|gcloud container clusters delete my-cluster|
+|Adding Node Pool	|gcloud container node-pools create new-node-pool-name --cluster my-cluster|
+|List Images	|gcloud container images list|
+
+## GKE - Workload Management - Command Line
+|Description	|Command|
+|:--:|--|
+|List Pods/Service/Replica Sets|	kubectl get pods/services/replicasets|
+|Create Deployment	|kubectl apply -f deployment.yaml or kubectl create deployment|
+|Create Service	|kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080|
+|Scale Deployment	|kubectl scale deployment hello-world --replicas 5|
+|Autoscale Deployment	|kubectl autoscale deployment --max --min --cpu-percent|
+|Delete Deployment	|kubectl delete deployment hello-world|
+|Update Deployment	|kubectl apply -f deployment.yaml|
+|Rollback Deployment	|kubectl rollout undo deployment hello-world --to-revision=1|
 
 <BR/>
 
