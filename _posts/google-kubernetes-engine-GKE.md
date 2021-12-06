@@ -3,7 +3,7 @@ layout:     post
 title:      Google Kubernetes Engine (GKE) - GCP Certification Cheat Sheet
 date:       2021-12-06 11:13:00
 summary:    Let's get a quick overview of Encryption in Google Kubernetes Engine (GKE) from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Engine (GKE).
-categories:  GCP_General
+categories:  GCP_General GCP_Computing_Services
 permalink:  /google-kubernetes-engine-GKE
 ---
 Let's get a quick overview of Encryption in Google Kubernetes Engine (GKE) from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Engine (GKE).
