@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Encryption in Google Cloud with Cloud KMS - GCP Certification Cheat Sheet
+title:      Encryption in Google Cloud with Cloud Key Management Service (KMS) - GCP Certification Cheat Sheet
 date:       2021-12-06 11:13:00
 summary:    Let's get a quick overview of Encryption in Google Cloud with Cloud KMS from an GCP certification perspective. We will look at important certification questions regarding Encryption in Google Cloud with Cloud KMS.
 categories:  GCP_General
