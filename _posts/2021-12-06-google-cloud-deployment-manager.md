@@ -9,6 +9,9 @@ permalink:  /google-cloud-deployment-manager
 
 Let's get a quick overview of Google Cloud Deployment Manager from an GCP certification perspective. We will look at important certification questions regarding Google Cloud Deployment Manager.
 
+![Screenshot 2021-12-06 at 12 04 08 PM](https://user-images.githubusercontent.com/57451228/144798844-0e627368-2f52-4ed5-a71c-04e554282603.png)
+
+
 ## You will learn
 - What is Google Cloud Deployment Manager?
 - Advantages of Google Cloud Deployment Manager?
