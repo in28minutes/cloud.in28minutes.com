@@ -290,8 +290,18 @@ Each Pod is assigned an ephemeral **IP address**
 |You want an efficient, completely auto scaling GKE solution	|Configure Horizontal Pod Autoscaler for deployments and Cluster Autoscaler for node pools|
 |You want to execute untrusted third-party code in Kubernetes Cluster	|Create a new node pool with GKE Sandbox. Deploy untrused code to Sandbox node pool.|
 
-<BR/>
 
+## Google Kubernetes Engine - Scenarios - 2
+|Scenario	|Solution|
+|:--:|--|
+|You want enable ONLY internal communication between your microservice deployments in a Kubernetes Cluster	|Create Service of type ClusterIP|
+|My pod stays pending	|Most probably Pod cannot be scheduled onto a node(insufficient resources)|
+|My pod stays waiting	|Most probably failure to pull the image|
+
+
+
+<BR/>
+<BR/>
 
 <pre>
 Thank You for Choosing to Learn from in28Minutes
