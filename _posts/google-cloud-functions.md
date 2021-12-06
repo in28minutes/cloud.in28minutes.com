@@ -115,6 +115,7 @@ exports.helloPubSub = (message, context) => {
 
 
 <pre>
+Thank You for Choosing to Learn from in28Minutes
 Author
 - <a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
 <br/>
