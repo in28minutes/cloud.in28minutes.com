@@ -70,7 +70,7 @@ Share Public Key with everybody and keep the Private Key with you(YEAH, ITS PRIV
   - Will somebody not figure out private key using the public key?
 - **How do you create Asymmetric Keys?**
 
-## Cloud KMS
+## Cloud Key Management Service (KMS)
 
 ![kms](https://user-images.githubusercontent.com/57451228/144871178-e94ef009-0a9e-4e1c-9df3-e45e32add0f2.png)
 
