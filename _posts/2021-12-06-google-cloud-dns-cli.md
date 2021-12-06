@@ -11,7 +11,7 @@ Let's get a quick overview of Google Cloud DNS from an GCP certification perspec
 
 ## You will learn
 - What is Google Cloud DNS?
-- Advantages of Google Cloud DNS?
+- Advantages of Google Cloud DNS?   ![dns](https://user-images.githubusercontent.com/57451228/144802720-8d5f1ff8-db0d-44c5-a071-6753209b168b.png)
 - What is Google Cloud DNS - CLI?
 
 ## Google Cloud DNS - CLI - Need
@@ -22,7 +22,7 @@ Let's get a quick overview of Google Cloud DNS from an GCP certification perspec
 - Step III : Route requests to in28minutes.com to the my website host server (DNS)
 
 ## Cloud DNS = Global Domain Name System (Step III)
-![dns](https://user-images.githubusercontent.com/57451228/144802720-8d5f1ff8-db0d-44c5-a071-6753209b168b.png)
+
 
  - Setup your DNS routing for your website (in28minutes.com)
     - Route api.in28minutes.com to the IP address of api server
@@ -30,9 +30,13 @@ Let's get a quick overview of Google Cloud DNS from an GCP certification perspec
     - Route email (ranga@in28minutes.com) to the mail server(mail.in28minutes.com)
 **Public and private managed DNS zones (container for records)**
 
+## Cloud DNS - Images
+
 ![Screenshot 2021-12-06 at 12 29 47 PM](https://user-images.githubusercontent.com/57451228/144802315-cb848409-48f1-4301-ab5e-b0a307c5ec3c.png)
 
 ![Screenshot 2021-12-06 at 12 30 18 PM](https://user-images.githubusercontent.com/57451228/144802332-e23e47dc-b06b-4390-9163-3d20809a0beb.png)
+
+<BR/>
 
 ## Cloud DNS - CLI
 
