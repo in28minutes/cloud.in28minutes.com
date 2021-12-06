@@ -75,6 +75,7 @@ If creation of database fails, it would automatic delete the subnet and VPC
       - name: External NAT
         type: ONE_TO_ONE_NAT
 ```
+## Cloud Deployment Manager - Image
 
 ![Screenshot 2021-12-06 at 12 04 08 PM](https://user-images.githubusercontent.com/57451228/144798844-0e627368-2f52-4ed5-a71c-04e554282603.png)
 
