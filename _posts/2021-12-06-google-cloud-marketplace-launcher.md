@@ -22,7 +22,8 @@ Let's first understand that with a simple scenario.
    - Example: Installing WordPress needs set up of compute engine and a relational database
 - How do you simplify the set up of custom software solutions like Wordpress or even more complex things like SAP HANA suite on GCP?
 
-- **Cloud Marketplace:** Central repo of easily deployable apps & datasets
+## Cloud Marketplace:
+**Central repo of easily deployable apps & datasets**
    - Similar to App Store/Play Store for mobile applications
    - You can search and install a complete stack
        - Commercial solutions - SAP HANA etc
@@ -32,6 +33,10 @@ Let's first understand that with a simple scenario.
    - When selecting a solution, you can see:
        - Components - Software, infrastructure needed etc
        - Approximate price
+
+## Google Cloud Marketplace - Image
+
+![Screenshot 2021-12-06 at 12 21 27 PM](https://user-images.githubusercontent.com/57451228/144800894-de2fe751-478a-4040-8966-b004771e720d.png)
 
 
 
