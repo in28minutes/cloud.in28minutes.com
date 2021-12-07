@@ -8,10 +8,6 @@ permalink:  /instance-groups-in-google-cloud
 ---
 Let's get a quick overview of Instance Groups in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Instance Groups in Google Cloud Platform.
 
-![load-balancing](https://user-images.githubusercontent.com/57451228/144972763-8b0fb7e4-1e83-40c9-a2cb-cd7bba1b580b.png)
-
-
-
 
 ## You will learn
 
@@ -25,6 +21,11 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 - Instance Groups - QNA
 
 ## Instance Groups
+
+
+![load-balancing](https://user-images.githubusercontent.com/57451228/144972763-8b0fb7e4-1e83-40c9-a2cb-cd7bba1b580b.png)
+
+
 
 - How do you create a group of VM instances?
   - **Instance Group** - Group of VM instances managed as a single entity
@@ -57,7 +58,7 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 
 ![mig-card](https://user-images.githubusercontent.com/57451228/144974449-71dcde2f-055a-4300-a505-95461fe194bd.png)
 
-![arrowtd](https://user-images.githubusercontent.com/57451228/144974463-ef5f7b8a-bb24-417e-9ec3-dcab572f46f5.png)
+          ![arrowtd](https://user-images.githubusercontent.com/57451228/144974463-ef5f7b8a-bb24-417e-9ec3-dcab572f46f5.png)
 
 ![compute-instances-card](https://user-images.githubusercontent.com/57451228/144974474-f7fce25a-41c6-419d-8a1b-b4624115aa9c.png)
 
