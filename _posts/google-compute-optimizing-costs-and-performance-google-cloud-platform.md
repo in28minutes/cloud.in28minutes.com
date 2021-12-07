@@ -91,6 +91,42 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 ![Screenshot 2021-12-07 at 10 14 54 AM](https://user-images.githubusercontent.com/57451228/144967903-ad1e79d0-b847-4238-99fd-969d36b0ab76.png)
 
+<BR/>
+
+## Compute Engine : Live Migration & Availability Policy
+
+- How do you keep your VM instances running when a host system needs to be updated (a software or a hardware update needs to be performed)?
+- **Live Migration**
+  - Your running instance is migrated to another host in the same zone
+  - Does NOT change any attributes or properties of the VM
+  - SUPPORTED for instances with local SSDs
+  - NOT SUPPORTED for GPUs and preemptible instances
+- Important Configuration - **Availability Policy:**
+  - **On host maintenance:** What should happen during periodic infrastructure maintenance?
+     - Migrate (default): Migrate VM instance to other hardware
+     - Terminate: Stop the VM instance
+  - **Automatic restart** - Restart VM instances if they are terminated due to non-user-initiated reasons (maintenance event, hardware failure etc.)
+<BR/>
+
+![Screenshot 2021-12-07 at 10 20 21 AM](https://user-images.githubusercontent.com/57451228/144968438-7d57cdb6-5184-4054-9d1b-ea06cfa1981b.png)
+
+<BR/>
+
+## Compute Engine Features: Custom Machine Types
+
+- What do you do **when predefined VM options are NOT appropriate** for your workload?
+  - Create a machine type customized to your needs (a Custom Machine Type)
+- **Custom Machine Type: Adjust** vCPUs, memory and GPUs
+  - Choose between E2, N2, or N1 machine types
+  - Supports a wide variety of Operating Systems: CentOS, CoreOS, Debian, Red Hat, Ubuntu, Windows etc
+  - **Billed per vCPUs, memory provisioned** to each instance
+     - Example Hourly Price: $0.033174 / vCPU + $0.004446 / GB
+
+<BR/>
+
+![Screenshot 2021-12-07 at 10 23 10 AM](https://user-images.githubusercontent.com/57451228/144968717-e7dd4f50-5f06-4b06-a2e8-e0536be58542.png)
+
+
 
 <BR/>
 <BR/>
