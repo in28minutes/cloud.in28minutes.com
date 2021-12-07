@@ -127,6 +127,19 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
         - --initial-delay: How much time should you give to the instance to start before marking it as unhealthy?
         - --health-check: How do you decide if an instance is healthy?
 
+## Managed Instance Group - Command Line - Making Updates
+
+- **Resize the group:**
+  - gcloud compute instance-groups managed **resize** my-mig -**-size=5**
+- **Recreate one or more instances** (delete and recreate instances):
+  - gcloud compute instance-groups managed **recreate-instances** my-mig **--instances=my-instance-1,my-instance-2**
+- **Update specific instances:**
+  - gcloud compute instance-groups managed **update-instances** my-mig --instances=my-instance-3,my-instance-4 (Update specific instances from the group)
+     - **--minimal-action**=none(default)/refresh/replace/restart
+     - **--most-disruptive-allowed-action**=none(default)/refresh/replace/restart
+- **Update instance template:**
+  - gcloud compute instance-groups managed **set-instance-template my-mig --template=v2-template**
+     - After updating instance template, you can trigger roll out of the new template using update-instances, recreate-instances or rolling-action start-update commands
 
 <BR/>
 <BR/>
