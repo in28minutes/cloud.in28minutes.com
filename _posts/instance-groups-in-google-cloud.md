@@ -141,6 +141,18 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
   - gcloud compute instance-groups managed **set-instance-template my-mig --template=v2-template**
      - After updating instance template, you can trigger roll out of the new template using update-instances, recreate-instances or rolling-action start-update commands
 
+
+## Instance Group Scenarios
+
+|Scenario	|Solution|
+|:--:|--|
+|You want MIG managed application to survive Zonal Failures	|Create multiple zone MIG (or regional MIG)|
+|You want to create VMs of different configurations in the same group	|Create Un-managed Instance Group|
+|You want to preserve VM state in an MIG	|Stateful MIG - Preserve VM state (Instance name, attached Persistent disks and Metadata). Recommended for stateful workloads (database, data processing apps)|
+|You want high availability in an MIG even when there are hardware/software updates	| Use an instance template with availability policy automatic restart: enabled & on-host maintenance: migrate Ensures live migration and automatic restarts |
+|You want unhealthy instances to be automatically replaced	|Configure health check on the MIG (self healing)|
+|Avoid frequent scale up & downs	|Cool-down period/Initial delay|
+
 <BR/>
 <BR/>
 
