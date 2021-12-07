@@ -109,6 +109,8 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 
 ![shell](https://user-images.githubusercontent.com/57451228/144976044-c6ca1c46-e4ec-4fd2-b14c-2616db79cd10.png)
 
+<BR/>
+<BR/>
 
 ### Gcloud compute instance-groups managed
 - **Create instance group:** create
@@ -127,6 +129,9 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
         - --initial-delay: How much time should you give to the instance to start before marking it as unhealthy?
         - --health-check: How do you decide if an instance is healthy?
 
+<BR/>
+<BR/>
+
 ## Managed Instance Group - Command Line - Making Updates
 
 - **Resize the group:**
@@ -140,6 +145,9 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 - **Update instance template:**
   - gcloud compute instance-groups managed **set-instance-template my-mig --template=v2-template**
      - After updating instance template, you can trigger roll out of the new template using update-instances, recreate-instances or rolling-action start-update commands
+
+<BR/>
+<BR/>
 
 ## Managed Instance Groups - Command Line - Rolling Actions
 
@@ -156,6 +164,9 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
      - **Canary Version** (Update a subset of instances to v2) - gcloud compute instance-groups managed rolling-action **start-update** my-mig --version=template=v1-template --canary-version=template=v2-template,target-size=10%
         - Options: --max-surge, --max-unavailable, --replacement-method
 
+<BR/>
+<BR/>
+
 
 ## Playing with Managed Instance Groups - Scenarios
 
@@ -164,6 +175,8 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 - I want to make a new release with no reduction in available number of instances. I want to update one instance at a time:
   - gcloud compute instance-groups managed **rolling-action start-update** my-group --version=template=my-v1-template --max-surge 1 --max-unavailable 0
 
+<BR/>
+<BR/>
 
 
 ## Instance Group Scenarios
