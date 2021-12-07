@@ -141,6 +141,30 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
   - gcloud compute instance-groups managed **set-instance-template my-mig --template=v2-template**
      - After updating instance template, you can trigger roll out of the new template using update-instances, recreate-instances or rolling-action start-update commands
 
+## Managed Instance Groups - Command Line - Rolling Actions
+
+- **Scenario:** You want to manage your new release - v1 to v2 - without downtime
+- gcloud compute instance-groups managed **rolling-action**
+  - **Restart(stop & start)-** gcloud compute instance-groups **managed rolling-action restart** my-mig
+     - --max-surge=5 or 10% (Max no of instances updated at a time)
+  - **Replace(delete & recreate)-** gcloud compute instance-groups **managed rolling-action replace my-mig**
+     - --max-surge=5 or 10% (Max no of instances updated at a time)
+     - --max-unavailable=5 or 10% (Max no of instances that can be down for the update)
+     - --replacement-method=recreate/substitute (substitute (default) creates instances with new names. recreate reuses names)
+  - **Updates instances** to a new template:
+     - **Basic Version **(Update all instances slowly step by step) - gcloud compute instance-groups managed rolling-action **start-update** my-mig --version=template=v1-template
+     - **Canary Version** (Update a subset of instances to v2) - gcloud compute instance-groups managed rolling-action **start-update** my-mig --version=template=v1-template --canary-version=template=v2-template,target-size=10%
+        - Options: --max-surge, --max-unavailable, --replacement-method
+
+
+## Playing with Managed Instance Groups - Scenarios
+
+- I want to ensure that I have one healthy instance running all the time:
+  - gcloud compute instance-groups managed **set-autoscaling** my-group --max-num-replicas=1 --min-num-replicas=1
+- I want to make a new release with no reduction in available number of instances. I want to update one instance at a time:
+  - gcloud compute instance-groups managed **rolling-action start-update** my-group --version=template=my-v1-template --max-surge 1 --max-unavailable 0
+
+
 
 ## Instance Group Scenarios
 
