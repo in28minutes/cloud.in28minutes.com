@@ -110,19 +110,19 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 ![shell](https://user-images.githubusercontent.com/57451228/144976044-c6ca1c46-e4ec-4fd2-b14c-2616db79cd10.png)
 
 
-- gcloud compute instance-groups managed
-  - **Create instance group:** create
+### Gcloud compute instance-groups managed
+- **Create instance group:** create
      - gcloud compute instance-groups managed **create** my-mig --zone us-central1-a --template my-instance-template --size 1
         - --health-check=HEALTH_CHECK: How do you decide if an instance is healthy?
         - --initial-delay: How much time should you give to an instance to start?
      - **Other similar commands** - gcloud compute instance-groups managed **delete/describe/list**
-  - **Setup Autoscaling:** set-autoscaling/stop-autoscaling
+- **Setup Autoscaling:** set-autoscaling/stop-autoscaling
      - gcloud compute instance-groups managed **set-autoscaling my-mig --max-num-replicas=10**
         - --cool-down-period (default - 60s): How much time should Auto Scaler wait after initiating an autoscaling action?
         - --scale-based-on-cpu --target-cpu-utilization --scale-based-on-load-balancing --target-load-balancing-utilization
         - --min-num-replicas --mode (off/on(default)/only-scale-out)
      - gcloud compute instance-groups managed **stop-autoscaling my-mig**
-  - **Update existing MIG policies** (ex: auto healing policies):
+- **Update existing MIG policies** (ex: auto healing policies):
      - gcloud compute instance-groups managed **update** my-mig
         - --initial-delay: How much time should you give to the instance to start before marking it as unhealthy?
         - --health-check: How do you decide if an instance is healthy?
