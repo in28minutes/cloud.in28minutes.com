@@ -24,6 +24,7 @@ Let's get a quick overview of Google Compute - Optimizing Costs and Performance 
 - Virtual Machine - Quick Review
 - Virtual Machine - Best Practices
 - Compute Engine - Quick QNA
+- Quick Review 
 
 ##
 
@@ -199,11 +200,11 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 ## Quick Review
 
-- **Image**
+- **Image:**
   - What **operating system and what software** do you want on the VM instance?
   - Reduce boot time and improve security by creating custom **hardened Images.**
   - You can share an Image with other projects  
-- **Machine Types**
+- **Machine Types:**
   - Optimized combination of compute(CPU, GPU), memory, disk (storage) and networking for specific workloads.
   - You can **create your own Custom Machine Types** when existing ones don't fit your needs  
 - **Static IP Addresses:** Get a constant IP addresses for VM instances
