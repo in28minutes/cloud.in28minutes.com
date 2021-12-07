@@ -22,6 +22,8 @@ Let's get a quick overview of Google Compute - Optimizing Costs and Performance 
 - Compute Engine Features: Custom Machine Types
 - Compute Engine Features: GPUs
 
+##
+
 Whenever we are making use of the cloud, you'd want to keep your costs as low as possible.
 What are the things that you can do, to keep the, to keep the cost of your virtual machines low?
 
