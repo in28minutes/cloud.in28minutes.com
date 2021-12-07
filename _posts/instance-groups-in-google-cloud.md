@@ -58,9 +58,7 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 
 ![mig-card](https://user-images.githubusercontent.com/57451228/144974449-71dcde2f-055a-4300-a505-95461fe194bd.png) 
 
-
-&emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/144975149-f5a53302-74f2-43d7-9e24-eeebde5861fc.png)
-
+&emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/144975149-f5a53302-74f2-43d7-9e24-eeebde5861fc.png)
 
 ![compute-instances-card](https://user-images.githubusercontent.com/57451228/144974474-f7fce25a-41c6-419d-8a1b-b4624115aa9c.png)
 
