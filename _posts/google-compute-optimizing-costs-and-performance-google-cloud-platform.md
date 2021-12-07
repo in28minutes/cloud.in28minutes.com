@@ -170,6 +170,20 @@ Now, let's look at another type of discounts which are applied on your virtual m
   - Default Metrics: CPU utilization, Network Bytes (in/out), Disk Throughput/IOPS
   - For Memory Utilization & Disk Space Utilization - Cloud Monitoring agent is needed
 
+
+## Virtual Machine - Best Practices
+
+- Choose **Zone and Region** based on:
+  - Cost, Regulations, Availability Needs, Latency and Specific Hardware needs
+  - Distribute instances in multiple zones and regions for high availability
+- Choose **right machine type** for you needs:
+  - Play with them to find out the right machine type
+  - Use GPUs for Math and Graphic intensive applications
+- Reserve for **"committed use discounts"** for constant workloads
+- Use preemptible instances for fault-tolerant, NON time critical workloads
+- Use **labels** to indicate environment, team, business unit etc
+
+
 <BR/>
 <BR/>
 
