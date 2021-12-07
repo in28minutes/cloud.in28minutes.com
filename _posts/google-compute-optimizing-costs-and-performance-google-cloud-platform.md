@@ -14,8 +14,8 @@ Let's get a quick overview of Google Compute - Optimizing Costs and Performance 
 
 ## You will learn
 
-- Sustained use Discounts[https://github.com/debrupofficial365/cloud.in28minutes.com/blob/master/_posts/google-compute-optimizing-costs-and-performance-google-cloud-platform.md#sustained-use-discounts]
-- Committed use Discounts[https://github.com/debrupofficial365/cloud.in28minutes.com/blob/master/_posts/google-compute-optimizing-costs-and-performance-google-cloud-platform.md#committed-use-discounts]
+- Sustained use Discounts
+- Committed use Discounts
 - Preemptible VM
 - Google Compute Engine - Billing
 - Compute Engine : Live Migration & Availability Policy
