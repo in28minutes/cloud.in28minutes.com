@@ -187,7 +187,7 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 |Scenario	|Solution|
 |:--:|--|
-|What are the pre-requisites to be able to create a VM instance?	|1. Project 2. Billing Account 3. Compute Engines APIs should be enabled |
+|What are the pre-requisites to be able to create a VM instance?	|1. Project <BR/> 2. Billing Account <BR/> 3. Compute Engines APIs should be enabled |
 |You want dedicated hardware for your compliance, licensing, and management needs	|Sole-tenant nodes|
 |I have 1000s of VM and I want to automate OS patch management,OS inventory management and OS configuration management (manage software installed)	|Use "VM Manager"|
 |You want to login to your VM instance to install software	|You can SSH into it|
