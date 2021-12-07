@@ -7,6 +7,8 @@ categories:  GCP_General GCP_Computing_Services
 permalink:  /google-compute-optimizing-costs-and-performance-google-cloud-platform
 ---
 Let's get a quick overview of Google Compute - Optimizing Costs and Performance in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Google Compute - Optimizing Costs and Performance in Google Cloud Platform.
+
+
 ![compute-engine](https://user-images.githubusercontent.com/57451228/144966798-ba7976a2-8a3d-4bc9-ae7b-b28925d8983e.png)
 
 
@@ -50,6 +52,7 @@ Now, let's look at another type of discounts which are applied on your virtual m
 ![Screenshot 2021-12-07 at 10 04 34 AM](https://user-images.githubusercontent.com/57451228/144966979-264c071f-bfff-4a24-b5da-94cf734d3834.png)
 
 <BR/>
+
 ## Saving Costs with Preemptible VM
 
 - **Short-lived cheaper** (upto 80%) compute instances
@@ -65,6 +68,11 @@ Now, let's look at another type of discounts which are applied on your virtual m
   - NO SLA and CANNOT be migrated to regular VMs
   - NO Automatic Restarts
   - Free Tier credits not applicable
+
+<BR/>
+
+![Screenshot 2021-12-07 at 10 09 06 AM](https://user-images.githubusercontent.com/57451228/144967382-a96ee4cf-8a8a-458c-a852-9c87eaf0964e.png)
+
 
 
 <BR/>
