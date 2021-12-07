@@ -110,7 +110,6 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 ![shell](https://user-images.githubusercontent.com/57451228/144976044-c6ca1c46-e4ec-4fd2-b14c-2616db79cd10.png)
 
 <BR/>
-<BR/>
 
 ### Gcloud compute instance-groups managed
 - **Create instance group:** create
@@ -130,7 +129,6 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
         - --health-check: How do you decide if an instance is healthy?
 
 <BR/>
-<BR/>
 
 ## Managed Instance Group - Command Line - Making Updates
 
@@ -146,7 +144,6 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
   - gcloud compute instance-groups managed **set-instance-template my-mig --template=v2-template**
      - After updating instance template, you can trigger roll out of the new template using update-instances, recreate-instances or rolling-action start-update commands
 
-<BR/>
 <BR/>
 
 ## Managed Instance Groups - Command Line - Rolling Actions
@@ -165,8 +162,6 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
         - Options: --max-surge, --max-unavailable, --replacement-method
 
 <BR/>
-<BR/>
-
 
 ## Playing with Managed Instance Groups - Scenarios
 
@@ -176,8 +171,6 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
   - gcloud compute instance-groups managed **rolling-action start-update** my-group --version=template=my-v1-template --max-surge 1 --max-unavailable 0
 
 <BR/>
-<BR/>
-
 
 ## Instance Group Scenarios
 
