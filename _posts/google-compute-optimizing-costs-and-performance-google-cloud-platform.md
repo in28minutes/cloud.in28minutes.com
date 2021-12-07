@@ -1,0 +1,81 @@
+---
+layout:     post
+title:      Google Compute - Optimizing Costs and Performance in Google Cloud Platform - GCP Certification Cheat Sheet
+date:       2021-12-06 11:13:00
+summary:    Let's get a quick overview of Google Compute - Optimizing Costs and Performance in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Google Compute - Optimizing Costs and Performance in Google Cloud Platform.
+categories:  GCP_General GCP_Computing_Services
+permalink:  /google-compute-optimizing-costs-and-performance-google-cloud-platform
+---
+Let's get a quick overview of Google Compute - Optimizing Costs and Performance in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Google Compute - Optimizing Costs and Performance in Google Cloud Platform.
+![compute-engine](https://user-images.githubusercontent.com/57451228/144966798-ba7976a2-8a3d-4bc9-ae7b-b28925d8983e.png)
+
+
+## You will learn
+- Sustained use Discounts
+- Committed use Discounts
+- Preemptible VM
+- Google Compute Engine - Billing
+- Compute Engine : Live Migration & Availability Policy
+- Compute Engine Features: Custom Machine Types
+- Compute Engine Features: GPUs
+
+Whenever we are making use of the cloud, you'd want to keep your costs as low as possible.
+What are the things that you can do, to keep the, to keep the cost of your virtual machines low?
+
+The first thing that we would be talking about is sustained use discounts. 
+
+## Sustained use Discounts
+
+![sustained-use-example](https://user-images.githubusercontent.com/57451228/144966514-ffac5688-c824-4401-8eb2-9dfad0052b7b.png)
+
+- **Automatic discounts** for running VM instances for significant portion of the billing month
+  - Example: If you use N1, N2 machine types for more than 25% of a month, you get a 20% to 50% discount on every incremental minute.
+  - Discount increases with usage (graph)
+  - No action required on your part!
+- **Applicable** for instances created by **Google Kubernetes Engine and Compute Engine**
+- **RESTRICTION:** Does NOT apply on certain machine types (example: E2 and A2)
+- **RESTRICTION:** Does NOT apply to VMs created by App Engine flexible and Dataflow
+
+Now, let's look at another type of discounts which are applied on your virtual machines.
+
+## Committed use Discounts
+
+- For workloads with **predictable resource** needs
+- **Commit** for 1 year or 3 years
+- **Up to 70% discount** based on machine type and GPUs
+- **Applicable** for instances created by **Google Kubernetes Engine and Compute Engine**
+- **RESTRICTION:** Does NOT apply to VMs created by App Engine flexible and Dataflow
+<BR/>
+
+![Screenshot 2021-12-07 at 10 04 34 AM](https://user-images.githubusercontent.com/57451228/144966979-264c071f-bfff-4a24-b5da-94cf734d3834.png)
+
+<BR/>
+## Saving Costs with Preemptible VM
+
+- **Short-lived cheaper** (upto 80%) compute instances
+  - Can be stopped by GCP any time (preempted) within 24 hours
+  - Instances get 30 second warning (to save anything they want to save)
+- **Use Preempt VM's** if:
+  - Your applications are **fault tolerant**
+  - You are very **cost sensitive**
+  - Your workload is **NOT immediate**
+  - Example: Non immediate batch processing jobs
+- **RESTRICTIONS:**
+  - NOT always available
+  - NO SLA and CANNOT be migrated to regular VMs
+  - NO Automatic Restarts
+  - Free Tier credits not applicable
+
+
+<BR/>
+<BR/>
+
+<pre>
+Thank You for Choosing to Learn from in28Minutes
+
+Author
+- <a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
+
+Helping Hand
+- <a href="https://www.linkedin.com/in/debrup-365/">Debrup ❤️</a>
+</pre>
