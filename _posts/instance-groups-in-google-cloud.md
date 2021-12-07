@@ -73,6 +73,57 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
         - Example: Don't scale in by more than 10% or 3 instances in 5 minutes
   - **Autohealing:** Configure a Health check with Initial delay (How long should you wait for your app to initialize before running a health check?)
 
+<BR/>
+
+![Screenshot 2021-12-07 at 11 35 16 AM](https://user-images.githubusercontent.com/57451228/144975581-f20fd4a5-ddee-4d35-80dd-076b477a18cf.png)
+
+<BR/>
+
+## Updating a Managed Instance Group (MIG)
+
+- **Rolling update -** Gradual update of instances in an instance group to the new instance template
+  - Specify new template:
+     - (OPTIONAL) Specify a template for canary testing
+  - Specify how you want the update to be done:
+     - When should the update happen?
+        - Start the update immediately (Proactive) or when instance group is resized later(Opportunistic)
+     - How should the update happen?
+        - **Maximum surge:** How many instances are added at any point in time?
+        - **Maximum unavailable:** How many instances can be offline during the update?
+- **Rolling Restart/replace**: Gradual restart or replace of all instances in the group
+  - No change in template BUT replace/restart existing VMs
+  - Configure Maximum surge, Maximum unavailable and What you want to do? (Restart/Replace)
+
+<BR/>
+
+![Screenshot 2021-12-07 at 11 38 38 AM](https://user-images.githubusercontent.com/57451228/144975880-96c373c6-cbd7-407f-bb13-cb44b974ab74.png)
+
+![Screenshot 2021-12-07 at 11 38 51 AM](https://user-images.githubusercontent.com/57451228/144975891-722f7b49-a04f-4a6a-9d95-787d40ce349a.png)
+
+<BR/>
+
+## Playing with Managed Instance Groups - Command Line
+
+![shell](https://user-images.githubusercontent.com/57451228/144976044-c6ca1c46-e4ec-4fd2-b14c-2616db79cd10.png)
+
+
+- gcloud compute instance-groups managed
+  - **Create instance group:** create
+     - gcloud compute instance-groups managed **create** my-mig --zone us-central1-a --template my-instance-template --size 1
+        - --health-check=HEALTH_CHECK: How do you decide if an instance is healthy?
+        - --initial-delay: How much time should you give to an instance to start?
+     - **Other similar commands** - gcloud compute instance-groups managed **delete/describe/list**
+  - **Setup Autoscaling:** set-autoscaling/stop-autoscaling
+     - gcloud compute instance-groups managed **set-autoscaling my-mig --max-num-replicas=10**
+        - --cool-down-period (default - 60s): How much time should Auto Scaler wait after initiating an autoscaling action?
+        - --scale-based-on-cpu --target-cpu-utilization --scale-based-on-load-balancing --target-load-balancing-utilization
+        - --min-num-replicas --mode (off/on(default)/only-scale-out)
+     - gcloud compute instance-groups managed **stop-autoscaling my-mig**
+  - **Update existing MIG policies** (ex: auto healing policies):
+     - gcloud compute instance-groups managed **update** my-mig
+        - --initial-delay: How much time should you give to the instance to start before marking it as unhealthy?
+        - --health-check: How do you decide if an instance is healthy?
+
 
 <BR/>
 <BR/>
