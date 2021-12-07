@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Google Compute - Optimizing Costs and Performance in Google Cloud Platform - GCP Certification Cheat Sheet
-date:       2021-12-06 11:13:00
+date:       2021-12-07 10:13:00
 summary:    Let's get a quick overview of Google Compute - Optimizing Costs and Performance in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Google Compute - Optimizing Costs and Performance in Google Cloud Platform.
 categories:  GCP_General GCP_Computing_Services
 permalink:  /google-compute-optimizing-costs-and-performance-google-cloud-platform
@@ -13,6 +13,7 @@ Let's get a quick overview of Google Compute - Optimizing Costs and Performance 
 
 
 ## You will learn
+
 - Sustained use Discounts
 - Committed use Discounts
 - Preemptible VM
@@ -73,6 +74,22 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 ![Screenshot 2021-12-07 at 10 09 06 AM](https://user-images.githubusercontent.com/57451228/144967382-a96ee4cf-8a8a-458c-a852-9c87eaf0964e.png)
 
+## Google Compute Engine - Billing
+
+- You are **billed by the second** (after a minimum of 1 minute)
+- You are NOT billed for compute when a compute instance is stopped
+  - However, you will be billed for any storage attached with it!
+- (RECOMMENDATION) **Always create Budget alerts** and make use of Budget exports to stay on top of billing!
+- What are the ways you can save money?
+  - Choose the right machine type and image for your workload
+  - Be aware of the discounts available:
+     - Sustained use discounts
+     - Committed use discounts
+     - Discounts for preemptible VM instances
+
+<BR/>
+
+![Screenshot 2021-12-07 at 10 14 54 AM](https://user-images.githubusercontent.com/57451228/144967903-ad1e79d0-b847-4238-99fd-969d36b0ab76.png)
 
 
 <BR/>
