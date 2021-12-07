@@ -153,7 +153,22 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 ![Screenshot 2021-12-07 at 10 33 06 AM](https://user-images.githubusercontent.com/57451228/144969614-419ad32b-e23a-4988-8b50-2c58e394c8ce.png)
 
+<BR/>
 
+## Virtual Machine - Remember
+
+- Associated with a **project**
+- Machine type **availability can vary** from region to regions
+- You can only change the machine type (adjust the number of vCPUs and memory) of a stopped instance
+  - You CANNOT change the machine type of a running instance
+- VM's **can be filtered** by various properties
+  - Name, Zone, Machine Type, Internal/External IP, Network, Labels etc
+- Instances are Zonal (Run in a **specific zone** (in a specific region))
+  - Images are global (You can provide access to other projects - if needed)
+  - Instance templates are global (Unless you use zonal resources in your templates)
+- **Automatic Basic Monitoring** is enabled
+  - Default Metrics: CPU utilization, Network Bytes (in/out), Disk Throughput/IOPS
+  - For Memory Utilization & Disk Space Utilization - Cloud Monitoring agent is needed
 
 <BR/>
 <BR/>
