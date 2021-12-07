@@ -75,6 +75,9 @@ Let's get a quick overview of Instance Groups in Google Cloud Platform from an G
 
 <BR/>
 
+![Screenshot 2021-12-07 at 11 34 13 AM](https://user-images.githubusercontent.com/57451228/144976367-3c9954aa-7e64-4a30-82f7-48cd951be70b.png)
+
+
 ![Screenshot 2021-12-07 at 11 35 16 AM](https://user-images.githubusercontent.com/57451228/144975581-f20fd4a5-ddee-4d35-80dd-076b477a18cf.png)
 
 <BR/>
