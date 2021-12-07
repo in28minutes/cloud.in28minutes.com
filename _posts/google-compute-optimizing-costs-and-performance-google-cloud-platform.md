@@ -21,6 +21,9 @@ Let's get a quick overview of Google Compute - Optimizing Costs and Performance 
 - Compute Engine : Live Migration & Availability Policy
 - Compute Engine Features: Custom Machine Types
 - Compute Engine Features: GPUs
+- Virtual Machine - Quick Review
+- Virtual Machine - Best Practices
+- Compute Engine - Quick QNA
 
 ##
 
