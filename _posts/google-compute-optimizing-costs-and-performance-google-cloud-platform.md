@@ -146,14 +146,14 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 <BR/>
 
-![Screenshot 2021-12-07 at 10 31 11 AM](https://user-images.githubusercontent.com/57451228/144969483-801c1f24-e0f3-4513-a14b-eb205536a350.png)
-
-<BR/>
-
-![Uploading Screenshot 2021-12-07 at 10.23.10 AM.png…]()
+![Screenshot 2021-12-07 at 10 31 28 AM](https://user-images.githubusercontent.com/57451228/144969677-8148e352-df88-44a2-b181-308ffd76787c.png)
 
 
 <BR/>
+
+![Screenshot 2021-12-07 at 10 33 06 AM](https://user-images.githubusercontent.com/57451228/144969614-419ad32b-e23a-4988-8b50-2c58e394c8ce.png)
+
+
 
 <BR/>
 <BR/>
