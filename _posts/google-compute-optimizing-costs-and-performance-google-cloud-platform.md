@@ -128,7 +128,32 @@ Now, let's look at another type of discounts which are applied on your virtual m
 
 ![Screenshot 2021-12-07 at 10 23 10 AM](https://user-images.githubusercontent.com/57451228/144968717-e7dd4f50-5f06-4b06-a2e8-e0536be58542.png)
 
+<BR/>
 
+## Compute Engine Features: GPUs
+
+- How do you accelerate math intensive and graphics-intensive workloads for AI/ML etc?
+- Add a **GPU** to your virtual machine:
+  - High performance for math intensive and graphics-intensive workloads
+  - Higher Cost
+  - (REMEMBER) Use **images with GPU libraries** (Deep Learning) installed
+     - OTHERWISE, GPU will not be used
+  - **GPU restrictions:**
+     - **NOT supported on all machine types** (For example, not supported on shared-core or memory-optimized machine types)
+     - **On host maintenance** can only have the value "Terminate VM instance"
+- Recommended **Availability policy** for GPUs
+  - Automatic restart - on
+
+<BR/>
+
+![Screenshot 2021-12-07 at 10 31 11 AM](https://user-images.githubusercontent.com/57451228/144969483-801c1f24-e0f3-4513-a14b-eb205536a350.png)
+
+<BR/>
+
+![Uploading Screenshot 2021-12-07 at 10.23.10 AM.png…]()
+
+
+<BR/>
 
 <BR/>
 <BR/>
