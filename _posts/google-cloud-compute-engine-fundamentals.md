@@ -154,6 +154,7 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 ![compute-instance-card](https://user-images.githubusercontent.com/57451228/146011415-e47b7713-4303-4a72-8772-22f9e2d8f72a.png)
 
 &emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/146011427-967f8985-27d2-4535-a105-e751932c9838.png)
+
 ![instance-template-card](https://user-images.githubusercontent.com/57451228/146011437-acf8a26e-3a7f-4623-b2ed-a78a534e3306.png)
 
 
