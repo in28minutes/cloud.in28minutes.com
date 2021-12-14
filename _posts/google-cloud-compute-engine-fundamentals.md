@@ -22,6 +22,8 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
 - Instance templates
 - Reducing Launch Time with Custom Image
 
+<BR/>
+
 ## Google Compute Engine (GCE)
 
 ![compute-engine](https://user-images.githubusercontent.com/57451228/146007819-3d19ae5d-2ccf-4c5d-92c3-dd79525fb648.png)
@@ -31,6 +33,8 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
    - Rent virtual servers
    - **Virtual Machines** - Virtual servers in GCP
    - **Google Compute Engine (GCE)** - Provision & Manage Virtual Machines
+
+<BR/>
 
 ### Compute Engine - Features
 
@@ -46,6 +50,7 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
    - Setup VM instances as HTTP (Web) Server
    - Distribute load with Load Balancers
 
+<BR/>
 
 ## Compute Engine Machine Family
 
@@ -58,6 +63,7 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
    - **Compute Optimized (C2):** Compute intensive workloads
        - Gaming applications
 
+<BR/>
 
 ## Compute Engine Machine Types
 
@@ -72,6 +78,7 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
        - **2 -** Number of CPUs
 - Memory, disk and networking capabilities increase along with vCPUs
 
+<BR/>
 
 ## Image
 
@@ -81,6 +88,8 @@ Let's get a quick overview of Compute Engine Fundamentals in Google Cloud Platfo
 - Type of Images:
    - **Public Images:** Provided & maintained by Google or Open source communities or third party vendors
    - **Custom Images:** Created by you for your projects
+
+<BR/>
 
 ## Compute Engine Hands-on : Setting up a HTTP server
 ```sh
@@ -103,6 +112,7 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
   - $(hostname) - Get host name
   - $(hostname -I) - Get host internal IP address
 
+<BR/>
 
 ## Internal and External IP Addresses
 
@@ -115,11 +125,15 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
    - (Remember) When you stop an VM instance, External IP address is lost
 - **DEMO:** VM instances - Internal and External IPs
 
+<BR/>
+
 ## Static IP Addresses
 
 - Scenario : How do you get a constant External IP address for a VM instance?
    - Quick and dirty way is to assign an Static IP Address to the VM!
 - **DEMO:** Using Static IP Address with an VM instance
+
+<BR/>
 
 ### Static IP Addresses - Remember
 
@@ -128,6 +142,8 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 - Remember : You are **billed** for an Static IP when **you are NOT using it** as well!
    - Make sure that you explicitly release an Static IP when you are not using it.
 
+<BR/>
+
 ## Simplify VM HTTP server setup
 
 - How do we **reduce the number of steps** in creating an VM instance and setting up a HTTP Server?
@@ -135,6 +151,8 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
    - **Startup script**
    - **Instance Template**
    - **Custom Image**
+
+<BR/>
 
 ## Bootstrapping with Startup script
 
@@ -148,6 +166,8 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 - **Bootstrapping:** Install OS patches or software when an VM instance is launched.
 - In VM, you can configure **Startup script** to bootstrap
 - **DEMO** - Using Startup script
+
+<BR/>
 
 ## Instance templates
 
@@ -172,6 +192,8 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 - (Optional) Image family can be specified (example - debian-9):
   - Latest non-deprecated version of the family is used
 - **DEMO** - Launch VM instances using Instance templates
+
+<BR/>
 
 ## Reducing Launch Time with Custom Image
     
