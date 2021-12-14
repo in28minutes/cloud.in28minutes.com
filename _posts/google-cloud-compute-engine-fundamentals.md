@@ -102,3 +102,97 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
   - echo "Hello World" > /var/www/html/index.html - Write to index.html
   - $(hostname) - Get host name
   - $(hostname -I) - Get host internal IP address
+
+
+## Internal and External IP Addresses
+
+- **External** (Public) IP addresses are **Internet addressable.**
+- **Internal** (Private) IP addresses are **internal** to a corporate network
+- You CANNOT have two resources with same public (External) IP address.
+   - HOWEVER, two different corporate networks CAN have resources with same Internal (private) IP address
+- All **VM instances** are assigned at least one Internal IP address
+- Creation of External IP addresses can be enabled for VM instances
+   - (Remember) When you stop an VM instance, External IP address is lost
+- **DEMO:** VM instances - Internal and External IPs
+
+## Static IP Addresses
+
+- Scenario : How do you get a constant External IP address for a VM instance?
+   - Quick and dirty way is to assign an Static IP Address to the VM!
+- **DEMO:** Using Static IP Address with an VM instance
+
+### Static IP Addresses - Remember
+
+- Static IP **can be switched** to another VM instance in same project
+- Static IP **remains attached** even if you stop the instance. You have to manually detach it.
+- Remember : You are **billed** for an Static IP when **you are NOT using it** as well!
+   - Make sure that you explicitly release an Static IP when you are not using it.
+
+## Simplify VM HTTP server setup
+
+- How do we **reduce the number of steps** in creating an VM instance and setting up a HTTP Server?
+- Let's explore a few options:
+   - **Startup script**
+   - **Instance Template**
+   - **Custom Image**
+
+## Bootstrapping with Startup script
+
+```sh
+#!/bin/bash
+apt update 
+apt -y install apache2
+echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
+```
+
+- **Bootstrapping:** Install OS patches or software when an VM instance is launched.
+- In VM, you can configure **Startup script** to bootstrap
+- **DEMO** - Using Startup script
+
+## Instance templates
+
+![compute-instance-card](https://user-images.githubusercontent.com/57451228/146011415-e47b7713-4303-4a72-8772-22f9e2d8f72a.png)
+
+&emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/146011427-967f8985-27d2-4535-a105-e751932c9838.png)
+![instance-template-card](https://user-images.githubusercontent.com/57451228/146011437-acf8a26e-3a7f-4623-b2ed-a78a534e3306.png)
+
+
+&emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/146011445-a76b8e59-101a-4166-b64e-b0eda3e9ee68.png)
+
+![compute-instances-card](https://user-images.githubusercontent.com/57451228/146011487-c5af68cb-ecb5-4654-9a71-0414379136e0.png)
+
+- Why do you need to specify all the VM instance details (Image, instance type etc) **every time** you launch an instance?
+  - How about creating a **Instance template?**
+  - Define **machine type, image, labels, startup script** and other properties
+- Used to create **VM instances and managed instance groups**
+  - Provides a **convenient way** to create similar instances
+- **CANNOT** be updated
+  - To make a change, copy an existing template and modify it
+- (Optional) Image family can be specified (example - debian-9):
+  - Latest non-deprecated version of the family is used
+- **DEMO** - Launch VM instances using Instance templates
+
+## Reducing Launch Time with Custom Image
+    
+- Installing OS patches and software at launch of VM **instances increases boot up** time
+- How about creating a custom image with OS patches and software **pre-installed?**
+   - Can be created from an instance, a persistent disk, a snapshot, another image, or a file in Cloud Storage
+   - Can be shared across projects
+   - (Recommendation) Deprecate old images (& specify replacement image)
+   - (Recommendation) **Hardening an Image** - Customize images to your corporate security standards
+- **Prefer using Custom Image to Startup script**
+- **DEMO :** Create a Custom Image and using it in an Instance Template
+
+
+<BR/>
+<BR/>
+
+<pre>
+Thank You for Choosing to Learn from in28Minutes
+
+Author
+- <a href="https://www.linkedin.com/in/rangakaranam/">Ranga Rao Karanam</a>
+
+Helping Hand
+- <a href="https://www.linkedin.com/in/debrup-365/">Debrup ❤️</a>
+</pre>
