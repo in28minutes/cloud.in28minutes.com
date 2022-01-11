@@ -73,17 +73,7 @@ Let's get a quick overview of Cloud Load Balancing in Google Cloud Platform from
 
 ## Cloud Load Balancing - Terminology
     
-![user-card](https://user-images.githubusercontent.com/57451228/148980808-5aaf1b3f-5bf4-408c-b1d1-e326084302a8.png)
-
-
-![arrow-card](https://user-images.githubusercontent.com/57451228/148980817-6a26a606-036e-46b0-ac67-ff63dbd613b0.png)
-
-![load-balancing-card](https://user-images.githubusercontent.com/57451228/148980835-cecfe577-d53e-4ab6-b7df-0a9c7cbc3764.png)
-
-
-![arrow-card-1](https://user-images.githubusercontent.com/57451228/148980845-21c2f344-ce40-4a09-98c1-7fc417ccf693.png)
-
-![compute-instances-card](https://user-images.githubusercontent.com/57451228/148980858-6739b08e-bb31-4a0e-9d0d-b3eaf4a542ff.png)
+![user-card](https://user-images.githubusercontent.com/57451228/148980808-5aaf1b3f-5bf4-408c-b1d1-e326084302a8.png) &emsp; &emsp; ![arrow-card](https://user-images.githubusercontent.com/57451228/148980817-6a26a606-036e-46b0-ac67-ff63dbd613b0.png) &emsp; &emsp; ![load-balancing-card](https://user-images.githubusercontent.com/57451228/148980835-cecfe577-d53e-4ab6-b7df-0a9c7cbc3764.png) &emsp; &emsp; ![arrow-card-1](https://user-images.githubusercontent.com/57451228/148980845-21c2f344-ce40-4a09-98c1-7fc417ccf693.png) &emsp; &emsp; ![compute-instances-card](https://user-images.githubusercontent.com/57451228/148980858-6739b08e-bb31-4a0e-9d0d-b3eaf4a542ff.png)
 
 
 - **Backend** - Group of endpoints that receive traffic from a Google Cloud load balancer (example: instance groups)
@@ -117,25 +107,26 @@ Let's get a quick overview of Cloud Load Balancing in Google Cloud Platform from
 
 
 ## Cloud Load Balancing - Features
-Load Balancer	Type of Traffic	Proxy or pass-through	Destination Ports
-External HTTP(S)	Global, External, HTTP or HTTPS	Proxy	HTTP on 80 or 8080
-HTTPS on 443
-Internal HTTP(S)	Regional, Internal, HTTP or HTTPS	Proxy	HTTP on 80 or 8080
-HTTPS on 443
-SSL Proxy	Global, External, TCP with SSL offload	Proxy	A big list
-TCP Proxy	Global, External, TCP without SSL offload	Proxy	A big list
-External Network TCP/UDP	Regional, External, TCP or UDP	Pass-through	any
-Internal TCP/UDP	Regional, Internal, TCP or UDP	Pass-through	any
+
+|Load Balancer	|Type of Traffic	|Proxy or pass-through	|Destination Ports|
+|:--:|--|:--:|--|
+|External HTTP(S)	|Global, External, HTTP or HTTPS	|Proxy	|HTTP on 80 or 8080 HTTPS on 443|
+|Internal HTTP(S)	|Regional, Internal, HTTP or HTTPS	|Proxy	|HTTP on 80 or 8080 HTTPS on 443|
+|SSL Proxy	|Global, External, TCP with SSL offload |	Proxy	|A big list|
+|TCP Proxy	|Global, External, TCP without SSL offload	|Proxy	|A big list|
+|External Network TCP/UDP	|Regional, External, TCP or UDP	|Pass-through	|any|
+|Internal TCP/UDP	|Regional, Internal, TCP or UDP|	Pass-through	|any|
 
 
 ## Load Balancer Scenarios
-Scenario	Solution
-You want only healthy instances to receive traffic	Configure health check
-You want high availability for your VM instances	Create Multiple MIGs for your VM instances in multiple regions. Load balance using a Load Balancer.
-You want to route requests to multiple microservices using the same load balancer	Create individual MIGs and backends for each microservice. 
-Create Host and path rules to redirect to specific microservice backend based on the path (/microservice-a, /microservice-b etc). You can route to a backend Cloud Storage bucket as well.
-You want to load balance Global external HTTPS traffic across backend instances, across multiple regions	Choose External HTTP(S) Load Balancer
-You want SSL termination for Global non-HTTPS traffic with load balancing	Choose SSL Proxy Load Balancer
+
+|Scenario	|Solution|
+|:--:|--|
+|You want only healthy instances to receive traffic	|Configure health check|
+|You want high availability for your VM instances	|Create Multiple MIGs for your VM instances in multiple regions. Load balance using a Load Balancer.|
+|You want to route requests to multiple microservices using the same load balancer	|Create individual MIGs and backends for each microservice. Create Host and path rules to redirect to specific microservice backend based on the path (/microservice-a, /microservice-b etc). You can route to a backend Cloud Storage bucket as well. |
+|You want to load balance Global external HTTPS traffic across backend instances, across multiple regions	|Choose External HTTP(S) Load Balancer|
+|You want SSL termination for Global non-HTTPS traffic with load balancing	|Choose SSL Proxy Load Balancer|
 
 
 
