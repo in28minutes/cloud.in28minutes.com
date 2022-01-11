@@ -90,7 +90,7 @@ Each Region has three or more zones
 - Cluster : distinct physical infrastructure that is housed in a data center
 (Remember) Zones in a region are connected through low-latency links
 
-## AWS Regions and Zones examples
+## GCP Regions and Zones examples
 
 New Regions and Zones are constantly added
 
