@@ -11,6 +11,13 @@ Let's get a quick overview of Cloud Load Balancing in Google Cloud Platform from
 
 ## You will learn
 
+- Cloud Load Balancing
+- HTTP vs HTTPS vs TCP vs TLS vs UDP
+- Cloud Load Balancing - Terminology
+- Load Balancing - SSL/TLS Termination/Offloading
+- Cloud Load Balancing - Choosing Load Balancer
+- Cloud Load Balancing - Features
+- Load Balancer Scenarios - QNA
 
 ## Cloud Load Balancing
 
