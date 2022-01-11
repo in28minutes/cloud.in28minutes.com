@@ -3,7 +3,7 @@ layout:     post
 title:      Google Cloud Storage : Block and File Storage in Google Cloud Platform - GCP Certification Cheat Sheet
 date:       2021-12-07 10:13:00
 summary:    Let's get a quick overview of Block and File Storage in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Block and File Storage in Google Cloud Platform.
-categories:  GCP_General GCP_Computing_Services
+categories:  GCP_General GCP_Storage_Services
 permalink:  /gogle-cloud-storage-block-and-file-storage-in-gcp
 ---
 
