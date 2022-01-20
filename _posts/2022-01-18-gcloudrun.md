@@ -4,6 +4,7 @@ In this tutorial, You'll learn how to create a simple Python flask application, 
 * Python and Flask Installation
 * Docker Desktop
 
+
 ## Getting Started
 
 ## 1. Create Helloworld Python Application
@@ -103,4 +104,19 @@ services:
       - "8080:8080"
 ```
 
+So now, we have created app's container image, next step is to deploy into Google Cloud environment. Let's go
+
+## 3. Configure Google SDK
+
+For Google Cloud SDK Installation and Account setup, please refer to the below links:
+
+[Configure Google Cloud SDK in Windows](https://cloudaffaire.com/how-to-install-and-configure-google-cloud-sdk-or-gcloud-on-windows-os/)
+
+[Configuree Google Cloud SDK in Linux or MacOS](https://cloud.google.com/docs/authentication/production#linux-or-macos)
+
+[Configure Docker with GCP](https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper)
+
+## Deploying to gcloud
+
+After successfully configuring Google Cloud SDK, now we will run the couple of scripts for deploying to the cloud.
 
