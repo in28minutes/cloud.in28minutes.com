@@ -2,9 +2,8 @@ In this tutorial, You'll learn how to create a simple Python flask application, 
 
 ## Requirements
 * Python and Flask Installation
-* Docker Desktop
+* [Docker Desktop](https://www.docker.com/products/docker-desktop)
 * [Google Cheat Sheet](https://cloud.google.com/sdk/docs/images/gcloud-cheat-sheet.pdf)
-
 
 ## Getting Started
 
