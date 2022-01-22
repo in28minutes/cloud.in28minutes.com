@@ -3,6 +3,7 @@ In this tutorial, You'll learn how to create a simple Python flask application, 
 ## Requirements
 * Python and Flask Installation
 * Docker Desktop
+* [Google Cheat Sheet](https://cloud.google.com/sdk/docs/images/gcloud-cheat-sheet.pdf)
 
 
 ## Getting Started
@@ -110,13 +111,57 @@ So now, we have created app's container image, next step is to deploy into Googl
 
 For Google Cloud SDK Installation and Account setup, please refer to the below links:
 
-[Configure Google Cloud SDK in Windows](https://cloudaffaire.com/how-to-install-and-configure-google-cloud-sdk-or-gcloud-on-windows-os/)
+1. Google Cloud SDK from [here](https://cloud.google.com/sdk/docs/install)
 
-[Configuree Google Cloud SDK in Linux or MacOS](https://cloud.google.com/docs/authentication/production#linux-or-macos)
+2. Configure Google Cloud SDK in Windows from [here](https://cloudaffaire.com/how-to-install-and-configure-google-cloud-sdk-or-gcloud-on-windows-os/)
 
-[Configure Docker with GCP](https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper)
+3. Configure Google Cloud SDK in Windows from [here](https://cloud.google.com/docs/authentication/production#linux-or-macos)
 
-## Deploying to gcloud
+4. Configure Docker with GCP from [here](https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper)
 
-After successfully configuring Google Cloud SDK, now we will run the couple of scripts for deploying to the cloud.
+## 4. Deploying to `gcloud`
 
+After successfully configuring Google Cloud SDK, now we will run the couple of scripts for deploying application to the cloud.
+
+## Prerequisites
+
+```shell
+gcloud beta auth configure-docker
+gcloud components install beta
+```
+### Execute the below Commands
+
+1. `config.sh` : For configuring an environment variables
+2. `build.sh` : For creating and pushing a docker image
+3. `create_cloud_run.sh` : Deploy the created image on the cloud run instance
+4. `start.sh`: Start the cloud run instance
+
+```shell
+# Open the terminal and navigate to 'infra' folder (say terminal1)
+
+$ source config.sh
+$ sh build.sh
+$ sh create_cloud_run.sh
+```
+
+Or,
+
+```shell
+# Open the terminal and navigate to 'infra' folder (say terminal1)
+
+$ source config.sh
+$ sh start.sh
+```
+Application will be deployed on cloud run, and you can play with the application at these endpoints:
+
+* `http://localhost:8080/`
+
+### Output
+```shell
+Welcome to the in28minutes tutorials!
+```
+* `http://localhost:8080/timestamp`
+### Output
+```shell
+22-01-2022-10:10:10
+```
