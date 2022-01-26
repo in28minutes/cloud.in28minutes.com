@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 ## 2. Build the apps's container image 
 
-### 2.1 Using Dockerfile
+### 2.1. Using Dockerfile
 
 In order to build the application, we need to use a ``Dockerfile``. A Dockerfile is simply step-by-step instructions (text-based) that is used to create a container image.
 
@@ -84,7 +84,7 @@ ENTRYPOINT ["python3", "app.py"]
 
 ```
 
-### 2.1 Using Docker Compose
+### 2.2. Using Docker Compose
 
 Using ``Dockerfile`` we can create a docker image for the single application, however with the help of ``Docker  Compose`` tool, we can create multi-container application.
 
