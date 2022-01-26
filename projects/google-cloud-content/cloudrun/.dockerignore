@@ -1,0 +1,6 @@
+__pycache__
+.pytest_cache
+infra/
+docker-compose.yml
+Dockerfile
+README.md
