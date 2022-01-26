@@ -65,11 +65,11 @@ Let's get a quick overview of Authentication and Authorization in Google Cloud w
 
 ## Cloud IAM Example 
   
-![user-card](https://user-images.githubusercontent.com/57451228/151097904-1302e9cb-080e-4a8c-a739-c09cdaf9e7e6.png)
+&emsp; &emsp; ![user-card](https://user-images.githubusercontent.com/57451228/151097904-1302e9cb-080e-4a8c-a739-c09cdaf9e7e6.png)
 
-&emsp; &emsp; &emsp; &emsp; &emsp;  ![arrowtd](https://user-images.githubusercontent.com/57451228/151097914-f17b764c-e48a-45ee-a900-da1ba7c2de64.png)
+&emsp; &emsp; &emsp; &emsp;  ![arrowtd](https://user-images.githubusercontent.com/57451228/151097914-f17b764c-e48a-45ee-a900-da1ba7c2de64.png)
 
-![storage-card](https://user-images.githubusercontent.com/57451228/151097924-0e823051-473c-4341-bd03-d9204f41c384.png)
+&emsp; ![storage-card](https://user-images.githubusercontent.com/57451228/151097924-0e823051-473c-4341-bd03-d9204f41c384.png)
 
   
 - I want to provide access to manage a specific cloud storage bucket to a colleague of mine:
@@ -204,7 +204,7 @@ Let's get a quick overview of Authentication and Authorization in Google Cloud w
 
 &emsp; &emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/151099390-d9f26182-482e-454b-a6cb-4dc8af31e750.png)
 
-![storage-card](https://user-images.githubusercontent.com/57451228/151099393-76939f0d-d1a7-4ad0-8d88-8bde1fa15c59.png)
+&emsp; &emsp; ![storage-card](https://user-images.githubusercontent.com/57451228/151099393-76939f0d-d1a7-4ad0-8d88-8bde1fa15c59.png)
 
   
   
@@ -241,11 +241,11 @@ Let's get a quick overview of Authentication and Authorization in Google Cloud w
 ## Use case 2 : On Prem <-> Cloud Storage (Long Lived)
  
  
- ![user-card](https://user-images.githubusercontent.com/57451228/151100545-1564122d-c01a-41cf-acec-5c44a49d335d.png)
+&emsp; &emsp; ![user-card](https://user-images.githubusercontent.com/57451228/151100545-1564122d-c01a-41cf-acec-5c44a49d335d.png)
 
- &emsp; &emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/151100580-14fd02cf-da12-42e4-955b-b3feb03bfdbf.png)
+&emsp; &emsp; &emsp; &emsp; ![arrowtd](https://user-images.githubusercontent.com/57451228/151100580-14fd02cf-da12-42e4-955b-b3feb03bfdbf.png)
 
- ![storage-card](https://user-images.githubusercontent.com/57451228/151100587-3fcba4c0-9bd5-4f5a-9e4e-cedad8c88d64.png)
+ &emsp; ![storage-card](https://user-images.githubusercontent.com/57451228/151100587-3fcba4c0-9bd5-4f5a-9e4e-cedad8c88d64.png)
 
  
 - You **CANNOT assign Service Account directly to an On Prem App**
