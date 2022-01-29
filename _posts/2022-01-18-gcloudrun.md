@@ -1,6 +1,6 @@
-In this tutorial, You'll learn how to create a simple Python flask application, create docker image and run the scripts to deploy into Google Cloud.
+In this tutorial, You'll learn how to create a simple Python flask application, create docker image and run the scripts to deploy into Google CloudRun.
 
-![](./images/google/cloudrun_app.png)
+![](./images/googlecloud/cloudrun_app.png)
 
 ## Requirements
 * Python and Flask Installation
