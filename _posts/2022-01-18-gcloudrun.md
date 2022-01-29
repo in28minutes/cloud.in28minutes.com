@@ -1,5 +1,7 @@
 In this tutorial, You'll learn how to create a simple Python flask application, create docker image and run the scripts to deploy into Google Cloud.
 
+![](./images/google/cloudrun_app.png)
+
 ## Requirements
 * Python and Flask Installation
 * [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -167,3 +169,5 @@ Welcome to the in28minutes tutorials!
 ```shell
 22-01-2022-10:10:10
 ```
+
+"If you feel like something needs to add or changed feel free to connect with us with the slack community or drop us an email at - support@in28minutes.com"
