@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  helloworld:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "pythonflask:latest"
+    container_name: "pythonflask"
+    ports:
+      - "8080:8080"

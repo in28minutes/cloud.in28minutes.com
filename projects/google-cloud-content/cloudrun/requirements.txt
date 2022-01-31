@@ -1,0 +1,2 @@
+# https://pypi.org/project/flask
+Flask==2.0.2
