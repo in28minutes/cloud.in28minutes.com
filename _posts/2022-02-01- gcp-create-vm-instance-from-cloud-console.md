@@ -23,9 +23,9 @@ In this article I will be show you how to create a Virtual Machine in Google Clo
 
 ## Let's get started
 
-**1.** Go to https://console.cloud.google.com/ or open Google cloud console. 
-   - Login with your billing enabled Google account.
-   - Create a new project 
+**1.** Go to https://console.cloud.google.com/ or open **Google cloud console.** 
+   - Login with your **billing enabled Google account**.
+   - Create a **new project**
 
 Now you are ready to go.
 
