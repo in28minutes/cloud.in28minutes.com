@@ -23,7 +23,7 @@ In this article I will be show you how to create a Virtual Machine in Google Clo
 
 ## Let's get started
 
-1. Go to https://console.cloud.google.com/ or open Google cloud console. 
+**1.** Go to https://console.cloud.google.com/ or open Google cloud console. 
    - Login with your billing enabled Google account.
    - Create a new project 
 
@@ -31,7 +31,7 @@ Now you are ready to go.
 
 <BR/>
 
-2. In the Cloud Console, Click on the top left **Navigation menu** , click **Compute Engine**, click **VM Instances**.
+**2.** In the Cloud Console, Click on the top left **Navigation menu** , click **Compute Engine**, click **VM Instances**.
 
 <BR/>
 
@@ -52,7 +52,7 @@ Now you are good to go.
 
 <BR/>
 
-3. To create new VM instance, click **CREATE INSTANCE**.
+**3.** To **create** new VM instance, click **CREATE INSTANCE**.
 
 <BR/>
 
@@ -60,7 +60,7 @@ Now you are good to go.
 
 <BR/>
 
-4. Now you will get a page like this with many parameters you can configure while creating your VM Instance.
+**4.** Now you will get a page like this with many parameters you can configure while creating your VM Instance.
 
 <BR/>
 
@@ -80,7 +80,7 @@ For Now don't worry about them, we will cover them in an another article.
 
 <BR/>
 
-5. For now just in the **Firewall Section** click on **allow HTTP traffic**, and rest of the others leave them as deafult.
+**5.** For now just in the **Firewall Section** click on **allow HTTP traffic**, and rest of the others leave them as deafult.
 And Click **Create**.
 
 <BR/>
@@ -97,7 +97,7 @@ It will take few minutes to create the Virtual Machine.
 
 <BR/>
 
-Congratulations you have successfully created a new Virtual Machine.
+**Congratulations you have successfully created a new Virtual Machine.**
 
 
 
