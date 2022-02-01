@@ -87,6 +87,8 @@ And Click **Create**.
 
 ![Screenshot 2022-02-01 at 4 38 17 PM](https://user-images.githubusercontent.com/57451228/151977056-d0518126-8cc0-49bd-9286-3c5d038f8341.png)
 
+<BR/>
+
 It will take few minutes to create the Virtual Machine. 
 
 <BR/>
