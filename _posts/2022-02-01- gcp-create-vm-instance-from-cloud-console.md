@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Create a Virtual Machine instance from the Cloud Console - GCP Certification Cheat Sheet
-date:       2022-01-01 10:13:00
+date:       2022-02-01 10:13:00
 summary:    Let's get a quick overview of Create a Virtual Machine instance from the Cloud Console in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Create a Virtual Machine instance from the Cloud Console in Google Cloud Platform.
 categories:  GCP_General GCP_Compute_Engine
 permalink:  /gcp-create-vm-instance-from-cloud-console
