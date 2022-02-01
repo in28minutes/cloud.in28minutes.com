@@ -23,7 +23,7 @@ If you are a command line fan, Instead of using the Cloud Console to create the 
 
 ## Let's get started
 
-1. Click the icon on the top right of the screen to open Cloud Shell.
+**1.** Click the icon on the top right of the screen to open **Cloud Shell**.
 
 <BR/>
 
@@ -32,7 +32,7 @@ If you are a command line fan, Instead of using the Cloud Console to create the 
 
 <BR/>
 
-If Compute Engine API is not enable in your GCP, You will get a option like this. And Click on Enable.
+If **Compute Engine API** is not enable in your GCP, You will get a option like this. And Click on **Enable**.
 
 <BR/>
 
@@ -43,7 +43,7 @@ If Compute Engine API is not enable in your GCP, You will get a option like this
 <BR/>
 
 
-Once it opened, you will able to view the Cloud Shell Terminal.
+Once it opened, you will able to view the **Cloud Shell Terminal**.
 
 <BR/>
 
@@ -52,7 +52,7 @@ Once it opened, you will able to view the Cloud Shell Terminal.
 <BR/>
 
 
-2. Now create the Virtual Machine instance using the command.
+**2.** Now **create** the **Virtual Machine instance** using the command.
 
 <BR/>
 
@@ -63,7 +63,8 @@ gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-c
 ```
 <BR/>
 
-Note: While creating the VM instance you have to specify the zone in which you want to create your instance. And instance name must be unique under the the project.
+**Note: While creating the VM instance you have to specify the zone in which you want to create your instance. And instance name must be unique under the the project.**
+
 And, The new instance has some deafult values. To know more about all the defaults. Run 
 
 <BR/>
@@ -75,8 +76,8 @@ gcloud compute instances create --help
 ```
 <BR/>
 
-3. Now to check the VM Instance.
-In the Google Cloud Console, Click on the left top Navigation Menu, Click on Compute Engine, Click on VM instances.
+**3.** Now to **check the VM Instance**.
+In the **Google Cloud Console**, Click on the left top **Navigation Menu**, Click on **Compute Engine**, Click on **VM instances**.
 
 <BR/>
 
@@ -92,7 +93,7 @@ In the Google Cloud Console, Click on the left top Navigation Menu, Click on Com
 
 <BR/>
 
-Congratulations you have succesfully created a new Virtual Machine from the Cloud Shell.
+**Congratulations you have succesfully created a new Virtual Machine from the Cloud Shell.**
 
 
 
