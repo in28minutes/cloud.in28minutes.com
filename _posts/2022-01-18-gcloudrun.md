@@ -3,7 +3,7 @@ layout:     post
 title:      Create Simple Python Flask Application and Deploy to Cloud Run
 date:       2022-01-18 13:14:27
 summary:    You'll learn how to create a simple Python flask application, create docker image and run the scripts to deploy into Google CloudRun.
-categories:  Google Cloud
+categories:  Google Cloud Platform
 permalink:  /gcloudrun
 ---
 
