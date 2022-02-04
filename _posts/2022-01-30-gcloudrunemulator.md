@@ -22,7 +22,7 @@ known as Sqlite), create a docker image, and run the scripts to deploy into the 
 
 # Example Code
 
-This tutorial is accompanied by a working code example [on Github]()
+This tutorial is accompanied by a working code example [on Github](https://github.com/in28minutes/cloud.in28minutes.com/tree/master/projects/google-cloud-content/cloudrunemulator)
 
 # Getting Started
 
