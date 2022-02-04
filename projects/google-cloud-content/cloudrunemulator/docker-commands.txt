@@ -1,8 +1,0 @@
--- to create the image and start container --
-docker-compose up -d --build
-
--- to check if container is started
-docker ps -a
-
--- to stop and remove the container --
-docker-compose down
