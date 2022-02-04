@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello-world
+spec:
+  template:
+    spec:
+      containers:
+        ports:
+          - containerPort: 8080
+            name: h2c
+        resources:
+          limits:
+            #              cpu: 2
+            memory: 2048M
