@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Visit</title>
+    </head>
+    <body>
+        <h2>Last 10 visits</h2>
+        {% for time in times %}
+        <p>{{ time['timestamp'] }}</p>
+        {% endfor %}
+    </body>
+</html>
