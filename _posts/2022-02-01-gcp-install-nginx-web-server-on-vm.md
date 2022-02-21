@@ -3,7 +3,7 @@ layout:     post
 title:      Install NGINX Web Server on Virtual Machine - GCP Certification Cheat Sheet
 date:       2022-02-01 10:13:00
 summary:    Let's get a quick overview of Install NGINX Web Server on Virtual Machine in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Install NGINX Web Server on Virtual Machine in Google Cloud Platform.
-categories:  GCP_General GCP_Compute_Engine
+categories:  GCP_General GCP_Compute_Engine Google_Cloud_Platform
 permalink:  /gcp-install-nginx-web-server-on-vm
 ---
 Let's get a quick overview of Install NGINX Web Server on Virtual Machine in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Install NGINX Web Server on Virtual Machine in Google Cloud Platform.
