@@ -7,7 +7,7 @@ categories:  GOOGLE_CLOUD DATASTORE_EMULATOR
 permalink:  /google-cloud-certification-datastore-emulator
 ---
 
-In this tutorial, you'll learn how to create a simple python flask application and integrate it with a cloud datastore emulator.
+In this tutorial, you'll learn how to create a simple python flask application and integrate it with a cloud datastore. The application will be exposing a single endpoint <code>/</code> responsible for storing the current timestamp in the <code>visit</code> key inside the default namespace and also return the html page listing the last ten user visit timestamps.
 
 ![](/images/googlecloud/cloudrun_datastore.png)
 
@@ -23,6 +23,8 @@ In this tutorial, you'll learn how to create a simple python flask application a
 This tutorial is accompanied by a working code example [on in28minutes]()
 
 # Getting Started
+
+In this tutorial since we will be using the datastore emulator hence we don't need the actual datastore to be created in the google cloud environment.
 
 ## 1. Create Python application
 
