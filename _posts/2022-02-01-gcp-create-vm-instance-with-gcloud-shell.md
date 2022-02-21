@@ -3,7 +3,7 @@ layout:     post
 title:      Create a Virtual Machine instance from the Cloud Shell - GCP Certification Cheat Sheet
 date:       2022-02-01 10:13:00
 summary:    Let's get a quick overview of Create a Virtual Machine instance from the Cloud Shell in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Create a Virtual Machine instance from the Cloud Shell in Google Cloud Platform.
-categories:  GCP_General GCP_Compute_Engine
+categories:  GCP_General GCP_Compute_Engine Google_Cloud_Platform
 permalink:  /gcp-create-vm-instance-with-gcloud-shell
 ---
 Let's get a quick overview of Create a Virtual Machine instance from the Cloud Shell in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Create a Virtual Machine instance from the Cloud Shell in Google Cloud Platform.
