@@ -62,5 +62,5 @@ For virtualization of computing resources, VMs are the basic building blocks. It
 <pre>
 Thank You for Choosing to Learn from in28Minutes
 
-Author
+Author 
 <a href="https://www.linkedin.com/in/debrup-365/">Debrup Mondal ❤️</a>
