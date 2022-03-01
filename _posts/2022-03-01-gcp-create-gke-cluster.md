@@ -4,7 +4,7 @@ title:      Create a Google Kubernetes Engine (GKE) Cluster - GCP Certification 
 date:       2022-03-01 10:13:00
 summary:    Let's get a quick overview of creating a Google Kubernetes Engine (GKE) Cluster in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding creating a Google Kubernetes Engine (GKE) Cluster in Google Cloud Platform.
 categories:  GCP_General GCP_Kubernetes_Engine Google_Cloud_Platform
-permalink:  /gcp-google-kubernetes-engine-gke-overview
+permalink:  /gcp-create-gke-cluster
 ---
 Let's get a quick overview of creating a Google Kubernetes Engine (GKE) Cluster in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding creating a Google Kubernetes Engine (GKE) Cluster in Google Cloud Platform.
 
