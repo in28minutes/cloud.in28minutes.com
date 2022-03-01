@@ -87,6 +87,7 @@ Now it will take a few minutes and you will get a ouput like below:
 
 ![Screenshot 2022-02-26 at 10 30 42 AM](https://user-images.githubusercontent.com/57451228/155847448-54675e47-e4b7-46c7-9fdc-55103406f78b.png)
 
+<BR/>
 
 **Yeppie! Congratulations you have successfully created your GKE Cluster.**
 
@@ -111,6 +112,8 @@ Now, you will get a output like the follwoing:
 
 ![Screenshot 2022-02-26 at 10 31 25 AM](https://user-images.githubusercontent.com/57451228/155847717-12d316cb-f156-45ee-9bab-f6ac4f16dad7.png)
 
+<BR/>
+
 **Congratulations! Now you can interact with your GKE Cluster.**
 
 <BR/>
@@ -129,6 +132,8 @@ kubectl create deployment in28minutes-server --image=gcr.io/google-samples/hello
 Now you will get a output like this:
 
 ![Screenshot 2022-02-26 at 10 32 16 AM](https://user-images.githubusercontent.com/57451228/155847985-aab8ebf3-d2bc-4dce-86bb-d1c95169242c.png)
+
+<BR/>
 
 **Awesome, You have done a great work.**
 
@@ -179,6 +184,7 @@ Wow! Satisfaction!
 
 ![Screenshot 2022-02-26 at 10 35 30 AM](https://user-images.githubusercontent.com/57451228/155848696-18046061-11a0-491f-9340-0ffc920f4aa5.png)
 
+<BR/>
 
 **Congratulations you have successfully deployed containerized application to Google Kubernetes Engine (GKE).**
 
@@ -201,6 +207,8 @@ gcloud container clusters delete in28minutes-cluster
 It will take some some and you will get a output like this.
 
 ![Screenshot 2022-02-26 at 10 40 31 AM](https://user-images.githubusercontent.com/57451228/155848145-dcbf77d3-eac1-46e5-a8ad-b5e74f967f7d.png)
+
+<BR/>
 
 **Congratulations you have successfully deleted your CKE Cluster.**
 
