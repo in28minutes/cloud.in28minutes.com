@@ -15,7 +15,7 @@ Let's get a quick overview of Google Kubernetes Engine (GKE) in Google Cloud Pla
 - How GKE work?
 - Features provide by Kubernetes on Google Cloud?
 
-<BR/>
+
 
 ## Kubernetes Engine
 
