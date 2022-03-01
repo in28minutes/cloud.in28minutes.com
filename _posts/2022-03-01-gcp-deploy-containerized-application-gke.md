@@ -210,7 +210,7 @@ It will take some some and you will get a output like this.
 
 <BR/>
 
-**Congratulations you have successfully deleted your CKE Cluster.**
+**Congratulations you have successfully deleted your GKE Cluster.**
 
 
 
