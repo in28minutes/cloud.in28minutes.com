@@ -19,7 +19,7 @@ Let's get a quick overview of Google Kubernetes Engine (GKE) in Google Cloud Pla
 
 ## Kubernetes Engine
 
-![kubernetes-engine-card](https://user-images.githubusercontent.com/57451228/156114123-2b84f9f8-02e1-410c-9be9-5b13b3633948.png)
+![container-orchestration](https://user-images.githubusercontent.com/57451228/144887464-a10eb4f3-24aa-4c0a-bca8-3e87716c49ff.png)
 
 
 ```sh
