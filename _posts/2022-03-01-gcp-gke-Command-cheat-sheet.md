@@ -11,6 +11,8 @@ Let's get a quick overview of Google Kubernetes Engine (GKE) Command Cheat Sheet
 ## You will learn
 
 - Google Kubernetes Engine (GKE) Command Line Cheat Sheet
+    - Cluster Management - Command 
+    - Workload Management - Command 
 
 <BR/>
 
