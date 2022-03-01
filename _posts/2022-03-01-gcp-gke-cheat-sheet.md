@@ -4,7 +4,7 @@ title:      Google Kubernetes Engine (GKE) Cheat Sheet - GCP Certification Cheat
 date:       2022-03-01 11:13:00
 summary:    Let's get a quick overview of Google Kubernetes Engine (GKE) Cheat Sheet from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Engine (GKE).
 categories:  GCP_General GCP_Computing_Services Google_Kubernetes_Engine Google_Cloud_Platform
-permalink:  /gcp-kubernetes-engine-cheat-sheet-gke
+permalink:  /gcp-kubernetes-engine-cheat-sheet-qna-gke
 ---
 Let's get a quick overview of Google Kubernetes Engine (GKE) Cheat Sheet from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Engine (GKE).
 
