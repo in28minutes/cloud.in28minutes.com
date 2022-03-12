@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Google Kubernetes Engine (GKE) - GCP Certification Cheat Sheet
+title:      Google Compute Engine Quick Recap - GCP Certification Cheat Sheet
 date:       2022-03-12 10:13:00
 summary:    Let's get a quick overview of Google Compute Engine in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Google Compute Engine in Google Cloud Platform.
 categories:  GCP_General GCP_Compute_Engine Google_Cloud_Platform
