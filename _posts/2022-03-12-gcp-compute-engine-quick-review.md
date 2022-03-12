@@ -14,7 +14,7 @@ Let's get a quick overview of Google Compute Engine in Google Cloud Platform fro
 
 
 
-## Google Compute Engine Quick Recap
+## Google Compute Engine Quick Review
 
 - **Image:**
   - What **operating system and what software** do you want on the VM instance?
