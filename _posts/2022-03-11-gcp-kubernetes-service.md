@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Google Kubernetes Service - GCP Certification Cheat Sheet
+title:      Google Kubernetes Service 
 date:       2022-03-11 11:13:00
 summary:    Let's get a quick overview of Google Kubernetes Service from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Service.
-categories:  GCP_General GCP_Computing_Services Google_Kubernetes_Engine Google_Cloud_Platform Google_Kubernetes_Service
+categories:  GCP_General GCP_Computing_Services Google_Kubernetes_Engine Google_Cloud_Platform 
 permalink:  /gcp-kubernetes-service
 ---
 Let's get a quick overview of Google Kubernetes Service from an GCP certification perspective. We will look at important certification questions regarding Google Kubernetes Service.
