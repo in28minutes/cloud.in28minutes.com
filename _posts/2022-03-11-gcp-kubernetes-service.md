@@ -78,5 +78,6 @@ It's also helps in `load balancing`. Here client can call a single and static IP
 <pre>
 Thank You for Choosing to Learn from in28Minutes
 
-- <a href="https://www.linkedin.com/in/debrup-365/">Debrup ❤️</a>
-</pre>
+Author
+<a href="https://www.linkedin.com/in/debrup-365/">Debrup Mondal ❤️</a>
+
