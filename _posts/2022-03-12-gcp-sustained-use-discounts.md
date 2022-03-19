@@ -43,5 +43,5 @@ The first thing that we would be talking about is `sustained use discounts`.
 <pre>
 Thank You for Choosing to Learn from in28Minutes
 
-Created By
+Author
 <a href="https://www.linkedin.com/in/debrup-365/">Debrup Mondal ❤️</a>
