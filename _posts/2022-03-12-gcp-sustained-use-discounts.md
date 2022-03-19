@@ -3,7 +3,7 @@ layout:     post
 title:      GCP - Sustained use Discounts 
 date:       2022-03-12 10:13:00
 summary:    Let's get a quick overview of Sustained use Discounts in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Sustained use Discounts in Google Cloud Platform.
-categories:  GCP_General GCP_Computing_Services
+categories:  GCP_General GCP_Computing_Services GCP_Discounts
 permalink:  /gcp-sustained-use-discounts
 ---
 Let's get a quick overview of Sustained use Discounts in Google Cloud Platform from an GCP certification perspective. We will look at important certification questions regarding Sustained use Discounts in Google Cloud Platform.
