@@ -71,7 +71,6 @@ It's also helps in `load balancing`. Here client can call a single and static IP
 - Headless: You can use a headless service when you want a Pod grouping, but don't need a stable IP address.
 
 
-
 <BR/>
 <BR/>
 
