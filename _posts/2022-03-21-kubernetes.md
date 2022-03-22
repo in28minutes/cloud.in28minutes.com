@@ -15,15 +15,26 @@ Kubernetes is one of the most important tools of the last few years. We will und
 - What is the architecture of Kubernetes?
 - How can you use Kubernetes in the Cloud?
 
-## Kubernetes 
-![](/images/aws/kubernetes-with-gcp-course-overview.png)
+## Kubernetes Introduction
+![](/images/aws/kubernetes-01-intro.png)
+
+## Kubernetes Cluster
 ![](/images/aws/kubernetes-02-architecture-cluster.png)
+
+## Kubernetes Master Node
 ![](/images/aws/kubernetes-03-architecture-master-node.png)
+
+## Kubernetes Worker Node
 ![](/images/aws/kubernetes-04-architecture-worker-node.png)
+
+## Kubernetes Pods
 ![](/images/aws/kubernetes-05-architecture-node-pod-containers.png)
+
+## Creating a Docker Image
 ![](/images/aws/kubernetes-06-deployment-1.png)
+
+## Deploying to Kubernetes
 ![](/images/aws/kubernetes-06-deployment-2.png)
+
+## Service and Pod
 ![](/images/aws/kubernetes-07-deployment-replicaset-pod.png)
-![](/images/aws/kubernetes-08-service-intro.png)
-![](/images/aws/kubernetes-09-istio-1.png)
-![](/images/aws/kubernetes-09-istio-2.png)
