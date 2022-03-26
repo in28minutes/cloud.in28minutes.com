@@ -32,6 +32,9 @@ Let's get a quick overview of Google Kubernetes Engine (GKE) Command Cheat Sheet
 <BR/>
 
 ## GKE - Workload Management - Command 
+
+<BR/>
+
 |Description	|Command|
 |:--:|--|
 |`List Pods/Service/Replica Sets`|	kubectl get pods/services/replicasets|
