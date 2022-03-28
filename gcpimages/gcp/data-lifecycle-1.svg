@@ -1,0 +1,1784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 844.1 990.2"
+	 style="enable-background:new 0 0 844.1 990.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E1F6FE;}
+	.st1{fill:#E2F3EC;}
+	.st2{fill:#FEF7E0;}
+	.st3{fill:#212121;}
+	.st4{font-family:'Roboto-Medium';}
+	.st5{font-size:12px;}
+	.st6{fill:#FFFFFF;}
+	.st7{clip-path:url(#SVGID_2_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{font-family:'Roboto-Regular';}
+	.st9{font-family:'ArialMT';}
+	.st10{fill:#AECBFA;}
+	.st11{fill:#669DF6;}
+	.st12{fill:#4285F4;}
+	.st13{clip-path:url(#SVGID_4_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st14{clip-path:url(#SVGID_6_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st15{clip-path:url(#SVGID_8_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st16{clip-path:url(#SVGID_10_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st17{clip-path:url(#SVGID_12_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st18{fill:#FFA000;}
+	.st19{fill:#F57C00;}
+	.st20{fill:#FFCA28;}
+	.st21{fill:#FFFFFF;fill-opacity:0.2;}
+	.st22{fill:#A52714;}
+	.st23{fill:#757575;}
+	.st24{clip-path:url(#SVGID_14_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st25{clip-path:url(#SVGID_16_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st26{clip-path:url(#SVGID_18_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st27{clip-path:url(#SVGID_20_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st28{clip-path:url(#SVGID_22_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st29{clip-path:url(#SVGID_24_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st30{clip-path:url(#SVGID_26_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st31{clip-path:url(#SVGID_28_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st32{clip-path:url(#SVGID_30_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st33{clip-path:url(#SVGID_32_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st34{clip-path:url(#SVGID_34_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st35{clip-path:url(#SVGID_36_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st36{fill:#1A73E8;}
+	.st37{fill:#EAEDEF;}
+	.st38{clip-path:url(#SVGID_38_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st39{clip-path:url(#SVGID_40_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st40{clip-path:url(#SVGID_42_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st41{clip-path:url(#SVGID_44_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st42{clip-path:url(#SVGID_46_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st43{clip-path:url(#SVGID_48_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st44{clip-path:url(#SVGID_50_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st45{clip-path:url(#SVGID_52_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st46{clip-path:url(#SVGID_54_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st47{clip-path:url(#SVGID_56_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st48{fill:#0F9D58;}
+	.st49{fill:#10A05A;}
+	.st50{fill:#1B985A;}
+	.st51{fill:#F1F1F1;}
+	.st52{fill:#616161;}
+	.st53{clip-path:url(#SVGID_58_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st54{clip-path:url(#SVGID_60_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st55{clip-path:url(#SVGID_62_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st56{clip-path:url(#SVGID_64_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st57{clip-path:url(#SVGID_66_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st58{clip-path:url(#SVGID_68_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st59{clip-path:url(#SVGID_70_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st60{fill:#AECBFC;}
+	.st61{clip-path:url(#SVGID_72_);fill:none;stroke:#DFDFDF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<defs>
+	
+		<font-face  ascent="927.7344" cap-height="710.9375" descent="-244.14062" font-family="Roboto" font-size="12" font-weight="500" panose-1="2 0 0 0 0 0 0 0 0 0" slope="0" underline-position="-73.24219" underline-thickness="48.828125" units-per-em="1000" x-height="528.3203">
+		<font-face-src>
+			<font-face-name  name="Roboto-Medium"></font-face-name>
+		</font-face-src>
+	</font-face>
+	
+		<font-face  ascent="927.7344" cap-height="710.9375" descent="-244.14062" font-family="Roboto" font-size="12" font-weight="400" panose-1="2 0 0 0 0 0 0 0 0 0" slope="0" underline-position="-73.24219" underline-thickness="48.828125" units-per-em="1000" x-height="528.3203">
+		<font-face-src>
+			<font-face-name  name="Roboto-Regular"></font-face-name>
+		</font-face-src>
+	</font-face>
+</defs>
+<g id="Graphic_864">
+	<rect x="243.9" y="45.9" class="st0" width="182.6" height="933.8"/>
+</g>
+<g id="Graphic_863">
+	<rect x="652.1" y="45.5" class="st1" width="181.5" height="934.2"/>
+</g>
+<g id="Graphic_862">
+	<rect x="446.5" y="45.3" class="st2" width="185.6" height="934.4"/>
+</g>
+<g id="Graphic_861">
+	<text transform="matrix(1 0 0 1 320.9731 26.8002)" class="st3 st4 st5">Store</text>
+</g>
+<g id="Group_846">
+	<g id="Graphic_860">
+		<rect x="263.5" y="65.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="263.5" y="65.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="65.3" class="st7" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 90.3076)" class="st3 st8 st5">Cloud</text>
+		<text transform="matrix(1 0 0 1 345.4379 90.3076)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 314.4887 104.3076)" class="st3 st8 st5">Storage</text>
+	</g>
+	<g id="Group_847">
+		<g id="Graphic_859">
+			<rect x="281" y="83.3" class="st10" width="25" height="8.8"/>
+		</g>
+		<g id="Graphic_858">
+			<rect x="303.5" y="83.3" class="st11" width="2.5" height="8.8"/>
+		</g>
+		<g id="Graphic_857">
+			<path class="st12" d="M306,83.3h-2.5v8.8L306,83.3z"/>
+		</g>
+		<g id="Graphic_856">
+			<rect x="281" y="83.3" class="st11" width="2.5" height="8.8"/>
+		</g>
+		<g id="Graphic_855">
+			<rect x="286" y="87.1" class="st6" width="7.5" height="1.3"/>
+		</g>
+		<g id="Graphic_854">
+			<path class="st6" d="M298.7,85.8h0.8c0.8,0,1.5,0.7,1.5,1.5v0.8c0,0.8-0.7,1.5-1.5,1.5h-0.8c-0.8,0-1.5-0.7-1.5-1.5v-0.8
+				C297.2,86.5,297.9,85.8,298.7,85.8z"/>
+		</g>
+		<g id="Graphic_853">
+			<rect x="281" y="94.6" class="st10" width="25" height="8.8"/>
+		</g>
+		<g id="Graphic_852">
+			<rect x="303.5" y="94.6" class="st11" width="2.5" height="8.8"/>
+		</g>
+		<g id="Graphic_851">
+			<path class="st12" d="M306,94.6h-2.5v8.8L306,94.6z"/>
+		</g>
+		<g id="Graphic_850">
+			<rect x="281" y="94.6" class="st11" width="2.5" height="8.8"/>
+		</g>
+		<g id="Graphic_849">
+			<rect x="286" y="98.3" class="st6" width="7.5" height="1.3"/>
+		</g>
+		<g id="Graphic_848">
+			<path class="st6" d="M298.7,97.1h0.8c0.8,0,1.5,0.7,1.5,1.5v0.8c0,0.8-0.7,1.5-1.5,1.5h-0.8c-0.8,0-1.5-0.7-1.5-1.5v-0.8
+				C297.2,97.7,297.9,97.1,298.7,97.1z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_835">
+	<g id="Graphic_845">
+		<rect x="263.5" y="141.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="263.5" y="141.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="141.3" class="st13" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 173.3076)" class="st3 st8 st5">Cloud SQL</text>
+	</g>
+	<g id="Group_836">
+		<g id="Graphic_844">
+			<path class="st10" d="M281,167v4.5l11,5.9v-4.5L281,167z"/>
+		</g>
+		<g id="Graphic_843">
+			<path class="st10" d="M281,173.9v4.5l11,5.9v-4.5L281,173.9z"/>
+		</g>
+		<g id="Graphic_842">
+			<path class="st11" d="M292,177.3l11-5.9V167l-11,5.9V177.3z"/>
+		</g>
+		<g id="Graphic_841">
+			<path class="st11" d="M292,184.3l11-5.9v-4.5l-11,5.9V184.3z"/>
+		</g>
+		<g id="Graphic_840">
+			<path class="st12" d="M303,164.7v-4.5l-11-5.8v4.5L303,164.7z"/>
+		</g>
+		<g id="Graphic_839">
+			<path class="st11" d="M292,154.3l-11,5.8v4.5l11-5.9V154.3z"/>
+		</g>
+		<g id="Graphic_838">
+			<path class="st10" d="M281,160.1v4.5l11,5.9V166L281,160.1z"/>
+		</g>
+		<g id="Graphic_837">
+			<path class="st11" d="M292,170.5l11-5.9v-4.5l-11,5.9V170.5z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_802">
+	<g id="Graphic_834">
+		<rect x="263.5" y="217.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_5_" x="263.5" y="217.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_6_">
+				<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="217.3" class="st14" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 249.3076)" class="st3 st8 st5">Datastore</text>
+	</g>
+	<g id="Group_803">
+		<g id="Graphic_833">
+			<path class="st10" d="M286.5,236.9l1.4-1.4h-8.4l1.4,1.4H286.5z"/>
+		</g>
+		<g id="Graphic_832">
+			<path class="st11" d="M286.5,236.9v5.6l1.4,1.4v-8.4L286.5,236.9z"/>
+		</g>
+		<g id="Graphic_831">
+			<path class="st10" d="M280.9,236.9l-1.4-1.4v8.4l1.4-1.4V236.9z"/>
+		</g>
+		<g id="Graphic_830">
+			<path class="st12" d="M280.9,242.5l-1.4,1.4h8.4l-1.4-1.4H280.9z"/>
+		</g>
+		<g id="Graphic_829">
+			<rect x="280.9" y="236.9" class="st10" width="5.6" height="5.6"/>
+		</g>
+		<g id="Graphic_828">
+			<path class="st12" d="M296.3,236.9l1.4-1.4h-8.4l1.4,1.4H296.3z"/>
+		</g>
+		<g id="Graphic_827">
+			<path class="st11" d="M296.3,236.9v5.6l1.4,1.4v-8.4L296.3,236.9z"/>
+		</g>
+		<g id="Graphic_826">
+			<path class="st12" d="M290.7,236.9l-1.4-1.4v8.4l1.4-1.4V236.9z"/>
+		</g>
+		<g id="Graphic_825">
+			<path class="st11" d="M290.7,242.5l-1.4,1.4h8.4l-1.4-1.4H290.7z"/>
+		</g>
+		<g id="Graphic_824">
+			<rect x="290.7" y="236.9" class="st6" width="5.6" height="5.6"/>
+		</g>
+		<g id="Graphic_823">
+			<path class="st12" d="M306.1,236.9l1.4-1.4h-8.4l1.4,1.4H306.1z"/>
+		</g>
+		<g id="Graphic_822">
+			<path class="st11" d="M306.1,236.9v5.6l1.4,1.4v-8.4L306.1,236.9z"/>
+		</g>
+		<g id="Graphic_821">
+			<path class="st12" d="M300.5,236.9l-1.4-1.4v8.4l1.4-1.4V236.9z"/>
+		</g>
+		<g id="Graphic_820">
+			<path class="st11" d="M300.5,242.5l-1.4,1.4h8.4l-1.4-1.4H300.5z"/>
+		</g>
+		<g id="Graphic_819">
+			<rect x="300.5" y="236.9" class="st6" width="5.6" height="5.6"/>
+		</g>
+		<g id="Graphic_818">
+			<path class="st12" d="M286.5,248.1l1.4-1.4h-8.4l1.4,1.4H286.5z"/>
+		</g>
+		<g id="Graphic_817">
+			<path class="st11" d="M286.5,248.1v5.6l1.4,1.4v-8.4L286.5,248.1z"/>
+		</g>
+		<g id="Graphic_816">
+			<path class="st12" d="M280.9,248.1l-1.4-1.4v8.4l1.4-1.4V248.1z"/>
+		</g>
+		<g id="Graphic_815">
+			<path class="st11" d="M280.9,253.7l-1.4,1.4h8.4l-1.4-1.4H280.9z"/>
+		</g>
+		<g id="Graphic_814">
+			<rect x="280.9" y="248.1" class="st6" width="5.6" height="5.6"/>
+		</g>
+		<g id="Graphic_813">
+			<path class="st10" d="M296.3,248.1l1.4-1.4h-8.4l1.4,1.4H296.3z"/>
+		</g>
+		<g id="Graphic_812">
+			<path class="st11" d="M296.3,248.1v5.6l1.4,1.4v-8.4L296.3,248.1z"/>
+		</g>
+		<g id="Graphic_811">
+			<path class="st10" d="M290.7,248.1l-1.4-1.4v8.4l1.4-1.4V248.1z"/>
+		</g>
+		<g id="Graphic_810">
+			<path class="st12" d="M290.7,253.7l-1.4,1.4h8.4l-1.4-1.4H290.7z"/>
+		</g>
+		<g id="Graphic_809">
+			<rect x="290.7" y="248.1" class="st10" width="5.6" height="5.6"/>
+		</g>
+		<g id="Graphic_808">
+			<path class="st10" d="M306.1,248.1l1.4-1.4h-8.4l1.4,1.4H306.1z"/>
+		</g>
+		<g id="Graphic_807">
+			<path class="st11" d="M306.1,248.1v5.6l1.4,1.4v-8.4L306.1,248.1z"/>
+		</g>
+		<g id="Graphic_806">
+			<path class="st10" d="M300.5,248.1l-1.4-1.4v8.4l1.4-1.4V248.1z"/>
+		</g>
+		<g id="Graphic_805">
+			<path class="st12" d="M300.5,253.7l-1.4,1.4h8.4l-1.4-1.4H300.5z"/>
+		</g>
+		<g id="Graphic_804">
+			<rect x="300.5" y="248.1" class="st10" width="5.6" height="5.6"/>
+		</g>
+	</g>
+</g>
+<g id="Group_780">
+	<g id="Graphic_801">
+		<rect x="263.5" y="293.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_7_" x="263.5" y="293.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="293.3" class="st15" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 325.3076)" class="st3 st8 st5">Cloud Bigtable</text>
+	</g>
+	<g id="Group_781">
+		<g id="Graphic_800">
+			<path class="st11" d="M298.5,313.6l-5.9-3.5c-0.9-0.5-1.5-1.4-1.7-2.4c0-0.1,0.2-0.4,0.5-0.3l7.3,4.3c0.9,0.5,0.3,2.8,0.3,2.8
+				C299,314.1,298.8,313.8,298.5,313.6z"/>
+		</g>
+		<g id="Graphic_799">
+			<path class="st10" d="M300.2,322.2c0,0.2-0.1,0.4-0.2,0.5l-1.5,0.9v-11c0-0.4,0.2-0.8-0.1-1l1.3,0.9c0.3,0.2,0.5,0.6,0.5,0.9
+				V322.2z"/>
+		</g>
+		<g id="Graphic_798">
+			<path class="st11" d="M292.6,323.5c-0.1,0-0.2,0-0.3-0.1l-4.8-2.9v1.3l5.1,3l0.4-0.8C293,324.1,292.7,323.5,292.6,323.5z"/>
+		</g>
+		<g id="Graphic_797">
+			<path class="st11" d="M292.9,326c-0.2,0.1-0.4,0.1-0.6,0l-4.8-2.9v0.9c0,0.2,0.1,0.4,0.3,0.5l4.6,2.7c0.2,0.1,0.4,0.1,0.5,0
+				c0.1-0.2,0.2-0.5,0.3-0.7L292.9,326L292.9,326z"/>
+		</g>
+		<g id="Graphic_796">
+			<path class="st10" d="M292.6,322.3l5.1-3v-0.6c0-0.2-0.1-0.4-0.3-0.5l-4.6-2.7c-0.2-0.1-0.4-0.1-0.5,0l-4.6,2.7
+				c-0.2,0.1-0.3,0.3-0.3,0.5v0.6L292.6,322.3z"/>
+		</g>
+		<g id="Graphic_795">
+			<path class="st11" d="M292.6,321.1l-4.8-2.8c-0.2,0.1-0.3,0.3-0.3,0.5v0.6l5.1,3l0.4-0.8L292.6,321.1z"/>
+		</g>
+		<g id="Graphic_794">
+			<path class="st12" d="M292.6,323.5v1.3l5.1-3v-1.3l-4.8,2.9C292.8,323.5,292.7,323.5,292.6,323.5z"/>
+		</g>
+		<g id="Graphic_793">
+			<path class="st12" d="M292.9,326c-0.1,0-0.2,0.1-0.3,0.1c0,0.4-0.1,1.3,0,1.3c0.1,0,0.2,0,0.3-0.1l4.6-2.7
+				c0.2-0.1,0.3-0.3,0.3-0.5v-0.9L292.9,326L292.9,326z"/>
+		</g>
+		<g id="Graphic_792">
+			<path class="st12" d="M297.4,318.2l-4.8,2.8v1.3l5.1-3v-0.6C297.7,318.5,297.6,318.3,297.4,318.2z"/>
+		</g>
+		<g id="Graphic_791">
+			<path class="st11" d="M286.7,329l5.8,3.4c0.9,0.6,1.6,1.5,1.8,2.5c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0l-7.6-4.5
+				c-0.7-0.4-0.1-2.6-0.1-2.6C286.2,328.5,286.4,328.8,286.7,329z"/>
+		</g>
+		<g id="Graphic_790">
+			<path class="st10" d="M285,329.3v-9.1c0-0.2,0.1-0.4,0.3-0.5l1.4-0.8v11c0,0.4,0,0.9,0.3,1.2l-1.5-0.9
+				C285.2,329.9,285,329.6,285,329.3z"/>
+		</g>
+		<g id="Graphic_789">
+			<path class="st11" d="M290,312.2c-0.3-0.2-0.7-0.2-1,0l-5.9,3.5c-0.9,0.5-1.9,0.6-2.9,0.4c-0.1-0.1-0.2-0.2-0.2-0.3
+				s0.1-0.2,0.2-0.3l8.7-5.2C289.3,310.1,290,312.2,290,312.2z"/>
+		</g>
+		<g id="Graphic_788">
+			<path class="st10" d="M290,310.3l7.4,4.4c0.2,0.1,0.3,0.2,0.3,0.4v1.6l-9.3-5.5c-0.3-0.2-0.7-0.2-1,0l1.6-1
+				C289.3,310.1,289.7,310.1,290,310.3L290,310.3z"/>
+		</g>
+		<g id="Graphic_787">
+			<path class="st11" d="M295.1,330.3c0.3,0.2,0.7,0.2,1,0l5.8-3.5c0.9-0.5,1.9-0.7,2.9-0.4c0.1,0.1,0.2,0.2,0.2,0.3
+				c0,0.1-0.1,0.2-0.2,0.3l-8.8,5.2C295.8,332.4,295.1,330.3,295.1,330.3L295.1,330.3z"/>
+		</g>
+		<g id="Graphic_786">
+			<path class="st10" d="M287.7,327.9c-0.1-0.1-0.2-0.3-0.2-0.5v-1.6l9.3,5.5c0.3,0.2,0.7,0.2,1,0l-1.6,1c-0.3,0.2-0.7,0.2-1,0
+				L287.7,327.9z"/>
+		</g>
+		<g id="Graphic_785">
+			<path class="st11" d="M284.6,318.2c-0.3,0.2-0.5,0.5-0.5,0.9v6.9c0,1.1-0.4,2.1-1.2,2.8c-0.1,0.1-0.2,0.1-0.3,0.1
+				c-0.1,0-0.2-0.1-0.2-0.2c0-0.3,0-10.5,0-10.5C282.5,317.8,284.6,318.2,284.6,318.2L284.6,318.2z"/>
+		</g>
+		<g id="Graphic_784">
+			<path class="st10" d="M289.5,313.7c0.2-0.1,0.3-0.1,0.5,0l1.4,0.8l-8.4,5c-0.3,0.2-0.5,0.5-0.5,0.9v-1.9c0-0.4,0.2-0.7,0.5-0.9
+				L289.5,313.7z"/>
+		</g>
+		<g id="Graphic_783">
+			<path class="st11" d="M301.2,323.3v-6.9c0-1,0.4-2,1.2-2.8c0,0,0.5-0.1,0.4,0.3c0,0.4,0,10.3,0,10.3c-0.4,0.5-2.2,0-2.2,0
+				C300.9,324,301.1,323.7,301.2,323.3z"/>
+		</g>
+		<g id="Graphic_782">
+			<path class="st10" d="M302.3,324.9l-6.6,4c-0.2,0.1-0.4,0.1-0.5,0l-1.4-0.8l8.5-5.1c0.3-0.2,0.5-0.5,0.5-0.9v1.9
+				C302.8,324.4,302.3,324.9,302.3,324.9z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_772">
+	<g id="Graphic_779">
+		<rect x="263.5" y="369.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_9_" x="263.5" y="369.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_10_">
+				<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="369.3" class="st16" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 401.3076)" class="st3 st8 st5">BigQuery</text>
+	</g>
+	<g id="Group_773">
+		<g id="Graphic_778">
+			<path class="st10" d="M287.2,395.8v3.5c0.5,0.9,1.3,1.7,2.2,2.3v-5.7H287.2z"/>
+		</g>
+		<g id="Graphic_777">
+			<path class="st11" d="M291.3,392.6v9.8c0.5,0.1,0.9,0.1,1.4,0.1c0.4,0,0.9,0,1.3-0.1v-9.8H291.3z"/>
+		</g>
+		<g id="Graphic_776">
+			<path class="st10" d="M296.1,397.1v4.3c0.9-0.6,1.7-1.4,2.2-2.4v-1.9H296.1z"/>
+		</g>
+		<g id="Graphic_775">
+			<path class="st12" d="M301.5,402.9l-1.9,1.9c-0.2,0.2-0.2,0.6,0,0.8l4.6,4.6c0.1,0.1,0.2,0.2,0.4,0.2c0.1,0,0.3-0.1,0.4-0.2
+				l1.9-1.8c0.2-0.2,0.2-0.6,0-0.8l-4.6-4.6C302,402.7,301.7,402.7,301.5,402.9"/>
+		</g>
+		<g id="Graphic_774">
+			<path class="st11" d="M292.7,384.3c-4.7,0-9,2.8-10.8,7.2c-1.8,4.4-0.8,9.4,2.5,12.8s8.4,4.4,12.8,2.6c4.4-1.8,7.2-6.1,7.2-10.8
+				C304.4,389.6,299.2,384.3,292.7,384.3 M292.7,404.7c-4.8,0-8.7-3.9-8.7-8.7c0-4.8,3.9-8.7,8.7-8.7c4.8,0,8.7,3.9,8.7,8.7
+				C301.4,400.8,297.5,404.7,292.7,404.7"/>
+		</g>
+	</g>
+</g>
+<g id="Group_760">
+	<g id="Graphic_771">
+		<rect x="263.5" y="445.6" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_11_" x="263.5" y="445.6" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_12_">
+				<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="445.6" class="st17" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 470.5502)" class="st3 st8 st5">Cloud Storage</text>
+		<text transform="matrix(1 0 0 1 389.6176 470.5502)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 314.4887 484.5502)" class="st3 st8 st5">for Firebase</text>
+	</g>
+	<g id="Group_761">
+		<g id="Group_769">
+			<g id="Graphic_770">
+				<path class="st6" d="M299.8,465.6c0-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-3.4,3.4l-2.8-5.2c-0.1-0.4-0.6-0.5-0.8-0.4
+					c-0.1,0.1-0.2,0.2-0.4,0.4l-1.4,2.8l-3.6-6.9c-0.2-0.4-0.6-0.5-1-0.2c-0.1,0-0.2,0.2-0.2,0.5l-3.6,22.7l9.5,5.3
+					c0.6,0.4,1.3,0.4,1.9,0l9.6-5.3L299.8,465.6z"/>
+			</g>
+		</g>
+		<g id="Graphic_768">
+			<path class="st18" d="M281.5,482.4l3.6-22.7c0-0.4,0.4-0.6,0.7-0.6c0.1,0,0.4,0.1,0.5,0.4l3.6,6.9l1.4-2.8c0.2-0.4,0.6-0.5,1-0.4
+				c0.1,0.1,0.2,0.1,0.2,0.2l9.9,18.9L281.5,482.4z"/>
+		</g>
+		<g id="Graphic_767">
+			<path class="st19" d="M293.7,473.5l-3.8-7.2l-8.4,16.1L293.7,473.5z"/>
+		</g>
+		<g id="Graphic_766">
+			<path class="st20" d="M302.5,482.4l-2.8-16.8c-0.1-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-17.2,17.1l9.5,5.3
+				c0.6,0.4,1.3,0.4,1.9,0L302.5,482.4z"/>
+		</g>
+		<g id="Graphic_765">
+			<path class="st21" d="M299.8,465.6c0-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-3.4,3.4l-2.8-5.2c-0.1-0.4-0.6-0.5-0.8-0.4
+				c-0.1,0.1-0.2,0.2-0.4,0.4l-1.4,2.8l-3.6-6.9c-0.2-0.4-0.6-0.5-1-0.2c-0.1,0-0.2,0.2-0.2,0.5l-3.6,22.7h0.1l13.6-13.7l3.4-3.4
+				c0.4-0.2,0.7-0.2,1,0c0.1,0.1,0.1,0.2,0.2,0.4l2.6,16.7L299.8,465.6z M281.5,482.3l3.6-22.5c0-0.4,0.4-0.6,0.7-0.6
+				c0.2,0,0.4,0.1,0.5,0.4l3.6,6.9l1.4-2.8c0.2-0.4,0.6-0.5,1-0.2c0.1,0.1,0.2,0.1,0.2,0.2l2.6,5L281.5,482.3z"/>
+		</g>
+		<g id="Graphic_764">
+			<path class="st22" d="M292.9,487.6c-0.6,0.4-1.3,0.4-1.9,0l-9.5-5.4v0.1l9.5,5.3C291.6,488,292.3,488,292.9,487.6l9.6-5.3v-0.1
+				L292.9,487.6z"/>
+		</g>
+		<g id="Graphic_763">
+			<circle class="st23" cx="299.9" cy="481.4" r="6.6"/>
+		</g>
+		<g id="Graphic_762">
+			<path class="st6" d="M299.2,478.8h-1.9c-0.4,0-0.6,0.2-0.6,0.6v4c0,0.4,0.2,0.6,0.6,0.6h5.3c0.4,0,0.6-0.2,0.6-0.6v-3.2
+				c0-0.4-0.2-0.6-0.6-0.6h-2.6C299.9,479.4,299.2,478.8,299.2,478.8z M299.6,482.7l1.1-1.2l1.4,1.7H298l1.1-1.3L299.6,482.7z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_747">
+	<g id="Graphic_759">
+		<rect x="263.5" y="521.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_13_" x="263.5" y="521.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_14_">
+				<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="521.3" class="st24" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 553.3076)" class="st3 st8 st5">Cloud Firestore</text>
+	</g>
+	<g id="Group_748">
+		<g id="Group_757">
+			<g id="Graphic_758">
+				<path class="st6" d="M299.8,541.4c0-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-3.4,3.4l-2.8-5.2c-0.1-0.4-0.6-0.5-0.8-0.4
+					c-0.1,0.1-0.2,0.2-0.4,0.4l-1.4,2.8l-3.6-6.9c-0.2-0.4-0.6-0.5-1-0.2c-0.1,0-0.2,0.2-0.2,0.5l-3.6,22.7l9.5,5.3
+					c0.6,0.4,1.3,0.4,1.9,0l9.6-5.3L299.8,541.4z"/>
+			</g>
+		</g>
+		<g id="Graphic_756">
+			<path class="st18" d="M281.5,558.2l3.6-22.7c0-0.4,0.4-0.6,0.7-0.6c0.1,0,0.4,0.1,0.5,0.4l3.6,6.9l1.4-2.8c0.2-0.4,0.6-0.5,1-0.4
+				c0.1,0.1,0.2,0.1,0.2,0.2l9.9,18.9L281.5,558.2z"/>
+		</g>
+		<g id="Graphic_755">
+			<path class="st19" d="M293.7,549.3l-3.8-7.2l-8.4,16.1L293.7,549.3z"/>
+		</g>
+		<g id="Graphic_754">
+			<path class="st20" d="M302.5,558.2l-2.8-16.8c-0.1-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-17.2,17.1l9.5,5.3
+				c0.6,0.4,1.3,0.4,1.9,0L302.5,558.2z"/>
+		</g>
+		<g id="Graphic_753">
+			<path class="st21" d="M299.8,541.4c0-0.4-0.4-0.6-0.7-0.5c-0.1,0-0.2,0.1-0.4,0.2l-3.4,3.4l-2.8-5.2c-0.1-0.4-0.6-0.5-0.8-0.4
+				c-0.1,0.1-0.2,0.2-0.4,0.4l-1.4,2.8l-3.6-6.9c-0.2-0.4-0.6-0.5-1-0.2c-0.1,0-0.2,0.2-0.2,0.5l-3.6,22.7h0.1l13.6-13.7l3.4-3.4
+				c0.4-0.2,0.7-0.2,1,0c0.1,0.1,0.1,0.2,0.2,0.4l2.6,16.7L299.8,541.4z M281.5,558.1l3.6-22.5c0-0.4,0.4-0.6,0.7-0.6
+				c0.2,0,0.4,0.1,0.5,0.4l3.6,6.9l1.4-2.8c0.2-0.4,0.6-0.5,1-0.2c0.1,0.1,0.2,0.1,0.2,0.2l2.6,5L281.5,558.1z"/>
+		</g>
+		<g id="Graphic_752">
+			<path class="st22" d="M292.9,563.4c-0.6,0.4-1.3,0.4-1.9,0l-9.5-5.4v0.1l9.5,5.3C291.6,563.7,292.3,563.7,292.9,563.4l9.6-5.3
+				v-0.1L292.9,563.4z"/>
+		</g>
+		<g id="Group_749">
+			<g id="Graphic_751">
+				<circle class="st23" cx="299.9" cy="557.1" r="6.6"/>
+			</g>
+			<g id="Graphic_750">
+				<path class="st6" d="M299.9,557.4l-2.5,1.1v-1.1l2.5-1.1l2.5,1.1v1v-0.2v0.3L299.9,557.4z M299.9,554.4l2.5,1.1v1.1l-2.5-1.1
+					l-2.5,1.1v-1.1L299.9,554.4z M300.8,558.4l1.2,0.5l-2.1,1v-1.1L300.8,558.4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Group_736">
+	<g id="Graphic_746">
+		<rect x="263.5" y="597.3" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_15_" x="263.5" y="597.3" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_16_">
+				<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="263.5" y="597.3" class="st25" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 314.4887 622.3076)" class="st3 st8 st5">Cloud</text>
+		<text transform="matrix(1 0 0 1 345.4379 622.3076)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 314.4887 636.3076)" class="st3 st8 st5">Spanner</text>
+	</g>
+	<g id="Group_737">
+		<g id="Graphic_745">
+			<path class="st11" d="M295.4,626.4v-6.1h-3.8v6.1l-5.3,3.1l1.9,3.2l5.3-3.1l5.3,3.1l1.9-3.2L295.4,626.4z"/>
+		</g>
+		<g id="Graphic_744">
+			<path class="st12" d="M295.4,626.4v-6.1h-1.9v7.1l-6.2,3.6l0.9,1.6l5.3-3.1l5.3,3.1l1.9-3.2L295.4,626.4z"/>
+		</g>
+		<g id="Graphic_743">
+			<path class="st10" d="M291.6,612.4l-2.8,1.7v5.2l4.7,2.6v-4.4l-1.9-0.9V612.4z"/>
+		</g>
+		<g id="Graphic_742">
+			<path class="st11" d="M295.4,616.7l-1.9,0.9v4.4l4.7-2.6v-5.2l-2.8-1.7V616.7z"/>
+		</g>
+		<g id="Graphic_741">
+			<path class="st11" d="M302.1,632.4l-0.1,2l3.7,2.2l-3.1,1.7l-4.5-2.6l0.2-5.4l4.6-2.8l4.5,2.6l0.1,3.5l-3.7-2.2L302.1,632.4z"/>
+		</g>
+		<g id="Graphic_740">
+			<path class="st11" d="M284.9,632.4l-1.7-1.1l-3.7,2.2l0.1-3.5l4.5-2.6l4.6,2.8l0.2,5.4l-4.5,2.6l-3.1-1.7l3.7-2.2L284.9,632.4z"
+				/>
+		</g>
+		<g id="Graphic_739">
+			<path class="st10" d="M307.5,633.5l-0.1-3.5l-4.5-2.6l-4.6,2.8l3.8,2.2l1.6-1.1L307.5,633.5z"/>
+		</g>
+		<g id="Graphic_738">
+			<path class="st10" d="M279.5,633.5l3.8-2.2l1.6,1.1l3.8-2.2l-4.6-2.8l-4.5,2.6L279.5,633.5z"/>
+		</g>
+	</g>
+</g>
+<g id="Graphic_735">
+	<text transform="matrix(1 0 0 1 484.5911 26.8002)" class="st3 st4 st5">Process and analyze</text>
+</g>
+<g>
+	<g id="Graphic_734">
+		<rect x="466.5" y="65.8" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_17_" x="466.5" y="65.8" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_18_">
+				<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="65.8" class="st26" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 97.8242)" class="st3 st8 st5">Dataflow</text>
+	</g>
+	<g id="Group_721">
+		<g id="Graphic_733">
+			<path class="st11" d="M500.2,83.3l-0.4-1.4l-2.1-0.1l-2.6,1.5l2.3,2.3l0,2.6l1.5,0l0-2.6l6.4,3.9l0,1.6l2.7,0v-3.1L500.2,83.3z"
+				/>
+		</g>
+		<g id="Graphic_732">
+			<path class="st10" d="M497.7,81.8l-2.2,0.5l-0.4,0.9l-8,4.4l0,3.1l2.7,0l0-1.6l6.5-3.7l0,2.6l1.3,0L497.7,81.8z"/>
+		</g>
+		<g id="Graphic_731">
+			<path class="st11" d="M497.7,81.8l-5.2-3.1l-2.6,1.4l5.2,3.1L497.7,81.8z"/>
+		</g>
+		<g id="Graphic_730">
+			<path class="st11" d="M505.2,98.5l-6.5,3.7l0-2.6l-2.6,0l0,2.6l1.3,3.7l2.2-0.2l0.4-1.3l8-4.4l0-3.2l-2.7,0L505.2,98.5z"/>
+		</g>
+		<g id="Graphic_729">
+			<path class="st11" d="M497.3,105.9l-5.3,2.9H492l-2.5-1.5l5.3-3L497.3,105.9z"/>
+		</g>
+		<g id="Graphic_728">
+			<path class="st12" d="M500.2,83.3l5.3-3l-2.5-1.5h-0.1l-5.3,2.9L500.2,83.3z"/>
+		</g>
+		<g id="Graphic_727">
+			<path class="st12" d="M499.9,104.4l5.2,3.1l-2.6,1.4h-0.1l-5.2-3.1L499.9,104.4z"/>
+		</g>
+		<g id="Graphic_726">
+			<path class="st10" d="M497.3,105.9l-2.6-1.5l-7.8-4.6v-3h2.7l0,1.6l6.4,3.9l0-2.6l1.3,0L497.3,105.9z"/>
+		</g>
+		<g id="Graphic_725">
+			<circle class="st10" cx="506.8" cy="93.9" r="1.7"/>
+		</g>
+		<g id="Graphic_724">
+			<circle class="st10" cx="488.2" cy="93.6" r="1.7"/>
+		</g>
+		<g id="Graphic_723">
+			<circle class="st10" cx="497.6" cy="90.8" r="1.7"/>
+		</g>
+		<g id="Graphic_722">
+			<circle class="st10" cx="497.4" cy="96.9" r="1.7"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_719">
+		<rect x="466.5" y="141.3" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_19_" x="466.5" y="141.3" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_20_">
+				<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="141.3" class="st27" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 173.3076)" class="st3 st8 st5">Dataproc</text>
+	</g>
+	<g id="Group_704">
+		<g id="Graphic_718">
+		</g>
+		<g id="Group_705">
+			<g id="Graphic_717">
+				<path class="st10" d="M504.6,172.2l-13.2,7.7l-1.3-2.2l13.2-7.7L504.6,172.2z"/>
+			</g>
+			<g id="Graphic_716">
+				<path class="st10" d="M491.3,177.3l0-15.3l2.4,0l0,13.4L491.3,177.3z"/>
+			</g>
+			<g id="Graphic_715">
+				<path class="st10" d="M493.8,166.3l-0.3-3.1l13.2,7.6l-1.3,2.2L493.8,166.3z"/>
+			</g>
+			<g id="Graphic_714">
+				<path class="st12" d="M500.1,167.1l-6.6-3.8l0.3,3.1l2,1.1C497.3,168,498.8,167.8,500.1,167.1L500.1,167.1z"/>
+			</g>
+			<g id="Graphic_713">
+				<path class="st10" d="M492,164.5c-1.1-1.9-0.8-4.4,0.8-5.9c0.9-0.9,2.2-1.4,3.5-1.4c2.4,0,4.4,1.7,4.8,4.1
+					c0.4,2.4-0.9,4.7-3.2,5.5C495.6,167.5,493.1,166.6,492,164.5z M498.3,160.8c-0.4-0.7-1.2-1.2-2.1-1.2c-1.3,0-2.4,1.1-2.4,2.4
+					c0,0.4,0.1,0.8,0.3,1.2c0.7,1.1,2.1,1.5,3.3,0.9C498.5,163.5,498.9,162,498.3,160.8L498.3,160.8z"/>
+			</g>
+			<g id="Graphic_712">
+				<path class="st12" d="M491.3,170.5v6.8l2.4-1.8v-2.1C493.4,172.1,492.5,171,491.3,170.5z"/>
+			</g>
+			<g id="Graphic_711">
+				<path class="st12" d="M498.7,175.6l5.9-3.4l-2.9-1.3l-1.6,0.9C499.2,172.9,498.7,174.2,498.7,175.6z"/>
+			</g>
+			<g id="Graphic_710">
+				<path class="st10" d="M484.7,178c-1-1.7-0.9-3.9,0.4-5.4s3.2-2.3,5.2-1.8c1.9,0.5,3.3,2.1,3.6,4.1c0.3,2-0.7,3.9-2.4,4.9
+					C489,181.2,486,180.4,484.7,178z M491,174.4c-0.7-1.1-2.1-1.5-3.3-0.9c-1.1,0.7-1.5,2.1-0.9,3.3c0.7,1.1,2.1,1.5,3.3,0.9
+					C491.2,177,491.6,175.5,491,174.4z"/>
+			</g>
+			<g id="Graphic_709">
+				<path class="st10" d="M500,177.6c-1.2-2.1-0.7-4.8,1.3-6.3s4.7-1.3,6.4,0.4s1.9,4.5,0.4,6.4c-1.5,1.9-4.2,2.5-6.3,1.3
+					C501.1,178.9,500.5,178.3,500,177.6z M506.3,173.9c-0.5-0.9-1.5-1.3-2.5-1.1c-1,0.2-1.7,0.9-1.9,1.9c-0.2,1,0.3,2,1.1,2.5
+					c0.5,0.3,1.2,0.4,1.8,0.2s1.1-0.6,1.4-1.1C506.7,175.6,506.7,174.7,506.3,173.9L506.3,173.9z"/>
+			</g>
+			<g id="Graphic_708">
+				<path class="st11" d="M493.7,174.7c0,0-3.1,2.6-3.6,2.9l3.7-2.1C493.8,175.2,493.8,175,493.7,174.7z"/>
+			</g>
+			<g id="Graphic_707">
+				<path class="st11" d="M494.6,166.6c0,0-0.8-4.2-0.8-4.6v4.3C494.1,166.4,494.3,166.6,494.6,166.6L494.6,166.6z"/>
+			</g>
+			<g id="Graphic_706">
+				<path class="st11" d="M501.3,171.2c0,0,3.6,1.5,4.2,1.8l-3.7-2.1C501.6,171,501.5,171.1,501.3,171.2z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_702">
+		<rect x="466.3" y="293.7" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_21_" x="466.3" y="293.7" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_22_">
+				<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.3" y="293.7" class="st28" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.2939 325.6563)" class="st3 st8 st5">BigQuery</text>
+	</g>
+	<g id="Group_696">
+		<g id="Graphic_701">
+			<path class="st10" d="M490.2,320.1v3.5c0.5,0.9,1.3,1.7,2.2,2.3v-5.7H490.2z"/>
+		</g>
+		<g id="Graphic_700">
+			<path class="st11" d="M494.3,317v9.8c0.5,0.1,0.9,0.1,1.4,0.1c0.4,0,0.9,0,1.3-0.1V317H494.3z"/>
+		</g>
+		<g id="Graphic_699">
+			<path class="st10" d="M499.1,321.5v4.3c0.9-0.6,1.7-1.4,2.2-2.4v-1.9H499.1z"/>
+		</g>
+		<g id="Graphic_698">
+			<path class="st12" d="M504.5,327.3l-1.9,1.9c-0.2,0.2-0.2,0.6,0,0.8l4.6,4.6c0.1,0.1,0.2,0.2,0.4,0.2s0.3-0.1,0.4-0.2l1.9-1.8
+				c0.2-0.2,0.2-0.6,0-0.8l-4.6-4.6C505,327,504.7,327,504.5,327.3"/>
+		</g>
+		<g id="Graphic_697">
+			<path class="st11" d="M495.7,308.7c-4.7,0-9,2.8-10.8,7.2c-1.8,4.4-0.8,9.4,2.5,12.8c3.3,3.4,8.4,4.4,12.8,2.6
+				c4.4-1.8,7.2-6.1,7.2-10.8C507.4,313.9,502.2,308.7,495.7,308.7 M495.7,329c-4.8,0-8.7-3.9-8.7-8.7s3.9-8.7,8.7-8.7
+				c4.8,0,8.7,3.9,8.7,8.7S500.5,329,495.7,329"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_694">
+		<rect x="466.5" y="369.1" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_23_" x="466.5" y="369.1" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_24_">
+				<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="369.1" class="st29" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 401.1396)" class="st3 st8 st5">AI Platform</text>
+	</g>
+	<g id="Group_691">
+		<g id="Graphic_693">
+			<path class="st12" d="M503,401.5l1-1.8h4.9l1.5-2.6l-3.1-5.2h-4.3l-1.5-2.6H500v-1.8h2.7l1.5,2.6h2.2l-3.1-5.2h-6v7h2.4l1,1.7
+				h-3.5v3.5h3.2l1.5-2.6h3.9l1,1.7H503l-1.5,2.6h-4.2v6.1h4.8l-1,1.7h-3.8v2.6h6l4.6-7.9H505l-1,1.7h-4v-1.7H503z"/>
+		</g>
+		<g id="Graphic_692">
+			<path class="st11" d="M490,401.5l-1-1.8H484l-1.5-2.6l3.1-5.2h4.3l1.5-2.6h1.7v-1.8h-2.7l-1.5,2.6h-2.2l3.1-5.2h6v7h-2.4l-1,1.7
+				h3.5v3.5h-3.2l-1.5-2.6H487l-1,1.7h3.9l1.5,2.6h4.2v6.1h-4.8l1,1.7h3.8v2.6h-6l-4.6-7.9h2.9l1,1.7h4v-1.7H490z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_689">
+		<rect x="466.5" y="445.8" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_25_" x="466.5" y="445.8" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_26_">
+				<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="445.8" class="st30" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 470.7646)" class="st3 st8 st5">Cloud</text>
+		<text transform="matrix(1 0 0 1 548.4375 470.7646)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 517.4883 484.7646)" class="st3 st8 st5">Vision API</text>
+	</g>
+	<g id="Group_683">
+		<g id="Graphic_688">
+			<path class="st11" d="M486.8,473.8l8.4,7v4.2l-14-11.2H486.8z"/>
+		</g>
+		<g id="Graphic_687">
+			<path class="st11" d="M495.2,480.7l8.4-7h5.6l-14,11.2V480.7z"/>
+		</g>
+		<g id="Graphic_686">
+			<path class="st10" d="M481.2,473.8l14-11.2v4.2l-8.4,7H481.2z"/>
+		</g>
+		<g id="Graphic_685">
+			<path class="st10" d="M495.2,466.8l8.4,7h5.6l-14-11.2V466.8z"/>
+		</g>
+		<g id="Graphic_684">
+			<circle class="st12" cx="495.2" cy="473.8" r="2.8"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_681">
+		<rect x="466.5" y="522.7" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_27_" x="466.5" y="522.7" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_28_">
+				<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="522.7" class="st31" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 547.7168)" class="st3 st8 st5">Cloud</text>
+		<text transform="matrix(1 0 0 1 548.4375 547.7168)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 517.4883 561.7168)" class="st3 st8 st5">Speech API</text>
+	</g>
+	<g id="Group_668">
+		<g id="Graphic_680">
+			<rect x="495.4" y="540.3" class="st12" width="2.1" height="20.8"/>
+		</g>
+		<g id="Graphic_679">
+		</g>
+		<g id="Group_669">
+			<g id="Graphic_678">
+				<rect x="491.3" y="546.6" class="st12" width="2.1" height="8.3"/>
+			</g>
+			<g id="Graphic_677">
+				<rect x="499.6" y="546.6" class="st12" width="2.1" height="8.3"/>
+			</g>
+			<g id="Graphic_676">
+				<rect x="487.1" y="543.4" class="st12" width="2.1" height="14.6"/>
+			</g>
+			<g id="Graphic_675">
+				<rect x="503.8" y="543.4" class="st12" width="2.1" height="14.6"/>
+			</g>
+			<g id="Graphic_674">
+				<rect x="495.4" y="540.3" class="st11" width="2.1" height="10.4"/>
+			</g>
+			<g id="Graphic_673">
+				<rect x="491.3" y="546.6" class="st11" width="2.1" height="4.2"/>
+			</g>
+			<g id="Graphic_672">
+				<rect x="499.6" y="546.6" class="st11" width="2.1" height="4.2"/>
+			</g>
+			<g id="Graphic_671">
+				<rect x="487.1" y="543.4" class="st11" width="2.1" height="7.3"/>
+			</g>
+			<g id="Graphic_670">
+				<rect x="503.8" y="543.4" class="st11" width="2.1" height="7.3"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_666">
+		<rect x="466.5" y="675.6" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_29_" x="466.5" y="675.6" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_30_">
+				<use xlink:href="#SVGID_29_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="675.6" class="st32" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 700.584)" class="st3 st8 st5">Natural</text>
+		<text transform="matrix(1 0 0 1 556.3711 700.584)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 517.4883 714.584)" class="st3 st8 st5">Language API</text>
+	</g>
+	<g id="Group_654">
+		<g id="Graphic_665">
+			<path class="st11" d="M506.5,693.6h-3.8v2.5h3.8v15h-3.8v2.5h3.8h2.5v-2.5v-15v-2.5H506.5z"/>
+		</g>
+		<g id="Group_662">
+			<g id="Graphic_664">
+				<path class="st12" d="M506.5,697.3l2.5-1.3h-2.5V697.3z"/>
+			</g>
+			<g id="Graphic_663">
+				<path class="st12" d="M509,709.8l-2.5,1.3h2.5V709.8z"/>
+			</g>
+		</g>
+		<g id="Graphic_661">
+			<path class="st11" d="M486.5,713.6h3.8v-2.5h-3.8v-15h3.8v-2.5h-3.8H484v2.5v15v2.5H486.5z"/>
+		</g>
+		<g id="Group_658">
+			<g id="Graphic_660">
+				<path class="st12" d="M484,709.8l2.5,1.3H484V709.8z"/>
+			</g>
+			<g id="Graphic_659">
+				<path class="st12" d="M486.5,697.3l-2.5-1.3h2.5V697.3z"/>
+			</g>
+		</g>
+		<g id="Graphic_657">
+			<rect x="490.2" y="702.3" class="st10" width="12.5" height="2.5"/>
+		</g>
+		<g id="Graphic_656">
+			<rect x="490.2" y="706.1" class="st10" width="12.5" height="2.5"/>
+		</g>
+		<g id="Graphic_655">
+			<rect x="490.2" y="698.6" class="st10" width="12.5" height="2.5"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_652">
+		<rect x="466.5" y="751.7" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_31_" x="466.5" y="751.7" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_32_">
+				<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="751.7" class="st33" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 783.7002)" class="st3 st8 st5">Dataprep</text>
+	</g>
+	<g id="Group_643">
+		<g id="Graphic_651">
+			<path class="st11" d="M493.9,778.3c0.5,0,1,0.3,1.2,0.8c0.2,0.5,0.1,1-0.3,1.4c-0.4,0.4-0.9,0.5-1.4,0.3
+				c-0.5-0.2-0.8-0.7-0.8-1.2C492.7,778.9,493.2,778.3,493.9,778.3z M493.9,777.3c-0.9,0-1.8,0.6-2.1,1.4c-0.4,0.9-0.2,1.9,0.5,2.5
+				c0.7,0.7,1.9,0.9,2.8,0.4c0.9-0.5,1.4-1.6,1.1-2.6S495,777.3,493.9,777.3z"/>
+		</g>
+		<g id="Graphic_650">
+			<path class="st11" d="M485.8,778.3c0.5,0,1,0.3,1.2,0.8c0.2,0.5,0.1,1-0.3,1.4c-0.4,0.4-0.9,0.5-1.4,0.3
+				c-0.5-0.2-0.8-0.7-0.8-1.2C484.6,778.9,485.1,778.3,485.8,778.3z M485.8,777.3c-0.9,0-1.8,0.6-2.1,1.4c-0.4,0.9-0.2,1.9,0.5,2.5
+				c0.7,0.7,1.9,0.9,2.8,0.4c0.9-0.5,1.4-1.6,1.1-2.6S486.9,777.3,485.8,777.3z"/>
+		</g>
+		<g id="Graphic_649">
+			<path class="st11" d="M490,785.6c0.5,0,1,0.3,1.2,0.8c0.2,0.5,0.1,1-0.3,1.4c-0.4,0.4-0.9,0.5-1.4,0.3c-0.5-0.2-0.8-0.6-0.8-1.2
+				C488.7,786.2,489.3,785.6,490,785.6z M490,784.5c-1.1,0-2.1,0.8-2.3,1.9c-0.2,1.1,0.4,2.2,1.4,2.6c1,0.4,2.2,0.1,2.8-0.9
+				c0.6-0.9,0.5-2.1-0.3-2.9C491.2,784.8,490.6,784.5,490,784.5z"/>
+		</g>
+		<g id="Graphic_648">
+			<path class="st11" d="M490,771.2c0.7,0,1.2,0.6,1.2,1.3c0,0.7-0.6,1.2-1.3,1.2c-0.7,0-1.2-0.6-1.2-1.2c0-0.3,0.1-0.7,0.4-0.9
+				C489.3,771.3,489.6,771.2,490,771.2L490,771.2z M490,770.1c-1.1,0-2.1,0.8-2.3,1.9c-0.2,1.1,0.4,2.2,1.4,2.6
+				c1,0.4,2.2,0.1,2.8-0.9c0.6-0.9,0.5-2.2-0.3-3C491.2,770.4,490.6,770.1,490,770.1z"/>
+		</g>
+		<g id="Graphic_647">
+			<rect x="494.1" y="766" class="st12" width="2.3" height="27.4"/>
+		</g>
+		<g id="Graphic_646">
+			<path class="st12" d="M501.8,769.9h-6.2c-0.3,0-0.4,0.3-0.4,0.5v3.9c0,0.3,0.2,0.5,0.4,0.5h6.2c0.3,0,0.4-0.3,0.4-0.5v-3.9
+				C502.3,770.2,502.1,770,501.8,769.9z"/>
+		</g>
+		<g id="Graphic_645">
+			<path class="st12" d="M507.7,777.2h-11.4c-0.4,0-0.8,0.2-0.8,0.5v3.9c0,0.3,0.3,0.5,0.8,0.5h11.4c0.4,0,0.8-0.2,0.8-0.5v-3.9
+				C508.5,777.4,508.1,777.2,507.7,777.2z"/>
+		</g>
+		<g id="Graphic_644">
+			<path class="st12" d="M499.6,784.4h-4.8c-0.2,0-0.3,0.3-0.3,0.5v3.9c0,0.3,0.1,0.5,0.3,0.5h4.8c0.2,0,0.3-0.3,0.3-0.5v-3.9
+				C499.9,784.6,499.8,784.4,499.6,784.4z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<rect x="466.5" y="903.7" class="st6" width="146" height="56"/>
+	<g>
+		<defs>
+			<rect id="SVGID_33_" x="466.5" y="903.7" width="146" height="56"/>
+		</defs>
+		<clipPath id="SVGID_34_">
+			<use xlink:href="#SVGID_33_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="466.5" y="903.7" class="st34" width="146" height="56"/>
+	</g>
+	<text transform="matrix(1 0 0 1 515.9883 928.7002)" class="st3 st8 st5">Video</text>
+	<text transform="matrix(1 0 0 1 546.5049 928.7002)" class="st3 st9 st5"> </text>
+	<text transform="matrix(1 0 0 1 515.9883 942.7002)" class="st3 st8 st5">Intelligence API</text>
+	<g id="Group_638">
+		<g id="Graphic_640">
+			<path class="st11" d="M500.4,922.9h-6.9l1.8,2.9h2.6v1.7h-3.7l-2.9-4.6h-8.9v5.4h2.5l1.6-2.9h3.2l1.1,1.7h-3.2l-1.6,2.9h-3.6v3.2
+				h3.6l1.6,3h3.2l-1.1,1.7h-3.2L485,935h-2.5v5.4h8.9l2.9-4.6h3.7v1.7h-2.6l-1.8,2.9h6.9v-7.9h-8l-1,1.7h-2.3l1.6-2.5l-1.6-2.5h2.3
+				l1,1.7h8.1V922.9z"/>
+		</g>
+		<g id="Graphic_639">
+			<path class="st12" d="M507.5,924.3l-5,3.6v7.6l5,3.7V924.3z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_625">
+	<g id="Graphic_636">
+		<rect x="671.6" y="222" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_35_" x="671.6" y="222" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_36_">
+				<use xlink:href="#SVGID_35_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="222" class="st35" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 254.0051)" class="st3 st8 st5">Data Studio</text>
+	</g>
+	<g id="Group_626">
+		<g id="Group_633">
+			<g id="Graphic_635">
+				<path class="st11" d="M712,255.2h-9.1c-2.2,0-3.4,1.5-3.4,3.1c0,1.5,1,3.1,3.4,3.1h9.1V255.2z"/>
+			</g>
+			<g id="Graphic_634">
+				<circle class="st36" cx="712" cy="258.3" r="3.1"/>
+			</g>
+		</g>
+		<g id="Group_630">
+			<g id="Graphic_632">
+				<path class="st11" d="M702.6,246.9h-9.1c-2.2,0-3.4,1.5-3.4,3.1c0,1.5,1,3.1,3.4,3.1h9.1V246.9z"/>
+			</g>
+			<g id="Graphic_631">
+				<circle class="st36" cx="702.6" cy="250" r="3.1"/>
+			</g>
+		</g>
+		<g id="Group_627">
+			<g id="Graphic_629">
+				<path class="st11" d="M712,238.5h-9.1c-2.2,0-3.4,1.5-3.4,3.1c0,1.5,1,3.1,3.4,3.1h9.1V238.5z"/>
+			</g>
+			<g id="Graphic_628">
+				<circle class="st36" cx="712" cy="241.7" r="3.1"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Graphic_624">
+	<text transform="matrix(1 0 0 1 685.9366 26.8002)" class="st3 st4 st5">Explore and visualize</text>
+</g>
+<g id="Graphic_623">
+	<rect x="10.5" y="45.3" class="st37" width="211" height="933.8"/>
+</g>
+<g id="Graphic_622">
+	<text transform="matrix(1 0 0 1 99.2257 26.8002)" class="st3 st4 st5">Ingest</text>
+</g>
+<g id="Group_613">
+	<g id="Graphic_621">
+		<rect x="32.9" y="65.9" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_37_" x="32.9" y="65.9" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_38_">
+				<use xlink:href="#SVGID_37_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="65.9" class="st38" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 97.8611)" class="st3 st8 st5">App Engine</text>
+	</g>
+	<g id="Group_614">
+		<g id="Graphic_620">
+			<path class="st12" d="M66.1,92.8l-1.7,1.7c0.6,0.4,0.9,1.1,0.9,1.9c0,0.6-0.3,1.3-0.7,1.7c-0.5,0.5-1.1,0.7-1.7,0.7
+				c-0.7,0-1.4-0.4-1.9-0.9l-1.7,1.7c0.9,1,2.2,1.6,3.6,1.6c2.7,0,4.8-2.2,4.8-4.8C67.7,95,67.1,93.7,66.1,92.8z"/>
+		</g>
+		<g id="Graphic_619">
+			<path class="st10" d="M62.9,87.6c-3.5,0-6.7,2.1-8.1,5.4c-1.4,3.3-0.6,7,1.9,9.5s6.3,3.3,9.5,1.9c3.3-1.4,5.4-4.5,5.4-8.1
+				C71.6,91.5,67.7,87.6,62.9,87.6 M62.9,102.5c-2.5,0-4.8-1.5-5.8-3.8c-1-2.3-0.4-5,1.4-6.8c1.8-1.8,4.5-2.3,6.8-1.3
+				c2.3,1,3.8,3.2,3.8,5.8c0,1.7-0.6,3.2-1.8,4.4S64.5,102.5,62.9,102.5"/>
+		</g>
+		<g id="Graphic_618">
+			<path class="st11" d="M76.4,95.5l-3.6-1.1c0.2,0.7,0.2,1.4,0.2,2.1c0,0.5,0,1-0.1,1.5h3.5c0.3-0.1,0.5-0.3,0.5-0.6V96
+				C76.9,95.8,76.6,95.5,76.4,95.5"/>
+		</g>
+		<g id="Graphic_617">
+			<path class="st11" d="M62.9,86.5c0.7,0,1.4,0.1,2.1,0.2l-1.3-3.6c0-0.3-0.3-0.5-0.6-0.5h-0.5c-0.3,0-0.5,0.2-0.6,0.5l-1.1,3.5
+				C61.5,86.6,62.2,86.5,62.9,86.5"/>
+		</g>
+		<g id="Graphic_616">
+			<path class="st11" d="M52.8,96.5c0-0.7,0.1-1.4,0.2-2.1l-3.6,1.1c-0.3,0-0.5,0.3-0.5,0.6v1.4c0,0.3,0.2,0.5,0.5,0.6h3.5
+				C52.8,97.5,52.8,97,52.8,96.5"/>
+		</g>
+		<g id="Graphic_615">
+			<path class="st10" d="M62.9,92.8c-1.9,0-3.5,1.6-3.5,3.5c0,1.9,1.6,3.5,3.5,3.5s3.5-1.6,3.5-3.5C66.4,94.4,64.8,92.8,62.9,92.8z
+				 M62.9,98.1c-0.7,0-1.4-0.4-1.6-1.1c-0.3-0.7-0.1-1.4,0.4-1.9c0.5-0.5,1.3-0.7,1.9-0.4s1.1,0.9,1.1,1.6c0,0.5-0.2,0.9-0.5,1.2
+				C63.8,97.9,63.3,98.1,62.9,98.1L62.9,98.1z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_594">
+	<g id="Graphic_612">
+		<rect x="32.9" y="141.9" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_39_" x="32.9" y="141.9" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_40_">
+				<use xlink:href="#SVGID_39_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="141.9" class="st39" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 173.8611)" class="st3 st8 st5">Compute Engine</text>
+	</g>
+	<g id="Group_595">
+		<g id="Graphic_611">
+			<rect x="59.1" y="166.1" class="st10" width="7.5" height="7.5"/>
+		</g>
+		<g id="Graphic_610">
+			<rect x="61.6" y="157.4" class="st11" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_609">
+			<rect x="56.6" y="157.4" class="st11" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_608">
+			<rect x="66.6" y="157.4" class="st11" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_607">
+			<rect x="61.6" y="177.4" class="st12" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_606">
+			<rect x="56.6" y="177.4" class="st12" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_605">
+			<rect x="66.6" y="177.4" class="st12" width="2.5" height="5"/>
+		</g>
+		<g id="Graphic_604">
+			<rect x="70.4" y="168.6" class="st12" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_603">
+			<rect x="70.4" y="173.6" class="st12" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_602">
+			<rect x="70.4" y="163.6" class="st12" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_601">
+			<rect x="50.4" y="168.6" class="st11" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_600">
+			<rect x="50.4" y="173.6" class="st11" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_599">
+			<rect x="50.4" y="163.6" class="st11" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_598">
+			<path class="st10" d="M54.1,161.1v17.5h17.5v-17.5H54.1z M69.1,176.1H56.6v-12.5h12.5V176.1z"/>
+		</g>
+		<g id="Graphic_597">
+			<path class="st11" d="M59.1,173.6h7.5l-3.8-3.8L59.1,173.6z"/>
+		</g>
+		<g id="Graphic_596">
+			<path class="st12" d="M62.9,169.9l3.8,3.8v-7.5L62.9,169.9z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_584">
+	<g id="Graphic_593">
+		<rect x="32.9" y="217.9" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_41_" x="32.9" y="217.9" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_42_">
+				<use xlink:href="#SVGID_41_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="217.9" class="st40" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 242.8611)" class="st3 st8 st5">Google </text>
+		<text transform="matrix(1 0 0 1 83.8831 256.8611)" class="st3 st8 st5">Kuberbetes Engine</text>
+	</g>
+	<g id="Group_585">
+		<g id="Graphic_592">
+			<path class="st12" d="M66.7,247.4l6.5,3.8v1.4l-7.1-4.1L66.7,247.4z"/>
+		</g>
+		<g id="Graphic_591">
+			<path class="st11" d="M60,248.2l-7.5,4.3l-0.5-1.2l7.3-4.2L60,248.2z"/>
+		</g>
+		<g id="Graphic_590">
+			<rect x="62.2" y="233.4" class="st10" width="1.2" height="8.3"/>
+		</g>
+		<g id="Graphic_589">
+			<path class="st10" d="M50.4,238.7V253l12.5,7.1l12.5-7.1v-14.3l-12.5-7.1L50.4,238.7z M72.7,251.4l-9.8,5.6l-9.8-5.6v-11.1
+				l9.8-5.6l9.8,5.6L72.7,251.4L72.7,251.4z"/>
+		</g>
+		<g id="Graphic_588">
+			<path class="st10" d="M62.9,245.2l5.7-3.3l-5.7-3.3l-5.7,3.3L62.9,245.2z"/>
+		</g>
+		<g id="Graphic_587">
+			<path class="st11" d="M62.2,246.3l-5.5-3.3v6.6l5.5,3.3V246.3z"/>
+		</g>
+		<g id="Graphic_586">
+			<path class="st12" d="M63.6,246.3v6.6l5.5-3.3V243L63.6,246.3z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_575">
+	<g id="Graphic_583">
+		<rect x="32.9" y="598.8" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_43_" x="32.9" y="598.8" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_44_">
+				<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="598.8" class="st41" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 623.7513)" class="st3 st8 st5">Storage</text>
+		<text transform="matrix(1 0 0 1 125.0921 623.7513)" class="st3 st9 st5"> </text>
+		<text transform="matrix(1 0 0 1 83.8831 637.7513)" class="st3 st8 st5">Transfer Service</text>
+	</g>
+	<g id="Group_576">
+		<g id="Graphic_582">
+			<path class="st12" d="M75.8,619.1H58.5c-0.2,0-0.4,0.2-0.4,0.4v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				s0.1-0.2,0.1-0.3v-3c0-0.1,0-0.2-0.1-0.3S75.9,619.1,75.8,619.1z M60.2,622.1c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1s1,0.4,1,1
+				c0,0.3-0.1,0.5-0.3,0.7C60.7,622,60.5,622.1,60.2,622.1L60.2,622.1z"/>
+		</g>
+		<g id="Graphic_581">
+			<path class="st12" d="M75.8,624.8H58.5c-0.2,0-0.4,0.2-0.4,0.5v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				c0.1-0.1,0.1-0.2,0.1-0.3v-3C76.3,625,76.1,624.8,75.8,624.8z M60.2,627.8c-0.4,0-0.8-0.2-0.9-0.6c-0.2-0.4-0.1-0.8,0.2-1.1
+				c0.3-0.3,0.7-0.4,1.1-0.2c0.4,0.2,0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7C60.7,627.7,60.5,627.8,60.2,627.8z"/>
+		</g>
+		<g id="Graphic_580">
+			<path class="st12" d="M75.9,630.4H58.6c-0.1,0-0.2,0-0.3,0.1c-0.1,0.1-0.1,0.2-0.1,0.3v3c0,0.1,0,0.2,0.1,0.3
+				c0.1,0.1,0.2,0.1,0.3,0.1h17.3c0.2,0,0.4-0.2,0.4-0.4v-3C76.3,630.6,76.1,630.4,75.9,630.4z M60.3,633.4c-0.4,0-0.8-0.2-0.9-0.6
+				c-0.2-0.4-0.1-0.8,0.2-1.1s0.7-0.4,1.1-0.2s0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7C60.8,633.3,60.5,633.4,60.3,633.4z"/>
+		</g>
+		<g id="Graphic_579">
+			<path class="st11" d="M54.9,623.8h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.4-1.2,1-1.3h3.3c0.6-0.1,1.2,0.4,1.3,1
+				c0.1,0.6-0.4,1.2-1,1.3C55.1,623.8,55,623.8,54.9,623.8z"/>
+		</g>
+		<g id="Graphic_578">
+			<path class="st10" d="M54.9,627.9h-5.4c-0.6,0.1-1.2-0.4-1.2-1c-0.1-0.6,0.3-1.2,1-1.3c0.1,0,0.2,0,0.3,0h5.4
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1s-0.5,0.6-0.9,0.7H54.9z"/>
+		</g>
+		<g id="Graphic_577">
+			<path class="st11" d="M54.9,632h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.3-1.2,0.9-1.3c0.1,0,0.2,0,0.3,0h3
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1s-0.5,0.6-0.9,0.7C55.1,632,55,632,54.9,632z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_566">
+	<g id="Graphic_574">
+		<rect x="32.9" y="751.2" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_45_" x="32.9" y="751.2" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_46_">
+				<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="751.2" class="st42" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 783.2334)" class="st3 st8 st5">Transfer Appliance</text>
+	</g>
+	<g id="Group_567">
+		<g id="Graphic_573">
+			<path class="st12" d="M75.8,771.6H58.5c-0.2,0-0.4,0.2-0.4,0.4v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				c0.1-0.1,0.1-0.2,0.1-0.3v-3c0-0.1,0-0.2-0.1-0.3C76.1,771.7,75.9,771.6,75.8,771.6z M60.2,774.6c-0.5,0-1-0.4-1-1
+				c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1c0,0.3-0.1,0.5-0.3,0.7C60.7,774.5,60.5,774.6,60.2,774.6L60.2,774.6z"/>
+		</g>
+		<g id="Graphic_572">
+			<path class="st12" d="M75.8,777.3H58.5c-0.2,0-0.4,0.2-0.4,0.5v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				c0.1-0.1,0.1-0.2,0.1-0.3v-3C76.3,777.5,76.1,777.3,75.8,777.3z M60.2,780.3c-0.4,0-0.8-0.2-0.9-0.6c-0.2-0.4-0.1-0.8,0.2-1.1
+				c0.3-0.3,0.7-0.4,1.1-0.2c0.4,0.2,0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7C60.7,780.2,60.5,780.3,60.2,780.3z"/>
+		</g>
+		<g id="Graphic_571">
+			<path class="st12" d="M75.9,782.9H58.6c-0.1,0-0.2,0-0.3,0.1s-0.1,0.2-0.1,0.3v3c0,0.1,0,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1
+				h17.3c0.2,0,0.4-0.2,0.4-0.4v-3C76.3,783.1,76.1,782.9,75.9,782.9z M60.3,785.9c-0.4,0-0.8-0.2-0.9-0.6c-0.2-0.4-0.1-0.8,0.2-1.1
+				c0.3-0.3,0.7-0.4,1.1-0.2c0.4,0.2,0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7S60.5,785.9,60.3,785.9z"/>
+		</g>
+		<g id="Graphic_570">
+			<path class="st11" d="M54.9,776.2h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.4-1.2,1-1.3h3.3c0.6-0.1,1.2,0.4,1.3,1
+				c0.1,0.6-0.4,1.2-1,1.3C55.1,776.3,55,776.3,54.9,776.2z"/>
+		</g>
+		<g id="Graphic_569">
+			<path class="st10" d="M54.9,780.4h-5.4c-0.6,0.1-1.2-0.4-1.2-1c-0.1-0.6,0.3-1.2,1-1.3c0.1,0,0.2,0,0.3,0h5.4
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1s-0.5,0.6-0.9,0.7H54.9z"/>
+		</g>
+		<g id="Graphic_568">
+			<path class="st11" d="M54.9,784.5h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.3-1.2,0.9-1.3c0.1,0,0.2,0,0.3,0h3
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1c-0.2,0.4-0.5,0.6-0.9,0.7C55.1,784.5,55,784.5,54.9,784.5z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_552">
+	<g id="Graphic_565">
+		<rect x="32.9" y="446.8" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_47_" x="32.9" y="446.8" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_48_">
+				<use xlink:href="#SVGID_47_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="446.8" class="st43" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 478.7513)" class="st3 st8 st5">Pub/Sub</text>
+	</g>
+	<g id="Group_553">
+		<g id="Graphic_564">
+			<circle class="st11" cx="72.4" cy="469.6" r="2.4"/>
+		</g>
+		<g id="Graphic_563">
+			<circle class="st11" cx="53.4" cy="469.6" r="2.4"/>
+		</g>
+		<g id="Graphic_562">
+			<circle class="st11" cx="62.9" cy="486" r="2.4"/>
+		</g>
+		<g id="Group_558">
+			<g id="Graphic_561">
+				<path class="st12" d="M62.3,476l1.1-1.9l9.5,5.5l-1.1,1.9L62.3,476z"/>
+			</g>
+			<g id="Graphic_560">
+				<path class="st12" d="M52.8,479.6l9.5-5.5l1.1,1.9l-9.5,5.5L52.8,479.6z"/>
+			</g>
+			<g id="Graphic_559">
+				<rect x="61.8" y="464.1" class="st12" width="2.2" height="11"/>
+			</g>
+		</g>
+		<g id="Graphic_557">
+			<circle class="st10" cx="62.9" cy="475.1" r="3.8"/>
+		</g>
+		<g id="Graphic_556">
+			<circle class="st10" cx="53.4" cy="480.6" r="3"/>
+		</g>
+		<g id="Graphic_555">
+			<circle class="st10" cx="72.4" cy="480.6" r="3"/>
+		</g>
+		<g id="Graphic_554">
+			<circle class="st10" cx="62.9" cy="464.1" r="3"/>
+		</g>
+	</g>
+</g>
+<g id="Group_541">
+	<g id="Graphic_551">
+		<rect x="32.9" y="522.8" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_49_" x="32.9" y="522.8" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_50_">
+				<use xlink:href="#SVGID_49_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="522.8" class="st44" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 554.7513)" class="st3 st8 st5">Logging</text>
+	</g>
+	<g id="Group_542">
+		<g id="Graphic_550">
+			<rect x="55.4" y="550.1" class="st12" width="5" height="2.5"/>
+		</g>
+		<g id="Graphic_549">
+			<rect x="52.9" y="558.9" class="st12" width="7.5" height="2.5"/>
+		</g>
+		<g id="Group_543">
+			<g id="Graphic_548">
+				<rect x="52.9" y="543.9" class="st12" width="2.5" height="15"/>
+			</g>
+			<g id="Graphic_547">
+				<rect x="59.1" y="540.1" class="st11" width="16.3" height="5"/>
+			</g>
+			<g id="Graphic_546">
+				<rect x="59.1" y="548.9" class="st11" width="16.3" height="5"/>
+			</g>
+			<g id="Graphic_545">
+				<rect x="59.1" y="557.6" class="st11" width="16.3" height="5"/>
+			</g>
+			<g id="Graphic_544">
+				<rect x="50.4" y="538.9" class="st10" width="7.5" height="7.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Group_537">
+	<g id="Graphic_540">
+		<rect x="671.6" y="146" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_51_" x="671.6" y="146" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_52_">
+				<use xlink:href="#SVGID_51_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="146" class="st45" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 178.0051)" class="st3 st8 st5">Datalab</text>
+	</g>
+	<g id="Group_538">
+		<g id="Graphic_539">
+			<path class="st12" d="M707.5,168.6c0.1,0,0.2,0.1,0.3,0.2l0,0v1.4c0,0.1-0.1,0.2-0.2,0.3l0,0h-1v2.5c0,0.1,0,0.2,0.1,0.3l0,0
+				l6.8,11.7c0.2,0.4,0.2,0.8,0,1.2l0,0l-2.5,4.3c-0.2,0.4-0.6,0.6-1,0.6l0,0h-14.6c-0.4,0-0.8-0.2-1.1-0.6l0,0l-2.5-4.3
+				c-0.2-0.4-0.2-0.8,0-1.2l0,0l6.8-11.7c0.1-0.1,0.1-0.2,0.1-0.3l0,0v-2.5h-1c-0.1,0-0.2-0.1-0.3-0.2l0,0v-1.4
+				c0-0.1,0.1-0.2,0.2-0.3l0,0H707.5z M704.7,170.5h-4.2v2.9c0,0.2-0.1,0.4-0.1,0.6l0,0l-6.5,11.3c-0.1,0.2-0.1,0.4,0,0.6l0,0
+				l1.7,2.9c0.1,0.2,0.3,0.3,0.5,0.3l0,0h2.1l-1.8-3.2c-0.1-0.2-0.1-0.4,0-0.6l0,0l1.6-2.8l11.9,0l-0.9-1.6l-4.4,0l-0.7-1.2l4.4,0
+				l-1.3-2.3h-4.4l-0.7-1.2h4.4l-1.3-2.2c-0.1-0.2-0.2-0.4-0.2-0.6l0,0V170.5z M710.5,184l-4.4,0l0.7,1.3l4.4,0L710.5,184z
+				 M700.1,163.3c0.7,0,1.2,0.6,1.2,1.2s-0.6,1.2-1.2,1.2s-1.2-0.6-1.2-1.2S699.4,163.3,700.1,163.3z M704.7,160.7
+				c1,0,1.9,0.8,1.9,1.9c0,1-0.8,1.9-1.9,1.9s-1.9-0.8-1.9-1.9C702.9,161.5,703.7,160.7,704.7,160.7z M701.9,156.9
+				c0.7,0,1.2,0.6,1.2,1.2c0,0.7-0.6,1.2-1.2,1.2c-0.7,0-1.2-0.6-1.2-1.2C700.7,157.4,701.2,156.9,701.9,156.9z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_536">
+		<rect x="466.5" y="599" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_53_" x="466.5" y="599" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_54_">
+				<use xlink:href="#SVGID_53_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="599" class="st46" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 631.0449)" class="st3 st8 st5">Translate API</text>
+	</g>
+	<g id="Group_533">
+		<g id="Graphic_535">
+			<path class="st12" d="M503.9,624.8h-2.3l-5.1,13.5h2.3l1.3-3.4h5.4l1.3,3.4h2.3L503.9,624.8z M500.9,632.7l1.9-4.9l1.8,4.9H500.9
+				z"/>
+		</g>
+		<g id="Graphic_534">
+			<path class="st11" d="M497.5,630.5l-2.9-2.8c1.9-2.1,3.4-4.6,4.2-7.3h3.3V618h-7.9v-2.3h-2.3v2.3h-8v2.2h12.7
+				c-0.8,2.2-2,4.3-3.6,6c-1-1.1-1.9-2.4-2.6-3.8h-2.3c0.9,1.9,2,3.6,3.4,5.1l-5.8,5.7l1.6,1.6l5.7-5.6l3.5,3.5L497.5,630.5z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_525">
+	<g id="Graphic_531">
+		<rect x="671.6" y="375.2" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_55_" x="671.6" y="375.2" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_56_">
+				<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="375.2" class="st47" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 407.1657)" class="st3 st8 st5">Sheets</text>
+	</g>
+	<g id="Group_526">
+		<g id="Graphic_530">
+			<path class="st48" d="M713.1,394c5.3,5.3,5.3,13.8,0,19.1c-5.3,5.3-13.8,5.3-19.1,0c-5.3-5.3-5.3-13.8,0-19.1
+				C699.3,388.7,707.9,388.7,713.1,394"/>
+		</g>
+		<g id="Graphic_529">
+			<path class="st49" d="M697.3,397.2h14.2l5.5,5.5c-0.2-3.2-1.5-6.2-3.9-8.7c-5.3-5.3-13.8-5.3-19.1,0c-5.3,5.3-5.3,13.8,0,19.1
+				c2.4,2.4,5.5,3.7,8.7,3.9l-7.2-7.2L697.3,397.2z"/>
+		</g>
+		<g id="Graphic_528">
+			<path class="st50" d="M713.1,413.1c2.8-2.8,4.2-6.6,3.9-10.3l-5.5-5.4h-14.2l-1.7,12.4l7.2,7.2
+				C706.5,417.1,710.3,415.9,713.1,413.1z"/>
+		</g>
+		<g id="Graphic_527">
+			<path class="st51" d="M709.9,401h-5.6v-2.2h5.6V401z M709.9,404.7h-5.6v-2.2h5.6V404.7z M709.9,408.3h-5.6v-2.2h5.6V408.3z
+				 M697.2,408.3v-2.2h5.6v2.2H697.2z M697.2,402.4h5.6v2.2h-5.6V402.4z M697.2,398.8h5.6v2.2h-5.6V398.8z M695.6,397.3v12.5h15.9
+				v-12.5H695.6z"/>
+		</g>
+	</g>
+</g>
+<g id="Graphic_524">
+	<path class="st52" d="M244.5,35.8h181c0.3,0,0.5-0.2,0.5-0.5s-0.2-0.5-0.5-0.5h-181c-0.3,0-0.5,0.2-0.5,0.5S244.2,35.8,244.5,35.8z
+		"/>
+</g>
+<g id="Graphic_523">
+	<path class="st52" d="M10.9,35.8h210.3c0.3,0,0.5-0.2,0.5-0.5s-0.2-0.5-0.5-0.5H10.9c-0.3,0-0.5,0.2-0.5,0.5S10.6,35.8,10.9,35.8z"
+		/>
+</g>
+<g id="Graphic_522">
+	<path class="st52" d="M449.5,35.8h181c0.3,0,0.5-0.2,0.5-0.5s-0.2-0.5-0.5-0.5h-181c-0.3,0-0.5,0.2-0.5,0.5S449.2,35.8,449.5,35.8z
+		"/>
+</g>
+<g id="Graphic_521">
+	<path class="st52" d="M652.2,35.8h180.4c0.3,0,0.5-0.2,0.5-0.5s-0.2-0.5-0.5-0.5H652.2c-0.3,0-0.5,0.2-0.5,0.5
+		S651.9,35.8,652.2,35.8z"/>
+</g>
+<g id="Group_514">
+	<g id="Graphic_520">
+		<rect x="32.9" y="371.1" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_57_" x="32.9" y="371.1" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_58_">
+				<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="371.1" class="st53" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 403.0855)" class="st3 st8 st5">Cloud Run</text>
+	</g>
+	<g id="Group_515">
+		<g id="Graphic_519">
+			<path class="st10" d="M58,386l4.3,13.1h13L58,386z"/>
+		</g>
+		<g id="Graphic_518">
+			<path class="st12" d="M75.4,399.1h-13L58,412.2L75.4,399.1z"/>
+		</g>
+		<g id="Graphic_517">
+			<path class="st12" d="M50.4,412.2l4.4-2.2l3.3-10.9h-4.4L50.4,412.2z"/>
+		</g>
+		<g id="Graphic_516">
+			<path class="st10" d="M50.4,386l3.3,13.1H58l-3.3-10.9L50.4,386z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_494">
+	<g id="Graphic_513">
+		<rect x="32.9" y="294.3" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_59_" x="32.9" y="294.3" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_60_">
+				<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="294.3" class="st54" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 326.2692)" class="st3 st8 st5">Cloud Functions</text>
+	</g>
+	<g id="Group_495">
+		<g id="Group_507">
+			<g id="Group_508">
+				<g id="Graphic_512">
+					<path class="st11" d="M50.4,326.7l3.8,3v-15l-3.8,3V326.7z"/>
+				</g>
+				<g id="Graphic_511">
+					<path class="st12" d="M50.4,319.8l3.8-2.5v-2.5L50.4,319.8z"/>
+				</g>
+				<g id="Graphic_510">
+					<path class="st12" d="M54.1,329.8v-2.5l-3.8-2.5L54.1,329.8z"/>
+				</g>
+				<g id="Graphic_509">
+					<path class="st10" d="M57.9,332.3l-7.5-7.5v5l5,5L57.9,332.3z"/>
+				</g>
+			</g>
+		</g>
+		<g id="Graphic_506">
+			<path class="st10" d="M55.4,309.8l-5,5l0,5l7.5-7.5L55.4,309.8z"/>
+		</g>
+		<g id="Group_500">
+			<g id="Group_501">
+				<g id="Graphic_505">
+					<path class="st11" d="M75.4,317.8l-3.8-3v15l3.8-3V317.8z"/>
+				</g>
+				<g id="Graphic_504">
+					<path class="st12" d="M75.4,324.8l-3.8,2.5v2.5L75.4,324.8z"/>
+				</g>
+				<g id="Graphic_503">
+					<path class="st12" d="M71.6,314.8v2.5l3.8,2.5L71.6,314.8z"/>
+				</g>
+				<g id="Graphic_502">
+					<path class="st10" d="M67.9,312.3l7.5,7.5v-5l-5-5L67.9,312.3z"/>
+				</g>
+			</g>
+		</g>
+		<g id="Graphic_499">
+			<path class="st10" d="M70.4,334.8l5-5l0-5l-7.5,7.5L70.4,334.8z"/>
+		</g>
+		<g id="Graphic_498">
+			<circle class="st10" cx="57.9" cy="322.3" r="1.3"/>
+		</g>
+		<g id="Graphic_497">
+			<circle class="st10" cx="62.9" cy="322.3" r="1.3"/>
+		</g>
+		<g id="Graphic_496">
+			<circle class="st10" cx="67.9" cy="322.3" r="1.3"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g id="Graphic_493">
+		<rect x="466.5" y="217.3" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_61_" x="466.5" y="217.3" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_62_">
+				<use xlink:href="#SVGID_61_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="217.3" class="st55" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 242.3076)" class="st3 st8 st5">Cloud </text>
+		<text transform="matrix(1 0 0 1 517.4883 256.3076)" class="st3 st8 st5">Composer</text>
+	</g>
+	<g id="Group_488">
+		<g id="Graphic_492">
+			<path class="st10" d="M493.7,236.8h-7.5v-5.5h20.5v5.5h-7.4v7.4h-5.6V236.8z"/>
+		</g>
+		<g id="Graphic_491">
+			<path class="st12" d="M486.2,238.8h5.5v7.4h7.5v13.1h-5.5v-7.5h-7.5V238.8z"/>
+		</g>
+		<g id="Graphic_490">
+			<rect x="501.2" y="238.8" class="st12" width="5.5" height="20.5"/>
+		</g>
+		<g id="Graphic_489">
+			<rect x="486.2" y="253.8" class="st10" width="5.5" height="5.5"/>
+		</g>
+	</g>
+</g>
+<g id="Group_479">
+	<g id="Graphic_486">
+		<rect x="671.6" y="298.8" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_63_" x="671.6" y="298.8" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_64_">
+				<use xlink:href="#SVGID_63_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="298.8" class="st56" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 323.7783)" class="st3 st8 st5">BigQuery </text>
+		<text transform="matrix(1 0 0 1 722.5772 337.7783)" class="st3 st8 st5">BI Engine</text>
+	</g>
+	<g id="Group_480">
+		<g id="Graphic_485">
+			<path class="st10" d="M696.3,325.3v3.5c0.5,0.9,1.3,1.7,2.2,2.3v-5.7H696.3z"/>
+		</g>
+		<g id="Graphic_484">
+			<path class="st11" d="M700.4,322.1v9.8c0.5,0.1,0.9,0.1,1.4,0.1c0.4,0,0.9,0,1.3-0.1v-9.8H700.4z"/>
+		</g>
+		<g id="Graphic_483">
+			<path class="st10" d="M705.2,326.6v4.3c0.9-0.6,1.7-1.4,2.2-2.4v-1.9H705.2z"/>
+		</g>
+		<g id="Graphic_482">
+			<path class="st12" d="M710.5,332.4l-1.9,1.9c-0.2,0.2-0.2,0.6,0,0.8l4.6,4.6c0.1,0.1,0.2,0.2,0.4,0.2c0.1,0,0.3-0.1,0.4-0.2
+				l1.9-1.8c0.2-0.2,0.2-0.6,0-0.8l-4.6-4.6C711.1,332.2,710.8,332.2,710.5,332.4"/>
+		</g>
+		<g id="Graphic_481">
+			<path class="st11" d="M701.8,313.8c-4.7,0-9,2.8-10.8,7.2c-1.8,4.4-0.8,9.4,2.5,12.8c3.3,3.4,8.4,4.4,12.8,2.6
+				c4.4-1.8,7.2-6.1,7.2-10.8C713.5,319,708.3,313.8,701.8,313.8 M701.8,334.2c-4.8,0-8.7-3.9-8.7-8.7c0-4.8,3.9-8.7,8.7-8.7
+				c4.8,0,8.7,3.9,8.7,8.7C710.5,330.3,706.6,334.2,701.8,334.2"/>
+		</g>
+	</g>
+</g>
+<g id="Group_467">
+	<g id="Graphic_478">
+		<rect x="671.6" y="451" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_65_" x="671.6" y="451" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_66_">
+				<use xlink:href="#SVGID_65_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="451" class="st57" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 483.0267)" class="st3 st8 st5">Data Catalog</text>
+	</g>
+	<g id="Group_468">
+		<g id="Graphic_477">
+			<path class="st12" d="M690.6,475.5l3.2-5.8h4.2v2.5h-2.7l-1.8,3.2l1.1,1.8l-2.2,1.3L690.6,475.5z"/>
+		</g>
+		<g id="Graphic_476">
+			<path class="st10" d="M706.5,480.6l3.4-2l3.4,2v3.9l-3.4,2l-3.4-2V480.6z"/>
+		</g>
+		<g id="Graphic_475">
+			<path class="st10" d="M692.9,480.6l3.4-2l3.4,2v3.9l-3.4,2l-3.4-2V480.6z"/>
+		</g>
+		<g id="Graphic_474">
+			<path class="st10" d="M699.7,469l3.4-2l3.4,2v3.9l-3.4,2l-3.4-2V469z"/>
+		</g>
+		<g id="Graphic_473">
+			<path class="st12" d="M709.9,478.6l3.4,2v3.9l-3.4,2V478.6z"/>
+		</g>
+		<g id="Graphic_472">
+			<path class="st12" d="M696.3,478.6l3.4,2v3.9l-3.4,2V478.6z"/>
+		</g>
+		<g id="Graphic_471">
+			<path class="st12" d="M703.1,467.1l3.4,2v3.9l-3.4,2V467.1z"/>
+		</g>
+		<g id="Graphic_470">
+			<path class="st12" d="M711.6,477.3l1.1-1.8l-1.8-3.2h-2.7v-2.5h4.2l3.2,5.8l-1.8,3.1L711.6,477.3z"/>
+		</g>
+		<g id="Graphic_469">
+			<path class="st12" d="M699.8,491l-2-3.4l2.2-1.3l1.3,2h3.6l1.3-2.1l2.2,1.3l-2,3.4H699.8z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_458">
+	<g id="Graphic_466">
+		<rect x="32.9" y="675.3" class="st6" width="170.6" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_67_" x="32.9" y="675.3" width="170.6" height="56"/>
+			</defs>
+			<clipPath id="SVGID_68_">
+				<use xlink:href="#SVGID_67_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="32.9" y="675.3" class="st58" width="170.6" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 83.8831 700.267)" class="st3 st8 st5">BigQuery Data </text>
+		<text transform="matrix(1 0 0 1 83.8831 714.267)" class="st3 st8 st5">Transfer Service</text>
+	</g>
+	<g id="Group_459">
+		<g id="Graphic_465">
+			<path class="st12" d="M76.6,695.7H59.2c-0.2,0-0.4,0.2-0.4,0.4v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				c0.1-0.1,0.1-0.2,0.1-0.3v-3c0-0.1,0-0.2-0.1-0.3C76.8,695.7,76.7,695.7,76.6,695.7z M60.9,698.7c-0.5,0-1-0.4-1-1
+				c0-0.5,0.4-1,1-1s1,0.4,1,1c0,0.3-0.1,0.5-0.3,0.7C61.5,698.5,61.2,698.6,60.9,698.7L60.9,698.7z"/>
+		</g>
+		<g id="Graphic_464">
+			<path class="st12" d="M76.6,701.3H59.2c-0.2,0-0.4,0.2-0.4,0.5v3c0,0.2,0.2,0.5,0.4,0.5h17.3c0.1,0,0.2,0,0.3-0.1
+				c0.1-0.1,0.1-0.2,0.1-0.3v-3C77,701.5,76.8,701.3,76.6,701.3z M60.9,704.3c-0.4,0-0.8-0.2-0.9-0.6c-0.2-0.4-0.1-0.8,0.2-1.1
+				c0.3-0.3,0.7-0.4,1.1-0.2c0.4,0.2,0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7C61.4,704.2,61.2,704.3,60.9,704.3z"/>
+		</g>
+		<g id="Graphic_463">
+			<path class="st12" d="M76.6,706.9H59.3c-0.1,0-0.2,0-0.3,0.1c-0.1,0.1-0.1,0.2-0.1,0.3v3c0,0.1,0,0.2,0.1,0.3s0.2,0.1,0.3,0.1
+				h17.3c0.2,0,0.4-0.2,0.4-0.4v-3C77.1,707.1,76.9,706.9,76.6,706.9z M61,709.9c-0.4,0-0.8-0.2-0.9-0.6c-0.2-0.4-0.1-0.8,0.2-1.1
+				c0.3-0.3,0.7-0.4,1.1-0.2c0.4,0.2,0.6,0.5,0.6,0.9c0,0.3-0.1,0.5-0.3,0.7C61.5,709.8,61.3,709.9,61,709.9z"/>
+		</g>
+		<g id="Graphic_462">
+			<path class="st11" d="M55.7,700.3h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.4-1.2,1-1.3h3.3c0.6-0.1,1.2,0.4,1.3,1
+				c0.1,0.6-0.4,1.2-1,1.3C55.9,700.3,55.8,700.3,55.7,700.3z"/>
+		</g>
+		<g id="Graphic_461">
+			<path class="st10" d="M55.7,704.4h-5.4c-0.6,0.1-1.2-0.4-1.2-1c-0.1-0.6,0.3-1.2,1-1.3c0.1,0,0.2,0,0.3,0h5.4
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1s-0.5,0.6-0.9,0.7H55.7z"/>
+		</g>
+		<g id="Graphic_460">
+			<path class="st11" d="M55.7,708.5h-3c-0.6,0.1-1.2-0.4-1.3-1c-0.1-0.6,0.3-1.2,0.9-1.3c0.1,0,0.2,0,0.3,0h3
+				c0.4-0.1,0.8,0.1,1.1,0.4c0.3,0.3,0.3,0.8,0.1,1.1s-0.5,0.6-0.9,0.7C55.8,708.5,55.8,708.5,55.7,708.5z"/>
+		</g>
+	</g>
+</g>
+<g id="Group_451">
+	<g id="Graphic_457">
+		<rect x="671.6" y="66" class="st6" width="143" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_69_" x="671.6" y="66" width="143" height="56"/>
+			</defs>
+			<clipPath id="SVGID_70_">
+				<use xlink:href="#SVGID_69_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="671.6" y="66" class="st59" width="143" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 722.5772 98.0051)" class="st3 st8 st5">Looker</text>
+	</g>
+	<g id="Group_452">
+		<g id="Graphic_456">
+			<path class="st60" d="M702.5,77.9c-1,0-2,0.6-2.5,1.5s-0.4,2,0.1,2.9l1.2-1.2c0-0.1-0.1-0.2-0.1-0.4c0-0.7,0.5-1.2,1.2-1.2
+				s1.2,0.5,1.2,1.2c0,0.7-0.5,1.2-1.2,1.2c-0.1,0-0.3,0-0.4-0.1l-1.2,1.2c1,0.7,2.3,0.6,3.3-0.1s1.4-2,1-3.1
+				C704.8,78.7,703.7,77.9,702.5,77.9z"/>
+		</g>
+		<g id="Graphic_455">
+			<path class="st11" d="M701.4,86.1c0-1-0.3-1.9-0.9-2.6l-1.6,1.6c0.5,0.9,0.3,2-0.4,2.7l0.8,2.1C700.6,89,701.4,87.6,701.4,86.1z"
+				/>
+		</g>
+		<g id="Graphic_454">
+			<path class="st11" d="M697,88.3L697,88.3c-1,0-1.9-0.6-2.2-1.5s0-1.9,0.7-2.5c0.8-0.6,1.8-0.6,2.6-0.1l1.5-1.5
+				c-1.5-1.2-3.6-1.3-5.2-0.2s-2.3,3.1-1.8,4.9c0.6,1.9,2.3,3.1,4.2,3.1c0.3,0,0.6,0,0.9-0.1L697,88.3z"/>
+		</g>
+		<g id="Graphic_453">
+			<path class="st12" d="M702.6,90.1c-1,0-2,0.1-2.9,0.4l1.2,3c0.5-0.1,1.1-0.2,1.6-0.2c3.2,0,6,2.3,6.6,5.4c0.6,3.2-1.1,6.3-4,7.5
+				c-3,1.2-6.4,0.2-8.2-2.5s-1.4-6.2,0.8-8.5c0.5-0.5,1-0.9,1.6-1.2l-1.2-3c-4.6,2.2-6.7,7.5-5,12.3c1.7,4.8,6.7,7.5,11.7,6.4
+				c5-1.1,8.3-5.8,7.7-10.9C711.9,93.9,707.7,90.1,702.6,90.1L702.6,90.1z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(0.9987 0 0 1 544.2979 852.3535)" class="st3 st9 st5"> </text>
+<text transform="matrix(0.9987 0 0 1 513.8223 866.3535)" class="st3 st8 st5">Intelligence API</text>
+<g>
+	<g id="Graphic_652_1_">
+		<rect x="466.5" y="827.7" class="st6" width="146" height="56"/>
+		<g>
+			<defs>
+				<rect id="SVGID_71_" x="466.5" y="827.7" width="146" height="56"/>
+			</defs>
+			<clipPath id="SVGID_72_">
+				<use xlink:href="#SVGID_71_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="466.5" y="827.7" class="st61" width="146" height="56"/>
+		</g>
+		<text transform="matrix(1 0 0 1 517.4883 859.7002)" class="st3 st8 st5">Cloud DLP</text>
+	</g>
+	<g>
+		<path class="st12" d="M499.2,848.8c-3.2-2-7.4-1.4-9.9,1.5c-1.2,1.4-1.9,3.2-1.9,5.1c0,2.5,1.3,4.9,3.4,6.3l-0.2,0.4l-0.8,0.2
+			c-1.2,2.2-1.7,2.8-2.9,4.9l2.1,1.2c1.2-2.1,1.6-2.7,2.9-4.9l-0.2-0.9l0.2-0.4c3.9,1.7,8.4,0,10.2-3.8
+			C503.6,854.9,502.4,850.8,499.2,848.8L499.2,848.8z M496.5,860.4c-2.8,0.8-5.8-0.9-6.5-3.7c-0.8-2.8,0.9-5.8,3.7-6.5
+			c2.8-0.8,5.7,0.9,6.5,3.7l0,0l0,0C501,856.7,499.3,859.6,496.5,860.4C496.5,860.4,496.5,860.4,496.5,860.4z"/>
+		<path class="st11" d="M481.2,853.4l0.2-1.5h1.7v0.5h-1.2l-0.1,0.6c0.1-0.1,0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.7,0.3
+			c0.2,0.2,0.3,0.5,0.2,0.7c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.2,0.3-0.3,0.4c-0.2,0.1-0.3,0.1-0.5,0.1c-0.2,0-0.3-0.1-0.5-0.1
+			c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.3-0.1-0.5h0.6c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.3-0.1
+			c0.1-0.1,0.1-0.3,0.1-0.4c0-0.1,0-0.3-0.1-0.4c-0.1-0.1-0.2-0.1-0.4-0.1c-0.1,0-0.2,0-0.3,0.1l-0.1,0.1L481.2,853.4z"/>
+		<path class="st10" d="M486,854.9h-0.6v-2.3l-0.7,0.2v-0.5l1.2-0.4h0.1V854.9z"/>
+		<path class="st10" d="M482.6,858.9H482v-2.3l-0.7,0.2v-0.5l1.3-0.4l0,0V858.9z"/>
+		<path class="st11" d="M486.6,857.6c0,0.3-0.1,0.7-0.3,0.9c-0.4,0.4-1,0.4-1.4,0.1l0,0c-0.2-0.3-0.3-0.6-0.3-0.9v-0.5
+			c0-0.3,0.1-0.7,0.3-0.9c0.4-0.4,1-0.4,1.4,0l0,0c0.2,0.3,0.3,0.6,0.3,0.9V857.6z M486,857c0-0.2,0-0.4-0.1-0.5
+			c-0.1-0.1-0.2-0.2-0.3-0.2c-0.1,0-0.2,0.1-0.3,0.2c-0.1,0.2-0.1,0.3-0.1,0.5v0.7c0,0.2,0,0.4,0.1,0.5c0.1,0.1,0.2,0.2,0.3,0.2
+			c0.1,0,0.3-0.1,0.3-0.2c0.1-0.2,0.1-0.3,0.1-0.5V857z"/>
+		<path class="st10" d="M505.1,854.8h-0.5v-2.3l-0.7,0.2v-0.5l1.2-0.4h0.1L505.1,854.8z"/>
+		<path class="st11" d="M507.2,853.3l0.2-1.5h1.7v0.5h-1.2l-0.1,0.6c0.1-0.1,0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.7,0.3
+			c0.2,0.2,0.3,0.5,0.2,0.7c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.2,0.3-0.3,0.3c-0.2,0.1-0.3,0.1-0.5,0.1c-0.2,0-0.3,0-0.5-0.1
+			c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.3-0.1-0.5h0.6c0,0.1,0.1,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2,0,0.3-0.1
+			c0.1-0.1,0.1-0.3,0.1-0.4c0-0.1,0-0.3-0.1-0.4c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0-0.3,0.1l-0.1,0.1L507.2,853.3z"/>
+		<path class="st11" d="M505.7,857.6c0,0.3-0.1,0.7-0.3,0.9c-0.4,0.4-1,0.4-1.4,0.1l0,0c-0.2-0.3-0.3-0.6-0.3-0.9v-0.5
+			c0-0.3,0.1-0.7,0.3-0.9c0.4-0.4,1-0.4,1.4,0l0,0c0.2,0.3,0.3,0.6,0.3,0.9V857.6z M505.1,857c0-0.2,0-0.4-0.1-0.5
+			c-0.1-0.1-0.2-0.2-0.3-0.2c-0.1,0-0.2,0.1-0.3,0.2c-0.1,0.2-0.1,0.3-0.1,0.5v0.7c0,0.2,0,0.4,0.1,0.5c0.1,0.1,0.2,0.2,0.3,0.2
+			c0.1,0,0.3-0.1,0.3-0.2c0.1-0.2,0.1-0.3,0.1-0.5V857z"/>
+		<path class="st10" d="M507.2,857.4l0.2-1.5h1.7v0.5h-1.2l-0.1,0.6c0.1-0.1,0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.7,0.3
+			c0.2,0.2,0.3,0.5,0.2,0.7c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.2,0.3-0.3,0.3c-0.2,0.1-0.3,0.1-0.5,0.1c-0.2,0-0.3,0-0.5-0.1
+			c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.3-0.1-0.5h0.6c0,0.1,0,0.2,0.1,0.3c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2,0,0.3-0.1
+			c0.1-0.1,0.1-0.3,0.1-0.4c0-0.1,0-0.3-0.1-0.4c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0-0.3,0.1h-0.1L507.2,857.4z"/>
+		<path class="st11" d="M492,858.1c0-0.5,0-0.9,0-1.3c0-0.3,0.2-0.7,0.5-0.9c0.3-0.3,0.7-0.5,1.2-0.6c1.1-0.4,2.4-0.2,3.4,0.4
+			c0.1,0.1,0.3,0.2,0.4,0.3c0.3,0.3,0.5,0.7,0.4,1.1c0,0.3,0,0.7,0,1.1L492,858.1z"/>
+		<path class="st11" d="M494.9,854.4c-0.8-0.1-1.5-0.8-1.4-1.6c0.1-0.7,0.6-1.3,1.4-1.4c0.8,0,1.5,0.7,1.5,1.5c0,0,0,0,0,0l0,0l0,0
+			C496.4,853.8,495.7,854.4,494.9,854.4C494.9,854.4,494.9,854.4,494.9,854.4z"/>
+	</g>
+</g>
+</svg>
