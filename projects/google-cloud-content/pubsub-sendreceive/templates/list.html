@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Files</title>
+    </head>
+    <body>
+        <h1>Fetch topics in a project or subscriptions for a topic</h1>
+        <hr />
+        <p>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </p>
+
+        <form action="/list" method="post">
+            <label for="choice_select">Select choice...</label>
+            <select id="choice_select" name="choice_select">
+                <option value="topics">topics</option>
+                <option value="subscriptions">subscriptions</option>
+            </select>
+            <br>
+            <br>
+            <label for="project">Enter project id...:</label>
+            <input type="text" id="project" name="project" placeholder="project name">
+            <br>
+            <br>
+            <label for="topic">Enter topic name...:</label>
+            <input type="text" id="topic" name="topic" placeholder="topic name" />
+            <br>
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+
+        <h3>{{message}}</h3>
+        <ul>
+            {% for item in data %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

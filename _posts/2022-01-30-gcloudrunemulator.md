@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Google cloud run emulator - For Architects - Google cloud certification
-date:       2022-02-30 21:06:00
+date:       2022-02-28 21:06:00
 summary:    Let's understand the google cloud run emulator with the help of a sample application
 categories:  GOOGLE_CLOUD CLOUDRUN
 permalink:  /google-cloud-certification-cloudrun-emulator
