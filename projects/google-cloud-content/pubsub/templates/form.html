@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Index</title>
+    </head>
+    <body>
+        <h1>Topic & subscription</h1>
+        <hr />
+        <p>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </p>
+
+        <h3>Enter details to create topic and subscription</h3>
+        <form action="/" method="post">
+            <label for="project">Enter project id...:</label>
+            <input type="text" id="project" name="project" placeholder="project name">
+            <br>
+            <br>
+            <label for="topic">Enter topic name...:</label>
+            <input type="text" id="topic" name="topic" placeholder="topic name" />
+            <br>
+            <br>
+            <label for="subscription">Enter subscription name...:</label>
+            <input type="text" id="subscription" name="subscription" placeholder="subscription name" />
+            <br>
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
