@@ -305,3 +305,87 @@ Source: https://cloud.google.com
 - **Sustained use discounts**: **Automatic discounts** for running VM instances for significant portion of the billing month
 - **Committed use discounts**: 1 year or 3 year **reservations** for workloads with **predictable resource** needs
 - **Preemptible VM**: Short-lived cheaper (upto 80%) compute instances for non-time-critical fault-tolerant workloads
+
+
+---
+Question:Compute-1->. You are running 100s of Linux VM machines in production. You need to manage access to the users to these VM machines. Which one of the below is NOT an correct option to manage access to the VM's?
+1. OS Login
+2. Managing SSH keys in metadata
+3. Temporarily grant a user access to an instance
+4. Managing SSH keys in Persistent Disks
+
+Ans 4. Managing SSH keys in Persistent Disks is not one of the recommended options. Google provides multiple ways to manage user access to Linux machines.
+Option 1: OS Login is the recommended option from Google. From the documentation "In most scenarios, we recommend using OS Login. The OS Login feature lets you use Compute Engine IAM roles to manage SSH access to Linux instances. You can add an extra layer of security by setting up OS Login with two-factor authentication, and manage access at the organization level by setting up organization policies.". More details can be found here. https://cloud.google.com/compute/docs/instances/access-overview
+Option 2: Managing SSH keys in metadata is also a correct option to manage access. However this is not a recommended one compared to OS Login as this involves manually managing SSH keys. 
+Option 3: Temporarily grant a user access to an instance is also an option to grant access to users. To grant a role to a member on a resource, use the resource's add-iam-policy-binding subcommand with the --member and --role flags.
+gcloud compute resource-type add-iam-policy-binding resource-name \
+    --member='member' \
+    --role='role'
+resource-type here could be disks, images, instances, instance-templates, regionDisks, sole-tenancy node-groups, sole-tenancy node-templates, snapshots. member is someone to whom you want to grant access and role is the role you want to assign to the identity.
+---
+Question:Compute-1a->You are running 100s of Linux VM machines in production. You need to manage access to the users to these VM machines. Which one of the below is the recommended option to manage access to the VM's?
+1. OS Login
+2. Managing SSH keys in metadata
+3. Temporarily grant a user access to an instance
+4. Managing SSH keys in Persistent Disks
+
+Google provides multiple ways to manage user access to Linux machines.
+Option 1: OS Login is the recommended option from Google. From the documentation "In most scenarios, we recommend using OS Login. The OS Login feature lets you use Compute Engine IAM roles to manage SSH access to Linux instances. You can add an extra layer of security by setting up OS Login with two-factor authentication, and manage access at the organization level by setting up organization policies.". More details can be found here. https://cloud.google.com/compute/docs/instances/access-overview
+Option 2: Managing SSH keys in metadata is also a correct option to manage access. However this is not a recommended one compared to OS Login as this involves manually managing SSH keys. 
+Option 3: Temporarily grant a user access to an instance is also an option to grant access to users. To grant a role to a member on a resource, use the resource's add-iam-policy-binding subcommand with the --member and --role flags.
+gcloud compute resource-type add-iam-policy-binding resource-name \
+    --member='member' \
+    --role='role'
+resource-type here could be disks, images, instances, instance-templates, regionDisks, sole-tenancy node-groups, sole-tenancy node-templates, snapshots. member is someone to whom you want to grant access and role is the role you want to assign to the identity.
+Ans 4. Managing SSH keys in Persistent Disks is not one of the recommended options.
+---
+Question:Compute-2-> You are running multiple Linux VM's on production in a project named Production. You have built a custom app which connect to all VM's using SSH and execute a specific command which gathers specific information about the VM's. When new VM's added to the project that VM's also should be included. The custom app will be running on one of VM's in the same network as other VM's. What is the Google recommended way of doing this?
+1. Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+2. Create a service account. Provide the role roles/compute.osOwnerLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+3. Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). Assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+4. Create a service account. Provide the role Owner to the Service Account on the project level (production project). Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+
+Option 1: Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is the correct answer. 
+The recommended way is to create a Service Account and assign the role OS Login. This way the app's running on the VM can connect to the VM's through SSH. More details are here. https://cloud.google.com/compute/docs/tutorials/service-account-ssh
+Option 2  Create a service account. Provide the role roles/compute.osOwnerLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is incorrect because there is no role called roles/compute.osOwnerLogin. 
+Option 3 Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). Assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is incorrect because there is no scope is given which is required for the Service Account to execute API requests on this instance
+Option 4 Create a service account. Provide the role Owner to the Service Account on the project level (production project). Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is not correct because assigning Owner role is not a Google recommended practice.
+---
+Question:Compute-2a-> You are running multiple Linux VM's on production in a project named Production. You have built a custom app which connect to all VM's using SSH and execute a specific command which gathers specific information about the VM's. When new VM's added to the project that VM's also should be included. The custom app will be running on one of VM's in the same network as other VM's. What is the Google recommended way of doing this?
+1. Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+2. Create a service account. Provide the role roles/compute.osOwnerLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+3. Create a service account. Provide the role roles/compute.osLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+4. Create a service account. Provide the role Owner to the Service Account on the project level (production project). Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project
+
+Option 3: Create a service account. Provide the role roles/compute.osLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is the correct answer. 
+The recommended way is to create a Service Account and assign the role OS Login. This way the app's running on the VM can connect to the VM's through SSH. More details are here. https://cloud.google.com/compute/docs/tutorials/service-account-ssh
+Option 1: Create a service account. Provide the role roles/compute.osAdminLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is not correct answer though it will do the job but you don't necessarily have to provide osAdminLogin role unless you want admin privilages to those VM's.
+Option 2  Create a service account. Provide the role roles/compute.osOwnerLogin to the Service Account on the project level (production project). For the VM, where the custom app is running provide the scope cloud-platform scope. Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is incorrect because there is no role called roles/compute.osOwnerLogin. 
+Option 4 Create a service account. Provide the role Owner to the Service Account on the project level (production project). Also assign the Service Account to this VM. This should enable the custom app to connect to the other VM's in the project is not correct because assigning Owner role is not a Google recommended practice.
+---
+Question:Compute-3-> You would like to setup OS Login to a VM as that is the recommended way of allowing the users to connect to a VM. Which of the below commands is the correct command to enable this?
+1. gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE
+2. gcloud compute instances add-metadata VM_NAME --metadata enable-oslogin=TRUE
+3. gcloud compute instances add-metadata VM_NAME --metadataflag enable-oslogin=TRUE
+4. gcloud compute instances add-metadata VM_NAME --enable-oslogin=TRUE
+
+Option 2: gcloud compute instances add-metadata VM_NAME --metadata enable-oslogin=TRUE is correct. This command enables the os-login on the VM.
+Option 1: gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE is incorrect because it does this at project level. The question is how to enable this at the VM level.
+Option 3: gcloud compute instances add-metadata VM_NAME --metadataflag enable-oslogin=TRUE is not correct because there is no flag called --metadataflag
+Option 4: gcloud compute instances add-metadata VM_NAME --enable-oslogin=TRUE is incorrect because there is no flag called --enable-oslogin
+
+For more information https://cloud.google.com/compute/docs/oslogin/set-up-oslogin
+---
+Question:Compute-3a-> You would like to setup OS Login to all the VMs in a project as that is the recommended way of allowing the users to connect to a VMs. Which of the below commands is the correct command to enable this?
+1. gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE
+2. gcloud compute instances add-metadata VM_NAME --metadata enable-oslogin=TRUE
+3. gcloud compute project-info add-metadata --metadataflag enable-oslogin=TRUE
+4. gcloud compute instances add-metadata ALL_VM --metadata enable-oslogin=TRUE
+
+Option 1: gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE is correct and it does this at project level. 
+Option 2: gcloud compute instances add-metadata VM_NAME --metadata enable-oslogin=TRUE is not correct. This command enables the os-login on the VM. The question is how to enable this at the VM level.
+Option 3: gcloud compute project-info add-metadata --metadataflag enable-oslogin=TRUE is not correct because there is no flag called --metadataflag
+Option 4: gcloud compute instances add-metadata ALL_VM --metadata enable-oslogin=TRUE  is incorrect because there is no way to mention all the VM's in the project by using the term ALL_VM.
+
+For more information https://cloud.google.com/compute/docs/oslogin/set-up-oslogin
+---
