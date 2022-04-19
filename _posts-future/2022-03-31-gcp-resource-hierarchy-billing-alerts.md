@@ -4,7 +4,7 @@ title:      GCP Resource Hierarchy, Roles and Identities - GCP Certification Che
 date:       2022-03-31 00:00:00
 summary:    Let's get a quick overview of resource hierarchy and billing in google cloud and what roles, identities helps you setup the right hierachy for your google cloud workloads 
 categories:  GCP_CLOUD General
-permalink:  /gcp-certification-region-availability-zones-az
+permalink:  /gcp-certification-resource-hierarchy
 ---
 
 Let's get a quick overview of resources hierachy from an GCP certification perspective. We will look at important certification questions regarding resource hierarchy, billing, roles and identities.
