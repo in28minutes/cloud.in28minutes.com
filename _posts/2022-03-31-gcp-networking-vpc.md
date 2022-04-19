@@ -2,8 +2,8 @@
 layout:     post
 title:      GCP Networking VPC - GCP Certification Cheat Sheet
 date:       2022-03-31 00:00:00
-summary:    Let's get a quick overview of Google Cloud Load Balancers
-categories:  GCP_CLOUD General
+summary:    Let's get a quick overview of Google Cloud Networking 
+categories:  GCP_CLOUD
 permalink:  /gcp-certification-google-cloud-vpc
 ---
 
@@ -12,7 +12,7 @@ Let's get a quick overview of Google Cloud Networking from an GCP certification 
 ## You will learn
 - What is a VPC
 - Why it is important and how to set it up?
-- Commands Cheatsheet
+- What is shared VPC and VPC Peering
 
 ## GCP Certification Study Material and Notes - 25 PDF Cheat Sheets
 
@@ -27,10 +27,10 @@ Each cheat sheet contains:
 </div>
 
 # Networking 
----
+
 ## Need for Google Cloud VPC 
-<!-- .slide: class="image-right image-thirty" -->
-![](images/aws/vpc/1-SingleDataCenterWithDB.png)
+
+![](./gcpimages/aws/vpc/1-SingleDataCenterWithDB.png)
 - In a corporate network or an on-premises data center:
 	- Can anyone on the internet **see the data exchange** between the application and the database? 
 		- **No**
@@ -41,10 +41,9 @@ Each cheat sheet contains:
 - How do you do create **your own private network** in the cloud?
 	- Enter **Virtual Private Cloud (VPC)**
 
----
 ## Google Cloud VPC (Virtual Private Cloud)
-<!-- .slide: class="image-right image-twenty" -->
-![](./images/00-icons/gcp/vpc.png)
+
+![](./gcpimages/00-icons/gcp/vpc.png)
 - Your **own isolated network** in GCP cloud
 	- Network traffic within a VPC is isolated (not visible) from all other Google Cloud VPCs
 - You **control all the traffic** coming in and going outside a VPC
@@ -54,16 +53,15 @@ Each cheat sheet contains:
 - VPC is a **global resource** & contains subnets in one or more region
 	- (REMEMBER) NOT tied to a region or a zone. VPC resources can be in any region or zone!
 
----
 ## Need for VPC Subnets
-<!-- .slide: class="image-right image-ten" -->
-![](./images/aws/00-icons/user.png)
-![](./images/arrowtdsmall.png) 
-![](./images/00-icons/gcp/load-balancing.png)
-![](./images/arrowtdsmall.png) 
-![](./images/00-icons/gcp/compute-engine.png) 
-![](./images/arrowtdsmall.png) 
-![](./images/aws/00-icons/database.png) 
+
+![](./gcpimages/aws/00-icons/user.png)
+![](./gcpimages/arrowtdsmall.png) 
+![](./gcpimages/00-icons/gcp/load-balancing.png)
+![](./gcpimages/arrowtdsmall.png) 
+![](./gcpimages/00-icons/gcp/compute-engine.png) 
+![](./gcpimages/arrowtdsmall.png) 
+![](./gcpimages/aws/00-icons/database.png) 
 
 - Different types of resources are created on cloud - databases, compute etc
 	- Each type of resource has **its own access needs**
@@ -74,10 +72,9 @@ Each cheat sheet contains:
 	- Create separate Subnets!
 - (Additional Reason) You want to distribute resources across multiple regions for high availability
 
----
 ## VPC Subnets
-<!-- .slide: class="image-right image-forty" -->
-![](images/02-architecture/00-public-private-subnet.png)
+
+![](./gcpimages/02-architecture/00-public-private-subnet.png)
 - (Solution) **Create different subnets** for public and private resources
 	- Resources in a public subnet **CAN** be accessed from internet
 	- Resources in a private subnet **CANNOT** be accessed from internet
@@ -86,10 +83,9 @@ Each cheat sheet contains:
 - **Example** : VPC - demo-vpc => Subnets - region us-central1, europe-west1 or us-west1 or ..
 
 
----
 ## Creating VPCs and Subnets
-<!-- .slide: class="image-right image-forty" -->
-![](images/02-architecture/00-public-private-subnet.png)
+
+![](./gcpimages/02-architecture/00-public-private-subnet.png)
 
 - By default, every project has a default VPC
 - You can create YOUR own VPCs:
@@ -104,7 +100,6 @@ Each cheat sheet contains:
 	- Enable **Private Google Access** - Allows VM's to connect to Google API's using private IP's
 	- Enable **FlowLogs** - To troubleshoot any VPC related network issues
 
----
 ## CIDR (Classless Inter-Domain Routing) Blocks
 - Resources in a network use continuous IP addresses to make routing easy:
 	- Example: Resources inside a specific network can use IP addresses from 69.208.0.0 to 69.208.0.15
@@ -115,9 +110,8 @@ Each cheat sheet contains:
 - **Quick Tip**: 69.208.0.0/28 indicates that the first 28 bits (out of 32) are fixed. 
 	- Last 4 bits can change => 2 to the power 4  = 16 addresses
 
----
 ## CIDR Exercises
-![](images/aws/cidr-examples.png)
+![](./gcpimages/aws/cidr-examples.png)
 - Exercise : How many addresses does **69.208.0.0/26** represent?
 	- 2 to the power (32-26 = 6) = 64 addresses from 69.208.0.0 to 69.208.0.63
 - Exercise : How many addresses does **69.208.0.0/30** represent?
@@ -125,10 +119,8 @@ Each cheat sheet contains:
 - Exercise : What is the difference between **0.0.0.0/0** and **0.0.0.0/32**?
 	- 0.0.0.0/0 represent all IP addresses. 0.0.0.0/32 represents just one IP address 0.0.0.0.
 
----
 ## Examples of Recommended CIDR Blocks - VPC Subnets
-<!-- .slide: class="image-right image-ten" -->
-![](./images/00-icons/gcp/vpc.png)
+![](./gcpimages/00-icons/gcp/vpc.png)
 - **Recommended CIDR Blocks**
 	- Private IP addresses RFC 1918: 10.0.0.0/8,  172.16.0.0/12, 192.168.0.0/16
 	- Shared address space RFC 6598: 100.64.0.0/10	
@@ -140,10 +132,9 @@ Each cheat sheet contains:
 		- Local host RFC 1122: 127.0.0.0/8	
 - (REMEMBER) You **CAN EXTEND** the CIDR Block Range of a Subnet (Secondary CIDR Block)
 
----
 ##  Firewall Rules
-<!-- .slide: class="image-right image-twenty" -->
-![](./images/00-icons/gcp/vpc.png)
+
+![](./gcpimages/00-icons/gcp/vpc.png)
 - Configure Firewall Rules to control traffic going in or out of the network:
 	- Stateful
 	- Each firewall rule has priority (0-65535) assigned to it
@@ -159,10 +150,8 @@ Each cheat sheet contains:
 		- Allow Incoming TCP traffic on port 3389 (RDP) **default-allow-rdp**
 		- Allow Incoming ICMP from any source on the network **default-allow-icmp**
 
----
 ##  Firewall Rules - Ingress and Egress Rules
-<!-- .slide: class="image-right image-twenty" -->
-![](./images/00-icons/gcp/vpc.png)
+![](./gcpimages/00-icons/gcp/vpc.png)
 - **Ingress Rules**: Incoming traffic from outside to GCP targets
 	- **Target (defines the destination)**: All instances or instances with TAG/SA
 	- **Source (defines where the traffic is coming from)**: CIDR or All instances or instances with TAG/SA
@@ -176,10 +165,8 @@ Each cheat sheet contains:
 	- **Port** - Which port?
 	- **Enforcement status** - Enable or Disable the rule
 
----
 ##  Shared VPC
-<!-- .slide: class="image-right image-twenty" -->
-![](./images/00-icons/gcp/vpc.png)
+![](./gcpimages/00-icons/gcp/vpc.png)
 
 - Scenario: Your organization has multiple projects. You want resources in different projects to talk to each other?
 	- How to allow resources in different projects to talk with internal IPs securely and efficiently? 
@@ -192,10 +179,8 @@ Each cheat sheet contains:
 - Helps you achieve **separation of concerns**:
 	- Network administrators responsible for Host projects and Resource users use Service Project
 
----
 ## VPC Peering
-<!-- .slide: class="image-right image-twenty" -->
-![](./images/00-icons/gcp/vpc.png)
+![](./gcpimages/00-icons/gcp/vpc.png)
 
 - Scenario: How to connect VPC networks across different organizations?
 - Enter **VPC Peering** 
@@ -207,4 +192,3 @@ Each cheat sheet contains:
 	- (REMEMBER) Network administration is NOT changed:
 		- Admin of one VPC do not get the role automatically in a peered network
 
----
