@@ -1,6 +1,0 @@
-Flask
-google-cloud
-google-api-core
-google-api-python-client
-google-cloud-core
-google-cloud-pubsub
