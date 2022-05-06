@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      GCP App Engine - GCP Certification Cheat Sheet
-date:       2022-03-31 00:00:00
+date:       2022-05-06 00:00:00
 summary:    Let's get a quick overview of Google Cloud App Engine
-categories:  GCP_CLOUD General
+categories:  GCP_CLOUD
 permalink:  /gcp-certification-google-cloud-app-engine
 ---
 
@@ -29,7 +29,7 @@ Each cheat sheet contains:
 # App Engine
 
 ## App Engine
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 - **Simplest way** to deploy and scale your applications in GCP
 	- Provides end-to-end application management
 - Supports:
@@ -44,8 +44,8 @@ Each cheat sheet contains:
 	- Traffic splitting
 
 ## Compute Engine vs App Engine
-![](./images/00-icons/gcp/app-engine.png)
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - **Compute Engine**
 	- IAAS
 	- MORE Flexibility
@@ -62,7 +62,7 @@ Each cheat sheet contains:
 	- LOWER Flexibility
 
 ## App Engine environments
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 - **Standard**: Applications run in language specific sandboxes
 	- Complete isolation from OS/Disk/Other Apps
@@ -79,7 +79,7 @@ Each cheat sheet contains:
 	- Provides access to background processes and local disks
 
 ## App Engine - Application Component Hierarchy
-![](./images/02-architecture/appengine-architecture-components.png)
+![](./gcpimages/02-architecture/appengine-architecture-components.png)
 - **Application**: One App per Project
 - **Service(s)**: Multiple Microservices or App components
 	- You can have multiple services in a single application
@@ -103,7 +103,7 @@ Each cheat sheet contains:
 |SSH for debugging|No|Yes|
 
 ## App Engine - Scaling Instances
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 - **Automatic** - Automatically scale instances based on the load:
 	- Recommended for Continuously Running Workloads
@@ -153,7 +153,7 @@ automatic_scaling:
 ```
 
 ## AppEngine - Request Routing
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 - You can use a **combination** of three approaches:
 	- Routing with **URLs**:
@@ -168,7 +168,7 @@ automatic_scaling:
 		- Configure routes on Load Balancing instance
 
 ## AppEngine - Deploying new versions without downtime
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 - How do I go from V1 to V2 without downtime?
 - **Option 1**: I'm very confident - Deploy & shift all traffic at once:
 	- Deploy and shift all traffic at once from v1 to v2: ***gcloud app deploy***
@@ -186,7 +186,7 @@ automatic_scaling:
 		- Ensure that new instances are warmed up before they receive traffic (app.yaml - `inbound_services > warmup`)
 
 ## How do you split traffic between multiple versions?
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 - How do you decide which version receives which traffic?
 	- **IP Splitting** - Based on request IP address
@@ -203,7 +203,7 @@ automatic_scaling:
 
 ## Playing with App Engine
 
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 - ***gcloud app browse/create/deploy/describe/open-console***
 	- *gcloud app **create** --region=us-central*
@@ -220,7 +220,7 @@ automatic_scaling:
 	- *gcloud app **logs tail***
 	- *gcloud app **regions list***
 
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 
 ## Playing with App Engine Instances
 - ***gcloud app instances delete/describe/list/scp/ssh***
@@ -288,7 +288,7 @@ queue:
 ```
 
 ## App Engine - Remember
-![](./images/00-icons/gcp/app-engine.png)
+![](./gcpimages/00-icons/gcp/app-engine.png)
 - AppEngine is **Regional** (services deployed across zones)
 	- You **CANNOT** change an Application's region
 - Good option for simple **microservices** (multiple services)
@@ -303,6 +303,7 @@ queue:
 		- If you are not very cost sensitive, keep a set of resident instances running always
 
 ## App Engine - Scenarios
+
 | Scenario |Solution  |
 |:--|:--|
 |I want to create two Google App Engine Apps in the same project|Not possible. You can only have one App Engine App per project. However you can have multiple services and multiple version for each service.|
