@@ -31,7 +31,7 @@ Each cheat sheet contains:
 # Compute Engine Fundamentals
 
 ## Google Compute Engine (GCE)
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - In corporate data centers, applications are deployed to physical servers
 - Where do you deploy applications in the cloud?
 	- Rent virtual servers
@@ -39,9 +39,9 @@ Each cheat sheet contains:
 	- **Google Compute Engine (GCE)** - Provision & Manage Virtual Machines
 
 ## Compute Engine - Features
-![](./images/00-icons/gcp/compute-engine.png)
-![](./images/00-icons/gcp/persistent-disk.png)
-![](./images/00-icons/gcp/load-balancing.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/persistent-disk.png)
+![](./gcpimages/00-icons/gcp/load-balancing.png)
 - Create and manage lifecycle of Virtual Machine (VM) instances
 - **Load balancing** and **auto scaling** for multiple VM instances
 - **Attach storage** (& network storage) to your VM instances
@@ -51,7 +51,7 @@ Each cheat sheet contains:
 	- Distribute load with Load Balancers	
 
 ## Compute Engine Machine Family
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - What type of hardware do you want to run your workloads on?
 - Different Machine Families for Different Workloads:
 	- **General Purpose (E2, N2, N2D, N1)** : Best price-performance ratio
@@ -72,16 +72,16 @@ Each cheat sheet contains:
 - Memory, disk and networking capabilities increase along with vCPUs
 
 ## Image
-![](./images/00-icons/gcp/image-card.png)
-![](./images/arrow-card.png)
-![](./images/00-icons/gcp/compute-instances-card.png)
+![](./gcpimages/00-icons/gcp/image-card.png)
+![](./gcpimages/arrow-card.png)
+![](./gcpimages/00-icons/gcp/compute-instances-card.png)
 - What operating system and what software do you want on the instance?
 - Type of Images:
 	- **Public Images**: Provided & maintained by Google or Open source communities or third party vendors
 	- **Custom Images**: Created by you for your projects
 
 ## Internal and External IP Addresses
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - **External** (Public) IP addresses are **Internet addressable**.
 - **Internal** (Private) IP addresses are **internal** to a corporate network
 - You CANNOT have two resources with same public (External) IP address.
@@ -91,12 +91,12 @@ Each cheat sheet contains:
 	- (Remember) When you stop an VM instance, External IP address is lost
 
 ## Static IP Addresses
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - Scenario : How do you get a constant External IP address for a VM instance?
 	- Quick and dirty way is to assign an Static IP Address to the VM!
 
 ## Static IP Addresses - Remember
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - Static IP **can be switched** to another VM instance in same project
 - Static IP **remains attached** even if you stop the instance. You have to manually detach it.
 - Remember : You are **billed for** an Static IP when **you are NOT using it**! 
@@ -104,7 +104,7 @@ Each cheat sheet contains:
 
 ## Simplify VM setup
 <!-- .slide: class="image-right image-ten one50" -->
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - How do we **reduce** the **number of steps** in creating an VM instance and
 setting up?
 - Let's explore a few options: 
@@ -127,11 +127,11 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 
 ---
 ## Instance templates
-![](./images/00-icons/gcp/compute-instance-card.png)
-![](./images/arrowtd.png)
-![](./images/00-icons/gcp/instance-template-card.png)
-![](./images/arrowtd.png)
-![](./images/00-icons/gcp/compute-instances-card.png)
+![](./gcpimages/00-icons/gcp/compute-instance-card.png)
+![](./gcpimages/arrowtd.png)
+![](./gcpimages/00-icons/gcp/instance-template-card.png)
+![](./gcpimages/arrowtd.png)
+![](./gcpimages/00-icons/gcp/compute-instances-card.png)
 
 - Why do you need to specify all the VM instance details (Image, instance type etc) **every time** you launch an instance?
 	- How about creating a **Instance template**?
@@ -144,11 +144,11 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 	- Latest non-deprecated version of the family is used
 
 ## Reducing Launch Time with Custom Image 
-![](./images/00-icons/gcp/compute-instance-card.png)
-![](./images/arrowtd.png)
-![](./images/00-icons/gcp/image-card.png)
-![](./images/arrowtd.png)
-![](./images/00-icons/gcp/compute-instances-card.png)
+![](./gcpimages/00-icons/gcp/compute-instance-card.png)
+![](./gcpimages/arrowtd.png)
+![](./gcpimages/00-icons/gcp/image-card.png)
+![](./gcpimages/arrowtd.png)
+![](./gcpimages/00-icons/gcp/compute-instances-card.png)
 
 - Installing OS patches and software at launch of VM instances **increases boot up** time
 - How about creating a custom image with OS patches and software **pre-installed**?
@@ -159,7 +159,7 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 - **Prefer** using **Custom Image** to **Startup script**
 
 ## Sustained use discounts
-![](./images/gcp/sustained-use-example.png)
+![](./gcpimages/gcp/sustained-use-example.png)
 Source: https://cloud.google.com
 
 - **Automatic discounts** for running VM instances for significant portion of the billing month
@@ -171,7 +171,7 @@ Source: https://cloud.google.com
 - **RESTRICTION**: Does NOT apply to VMs created by App Engine flexible and Dataflow
 
 ## Committed use discounts
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - For workloads with **predictable resource** needs
 - **Commit** for 1 year or 3 years
 - **Up to 70% discount** based on machine type and GPUs
@@ -179,7 +179,7 @@ Source: https://cloud.google.com
 - **RESTRICTION**: Does NOT apply to VMs created by App Engine flexible and Dataflow
 
 ## Preemptible VM
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - **Short-lived cheaper** (upto 80%) compute instances
 	- Can be stopped by GCP any time (preempted) within 24 hours
 	- Instances get 30 second warning (to save anything they want to save)
@@ -195,7 +195,7 @@ Source: https://cloud.google.com
 	- Free Tier credits not applicable
 
 ## Google Compute Engine - Billing
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - You are **billed by the second** (after a minimum of 1 minute)
 - You are NOT billed for compute when a compute instance is stopped
 	- However, you will be billed for any storage attached with it!
@@ -221,7 +221,7 @@ Source: https://cloud.google.com
 	- **Automatic restart** - Restart VM instances if they are terminated due to non-user-initiated reasons (maintenance event, hardware failure etc.)
 
 ## Compute Engine Features: Custom Machine Types
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - What do you do **when predefined VM options are NOT appropriate** for your workload?
 	- Create a machine type customized to your needs (a **Custom Machine Type**)
 - **Custom Machine Type**: **Adjust** vCPUs, memory and GPUs
@@ -231,7 +231,7 @@ Source: https://cloud.google.com
 		- Example Hourly Price: $0.033174 / vCPU + $0.004446 / GB
 
 ## Compute Engine Features: GPUs 
-![](./images/00-icons/gcp/gpus.png)
+![](./gcpimages/00-icons/gcp/gpus.png)
 - How do you accelerate math intensive and graphics-intensive workloads for AI/ML etc?
 - Add a **GPU** to your virtual machine:
 	- High performance for math intensive and graphics-intensive workloads
@@ -245,7 +245,7 @@ Source: https://cloud.google.com
 	- Automatic restart - on
 
 ## Virtual Machine - Remember
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - Associated with a **project**
 - Machine type **availability can vary** from region to regions
 - You can only change the machine type (adjust the number of vCPUs and memory) of a stopped instance
@@ -260,7 +260,7 @@ Source: https://cloud.google.com
 	- For Memory Utilization & Disk Space Utilization - Cloud Monitoring agent is needed
 
 ## Virtual Machine - Best Practices
-![](./images/00-icons/gcp/compute-engine.png)
+![](./gcpimages/00-icons/gcp/compute-engine.png)
 - Choose **Zone and Region** based on:
 	- Cost, Regulations, Availability Needs, Latency and Specific Hardware needs
 	- Distribute instances in multiple zones and regions for high availability 
