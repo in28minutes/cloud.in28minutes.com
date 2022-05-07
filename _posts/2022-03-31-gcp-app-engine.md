@@ -91,6 +91,7 @@ Each cheat sheet contains:
 	- Options to rollback and split traffic
 
 ## App Engine - Comparison
+
 | Feature | Standard | Flexible |
 |:--|:--|:--|
 |Pricing Factors|Instance hours|vCPU, Memory & Persistent Disks|
