@@ -3,7 +3,7 @@ layout:     post
 title:      GCP App Engine - GCP Certification Cheat Sheet
 date:       2022-05-06 00:00:00
 summary:    Let's get a quick overview of Google Cloud App Engine
-categories:  GCP_CLOUD
+categories:  GCP_COMPUTE
 permalink:  /gcp-certification-google-cloud-app-engine
 ---
 

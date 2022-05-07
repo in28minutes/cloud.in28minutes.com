@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      GCP Kubernetes Engine - GCP Certification Cheat Sheet
+title:      GCP Cloud Functions and Cloud Run - GCP Certification Cheat Sheet
 date:       2022-03-31 00:00:00
 summary:    Let's get a quick overview of Google Cloud Functions & Cloud Run
-categories:  GCP_CLOUD
+categories:  GCP_COMPUTE
 permalink:  /gcp-certification-google-cloud-functions-cloud-run
 ---
 
