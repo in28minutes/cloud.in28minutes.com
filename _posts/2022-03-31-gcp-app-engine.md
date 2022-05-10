@@ -7,11 +7,12 @@ categories:  GCP_COMPUTE
 permalink:  /gcp-certification-google-cloud-app-engine
 ---
 
-Let's get a quick overview of Google Cloud App Engine from an GCP certification perspective. We will look at important certification questions related to App Engine, 
+Let's get a quick overview of Google Cloud App Engine from an GCP certification perspective. We will look at important certification questions related to App Engine, how this is different compared to other compute services, features of App Engine and how to use AppEngine to run your compute load.
 
 ## You will learn
 - What is a App Engine
-- Why it is important and how to set it up?
+- Features of AppEngine
+- Various concepts of AppEngine and how to use it to run the applications
 - Commands Cheatsheet
 
 ## GCP Certification Study Material and Notes - 25 PDF Cheat Sheets
