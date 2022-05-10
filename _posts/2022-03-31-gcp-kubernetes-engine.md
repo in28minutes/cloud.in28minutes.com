@@ -3,7 +3,7 @@ layout:     post
 title:      GCP Kubernetes Engine - GCP Certification Cheat Sheet
 date:       2022-03-31 00:00:00
 summary:    Let's get a quick overview of Google Kubernetes Engine
-categories:  GCP_CLOUD General
+categories:  GCP_COMPUTE
 permalink:  /gcp-certification-google-kubernetes-engine
 ---
 
@@ -11,7 +11,7 @@ Let's get a quick overview of Google Kubernetes Engine from an GCP certification
 
 ## You will learn
 - What is GKE?
-- Why it is important and how to set it up?
+- What are the different concepts, components and important terminologies
 - Commands Cheatsheet
 
 ## GCP Certification Study Material and Notes - 25 PDF Cheat Sheets
@@ -276,6 +276,7 @@ spec:
 
 ---
 ## Google Kubernetes Engine - Scenarios - 1
+
 | Scenario |Solution  |
 |:--|:--|
 |You want to keep your costs low and optimize your GKE implementation|Consider Preemptible VMs, Appropriate region, Committed-use discounts. <BR/>E2 machine types are cheaper than N1. <BR/>Choose right environment to fit your workload type (Use multiple node pools if needed).|
@@ -284,6 +285,7 @@ spec:
 
 ---
 ## Google Kubernetes Engine - Scenarios - 2
+
 | Scenario |Solution  |
 |:--|:--|
 |You want enable ONLY internal communication between your microservice deployments in a Kubernetes Cluster|Create Service of type ClusterIP|
