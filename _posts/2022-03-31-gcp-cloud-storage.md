@@ -91,6 +91,7 @@ Each cheat sheet contains:
 	- No committed SLA for Archive storage
 
 ## Cloud Storage - Uploading and Downloading Objects
+
 | Option |Recommended for Scenarios |
 |:--|:--|
 |Simple Upload |Small files (that can be re uploaded in case of failures) + NO object metadata| 
@@ -169,6 +170,7 @@ Each cheat sheet contains:
 	- GCP does NOT know about the keys used
 
 ## Cloud Storage - Scenarios
+
 | Scenario| Description | 
 |:--|:--|
 |How do you speed up large uploads (example: 100 GB) to Cloud Storage? | Use **Parallel composite uploads** (File is broken in to small chunks and uploaded) |
@@ -208,28 +210,3 @@ Each cheat sheet contains:
 		- *gsutil iam ch allUsers:objectViewer gs://BKT_NAME* (make the entire bucket readable)
 	- *gsutil **signurl -d 10m** YOUR_KEY gs://BUCKET_NAME/OBJECT_PATH* (Signed URL for temporary access)
 
-
----
-Question: Your company stores lot of information in the cloud storage buckets. This information is frequently accessed by the users (more than once a month) from across multiple geographies. Which storage class is best suited to address this requirement?
-1. Standard - Regional
-2. Standard - Multi-Regional
-3. Nearline
-4. Coldline
-
-Ans: Standard - Multi-Regional is the correct answer as this is accessable from across multiple geographies.
-Option 1 Standard - Regional is not correct as Regional storage keeps the data in a single region and users from other regions may experience latency issues.
-Option 3 Nearline is not correct as this is used for infrequently accessed data. In the above scenario it is accessed more than once a month. 
-Option 4 Coldline is not correct as this is used for infrequently accessed data.
----
-Question: Your company stores lot of information in the cloud storage buckets. This information is in-frequently accessed by the users (once a month or less) from across multiple geographies. Which storage class is best suited to address this requirement?
-1. Standard - Regional
-2. Standard - Multi-Regional
-3. Nearline - Regional
-4. Nearline - Multi-Regional
-
-Ans: 
-Option 1 Standard - Multi-Regional is the not correct answer though this is accessable from across multiple geographies, it is accessed infrequently.
-Option 1 Standard - Regional is not correct as Regional storage keeps the data in a single region and also this data is not hot data
-Option 3 Nearline - Regional is not correct though this is used for infrequently accessed data, multi regional is better suited in this scenario. 
-Option 4 Nearline - Multi-Regional is correct as this is used for infrequently accessed data. 
----
