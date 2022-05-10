@@ -1,6 +1,6 @@
 
 layout:     post
-title:      GCP IAM - GCP Certification Cheat Sheet
+title:      GCP PubSub - GCP Certification Cheat Sheet
 date:       2022-05-06 00:00:00
 summary:    Let's get a quick overview of Google Cloud PubSub
 categories:  GCP_CLOUD
