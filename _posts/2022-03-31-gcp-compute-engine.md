@@ -144,6 +144,7 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 	- Latest non-deprecated version of the family is used
 
 ## Reducing Launch Time with Custom Image 
+
 ![](./gcpimages/00-icons/gcp/compute-instance-card.png)
 ![](./gcpimages/arrowtd.png)
 ![](./gcpimages/00-icons/gcp/image-card.png)

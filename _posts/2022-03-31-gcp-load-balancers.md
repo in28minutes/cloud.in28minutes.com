@@ -138,7 +138,7 @@ https://cloud.google.com/load-balancing/gcpimages/choose-lb.svg
 
 ---
 ## Load Balancer Scenarios
-<!-- .slide: class="tdfragment" -->
+
 | Scenario |Solution  |
 |:--|:--|
 |You want only healthy instances to receive traffic| Configure health check|
