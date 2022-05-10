@@ -3,7 +3,7 @@ layout:     post
 title:      GCP Cloud Storage - GCP Certification Cheat Sheet
 date:       2022-03-31 00:00:00
 summary:    Let's get a quick overview of cloud storage
-categories:  GCP_CLOUD General
+categories:  GCP_Storage
 permalink:  /gcp-certification-cloud-storage
 ---
 
