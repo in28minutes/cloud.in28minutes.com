@@ -1,10 +1,11 @@
-
+---
 layout:     post
 title:      GCP PubSub - GCP Certification Cheat Sheet
 date:       2022-05-06 00:00:00
 summary:    Let's get a quick overview of Google Cloud PubSub
 categories:  GCP_CLOUD
 permalink:  /gcp-certification-google-cloud-pubsub
+---
 
 
 Let's get a quick overview of Google Cloud PubSub from an GCP certification perspective. We will look at important certification questions related to PubSub and how it enables asynchronous message processing in GCP. 
