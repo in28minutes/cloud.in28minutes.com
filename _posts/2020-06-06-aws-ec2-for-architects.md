@@ -13,16 +13,10 @@ Let's get a quick overview of EC2 from an AWS Architects certification perspecti
 - What are the important factors about EC2 from an architecture stand point?
 - How do you scale EC2 instances?
 
-## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
-
-Each cheat sheet contains:
-- FAQs and Tutorials with 5-20 slides
-- Study Material and Notes to quickly review and prepare for certification exam
-- Certification Exam Tips
-- Certification and Interview Scenario Questions
+## Get Multi Cloud Certified
 
 <div>
- <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
 </div>
 
 

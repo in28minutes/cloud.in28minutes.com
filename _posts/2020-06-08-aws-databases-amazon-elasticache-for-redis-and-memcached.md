@@ -15,16 +15,10 @@ Let's get a quick overview of Amazon ElastiCache for Redis and Memcached from an
 - When do we use Amazon ElastiCache for Redis vs Amazon ElastiCache for Memcached?
 - How is Amazon ElastiCache for Redis different from Amazon ElastiCache for Memcached?
 
-## AWS Certification Study Material and Notes - 25 PDF Cheat Sheets
-
-Each cheat sheet contains:
-- FAQs and Tutorials with 5-20 slides
-- Study Material and Notes to quickly review and prepare for certification exam
-- Certification Exam Tips
-- Certification and Interview Scenario Questions
+## Get Multi Cloud Certified
 
 <div>
- <a href="https://links.in28minutes.com/cloud-in28minutes-teachable-free-link" target="_blank" class="button instagram">Download</a>
+	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
 </div>
 
 
