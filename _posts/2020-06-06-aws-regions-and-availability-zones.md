@@ -14,11 +14,6 @@ Let's get a quick overview of Regions and Availability Zones from an AWS certifi
 - What is an Availability Zone?
 - Why do we need Regions and Availability Zones?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## Regions and Zones - Need

@@ -14,11 +14,6 @@ Let's get a quick overview of Cloud Storage from an GCP certification perspectiv
 - Why it is important and how to set it up?
 - What are the important roles necessary?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 # Object Storage - Cloud Storage
 

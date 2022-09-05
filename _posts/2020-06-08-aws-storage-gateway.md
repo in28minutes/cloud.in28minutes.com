@@ -16,11 +16,6 @@ Let's get a quick overview of AWS Storage Gateway from an AWS certification pers
 - How is AWS Storage Gateway different from?
 - Compare Storage Gateway Options - AWS Storage File Gateway vs  AWS Storage Tape Gateway vs  AWS Storage Volume Gateway
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## AWS Storage Gateway
 

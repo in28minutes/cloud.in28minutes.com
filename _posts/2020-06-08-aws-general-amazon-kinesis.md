@@ -16,11 +16,6 @@ Let's get a quick overview of Amazon Kinesis - Data Streams, Firehose, Analytics
 - What are the different Amazon Kinesis Options - Data Streams, Firehose, Analytics and Video Streams?
 - When do you use - Amazon Kinesis Data Streams vs Amazon Kinesis Firehose vs Amazon Kinesis Analytics vs Amazon Kinesis Video Streams?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Amazon Kinesis
 

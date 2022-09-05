@@ -20,11 +20,6 @@ Let's get a quick overview of Multi-AZ vs Multi-Region vs Read replicas for Amaz
 - [Read Replicas](#read-replicas)
 - [RDS Multi-AZ vs Multi-Region vs Read replicas - Certification Questions and Scenarios](#rds-multi-az-vs-multi-region-vs-read-replicas---certification-questions-and-scenarios)
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## Multi-AZ Deployments

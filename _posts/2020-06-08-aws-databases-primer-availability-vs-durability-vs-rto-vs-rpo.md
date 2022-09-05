@@ -35,11 +35,6 @@ Let's get a primer on Databases from an Architectural perspective. Let's underst
 - [Read Replicas](#read-replicas)
 - [Consistency](#consistency)
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Databases Primer
 

@@ -15,11 +15,6 @@ Let's get a quick overview of how you can choose between different AWS Databases
 - What are the differences between RDS vs DynamoDB vs Redshift?
 - When do you use RDS vs DynamoDB vs Redshift?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## Database Categories

@@ -25,11 +25,6 @@ Let's get a quick overview of AWS Data Lakes from an AWS certification perspecti
 - [Data Cataloging](#data-cataloging)
 - [AWS Glue](#aws-glue)
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## AWS Data Lakes - Simplified Big Data Solutions

@@ -16,11 +16,6 @@ Let's get a quick overview of Amazon Cognito from an AWS certification perspecti
 - How can you do authorization and authentication with Amazon Cognito?
 - What are User Pools and Identity Pools?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## Amazon Cognito

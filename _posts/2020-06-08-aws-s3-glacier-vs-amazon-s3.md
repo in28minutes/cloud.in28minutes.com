@@ -14,11 +14,6 @@ Let's get a quick overview of Amazon S3 Glacier from an AWS certification perspe
 - When do we use Amazon S3 Glacier?
 - How is Amazon S3 Glacier different from Amazon S3?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## Amazon S3 Glacier

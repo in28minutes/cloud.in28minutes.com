@@ -19,11 +19,6 @@ Let's get a quick overview of AWS Elastic Container Service and Fargate from an 
 - What are the different options to run containers in AWS?
 - When do you use Elastic Beanstalk, Amazon ECS, Amazon Fargate and Amazon EKS to run Docker Containers?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Microservices
 

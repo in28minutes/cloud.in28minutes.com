@@ -15,11 +15,6 @@ Let's get a quick overview of Managed Services - IAAS and PAAS - from an AWS cer
 - What are the different Managed Services provided by AWS?
 - What is Shared Responsibility Model?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## IAAS (Infrastructure as a Service) 

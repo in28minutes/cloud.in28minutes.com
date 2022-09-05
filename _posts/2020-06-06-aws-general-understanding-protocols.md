@@ -14,11 +14,6 @@ Let's compare - HTTP vs HTTPS vs TCP vs TLS vs UDP.
 - Why do we have multiple layers in the TCP/IP Stack?
 - What is the role of Network Layer vs Transport Layer vs Application Layer?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 

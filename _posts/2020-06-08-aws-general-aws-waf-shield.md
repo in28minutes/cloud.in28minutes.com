@@ -15,11 +15,6 @@ Let's get a quick overview of AWS Shield, AWS WAF and AWS Macie.
 - When do we use AWS Shield and WAF?
 - How does AWS Macie help in protecting your data in Amazon S3?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## AWS Shield
 

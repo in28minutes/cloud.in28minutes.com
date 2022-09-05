@@ -21,11 +21,6 @@ Let's get a quick overview of the big data options in AWS - Amazon RedShift vs R
 - [Amazon EMR - Storage Types](#amazon-emr---storage-types)
 - [Comparison and Certification Questions - Amazon Redshift and EMR](#comparison-and-certification-questions---amazon-redshift-and-emr)
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Amazon Redshift
 

@@ -16,11 +16,6 @@ Let's get a quick overview of Amazon API Gateway from an AWS certification persp
 - When do we use Amazon API Gateway?
 - How do you implement authentication and authorization for Amazon API Gateway?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## REST API Challenges

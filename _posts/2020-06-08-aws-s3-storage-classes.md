@@ -16,11 +16,6 @@ Let's get a quick overview of Amazon S3 Storage Classes from an AWS certificatio
 - When do we use Amazon S3 Storage Classes?
 - Differences and Comparison of Amazon S3 Storage Classes - Standard vs Intelligent Tiering vs Standard IA vs One Zone IA vs Glacier vs Glacier Deep Archive
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Amazon S3 Storage Classes - Introduction
 

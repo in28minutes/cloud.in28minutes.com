@@ -15,11 +15,6 @@ Let's get a quick overview of Server Side vs Client Side Encryption for Amazon S
 - How can you implement Encryption for S3 using KMS?
 - When do we use Server Side vs Client Side Encryption?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## KMS and Cloud HSM
 

@@ -15,11 +15,6 @@ Let's get a quick overview of EC2 Pricing Models from an AWS certification persp
 - How do they compare - On Demand vs Spot vs Reserved vs Savings Plans?
 - How do you choose - On Demand vs Spot vs Reserved vs Savings Plans?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 

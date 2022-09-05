@@ -17,11 +17,6 @@ Let's get a quick overview of DevOps in AWS. What are the different DevOps tools
 - What is OpsWorks?
 - How do these compare against each other - CodePipeline vs CodeBuild vs CodeDeploy?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## DevOps
 

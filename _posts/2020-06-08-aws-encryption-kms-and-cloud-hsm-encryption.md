@@ -16,11 +16,6 @@ Let's get a quick overview of KMS and Cloud HSM from an AWS certification perspe
 - How is KMS different from Cloud HSM?
 - How do you manage keys with KMS and Cloud HSM?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## KMS and Cloud HSM

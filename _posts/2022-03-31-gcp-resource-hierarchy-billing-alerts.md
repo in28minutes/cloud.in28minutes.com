@@ -14,11 +14,6 @@ Let's get a quick overview of resources hierachy from an GCP certification persp
 - Why it is important and how to set it up?
 - What are the important roles necessary?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## Resource Hierarchy in GCP
 

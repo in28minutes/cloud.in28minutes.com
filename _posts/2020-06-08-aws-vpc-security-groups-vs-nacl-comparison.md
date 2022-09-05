@@ -16,11 +16,6 @@ Let's compare Security Groups vs NACL from an AWS certification perspective. We 
 - When do you use Security Groups?
 - When do you use NACL?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 
 ## EC2 Security Groups

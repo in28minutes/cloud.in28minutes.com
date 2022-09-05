@@ -14,11 +14,6 @@ Let's get a quick overview of Managing Multiple AWS Accounts - Organizations, Tr
 - How can you manage multiple AWS accounts together?
 - How can you use AWS Organizations, Trusted Advisor and more?
 
-## Get Multi Cloud Certified
-
-<div>
-	<p><a href="https://courses.in28minutes.com/p/3-in-1-aws-azure-and-google-cloud-beginner-certifications"><img src="/images/multi-cloud-certified.png" alt="Image" title="AWS Architect Associate Certification"></a></p>
-</div>
 
 ## AWS Organizations 
 
