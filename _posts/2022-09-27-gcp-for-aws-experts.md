@@ -18,7 +18,7 @@ If you are familiar with AWS, this article is the shortcut you need to get quick
 
 ## Table of Contents
 
-<!-- MarkdownTOC levels="3" -->
+<!-- MarkdownTOC levels="2" -->
 
 - 1: Quick Overview - Google Cloud vs AWS
 - 2: Let's dig deeper - Google Cloud vs AWS
@@ -32,21 +32,19 @@ If you are familiar with AWS, this article is the shortcut you need to get quick
 <!-- /MarkdownTOC -->
 
 
-### 1: Quick Overview - Google Cloud vs AWS
+## 1: Quick Overview - Google Cloud vs AWS
 
 What is best way to learn a cloud when you are an expert at a different cloud platform? 
 
 I doubt if there is one answer to this question!
 
-All cloud platforms are similar. They have a wide variety of services under different categories - compute, database, networking, storage, security, machine learning, .
+> All cloud platforms are similar. They have a wide variety of services under different categories - compute, database, networking, storage, security, machine learning, .
 
-We will get started with a quick overview using Q&A kind of approach.
-
-We will look at the question (or context or a problem), the AWS solution, and the comparable Google Cloud solution.
+We will get started with a quick overview using Q&A kind of approach. We will look at the question (or context or a problem), the AWS solution, and the comparable Google Cloud solution.
 
 > We are taking a 10,000 feet overview. While services are comparable, when you go deeper, you will find significant differences in terms of the details.
 
-#### Compute Services
+### Compute Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -56,7 +54,7 @@ We will look at the question (or context or a problem), the AWS solution, and th
 | How do you orchestrate containers?|Amazon EKS, Amazon ECS|Google Kubernetes Engine (GKE)|
 | How do you build serverless applications?| AWS Lambda| Cloud Functions|
 
-#### Database Services
+### Database Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -65,7 +63,7 @@ We will look at the question (or context or a problem), the AWS solution, and th
 | What are the NoSQL database options?|Amazon DynamoDB, Amazon DocumentDB|Datastore/Firestore, Cloud Bigtable|
 | How do you cache data from a database?| Amazon ElastiCache| Memorystore|
 
-#### Networking Services
+### Networking Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -73,7 +71,7 @@ We will look at the question (or context or a problem), the AWS solution, and th
 | How do you build private networks?|Amazon VPC|Cloud VPC|
 | How do you connect on-premise with the cloud?|AWS VPN(shared), AWS Direct Connect (dedicated)|Cloud VPN(shared), Cloud Interconnect (dedicated)|
 
-#### Storage Services
+### Storage Services
 
 |Type|AWS|Google Cloud|
 |:--:|:--|:--|
@@ -85,7 +83,7 @@ We will look at the question (or context or a problem), the AWS solution, and th
 |File storage|Amazon Elastic File System|Filestore|
 
 
-#### DevOps Services
+### DevOps Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -95,7 +93,7 @@ We will look at the question (or context or a problem), the AWS solution, and th
 |How do you trace requests across applications and services?|AWS X-Ray|Cloud Trace|
 |How do you implement Continuous Integration?|AWS CodePipeline, CodeDeploy|Cloud Build|
 
-#### Other Services
+### Other Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -104,12 +102,12 @@ We will look at the question (or context or a problem), the AWS solution, and th
 |How do you manage keys used for encrypting data?|AWS KMS|Cloud KMS|
 
 
-### 2: Let's dig deeper - Google Cloud vs AWS
+## 2: Let's dig deeper - Google Cloud vs AWS
 
 Let's now dig deeper into a few specific important groups of services.
 
 
-### 3: Compute Services
+## 3: Compute Services
 
 There is a variety of compute services offered by each cloud platform. 
 
@@ -132,7 +130,7 @@ Cloud Functions is the Serverless, Function as a Service offering in Google Clou
 |CAAS - Serverless|AWS Fargate|Cloud Run|
 |FAAS - Serverless | AWS Lambda |Cloud Functions|
 
-#### Google Compute Engine
+### Google Compute Engine
 
 In AWS, we use EC2 service to provision Virtual Instances.
 
@@ -150,7 +148,7 @@ To create a VM, you need to choose OS, Software (Image), and Hardware (Machine F
 | Attach Permanent Hard Disks (Block Storage)| Amazon EBS| Persistent Disks|
 
 
-#### IP Addresses - Virtual Machines
+### IP Addresses - Virtual Machines
 
 Almost all cloud platforms offer solutions to create public, private, and static IP addresses for your resources. In AWS and GCP, the names used to refer to these are different. Other than that, the concepts remain similar.
 
@@ -160,7 +158,7 @@ Almost all cloud platforms offer solutions to create public, private, and static
 |Ephemeral External IP Address that changes when an instance is stopped| Public IP Address| External or Ephemeral IP Address|
 |Permanent External IP Address that can be attached to a VM|Elastic IP Address|Static IP Address|
 
-#### Managing Virtual Machines
+### Managing Virtual Machines
 
 One virtual machine does not provide sufficient scalability and availability for your solution. We need multiple virtual machines. Here are some of the important features that simplify the management of your virtual machines.
 
@@ -172,7 +170,7 @@ One virtual machine does not provide sufficient scalability and availability for
 |Physical hosts dedicated to one customer|EC2 Dedicated Hosts|Sole-tenant nodes|
 
 
-#### Manage Costs for Virtual Machines
+### Manage Costs for Virtual Machines
 
 You want to run your VMs at the lowest cost possible. Here are some of the options provided by AWS and Google Cloud to reduce your costs.
 
@@ -185,7 +183,7 @@ You want to run your VMs at the lowest cost possible. Here are some of the optio
 |Budget Management|Budget alerts|Budget alerts|
 
 
-#### App Engine vs AWS Elastic Beanstalk
+### App Engine vs AWS Elastic Beanstalk
 
 Google Cloud App Engine and AWS Elastic Beanstalk are the recommended options to run simple web applications and/or REST API.
 
@@ -200,11 +198,11 @@ Here is a comparison of some of the important features of these two services:
 |Run Containers| Yes| Yes (App Engine flexible)|
 |New Releases|Rolling updates, blue/green deployment (using Swap URL)|Rolling updates, blue/green deployment|
 
-### 4: Databases
+## 4: Databases
 
 Let's look at the different types of databases in AWS and Google Cloud.
 
-#### Relational Databases - OLTP - Online Transaction Processing
+### Relational Databases - OLTP - Online Transaction Processing
 
 Let's start with applications where a large number of users make a large number of small transactions ( small reads & updates). Typical use cases include CRM, e-commerce, and banking applications. The most popular databases are MySQL, Oracle, SQL Server, etc.
 
@@ -214,7 +212,7 @@ Recommended GCP Services are:
 - Cloud SQL: Supports PostgreSQL, MySQL, and SQL Server for regional relational databases (up to a few TBs)
 - Cloud Spanner: Unlimited scale (multiple PBs) and 99.999% availability for global applications with horizontal scaling
 
-#### Relational Database - OLAP - Online Analytics Processing
+### Relational Database - OLAP - Online Analytics Processing
 
 OLAP Applications allow users to analyze petabytes of data. Examples include Reporting applications, Data warehouses, Business intelligence applications, and Analytics systems.
 
@@ -222,7 +220,7 @@ Recommended AWS Managed Service is Amazon Redshift.
 
 Recommended GCP Managed Service is BigQuery.
 
-#### NoSQL Databases
+### NoSQL Databases
 NoSQL represents a new approach (actually NOT so new!) to building your databases.
 
 NoSQL stands for "not only SQL". You would use NoSQL databases when you need flexible schema - structure data the way your application needs it and you want to let the schema evolve with time.
@@ -233,7 +231,7 @@ AWS Managed Services are Amazon DynamoDB & Amazon DocumentDB.
 
 Google Managed Services are Cloud Firestore (Datastore) &  Cloud BigTable.
 
-#### Choosing between Cloud Firestore, Datastore vs Cloud BigTable
+### Choosing between Cloud Firestore, Datastore vs Cloud BigTable
 Cloud Datastore is managed serverless NoSQL document database. It provides ACID transactions, SQL-like queries, and indexes. It is designed for transactional mobile and web applications.
 
 Firestore is the next version of Datastore with additional capabilities like Strong consistency and Mobile and Web client libraries.
@@ -246,7 +244,7 @@ BigTable is recommended for data sizes> 10 Terabytes to several Petabytes. It is
 
 BigTable is NOT recommended for transactional workloads. It does NOT support multi-row transactions - supports ONLY single-row transactions.
 
-#### In-memory Databases
+### In-memory Databases
 
 Retrieving data from memory is much faster than retrieving data from disk. In-memory databases like Redis deliver microsecond latency by storing persistent data in memory.
 
@@ -256,7 +254,7 @@ Recommended GCP Managed Service is Memorystore.
 
 Both Amazon ElastiCache and Memorystore support Redis and Memcached.
 
-#### A Quick Summary of Databases
+### A Quick Summary of Databases
 
 | Type |AWS  | GCP |
 |--|:--|:--|
@@ -267,11 +265,11 @@ Both Amazon ElastiCache and Memorystore support Redis and Memcached.
 
 
 
-### 5: IAM - Identity and Access Management
+## 5: IAM - Identity and Access Management
 
 Google Cloud and AWS use the same name for their authentication and authorization service - Identity and Access Management (IAM). However, the concepts of IAM are very different.
 
-#### How does IAM work in AWS?
+### How does IAM work in AWS?
 
 
 Here are some of the important IAM concepts in AWS:
@@ -289,7 +287,7 @@ Here are some of the important IAM concepts in AWS:
   - Customer managed - Standalone policy created by you
   - Inline - Directly embedded into a user, group, or role
 
-#### How does IAM work in Google Cloud?
+### How does IAM work in Google Cloud?
 
 IAM in AWS is very different from Google Cloud.
 
@@ -308,7 +306,7 @@ To implement the permissions needed by our example, we need to take two simple s
 - 1: Choose a Role with the right permissions (Ex: Storage Object Admin)
 - 2: Create a Policy binding member (your friend) with the role (permissions)
 
-#### Few more differences: IAM in GCP vs AWS
+### Few more differences: IAM in GCP vs AWS
 
 Here are a few more important differences:
 
@@ -322,7 +320,7 @@ Here are a few more important differences:
 |How can you track usage of IAM Identities?|AWS CloudTrail|Audit logging|
 
 
-#### AWS IAM Policy Example
+### AWS IAM Policy Example
 
 In AWS, a Policy is a set of permissions.
 
@@ -346,7 +344,7 @@ In AWS, a Policy is a set of permissions.
   - Example above: AWS Managed Policy: AdministratorAccess
   - Give Read Only Access to S3 buckets - `"Action": ["s3:Get*","s3:List*"]`
 
-#### Google Cloud IAM policy - Example
+### Google Cloud IAM policy - Example
 
 In Google Cloud, Policy is a list of bindings - Each binding binds roles with members.
 
@@ -378,17 +376,17 @@ In Google Cloud, Policy is a list of bindings - Each binding binds roles with me
 }
 ```
 
-### 6: Networking 
+## 6: Networking 
 
 Let's now dig deeper into Networking concepts.
 
-#### Networking in AWS - Amazon VPC and Subnets
+### Networking in AWS - Amazon VPC and Subnets
 
 A VPC(Virtual Private Cloud) in AWS is your own isolated network in the AWS cloud. Network traffic within a VPC is isolated (not visible) from all other Amazon VPCs. You control all the traffic coming in and going outside a VPC.
 
 A Subnet separates public resources from private resources in a VPC. 
 
-#### Networking in Google Cloud - VPC and Subnets
+### Networking in Google Cloud - VPC and Subnets
 
 VPC and Subnets in Google Cloud are very similar to AWS:
 - Default VPCs are provided with default subnets
@@ -406,11 +404,11 @@ However, it is important to note the differences:
     - Each default VPC has multiple subnets - one in each region
 
 
-### 7: Organizing Resources
+## 7: Organizing Resources
 
 Typically, every enterprise creates thousands of resources in the cloud. Google Cloud and AWS take very different approaches to group and manage resources.
 
-#### Organizing Resources in AWS
+### Organizing Resources in AWS
 
 Resources in AWS are created in an AWS account. By default, you will be billed per AWS Account.
 
@@ -421,7 +419,7 @@ If you want to create resources for multiple environments, one of the recommende
 - Use AWS Resource Access Manager to share AWS resources:
   - Share AWS Transit Gateways, Subnets, AWS License Manager configurations, etc
 
-#### Organizing Resources in Google Cloud
+### Organizing Resources in Google Cloud
 
 Google Cloud has a very well defined hierarchy (Organization > Folder > Project > Resources) to help you organize your resources.
 
@@ -441,7 +439,7 @@ Let's consider two apps: "A1" and "A2" with two environments each: "DEV" and "PR
 - Grant all developers complete access (create, delete, deploy) to DEV Projects
 - Provide production access to operations teams only!
 
-### 8: What's Next?
+## 8: What's Next?
 
 The next obvious step is to broaden your horizon. I would recommend you to get started here - [https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison](https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison)
 
