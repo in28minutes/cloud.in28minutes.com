@@ -13,6 +13,9 @@ If you are familiar with AWS, this article is the shortcut you need to get quick
 
 **Our Goal**: Give you a quick start for Google Cloud!
 
+![](/gcpimages/gcp-vs-aws.jpeg)
+
+
 ## Table of Contents
 
 <!-- MarkdownTOC levels="3" -->
