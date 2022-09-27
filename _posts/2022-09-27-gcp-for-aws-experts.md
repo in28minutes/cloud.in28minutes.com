@@ -46,6 +46,19 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 
 ### 1.1: Compute Services
 
+There are a variety of compute services offered by each cloud platform. 
+
+If you want complete flexibility to manage OS, software and hardware used to run your applications, you want to go with the Infrastructure as a Service option. However, with flexibility, you get a lot of responsibility. 
+
+If you want to reduce your responsibilities (concerning scaling, availability, and durability), you might want to use managed services in the cloud.
+
+If you want to run a simple web application in Google Cloud, you might want to go with either App Engine or Cloud Run (if you want to use containers).
+
+If you want to implement microservices architecture with Kubernetes, you can go with Google Kubernetes Engine.
+
+Cloud Functions is the Serverless, Function as a Service offering in Google Cloud.
+
+
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
 | How do you create Virtual Machines?|Amazon EC2 |Compute Engine|
@@ -56,6 +69,8 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 
 ### 1.2: Database Services
 
+Here is a quick comparison of database services in AWS vs Google Cloud.
+
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
 | How do you create relational OLTP databases?|Amazon RDS (Amazon Aurora)|Cloud SQL, Cloud Spanner|
@@ -65,6 +80,8 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 
 ### 1.3: Networking Services
 
+Here is a quick comparison of networking services in AWS vs Google Cloud.
+
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
 | How do distribute load among VMs?|Elastic Load Balancer|Cloud Load Balancing|
@@ -72,6 +89,8 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 | How do you connect on-premise with the cloud?|AWS VPN(shared), AWS Direct Connect (dedicated)|Cloud VPN(shared), Cloud Interconnect (dedicated)|
 
 ### 1.4: Storage Services
+
+Here is a quick comparison of storage services in AWS vs Google Cloud.
 
 |Type|AWS|Google Cloud|
 |:--:|:--|:--|
@@ -84,6 +103,8 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 
 
 ### 1.5: DevOps Services
+
+Here is a quick comparison of DevOps services in AWS vs Google Cloud.
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -109,17 +130,7 @@ Let's now dig deeper into a few specific important groups of services.
 
 ## 3: Compute Services
 
-There is a variety of compute services offered by each cloud platform. 
-
-If you want complete flexibility to manage OS, software and hardware used to run your applications, you want to go with the Infrastructure as a Service option. However, with flexibility, you get a lot of responsibility. 
-
-If you want to reduce your responsibilities (concerning scaling, availability, and durability), you might want to use managed services in the cloud.
-
-If you want to run a simple web application in Google Cloud, you might want to go with either App Engine or Cloud Run (if you want to use containers).
-
-If you want to implement microservices architecture with Kubernetes, you can go with Google Kubernetes Engine.
-
-Cloud Functions is the Serverless, Function as a Service offering in Google Cloud.
+Here is a quick comparison of compute services in AWS vs Google Cloud.
 
 |Category|AWS|Google Cloud|
 |:--:|--|--|
@@ -255,6 +266,8 @@ Recommended GCP Managed Service is Memorystore.
 Both Amazon ElastiCache and Memorystore support Redis and Memcached.
 
 ### A Quick Summary of Databases
+
+Here is a quick comparison of database services in AWS vs Google Cloud.
 
 | Type |AWS  | GCP |
 |--|:--|:--|
