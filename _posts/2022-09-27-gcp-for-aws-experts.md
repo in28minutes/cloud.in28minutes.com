@@ -44,7 +44,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 
 > We are taking a 10,000 feet overview. While services are comparable, when you go deeper, you will find significant differences in terms of the details.
 
-### Compute Services
+### 1.1: Compute Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -54,7 +54,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 | How do you orchestrate containers?|Amazon EKS, Amazon ECS|Google Kubernetes Engine (GKE)|
 | How do you build serverless applications?| AWS Lambda| Cloud Functions|
 
-### Database Services
+### 1.2: Database Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -63,7 +63,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 | What are the NoSQL database options?|Amazon DynamoDB, Amazon DocumentDB|Datastore/Firestore, Cloud Bigtable|
 | How do you cache data from a database?| Amazon ElastiCache| Memorystore|
 
-### Networking Services
+### 1.3: Networking Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -71,7 +71,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 | How do you build private networks?|Amazon VPC|Cloud VPC|
 | How do you connect on-premise with the cloud?|AWS VPN(shared), AWS Direct Connect (dedicated)|Cloud VPN(shared), Cloud Interconnect (dedicated)|
 
-### Storage Services
+### 1.4: Storage Services
 
 |Type|AWS|Google Cloud|
 |:--:|:--|:--|
@@ -83,7 +83,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 |File storage|Amazon Elastic File System|Filestore|
 
 
-### DevOps Services
+### 1.5: DevOps Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
@@ -93,7 +93,7 @@ We will get started with a quick overview using Q&A kind of approach. We will lo
 |How do you trace requests across applications and services?|AWS X-Ray|Cloud Trace|
 |How do you implement Continuous Integration?|AWS CodePipeline, CodeDeploy|Cloud Build|
 
-### Other Services
+### 1.6: Other Services
 
 | Question | AWS  | Google Cloud | 
 |--|:--|:--|
