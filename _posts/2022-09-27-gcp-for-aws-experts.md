@@ -3,7 +3,7 @@ layout:     post
 title:      Introduction to Google Cloud - For AWS Professionals
 date:       2022-09-26 12:31:19
 summary:    If you are familiar with AWS, this article is the shortcut you need to get quickly started with understanding Google Cloud
-categories:  GOOGLE_CLOUD
+categories:  GCP_CLOUD
 permalink:  /google-cloud-for-aws-professionals
 ---
 
