@@ -1,10 +1,19 @@
+---
+layout:     post
+title:      Important Kubernetes Concepts Made Easy
+date:       2022-10-02 12:31:19
+summary:    Getting Started with Kubernetes is NOT easy.This article will help you understand some of the most important concepts of Kubernetes.
+categories:  GCP_CLOUD
+permalink:  /kubernetes-for-beginners-important-concepts-simplified
+---
+
 Kubernetes is the most popular open source container orchestration solution.
 
 Getting Started with Kubernetes is NOT easy.
 
 This article will help you understand some of the most important concepts of Kubernetes.
 
-![](./images/02-architecture/container-orchestration.png) 
+![](/gcpimages/02-architecture/container-orchestration.png)
 
 <!-- MarkdownTOC -->
 
@@ -19,17 +28,22 @@ This article will help you understand some of the most important concepts of Kub
 	- 4.5: What is a Deployment?
 	- 4.6: A Quick Review - Deployment vs Replica Set
 	- 4.7: What is a Service?
+- 5: Next Steps
 
 <!-- /MarkdownTOC -->
 
 
 ### 1: Why do we need Container Orchestration?
 
-![](./images/02-architecture/microservices.png)
+![](/gcpimages/02-architecture/microservices.png)
 
-Enterprises are heading towards microservices architectures. Microservices provide the **flexibility to innovate**. 
+Most enterprises are adopting Microservices architectures.
 
-However, microservices architectures also have complex technical requirements. Example: I want 10 instances of Microservice A container, 15 instances of Microservice B container, .. and so on for multiple microservices. In addition, I want a number of other features for my microservices. A few typical features include:
+Microservices provide the **flexibility to innovate**. 
+
+However, Microservices don't come free. Instead of deploying a few applications, we are deploying hundred's of microservices. This results in increased complexity.
+
+Containers can help simplify your deployment and observability challenges. However, there are still challenges with respect to managing your infrastructure and deployments. Example: I want 10 instances of Microservice A container, 15 instances of Microservice B container, .. and so on for multiple microservices. In addition, I want a number of other features for my microservices. A few typical features include:
 - **Auto Scaling** - Scale containers based on demand
 - **Service Discovery** - Help microservices find one another
 - **Load Balancer** - Distribute load among multiple instances of a microservice
@@ -40,7 +54,7 @@ However, microservices architectures also have complex technical requirements. E
 
 Container orchestration solutions provide most technical features need by microservices architectures. You will be able to create a cluster of multiple vm instances and deploy microservices to the cluster. Container orchestration solution will manage the clusters and deployments.
 
-![](./images/02-architecture/container-orchestration.png) 
+![](/gcpimages/02-architecture/container-orchestration.png) 
 
 ### 3: What is Kubernetes?
 
@@ -57,7 +71,7 @@ Let's now look at each of these in depth.
 
 #### 4.1: What is a Cluster?
 
-![](./images/gcp/kubernetes-02-architecture-cluster.png)
+![](/gcpimages/gcp/kubernetes-02-architecture-cluster.png)
 
 A **cluster** is a group of virtual machines. In the cluster, there are two types of nodes:
 - **Master Node(s)** - Manages the cluster. You send all your deployment instructions to master node.
@@ -96,7 +110,7 @@ Let's dig deeper.
 
 A pod is the smallest deployable unit in Kubernetes. A pod represents an instance of your microservice. Each Pod is assigned an ephemeral **IP address**. 
 
-![](./images/gcp/kubernetes-deployment-hierarchy.png) 
+![](/gcpimages/gcp/kubernetes-deployment-hierarchy.png) 
 
 If I have 10 instance of a Microservice A and 12 instances of Microservice B running in a Kubernetes cluster, then I would have a total of 10 + 12 = 22 pods running.
 
@@ -120,7 +134,7 @@ Currently we have just one version of the microservice. However, you can deploy 
 
 That's the job of a Deployment.
 
-![](./images/gcp/kubernetes-deployment-hierarchy.png) 
+![](/gcpimages/gcp/kubernetes-deployment-hierarchy.png) 
 
 When you deploy a new version of an existing microservice, the Deployment would create a new ReplicaSet for V2 of Microservice A.
 
@@ -166,3 +180,7 @@ There are three types of services:
 - **LoadBalancer**: Exposes Service externally using a cloud provider's load balancer. Use case: You want to create individual Load Balancer's for each microservice.
 - **NodePort**: Exposes Service on each Node's IP at a static port (the NodePort). Use case: You DO not want to create an external Load Balancer for each microservice (You can create one Ingress component to load balance multiple microservices).
 
+### 5: Next Steps
+
+- 1: Try Kubernetes Playground - https://labs.play-with-k8s.com/
+- 2: Create a Kubernete cluster in one of the cloud platforms and play with it (GKE has a free tier. You can try AKS and EKS but they are not part of free tier as of now!)
