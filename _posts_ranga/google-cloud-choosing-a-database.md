@@ -1,4 +1,11 @@
-Title: Google Cloud - How to choose the Database Service?
+---
+layout:     post
+title:      Google Cloud For Beginners - How to choose a Database Service?
+date:       2022-10-02 12:31:19
+summary:    Google Cloud offer multiple database options. How to choose between them?
+categories:  GCP_CLOUD
+permalink:  /google-cloud-for-beginners-choosing-database
+---
 
 Managing databases is a pain. Ensuring high availability, high durability and a host of other needs for your data is a big challenge. Cloud platforms provide you with varied range of database services. 
 
@@ -51,10 +58,11 @@ Most **popular (or unpopular)** type of databases. These have **Predefined schem
 Let's start with applications where a large number of users make a large number of small transactions ( small reads & updates). Typical use cases include CRM, e-commerce, and banking applications. The most popular databases are MySQL, Oracle, SQL Server, etc.
 
 Recommended GCP Services are:
-- Cloud SQL: Supports PostgreSQL, MySQL, and SQL Server for regional relational databases (up to a few TBs)
-- Cloud Spanner: Unlimited scale (multiple PBs) and 99.999% availability for global applications with horizontal scaling
+- **Cloud SQL**: Supports PostgreSQL, MySQL, and SQL Server for regional relational databases (up to a few TBs)
+- **Cloud Spanner**: Unlimited scale (multiple PBs) and 99.999% availability for global applications with horizontal scaling
 
 ##### Cloud SQL
+
 Cloud SQL is a **Fully Managed Relational Database** service.
 
 Here are some of the important features:
@@ -62,23 +70,18 @@ Here are some of the important features:
 - Regional Service providing High Availability (99.95%)
 - Option to use SSDs or HDDs (For best performance: use SSDs)
 - Automatic encryption (tables/backups), maintenance and updates
-- High availability and failover:
-	- Create a Standby with automatic failover
-	- Pre requisites: Automated backups and Binary logging
-- Read replicas for read workloads:
-	- Options: Cross-zone, Cross-region and External (NON Cloud SQL DB)
-	- Pre requisites: Automated backups and Binary logging
+- High availability and failover: Create a Standby with automatic failover
+- Read replicas for read workloads - Options: Cross-zone, Cross-region and External (NON Cloud SQL DB)
 - Automatic storage increase without downtime (for newer versions)
 - Point-in-time recovery: Enable binary logging
 - Backups (Automated and on-demand backups)
 
 ##### Cloud Spanner
 
-Cloud Spanner is a **fully managed, mission critical, relational(SQL), globally distributed database** with VERY high availability (99.999%). It provides strong transactional consistency at **global scale**. It can **scales to petabytes of data** with automatic sharding.
+Cloud Spanner is a **fully managed, mission critical, relational(SQL), globally distributed database** with VERY high availability. It provides strong transactional consistency at **global scale**. It can **scales to petabytes of data** with automatic sharding.
 
 Here are some of the important features:
-- **Scales horizontally for reads and writes**
-	- (REMEMBER) In comparison, Cloud SQL provides read replicas BUT you cannot horizontally scale write operations with Cloud SQL!
+- **Scales horizontally for reads and writes**: In comparison, Cloud SQL provides read replicas BUT you cannot horizontally scale write operations with Cloud SQL!
 - Regional and Multi-Regional configurations
 - **Expensive** (compared to Cloud SQL): You pay for nodes & storage
 
@@ -96,10 +99,10 @@ Use Cloud Spanner(Expensive $$$$) instead of Cloud SQL for relational transactio
 
 OLAP Applications allow users to analyze petabytes of data. Examples include Reporting applications, Data warehouses, Business intelligence applications, and Analytics systems.
 
-Recommended GCP Managed Service is BigQuery.
+Recommended GCP Managed Service is **BigQuery**.
 
 ##### BigQuery - Modern Data warehouse
-BigQuery is one of most popular cloud data warehouses. It can handle exabytes of data with ease. It combines traditional elements (Storage + Compute) with more elements (Realtime + Serverless).
+BigQuery is one of most popular cloud data warehouses. It can handle exabytes of data with ease. It combines traditional data warehouse elements (Huge storage + compute) with modern elements (Realtime + Serverless).
 
 ### 2.2: What are NoSQL Databases?
 
@@ -109,7 +112,7 @@ NoSQL stands for "not only SQL". You would use NoSQL databases when you need fle
 
 Most NoSQL databases can scale horizontally to petabytes of data with millions of TPS.
 
-Google Managed Services are Cloud Firestore (Datastore) &  Cloud BigTable.
+Google Managed Services are **Cloud Firestore (Datastore)** &  **Cloud BigTable**.
 
 #### Cloud Datastore and Firestore
 
@@ -141,7 +144,7 @@ Firestore and Datastore are recommended for small to medium databases (0 to a fe
 
 Cloud BigTable on the other hand, is a managed, scalable NoSQL wide column database. It is NOT serverless (You need to create instances). 
 
-BigTable is recommended for data sizes> 10 Terabytes to several Petabytes. It is usually used for large analytical and operational workloads.
+BigTable is recommended for data sizes greater than 10 terabytes. It is usually used for large analytical and operational workloads.
 
 BigTable is NOT recommended for transactional workloads. It does NOT support multi-row transactions - supports ONLY single-row transactions.
 

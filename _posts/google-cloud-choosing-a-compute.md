@@ -1,10 +1,18 @@
-Title: Google Cloud - How to choose the Compute Service?
+---
+layout:     post
+title:      Google Cloud For Beginners - How to choose a Compute Service?
+date:       2022-10-02 12:31:19
+summary:    Google Cloud offer multiple compute options. How to choose between them?
+categories:  GCP_CLOUD
+permalink:  /google-cloud-for-beginners-choosing-compute
+---
+
 
 We need a compute device to run your applications and services. Traditionally, we are used to making use of Virtual Machine's in our data centers. However, cloud platforms provide you with greater flexibility. How do you choose compute service in Google Cloud?
 
 Let's find out!
 
-![](./images/aws/cloud-2-PAAS.png)
+![](/images/aws/cloud-2-PAAS.png)
 
 <!-- MarkdownTOC -->
 
@@ -22,7 +30,9 @@ Let's find out!
 - 4: What are the Google Cloud Compute Services?
 	- 4.1: Google Compute Engine
 	- 4.2: Google App Engine
-		- Let's compare Compute Engine vs App Engine
+		- Comparing Google Compute Engine and Google App Engine
+			- **Compute Engine**
+			- **App Engine**
 	- 4.3: Google Kubernetes Engine
 	- 4.4: Google Cloud Functions
 	- 4.5: Google Cloud Run
@@ -48,7 +58,7 @@ And we can do this in the cloud too!
 
 In the cloud, we call this IaaS (Infrastructure as a Service).
 
-![](./images/aws/cloud-0-IAAS.png)
+![](/images/aws/cloud-0-IAAS.png)
 
 Each of the cloud platforms provide an IaaS service. 
 
@@ -85,9 +95,9 @@ Let's get on a quick **journey** to understand these!
 
 ### 3.1: What is Platform as a Service?
 
-![](./images/aws/cloud-2-PAAS.png)
+![](/images/aws/cloud-2-PAAS.png)
 
-How about cloud platform taking more responsibility?
+> How about cloud platform taking more responsibility?
 
 When you are making use of PAAS (Platform as a Service), you making use of a platform provided by cloud. You will have less access to infrastructure but you will give more responsibility to the cloud provider.
 
@@ -149,7 +159,8 @@ Docker simplifies operations:
 
 ### 3.4: Why do we need Container Orchestration?
 
-![](./images/02-architecture/microservices.png)
+
+![](/gcpimages/02-architecture/microservices.png)
 
 Enterprises are heading towards microservices architectures. Microservices provide the **flexibility to innovate**. 
 
@@ -164,7 +175,7 @@ However, microservices architectures also have complex technical requirements. E
 
 Container orchestration solutions provide most technical features need by microservices architectures. You will be able to create a cluster of multiple vm instances and deploy microservices to the cluster. Container orchestration solution will manage the clusters and deployments.
 
-![](./images/02-architecture/container-orchestration.png) 
+![](/gcpimages/02-architecture/container-orchestration.png) 
 
 #### What is Kubernetes?
 
@@ -214,7 +225,7 @@ Let's explore them one by one.
 
 ### 4.1: Google Compute Engine
 
-We already talking Google Compute Engine, which is the IaaS offering. Let's look at others.
+Google Compute Engine is the IaaS compute offering in Google Cloud.
 
 ### 4.2: Google App Engine
 
@@ -231,21 +242,20 @@ Here is a summary of important App Engine features:
 - Application versioning
 - Traffic splitting
 
-#### Let's compare Compute Engine vs App Engine
-- **Compute Engine**
-	- IAAS
-	- MORE Flexibility
-	- MORE Responsibility
-		- Choosing Image
-		- Installing Software
-		- Choosing Hardware
-		- Fine grained Access/Permissions (Certificates/Firewalls)
-		- Availability etc
-- **App Engine**
-	- PaaS
-	- Serverless
-	- LESSER Responsibility
-	- LOWER Flexibility
+#### Comparing Google Compute Engine and Google App Engine
+
+##### **Compute Engine**
+
+- IAAS
+- MORE Flexibility
+- MORE Responsibility for customer(Choosing Image, Installing Software, Choosing Hardware,  Fine grained Access/Permissions, Availability, Scaling)
+
+##### **App Engine**
+
+- PaaS
+- Serverless
+- LESSER Responsibility
+- LOWER Flexibility
 
 ### 4.3: Google Kubernetes Engine
 
@@ -260,6 +270,7 @@ It provides all the typical features expected of a container orchestration solut
 - **Self Healing**
 - **Zero Downtime Deployments**
 
+I can put my neck out a bit and say "In my opinion, GKE is the best managed Kubernetes service out there".
 
 ### 4.4: Google Cloud Functions
 
@@ -272,17 +283,16 @@ In the cloud, Event handling is one of the best use cases for Serverless Functio
 
 Cloud Functions is the Google Serverless FaaS offering.
 
-You can run code in response to events:
-- Write your business logic in  Node.js, Python, Go, Java, .NET, and Ruby
-- **Don't worry** about servers or scaling or availability (only worry about your code)
-- **Pay only for what you use**
-	- Number of invocations
-	- Compute Time of the invocations
-	- Amount of memory and CPU provisioned
+You can run code in response to events. Write your business logic in  Node.js, Python, Go, Java, .NET, and Ruby. **Don't worry** about servers or scaling or availability (only worry about your code).
+
+**Pay only for what you use:**
+- Number of invocations
+- Compute Time of the invocations
+- Amount of memory and CPU provisioned
 
 ### 4.5: Google Cloud Run
 
-Goal of **Cloud Run** is "Container to Production in Seconds".It is built on top of an open standard - **Knative**. Cloud Run is a **Fully managed** serverless platform for containerized applications. 
+Goal of **Cloud Run** is "Container to Production in Seconds". It is built on top of an open standard - **Knative**. Cloud Run is a **Fully managed** serverless platform for containerized applications. 
 
 Here are few of the important features:
 - ZERO infrastructure management
@@ -295,7 +305,7 @@ A number of enterprises are looking to use a mix of cloud platforms and their ow
 
 Goal of **Anthos** is help you run Kubernetes clusters anywhere - Cloud, Multi Cloud and On-Premise.
 
-You can multiple Kubernetes deployments and manage them centrally using Anthos.
+You can manage multiple Kubernetes deployments centrally using Anthos.
 
 ## 5: Here is a Quick Summary
 
@@ -307,4 +317,3 @@ You can multiple Kubernetes deployments and manage them centrally using Anthos.
 | Cloud Run  | Develop and deploy highly scalable containerized applications. <BR/>Does NOT need a cluster!|CaaS (Serverless)|
 | Google Kubernetes Engine  | Orchestrate containerized microservices on Kubernetes <BR/>Needs advanced cluster configuration and monitoring | Container Orchestration|
 |Anthos| Run Kubernetes Clusters anywhere | Multi Cloud Container Orchestration|
-
