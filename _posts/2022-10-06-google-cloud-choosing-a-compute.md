@@ -31,8 +31,8 @@ Let's find out!
 	- 4.1: Google Compute Engine
 	- 4.2: Google App Engine
 		- Comparing Google Compute Engine and Google App Engine
-			- **Compute Engine**
-			- **App Engine**
+			- Compute Engine
+			- App Engine
 	- 4.3: Google Kubernetes Engine
 	- 4.4: Google Cloud Functions
 	- 4.5: Google Cloud Run
@@ -244,13 +244,13 @@ Here is a summary of important App Engine features:
 
 #### Comparing Google Compute Engine and Google App Engine
 
-##### **Compute Engine**
+##### Compute Engine
 
 - IAAS
 - MORE Flexibility
 - MORE Responsibility for customer(Choosing Image, Installing Software, Choosing Hardware,  Fine grained Access/Permissions, Availability, Scaling)
 
-##### **App Engine**
+##### App Engine
 
 - PaaS
 - Serverless
