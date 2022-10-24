@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      6 Things I learnt teaching Cloud Certifications to 250000 Learners
+title:      Teaching Cloud Certifications - Top 6 Learnings
 date:       2022-10-21 12:31:19
 summary:    I've been teaching cloud certifications to over 250000 learners in the last few years. What did I learn?
 categories:  GCP_CLOUD

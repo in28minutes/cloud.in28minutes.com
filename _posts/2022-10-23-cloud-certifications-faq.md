@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Cloud Certifications - Top 8 FAQ
+title:      Cloud Certifications - AWS, Azure and Google Cloud - Top 8 FAQ For Me
 date:       2022-10-23 12:31:19
-summary:    I've been teaching cloud certifications to over 250000 learners in the last few years. Here are some of the FAQ.
+summary:    I've been teaching cloud certifications to over 250000 learners in the last few years. Here are some of the FAQ for me.
 categories:  GCP_CLOUD
 permalink:  /cloud-certifications-6-things-you-should-know
 ---
