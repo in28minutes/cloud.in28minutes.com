@@ -13,6 +13,8 @@ How do you choose a database service in Google Cloud?
 
 Let's find out!
 
+![](/gcpimages/02-architecture/database-fundamentals-3-single-db-snapshot-transaction.png)
+
 <!-- MarkdownTOC -->
 
 - 1: Is choosing a database easy?
@@ -52,6 +54,8 @@ There are **several categories** of databases: Relational (OLTP and OLAP), Docum
 ### 2.1: What are Relational Databases?
 
 Most **popular (or unpopular)** type of databases. These have **Predefined schema** with tables and relationships. Relational database provide very **strong transactional** capabilities.
+
+![](/gcpimages/02-architecture/database-fundamentals-relational-schema.png)
 
 #### Relational Databases - OLTP - Online Transaction Processing
 
@@ -104,6 +108,9 @@ Recommended GCP Managed Service is **BigQuery**.
 ##### BigQuery - Modern Data warehouse
 BigQuery is one of most popular cloud data warehouses. It can handle exabytes of data with ease. It combines traditional data warehouse elements (Huge storage + compute) with modern elements (Realtime + Serverless).
 
+![](/gcpimages/02-architecture/database-columnar-storage.png)
+
+
 ### 2.2: What are NoSQL Databases?
 
 NoSQL represents a new approach (actually NOT so new!) to building your databases.
@@ -113,6 +120,9 @@ NoSQL stands for "not only SQL". You would use NoSQL databases when you need fle
 Most NoSQL databases can scale horizontally to petabytes of data with millions of TPS.
 
 Google Managed Services are **Cloud Firestore (Datastore)** &  **Cloud BigTable**.
+
+![](/gcpimages/02-architecture/database-document.png)
+
 
 #### Cloud Datastore and Firestore
 
