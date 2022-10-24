@@ -1,15 +1,15 @@
 ---
 layout:     post
 title:      Google Cloud For Beginners - How to choose a Database Service?
-date:       2022-10-02 12:31:19
+date:       2022-10-23 12:31:19
 summary:    Google Cloud offer multiple database options. How to choose between them?
 categories:  GCP_CLOUD
 permalink:  /google-cloud-for-beginners-choosing-database
 ---
 
-Managing databases is a pain. Ensuring high availability, high durability and a host of other needs for your data is a big challenge. Cloud platforms provide you with varied range of database services. 
+Managing databases is a pain. Ensuring high availability, high durability and a host of other needs for your databases is a big challenge. Cloud platforms provide you with varied range of database services. 
 
-How do you choose compute service in Google Cloud?
+How do you choose a database service in Google Cloud?
 
 Let's find out!
 
